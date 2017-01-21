@@ -1,0 +1,15 @@
+PODS:
+  - Eureka (2.0.0-beta.1)
+  - ILPDFKit (1.0.5)
+
+DEPENDENCIES:
+  - Eureka (= 2.0.0-beta.1)
+  - ILPDFKit (= 1.0.5)
+
+SPEC CHECKSUMS:
+  Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
+  ILPDFKit: e208473cc97dd889c1cdf97711816be1ec64f8fe
+
+PODFILE CHECKSUM: b9e363ce652f5e5fbc840458db6c8abcd1a18cdd
+
+COCOAPODS: 1.0.1
