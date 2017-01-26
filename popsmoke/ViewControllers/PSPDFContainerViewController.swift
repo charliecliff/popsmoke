@@ -19,12 +19,12 @@ class PSPDFContainerViewController: UIViewController {
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		self.navigationController?.isNavigationBarHidden = true
+//		self.navigationController?.isNavigationBarHidden = true
 	}
 
 	override func viewWillDisappear(_ animated: Bool) {
 		super.viewWillDisappear(animated)
-		self.navigationController?.isNavigationBarHidden = false
+//		self.navigationController?.isNavigationBarHidden = false
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

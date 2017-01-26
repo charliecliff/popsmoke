@@ -29,6 +29,8 @@
 		DA01F0331E39B9D700B7FB04 /* PSDocumentViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01F0321E39B9D700B7FB04 /* PSDocumentViewFactory.swift */; };
 		DA0B26871E362A62000CC2DC /* PSMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B26861E362A62000CC2DC /* PSMainViewController.swift */; };
 		DA0B26891E362A6D000CC2DC /* PSMainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */; };
+		DA3585F21E3A7ABF0014AE10 /* UIImageView+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3585F11E3A7ABF0014AE10 /* UIImageView+Tint.swift */; };
+		DA3585F41E3A7DE00014AE10 /* PSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3585F31E3A7DE00014AE10 /* PSConstants.swift */; };
 		DA5007F31E28BBA80038A5E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5007F21E28BBA80038A5E8 /* AppDelegate.swift */; };
 		DA5007FC1E28BBA80038A5E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA5007FB1E28BBA80038A5E8 /* Assets.xcassets */; };
 		DA5007FF1E28BBA80038A5E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5007FD1E28BBA80038A5E8 /* LaunchScreen.storyboard */; };
@@ -75,6 +77,8 @@
 		DA01F0321E39B9D700B7FB04 /* PSDocumentViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSDocumentViewFactory.swift; sourceTree = "<group>"; };
 		DA0B26861E362A62000CC2DC /* PSMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSMainViewController.swift; sourceTree = "<group>"; };
 		DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSMainStoryboard.storyboard; sourceTree = "<group>"; };
+		DA3585F11E3A7ABF0014AE10 /* UIImageView+Tint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Tint.swift"; sourceTree = "<group>"; };
+		DA3585F31E3A7DE00014AE10 /* PSConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSConstants.swift; sourceTree = "<group>"; };
 		DA5007EF1E28BBA80038A5E8 /* popsmoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = popsmoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5007F21E28BBA80038A5E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA5007FB1E28BBA80038A5E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 		DA01F0121E392D3600B7FB04 /* UICategories */ = {
 			isa = PBXGroup;
 			children = (
+				DA3585F11E3A7ABF0014AE10 /* UIImageView+Tint.swift */,
 				DA01F0131E392D4C00B7FB04 /* UILabel+Size.swift */,
 				DA01F01A1E39A9C700B7FB04 /* UIViewController+Transition.swift */,
 			);
@@ -226,6 +231,7 @@
 				DA01F0121E392D3600B7FB04 /* UICategories */,
 				DA5007F21E28BBA80038A5E8 /* AppDelegate.swift */,
 				DA0051391E37B743008E7035 /* PSPacketUtilities.swift */,
+				DA3585F31E3A7DE00014AE10 /* PSConstants.swift */,
 				DA00512E1E37AE7A008E7035 /* Cells */,
 				DA861A9B1E3250FE00C9D4E0 /* DA31 */,
 				DA01F0201E39AC3600B7FB04 /* Factories */,
@@ -447,10 +453,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA01F02F1E39B42700B7FB04 /* PSPacketViewFactory.swift in Sources */,
+				DA3585F21E3A7ABF0014AE10 /* UIImageView+Tint.swift in Sources */,
 				DA01F0171E39617C00B7FB04 /* PSPacket.swift in Sources */,
 				DA861AA31E3250FE00C9D4E0 /* DA31FormViewController.swift in Sources */,
 				DA861AA41E3250FE00C9D4E0 /* DA31PDFFiller.swift in Sources */,
 				DA0B26871E362A62000CC2DC /* PSMainViewController.swift in Sources */,
+				DA3585F41E3A7DE00014AE10 /* PSConstants.swift in Sources */,
 				DA01F02D1E39AE9000B7FB04 /* PSPDFContainerViewFactory.swift in Sources */,
 				DA0051321E37AEC3008E7035 /* PSDocumentCollectionViewCell.swift in Sources */,
 				DA01F0221E39AC6E00B7FB04 /* DA31FormFactory.swift in Sources */,

@@ -16,15 +16,12 @@ class PSDocumentCollectionViewCell: UICollectionViewCell {
 	var attachmentType: FormType	= FormType.error
 	
 	@IBOutlet weak var iconImageView: UIImageView?
-	@IBOutlet weak var backgroundImageView: UIImageView?
 	@IBOutlet weak var documentLabel: UILabel?
 
 	func configure(document: PSDocument) {
 		
 		self.document = document
-		
-		backgroundImageView?.layer.cornerRadius = CGFloat(15)
-		
+
 		if let imageName = document.icon {
 			iconImageView?.image = UIImage.init(named: imageName)
 		}
@@ -39,11 +36,10 @@ class PSDocumentCollectionViewCell: UICollectionViewCell {
 	}
 	
 	func set(completed: Bool) {
-		
 		if completed {
-			backgroundImageView?.backgroundColor = .green
+			self.iconImageView?.renderWithColor(color: .green)
 		} else {
-			backgroundImageView?.backgroundColor = .red
+			self.iconImageView?.renderWithColor(color: dark_grey)
 		}
 	}
 }
