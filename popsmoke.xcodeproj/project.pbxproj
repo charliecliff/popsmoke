@@ -40,7 +40,6 @@
 		DAB08D9A1E38F68100F2E263 /* PSFormContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB08D981E38F68100F2E263 /* PSFormContainer.storyboard */; };
 		DAB08D9B1E38F68100F2E263 /* PSFormContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB08D991E38F68100F2E263 /* PSFormContainerViewController.swift */; };
 		DAB08D9D1E38F91F00F2E263 /* PSPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB08D9C1E38F91F00F2E263 /* PSPhotoViewController.swift */; };
-		DAB08D9F1E38FCC900F2E263 /* PSPhotoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB08D9E1E38FCC900F2E263 /* PSPhotoViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +91,6 @@
 		DAB08D981E38F68100F2E263 /* PSFormContainer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSFormContainer.storyboard; sourceTree = "<group>"; };
 		DAB08D991E38F68100F2E263 /* PSFormContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSFormContainerViewController.swift; sourceTree = "<group>"; };
 		DAB08D9C1E38F91F00F2E263 /* PSPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPhotoViewController.swift; sourceTree = "<group>"; };
-		DAB08D9E1E38FCC900F2E263 /* PSPhotoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSPhotoViewController.storyboard; sourceTree = "<group>"; };
 		DCC98E59EDB289071AD09144 /* Pods_popsmoke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_popsmoke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -199,7 +197,6 @@
 				DA00512C1E37ABDA008E7035 /* PSPacketViewController.swift */,
 				DA01F01E1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard */,
 				DA01F01C1E39AA9100B7FB04 /* PSPDFContainerViewController.swift */,
-				DAB08D9E1E38FCC900F2E263 /* PSPhotoViewController.storyboard */,
 				DAB08D9C1E38F91F00F2E263 /* PSPhotoViewController.swift */,
 			);
 			path = ViewControllers;
@@ -322,7 +319,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Charles Cliff";
 				TargetAttributes = {
 					DA5007EE1E28BBA80038A5E8 = {
@@ -370,7 +367,6 @@
 				DAB08D9A1E38F68100F2E263 /* PSFormContainer.storyboard in Resources */,
 				DA01F0281E39ACA700B7FB04 /* DA31_Packet.plist in Resources */,
 				DA00513E1E37C8CB008E7035 /* Icons.xcassets in Resources */,
-				DAB08D9F1E38FCC900F2E263 /* PSPhotoViewController.storyboard in Resources */,
 				DA0B26891E362A6D000CC2DC /* PSMainStoryboard.storyboard in Resources */,
 				DA0051361E37B36F008E7035 /* PSDocumentCollectionViewCell.xib in Resources */,
 				DA01F0291E39ACA700B7FB04 /* DA_31.pdf in Resources */,
@@ -399,7 +395,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		25E2718FC399EB3F4822CC78 /* [CP] Copy Pods Resources */ = {

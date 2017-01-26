@@ -12,7 +12,7 @@ fileprivate let minSpacing			= CGFloat(0)
 fileprivate let sectionInsets		= UIEdgeInsets(top: 0.0, left: 20.0, bottom: 0.0, right: 20.0)
 fileprivate let cellReuseIdentifier	= "document_cell"
 
-class PSPacketViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class PSPacketViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
 	private var packet: PSPacket?
 	private var widthPerItem  = CGFloat(0)
@@ -91,9 +91,7 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 		return documentCell
     }
 	
-	func collectionView(_ collectionView: UICollectionView,
-	                    viewForSupplementaryElementOfKind kind: String,
-	                    at indexPath: IndexPath) -> UICollectionReusableView {
+	func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 		if (kind == UICollectionElementKindSectionHeader) {
 			let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "HeaderView", for: indexPath)
 			return headerView
@@ -137,10 +135,7 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 		return minSpacing
 	}
 	
-	func collectionView(_ collectionView: UICollectionView,
-	                             layout collectionViewLayout: UICollectionViewLayout,
-	                             minimumInteritemSpacingForSectionAt section: Int) -> CGFloat{
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat{
 		return minSpacing
 	}
-	
 }

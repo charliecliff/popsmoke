@@ -11,6 +11,10 @@ import UIKit
 extension UIViewController {
 	
 	func segueTo(viewController: UIViewController) {
+		if viewController is UINavigationController {
+			self.present(viewController, animated: true, completion: nil)
+			return
+		}
 		if self.navigationController != nil {
 			self.navigationController?.pushViewController(viewController, animated: true)
 			return

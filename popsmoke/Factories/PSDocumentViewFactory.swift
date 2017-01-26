@@ -11,7 +11,6 @@ import UIKit
 class PSDocumentViewFactory: NSObject {
 
 	class func documentView(forDocument document: PSDocument?) -> UIViewController? {
-		
 		guard document != nil else {
 			return nil
 		}
@@ -20,12 +19,14 @@ class PSDocumentViewFactory: NSObject {
 			guard let vc = PSFormContainerViewFactory.formContainerView(withDocument: document) else {
 				return nil
 			}
+			vc.document = document
 			return vc
 		case DocumentType.attachment:
-			let storyboard = UIStoryboard.init(name: "PSPhotoViewController", bundle: nil)
-			guard let vc = storyboard.instantiateInitialViewController() as? PSPhotoViewController else {
-				return nil
-			}
+			let vc = PSImagePickerController.init()
+			vc.allowsEditing = true
+			vc.sourceType =  UIImagePickerControllerSourceType.camera
+			vc.delegate = vc
+			vc.document = document
 			return vc
 		default:
 			return nil

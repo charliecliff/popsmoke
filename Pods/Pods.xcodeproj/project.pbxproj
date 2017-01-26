@@ -7,136 +7,136 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		004C8AAA5143637A4360B55CAD850E4F /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700E30830A8949FDC57ABEB427388A0 /* Operators.swift */; };
-		05E44C82FAED17D346EE349295CF4603 /* SelectableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B97701D674AACC94CECB6F9F6FF2D /* SelectableSection.swift */; };
-		072CA9CCA2B930B776F567EAC7BC1666 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9854452B704969D40D932335DEE0FF /* Foundation.framework */; };
-		0A33E23970FB74BADA077C76A63ADDFC /* ILPDFObjectParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FACD9A8DA90DC7D512D6A6A01A302C /* ILPDFObjectParser.m */; };
-		0E059091C3520C4884751C4C0AA00085 /* ILPDFSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 17FAD62A01F01A3557770AAB8EABDDE5 /* ILPDFSerializer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E2B0F2591BCCC860712EE1EBB0C1DD6 /* ILPDFString.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E90ED371DD9A161829F007C267E1004 /* ILPDFString.m */; };
-		0E7232F55A0147C548BF0C1D91AD29DC /* RowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B379F7EEA4C33AD21F522D77C5CBF /* RowType.swift */; };
-		1039256A7B0AFBEB51D1BCD1DE192C30 /* ActionSheetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6EEBFFB61F03AEECADAA24AEF17FB6 /* ActionSheetRow.swift */; };
-		114B8967240AF21C565B7645215F8F44 /* InlineRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B46660BA69E67493A6193D1C8D1444 /* InlineRowType.swift */; };
-		130795E873137DA419183E8BBC2D2F9B /* PickerInlineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435D50FF544031E53F0EEE2159813019 /* PickerInlineRow.swift */; };
-		14085738C1B57648ADD19DDB9E7AA93F /* SegmentedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087BDCF1067540BE10DAD8D055EE32BE /* SegmentedRow.swift */; };
-		1D2C3F458A7EC5E133380C552CF8DA90 /* PushRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E82395916BBE3E9D05A356FA413553 /* PushRow.swift */; };
-		20D4363F1C932AAE0EB8AB41694ABE98 /* ILPDFWidgetAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A261A6A5CA7DEF430E9EFA9E7DCDF5E /* ILPDFWidgetAnnotationView.m */; };
-		2395F5D2B2E9E8CDCC9B2C03F31A59B6 /* SelectableRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36538E9E6C096D0DE051E3AD59FC29AF /* SelectableRowType.swift */; };
-		24B52E4528FE1CA5BBB438CF11441FA5 /* MultipleSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16C2CC5B8517D3474819142903E22D3 /* MultipleSelectorRow.swift */; };
-		278DA7CAFEDFF0B3E479BF7310999C84 /* AlertRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F762B6CD6C7C15FD32D52930C634AB /* AlertRow.swift */; };
-		2A84006D7A3BDF4D776324C3AD9D9F2F /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2B2D2AB83F55B8E3D605F78FDD6DC9 /* Cell.swift */; };
-		2AC217E55DBAE620E9B1F36F371DE4BF /* ButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6381DF04B5B482F76F93EF100BE1200 /* ButtonRow.swift */; };
-		2ACBF08CF311E49CB4BA1F75D7F7209C /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D49449401347A80B0A3AB562B04BB8D /* Section.swift */; };
-		2AFAE16062416674764562F22E85FB88 /* DateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE728A4A2338B6DFBBF9434910BB718 /* DateRow.swift */; };
-		2C5B95B3105F48DCBD0DF12B4EB099D9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F2331BAF78D4EDDCD400CF6388C7978 /* UIKit.framework */; };
-		2CA7DD784E7461A325A7C9EB64E14A8F /* ILPDFDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B68E5F636A8B14854C373D416E94D9 /* ILPDFDictionary.m */; };
-		2DB4B95698BE06240687E05B6D4146BB /* ILPDFKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C439391EFB23C83411C702A9C7B98CA2 /* ILPDFKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2F005065D096AE7E2DCEE8C7FAB91A2E /* FieldsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C545BE253427E87259863A4C43019F9 /* FieldsRow.swift */; };
-		2FC85028E55C625418DE34DF1006E6AA /* ILPDFView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2796B0C508C84FB43FF1318733323FBA /* ILPDFView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		30AAD30F48EB6531526A83E529E716BA /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FE1D7C27582A2EC9E7F76C9AD541E /* Protocols.swift */; };
-		311CF93EE9E301E3FAFD46BA0A62E3B8 /* RuleEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D377FBCAC99E3B4C40DAA46C7EDA9 /* RuleEmail.swift */; };
-		34B7DC92D8F8C86BA8ADC7F71D26AA72 /* ILPDFNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 45469D4AA8201B8BA9E93136FFE9A81A /* ILPDFNull.m */; };
-		372B3CE67A785D44D118A64F842577C4 /* ILPDFPage.h in Headers */ = {isa = PBXBuildFile; fileRef = D761779BB0BB9A3695ED20B823009137 /* ILPDFPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		37E2FFC149E2115469E943E6953CDE15 /* TextAreaRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E687231398893FDB0F7CEBEA6707692 /* TextAreaRow.swift */; };
-		3991DF903EE4C5D986052514554B67F6 /* PresenterRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF2667272DF9749F4F3A323890600A1 /* PresenterRowType.swift */; };
-		39C09650F85773B4BE14DE0D80DECB87 /* ILPDFStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 13313B55C11390F2F1EC46277FF68636 /* ILPDFStream.m */; };
-		3B1B5FB542F59351EE3DED922BEDEDE9 /* ILPDFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC1781038962A2CD8120479DE02E0E9 /* ILPDFViewController.m */; };
-		3C15E44B6003282E5BE62A3D32D85A2A /* Eureka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E53543675310B33A0725A0884A09F904 /* Eureka-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		402EA4A022E376724E25504C36C522CD /* SelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FD20080FCC612542C61B2C336124B8 /* SelectorRow.swift */; };
-		409F854D0E4E93B9B87D25A36790DFBE /* ILPDFDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9FEFB0FACFD33D4590753214CADAEB /* ILPDFDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4325E0AC8D1557CE015B4F35423277DA /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CAFF96897A2091582DB8A9BB2918 /* Validation.swift */; };
-		43B9A00DB9436E7BD6D705E2872E26E8 /* BaseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6AF1EE60317FBA4C5C10F37396A8C /* BaseRow.swift */; };
-		443D609AC2A51A834BD8D04EF54747DD /* ILPDFViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 03C775B27D8421D31034B47C628D20D4 /* ILPDFViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4481DA169650163649760DEF1B024098 /* ILPDFFormContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 20428316A7059E8CCE0948BA63153A4E /* ILPDFFormContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		498223C7F76DB7D28AE38C4B78829F9A /* FieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0657DDBC5608232D60903FD822F796 /* FieldRow.swift */; };
-		4DF81955654DBE4E02E806802D1D49B0 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55C65AA7DB4100503F4735ECC833601 /* Row.swift */; };
-		4EE521ADDD025747F450378FDDE95372 /* RuleURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB9D4DFA77AE75E6D01E725CB158681 /* RuleURL.swift */; };
-		520E9F67AFBBC78EBE66297B8D52C6D2 /* LabelRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1609BF4911128E6F5267D4479AB70C0 /* LabelRow.swift */; };
-		549A01629691F7DB092B3F8176AECD68 /* CheckRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100FAF297D4257AAB0D82E393184DC23 /* CheckRow.swift */; };
-		55582C1B0D02D5A84F1FBB731CDE35D9 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E80E7962FB53CD499FD94C913490A /* Core.swift */; };
-		5880B35AC6965546C400A621795B7881 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B4CCDF0ACEE37ED4308724E62FCDE939 /* CoreGraphics.framework */; };
-		598FA42A947DB0A73BF837326DFDB13C /* SelectorAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB359CF7E4C630D9D32D595207C47DBA /* SelectorAlertController.swift */; };
-		5CB85FC0E9168E9EC0CCD33A63FCBC1A /* NavigationAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B3BF92E92BA6C744490D61C88F6B73 /* NavigationAccessoryView.swift */; };
-		5D49089662AC20A1CB3F05D33635229D /* RuleClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF0A1C5004650246ADCB627A67AAA4 /* RuleClosure.swift */; };
-		5F8F70DE6415A3F95D974FBABAA9494B /* ILPDFKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0015E3DC38B727898AA7F7564C7969 /* ILPDFKit-dummy.m */; };
-		60CE7809D84AE3546C329F49B9A5CC90 /* ILPDFKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 12699D465035D8A32F4F15CDC47A82E0 /* ILPDFKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		62461E1AE08A42FDFE45468063125331 /* ILPDFNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = AD22C039ACDCA6D4EB30F298EA88C53B /* ILPDFNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		629D0E429D121D2DF247C8EB46325E0D /* ILPDFString.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE48141C50C655E7B78648DEB5380CC /* ILPDFString.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		653F5F8E52EED5D8B9CF3FBDB0712CDD /* RuleRequired.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62325702D368137721F375C2D92D21 /* RuleRequired.swift */; };
-		68DFF9A114D3807FABAAC3CF260F21BE /* DatePickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F3B275CC497057A356E2A4B5C954B /* DatePickerRow.swift */; };
-		6A2ADB55FB3683AF91BF54B8C9BC4258 /* ILPDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E791270FFCC03A3AC284903600704DB /* ILPDFView.m */; };
-		6EA26283A0E32D5594BDA55FF3F704A0 /* DateInlineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A487D9B1510A1EAF30DEC8852C86B4E7 /* DateInlineRow.swift */; };
-		6FBB071D9E7FE75CB93CD0F7A12CB69D /* PickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D2F3ECDB5FA2320785BB624615E492 /* PickerRow.swift */; };
-		717B194C46439157FFA2C24D48651C2B /* ILPDFFormTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FF534CFC49DD9DD44159D41A1F0715 /* ILPDFFormTextField.m */; };
-		7614C1B751242708E332B18FF2684B19 /* DateInlineFieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0182DE25F59721E89D26ECC9A22B6193 /* DateInlineFieldRow.swift */; };
-		78808B8338BDEF0959D8B0F3DA3BA891 /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F41E598CDDAA32260AC3F25489C2AC9 /* CellType.swift */; };
-		79E5ACA311F3FD7FF5A52E73A822CE2D /* OptionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37E5AA1C6C1B76515B71AA69F6767B0 /* OptionsRow.swift */; };
-		7A4D5F8C29CBA33E139BF8BBBE890330 /* ILPDFPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E9BF61C6CCA44F62F5BF608B21FA8B /* ILPDFPage.m */; };
-		7B9DC82FC3E433E06CC2FFBDDFE080B2 /* HeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA49F13168434A16DE806BDE80514F0 /* HeaderFooterView.swift */; };
-		7F47D56CB10F5749946C3EAF36226DCE /* ILPDFArray.h in Headers */ = {isa = PBXBuildFile; fileRef = FB538DCE0DD2AC847B2EDCD90F9377F1 /* ILPDFArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8036FBD9863FF1D763DD7A646B05CB5E /* PopoverSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78431C05A794FD42869F6DC3099797EC /* PopoverSelectorRow.swift */; };
-		8437DB9006B3307DE47EAF11E52E21AF /* ILPDFObjectParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 132C6BD8633AD5312FD0D2B64E698112 /* ILPDFObjectParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8A414B24776F28D731B81E50CCD457A2 /* ILPDFNull.h in Headers */ = {isa = PBXBuildFile; fileRef = 80A03CAF7030472D49F3F676FD996D2C /* ILPDFNull.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B03BFC33F0EC79684941687E3E975F8 /* ILPDFFormSignatureField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9CBB5FB0E74AE41EDD15132CB96BDA /* ILPDFFormSignatureField.m */; };
-		8EE9E8561BC120679990B9472824700A /* Pods-popsmoke-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F6AEC156C24469D3C298CD936C2945 /* Pods-popsmoke-dummy.m */; };
-		91DEA9BB97B764048501C3BDE7D0CD11 /* ILPDFFormButtonField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5F878DCA4092A8ECFBD454346E77DE /* ILPDFFormButtonField.m */; };
-		98B82309DB2678065E73E3120988819A /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952134E08848F1ECEC39DD70BBE38AEF /* Form.swift */; };
-		9BA505C7EC041432D3ABBE58FBED3617 /* ILPDFForm.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5D46EDB4B196C1EB283042D3F34F9F /* ILPDFForm.m */; };
-		A02C7158F19AACF3338714F3E01263F4 /* ILPDFStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 773FBA3EFDC5CBD6EA92995EDC8163EB /* ILPDFStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A1C9CC38A58B6F9665F7FFB8428ACA52 /* ILPDFUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 51B9EA466909A89B320637A2C1F8A603 /* ILPDFUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A58F1085E3C355795A7AB64698FB319A /* ILPDFName.m in Sources */ = {isa = PBXBuildFile; fileRef = 158D35024349302745348A6BEE973FE7 /* ILPDFName.m */; };
-		AA637C505780FD3D9CAC036977EE76E1 /* ILPDFNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A36F41769A5D944D661AF3EE2EBAC80 /* ILPDFNumber.m */; };
-		AB3126F1CC735C7FD7D09DB7392FD4CA /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6788CF361598944F4AA733A833252 /* Helpers.swift */; };
-		AEA1BD08FC0BF44288F2B7B87C020AB3 /* DateFieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF51C748277A7CEEB3D6D3C73C336436 /* DateFieldRow.swift */; };
-		AF9ADF4358A984E49EAC36314B6E023E /* ILPDFSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = F73DBFB6552E8555DF89865050564427 /* ILPDFSerializer.m */; };
-		B02EC6219AC21B862A0F5E710E270FC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9854452B704969D40D932335DEE0FF /* Foundation.framework */; };
-		B0EDDC8F692CA781D3D292BA50EAE92E /* ILPDFDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 44B6AA1775F0927FB380F9C6BE3CF9F2 /* ILPDFDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B1A551C55FCF0AAB8BE1CBBD05B73BC4 /* Eureka.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 160EDAAFB4E95992A204198DA6FF2BED /* Eureka.bundle */; };
-		B5D1D75F4DFB50ECDBD359388B708E4A /* RowProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E8F5539C7627663A46C06FB9501D0 /* RowProtocols.swift */; };
-		B8E82D98499955A6B39BDBCB56E048D8 /* SelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1DF3CF94C9362DC4762EE7042E3F9 /* SelectorViewController.swift */; };
-		BBB8A6E0E1766DF3D4EAEE509A1733B7 /* ILPDFWidgetAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 48C93471795481DD55000D46A0B895D1 /* ILPDFWidgetAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BD6289F8EAB7B892656DE97035EB984D /* ILPDFFormTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A14649409115DE30DFA8EED14483089 /* ILPDFFormTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE2AF7E9117DBDCF3613D527C476ACFC /* ILPDFUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BF81CAF1AC7A94976B693F693634DF /* ILPDFUtility.m */; };
-		BE3AFC46419AC438FE1D409B7B0BFED4 /* RuleRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D569FCA6738D9CEBAF2506E4F913998E /* RuleRange.swift */; };
-		C3C0FF320CC9DE76423E6CDF1F8058EE /* DecimalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A639D3474051BB9759F8A7A4250F4 /* DecimalFormatter.swift */; };
-		C4E1ACB5AED0442E0212211FAFDA7975 /* SliderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AF397247FE1875EF25F288E9F1D57 /* SliderRow.swift */; };
-		C60F11C7D5479F0153B43DC78B6DA97D /* MultipleSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777D19F24FD4B038B11213AB2C61B31D /* MultipleSelectorViewController.swift */; };
-		C66BDF1EAAA37656E8E9AC65CCEDFA49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C9854452B704969D40D932335DEE0FF /* Foundation.framework */; };
-		C7CDCF70B8AC0E79A38E1DDDB2D9DC3E /* ILPDFFormSignatureField.h in Headers */ = {isa = PBXBuildFile; fileRef = 18E66ABE7C966B3F3F9E1F573F5E0096 /* ILPDFFormSignatureField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C812952EC34CF6C37FA7B066870741B4 /* RuleRegExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E256DD5A6EA8721B1CDBF021352F2CC9 /* RuleRegExp.swift */; };
-		CD59136C12F97B812062B4AA0862AEC0 /* Eureka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE63E99CDC74DD5DD934DAB2B6F7B167 /* Eureka-dummy.m */; };
-		CD9C64EC77FC24F6CC3A13781DB65425 /* ILPDFForm.h in Headers */ = {isa = PBXBuildFile; fileRef = 548E59AA041F2D6B663C9E7E46C405B5 /* ILPDFForm.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D042F97BD6E9018B1E6AF3B78695F2F6 /* RuleLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5900AEF3656154F02C3BEA5C8D25318 /* RuleLength.swift */; };
-		D38C4C82C4397D964431454DB9BA6B98 /* ListCheckRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFBD1B380988169A578F9EBF3CB3E13 /* ListCheckRow.swift */; };
-		DC59E613604D47744BB4D92C5265B0EF /* ButtonRowWithPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D12FD14E47642769A88C809EB6CAFD /* ButtonRowWithPresent.swift */; };
-		DF9AD2DEBA1DA64FC24C16DFD8FE1392 /* ILPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BEB2D93DDC532391C666F466F4B98B /* ILPDFDocument.m */; };
-		EBB8BF916F7987CF6012C1C5FBF1E560 /* ILPDFArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9AD71CAFBA71C9A8BA4B27452A2A04 /* ILPDFArray.m */; };
-		ED6498AD627581D3216938680A6D4614 /* RowControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB149F0A052D93D29DD600E0F769F189 /* RowControllerType.swift */; };
-		F1AA327203CDBC5A462F6E60B348D95B /* ILPDFFormContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9CC978A628F41DED6C325993AACED81 /* ILPDFFormContainer.m */; };
-		F3247CD95148E670D550CC747A769404 /* SwitchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B3CF3A36D255F146B5F66373F1D2F /* SwitchRow.swift */; };
-		F53FE96D116C1B62BAE885A8A408414D /* ILPDFFormChoiceField.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BD688067D50311EFADFA0EBFE24452 /* ILPDFFormChoiceField.m */; };
-		F81BBAD35E3095048B7331A4FE61A388 /* ILPDFName.h in Headers */ = {isa = PBXBuildFile; fileRef = 43F47EF2C0DECD63C9776055C93C35CD /* ILPDFName.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8E3F64EA6FEDF34A2D5F5DB83EF044E /* GenericMultipleSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DB3A1D03BEFC5D5A0AACFB73743722 /* GenericMultipleSelectorRow.swift */; };
-		F937E2005D34828CC2E7194689DA7546 /* ILPDFObject.h in Headers */ = {isa = PBXBuildFile; fileRef = AC68DAED89C65C24EAB6BB14B6ABA70C /* ILPDFObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FC9FA1F088EBA3873C420DCADDD3E33B /* Pods-popsmoke-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6307AE0767975DE2EDA3AA776487CE3 /* Pods-popsmoke-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCD68F9D09DC45BF99C0C5A642C31DA3 /* ILPDFFormChoiceField.h in Headers */ = {isa = PBXBuildFile; fileRef = B36EC9DA03738FADEB511E6F253BC11A /* ILPDFFormChoiceField.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FF23400BEFE014C4818111FB1F2EB3EB /* StepperRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7632274ADBAC454168AD2E4C5BCB48D /* StepperRow.swift */; };
-		FF50A156244F9293864036077B039BD2 /* ILPDFFormButtonField.h in Headers */ = {isa = PBXBuildFile; fileRef = A9D33976BDD3221EC0C04E51BB419A48 /* ILPDFFormButtonField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		016FE6D3CBBED0D64EC03707BB35B40D /* ILPDFNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 45469D4AA8201B8BA9E93136FFE9A81A /* ILPDFNull.m */; };
+		034F80EC837A155A77F38361B6BD6E67 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB8CAFF96897A2091582DB8A9BB2918 /* Validation.swift */; };
+		057C2F5535DF957D0BA789C79A290BAC /* ILPDFStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 13313B55C11390F2F1EC46277FF68636 /* ILPDFStream.m */; };
+		0663F21E91FD40DD55F248D70E2B6F63 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55C65AA7DB4100503F4735ECC833601 /* Row.swift */; };
+		07C0E1B303CDA3055827C429352E4763 /* Eureka-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E53543675310B33A0725A0884A09F904 /* Eureka-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		081C9655DCBDE20D3CD2928B6D27B84F /* MultipleSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777D19F24FD4B038B11213AB2C61B31D /* MultipleSelectorViewController.swift */; };
+		08C0622082BE3ABEA2BCF55645FBE538 /* Pods-popsmoke-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D6307AE0767975DE2EDA3AA776487CE3 /* Pods-popsmoke-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0A20BA0694544A723D19F3B31497AA22 /* RuleURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB9D4DFA77AE75E6D01E725CB158681 /* RuleURL.swift */; };
+		0CF04E8CACF30C49068A2A23FDD62FBB /* SwitchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2B3CF3A36D255F146B5F66373F1D2F /* SwitchRow.swift */; };
+		0E65A142157699C5B0FC8574311DE098 /* ILPDFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E791270FFCC03A3AC284903600704DB /* ILPDFView.m */; };
+		17CF21D19CC486B52F9025A0FB15B667 /* RowControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB149F0A052D93D29DD600E0F769F189 /* RowControllerType.swift */; };
+		188D37BE684D152DBF28D1A19CB4F0BA /* PushRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E82395916BBE3E9D05A356FA413553 /* PushRow.swift */; };
+		18EB997AC9E1DB890F564886BD402EAD /* SelectableSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8B97701D674AACC94CECB6F9F6FF2D /* SelectableSection.swift */; };
+		1962E976387CAEF3C3FEBA706DE8338A /* MultipleSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B16C2CC5B8517D3474819142903E22D3 /* MultipleSelectorRow.swift */; };
+		197157CE3C03C879F25B541359548B9E /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B6788CF361598944F4AA733A833252 /* Helpers.swift */; };
+		1A93C16E9103C8BEA772AF8E7A7E6280 /* ILPDFView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2796B0C508C84FB43FF1318733323FBA /* ILPDFView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AE64F5755FAA61E702EB3EFC724FDE4 /* ILPDFName.h in Headers */ = {isa = PBXBuildFile; fileRef = 43F47EF2C0DECD63C9776055C93C35CD /* ILPDFName.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1BF69D3262D9E7BCE3AE768533161CFE /* NavigationAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B3BF92E92BA6C744490D61C88F6B73 /* NavigationAccessoryView.swift */; };
+		1D814D4D57B7BBC24EB564E8813525E4 /* ILPDFNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = AD22C039ACDCA6D4EB30F298EA88C53B /* ILPDFNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26C745E82887D1E0061316E1F3F83322 /* ILPDFArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C9AD71CAFBA71C9A8BA4B27452A2A04 /* ILPDFArray.m */; };
+		274A0946844B4BDEAA9C66D16F4D6638 /* RuleLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5900AEF3656154F02C3BEA5C8D25318 /* RuleLength.swift */; };
+		2894B1B84AD8464300463F01D6671515 /* BaseRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E6AF1EE60317FBA4C5C10F37396A8C /* BaseRow.swift */; };
+		2AC11AADC16DD50F3C122E080027B0B0 /* RuleRequired.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B62325702D368137721F375C2D92D21 /* RuleRequired.swift */; };
+		2DF1D2A7FDCB8403D76162E5E94D471C /* SelectableRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36538E9E6C096D0DE051E3AD59FC29AF /* SelectableRowType.swift */; };
+		2EA998FF3BA8B43AD2CBFD20217784EB /* ButtonRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6381DF04B5B482F76F93EF100BE1200 /* ButtonRow.swift */; };
+		3185C0AF2C79E04DDA0B76FD50D05561 /* Eureka.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 160EDAAFB4E95992A204198DA6FF2BED /* Eureka.bundle */; };
+		330D62440CE2773D0D4D802EEE1180B8 /* ILPDFUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BF81CAF1AC7A94976B693F693634DF /* ILPDFUtility.m */; };
+		362CEB31FF646FFA058013C6CC73DABC /* HeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA49F13168434A16DE806BDE80514F0 /* HeaderFooterView.swift */; };
+		36961169E639D1BE613A1C42AFA6195D /* ILPDFSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = F73DBFB6552E8555DF89865050564427 /* ILPDFSerializer.m */; };
+		378D202D64D7A141AB67663E789FA54D /* LabelRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1609BF4911128E6F5267D4479AB70C0 /* LabelRow.swift */; };
+		380C785F98D63C7BD5ED39053D6562E9 /* Form.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952134E08848F1ECEC39DD70BBE38AEF /* Form.swift */; };
+		39B9AF905697B761591D02D5E02FFCB3 /* SelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EC1DF3CF94C9362DC4762EE7042E3F9 /* SelectorViewController.swift */; };
+		408350EBBA15504F8BD621BDA3EAF24B /* ILPDFViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DEC1781038962A2CD8120479DE02E0E9 /* ILPDFViewController.m */; };
+		43DA26FF2638202E70513A0E0482F71B /* ILPDFFormChoiceField.h in Headers */ = {isa = PBXBuildFile; fileRef = B36EC9DA03738FADEB511E6F253BC11A /* ILPDFFormChoiceField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		467B76C8FE82774E4B2329DE997868CF /* ILPDFDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E9FEFB0FACFD33D4590753214CADAEB /* ILPDFDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46E4958A0168E3B9323E2691413232C9 /* ILPDFFormContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = F9CC978A628F41DED6C325993AACED81 /* ILPDFFormContainer.m */; };
+		4A37980C75DCCB4309E5A4D39633BF05 /* RowProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262E8F5539C7627663A46C06FB9501D0 /* RowProtocols.swift */; };
+		4C0C430C74FD0ADC96D90E58F9AB37F4 /* TextAreaRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E687231398893FDB0F7CEBEA6707692 /* TextAreaRow.swift */; };
+		4E52362D826CC8B93BBE8B5864066C82 /* OptionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F37E5AA1C6C1B76515B71AA69F6767B0 /* OptionsRow.swift */; };
+		5584C6BA4CCF3F5F4D266D6764A3783B /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D49449401347A80B0A3AB562B04BB8D /* Section.swift */; };
+		5C7CD3732EF7833D56D4BF75B8666768 /* ILPDFFormSignatureField.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9CBB5FB0E74AE41EDD15132CB96BDA /* ILPDFFormSignatureField.m */; };
+		5EC7334F080BE482D98AD5C076BD7D4C /* PickerInlineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435D50FF544031E53F0EEE2159813019 /* PickerInlineRow.swift */; };
+		5FD26A590F931040EE62E7C842D8B0D8 /* ILPDFFormButtonField.h in Headers */ = {isa = PBXBuildFile; fileRef = A9D33976BDD3221EC0C04E51BB419A48 /* ILPDFFormButtonField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60B7F597141DB5B2D19558DF01DFC1B8 /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F41E598CDDAA32260AC3F25489C2AC9 /* CellType.swift */; };
+		652CDE8987C676E2842FE57D4C7EBB6D /* ILPDFStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 773FBA3EFDC5CBD6EA92995EDC8163EB /* ILPDFStream.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		663D883D78C1EA3EBC73ACAA2EFCA0EE /* ILPDFObjectParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 132C6BD8633AD5312FD0D2B64E698112 /* ILPDFObjectParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66D2023A877EBFD52E4E1C15ED887527 /* PopoverSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78431C05A794FD42869F6DC3099797EC /* PopoverSelectorRow.swift */; };
+		6FA79DECFD53550668E4A61AF0B08E68 /* StepperRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7632274ADBAC454168AD2E4C5BCB48D /* StepperRow.swift */; };
+		721FDB022114135D18FC43CE6EEC6F28 /* ILPDFObject.h in Headers */ = {isa = PBXBuildFile; fileRef = AC68DAED89C65C24EAB6BB14B6ABA70C /* ILPDFObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7262A911457796B85FB0092C90BCF50D /* ILPDFObjectParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E4FACD9A8DA90DC7D512D6A6A01A302C /* ILPDFObjectParser.m */; };
+		769D8839CF85F423B0DC441DED88C076 /* ILPDFDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B68E5F636A8B14854C373D416E94D9 /* ILPDFDictionary.m */; };
+		7A8FBDE62A4BD3D0C375A6160FBE0ED3 /* FieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0657DDBC5608232D60903FD822F796 /* FieldRow.swift */; };
+		7A96647E526A36C9CBF714EE9661BBB3 /* SliderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1AF397247FE1875EF25F288E9F1D57 /* SliderRow.swift */; };
+		7EFE374DF078F735CF525C6AC1251F71 /* AlertRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7F762B6CD6C7C15FD32D52930C634AB /* AlertRow.swift */; };
+		818B729716B3A3BC2E50D998F65AA116 /* DateFieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF51C748277A7CEEB3D6D3C73C336436 /* DateFieldRow.swift */; };
+		82FC241E5B93AEF32FC2765F8CC8F2E7 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462E80E7962FB53CD499FD94C913490A /* Core.swift */; };
+		85FF667A47F8D4DE82837B244C57B3C8 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1700E30830A8949FDC57ABEB427388A0 /* Operators.swift */; };
+		890B1215C79ECEE103997B5F2C308638 /* ILPDFUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = 51B9EA466909A89B320637A2C1F8A603 /* ILPDFUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		894517E7B39B26DF599A3BAB01246AD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792165F2CA033667D6F57205316D40A1 /* Foundation.framework */; };
+		8B3D40F6022D6E6BDF38B5545B38A2C4 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C4FE1D7C27582A2EC9E7F76C9AD541E /* Protocols.swift */; };
+		8EB17810A5730131D22B04871EB2EF86 /* FieldsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C545BE253427E87259863A4C43019F9 /* FieldsRow.swift */; };
+		939CFADE0173CCC73C7BDCC22D17DC15 /* ILPDFForm.m in Sources */ = {isa = PBXBuildFile; fileRef = BD5D46EDB4B196C1EB283042D3F34F9F /* ILPDFForm.m */; };
+		946DBE5935C9D90DAC22550F3EBAF9D1 /* RuleRegExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E256DD5A6EA8721B1CDBF021352F2CC9 /* RuleRegExp.swift */; };
+		961C9FE5FADC72D0A1DB876AF0834739 /* RuleClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBF0A1C5004650246ADCB627A67AAA4 /* RuleClosure.swift */; };
+		9CDBAE9B6102007F1A9107978AA18C7C /* ILPDFFormContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 20428316A7059E8CCE0948BA63153A4E /* ILPDFFormContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A046977C46F5A93E349E95D83EC44454 /* ILPDFPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 56E9BF61C6CCA44F62F5BF608B21FA8B /* ILPDFPage.m */; };
+		A1156578184448640B1BE97B07734A43 /* ILPDFSerializer.h in Headers */ = {isa = PBXBuildFile; fileRef = 17FAD62A01F01A3557770AAB8EABDDE5 /* ILPDFSerializer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A43EECA0E036098BD01ED456F43799D2 /* ButtonRowWithPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D12FD14E47642769A88C809EB6CAFD /* ButtonRowWithPresent.swift */; };
+		A4871ECA5485794F6AB396141847E8E7 /* InlineRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B46660BA69E67493A6193D1C8D1444 /* InlineRowType.swift */; };
+		A6ADA5015850563CC2082C85F91BDAFD /* SelectorAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB359CF7E4C630D9D32D595207C47DBA /* SelectorAlertController.swift */; };
+		A71869CF6BD3EA25E59BF11021D67746 /* RuleEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0D377FBCAC99E3B4C40DAA46C7EDA9 /* RuleEmail.swift */; };
+		A74E045E42BCDD35A6E35C5F170321B4 /* SegmentedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087BDCF1067540BE10DAD8D055EE32BE /* SegmentedRow.swift */; };
+		A7A976B72C3F91C8B88A1B5B840CE22B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D9AD02E9CEE9B012A246B3874CF4587 /* CoreGraphics.framework */; };
+		A83EB60FE479ECA3E510B82FD68E1974 /* ILPDFFormButtonField.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D5F878DCA4092A8ECFBD454346E77DE /* ILPDFFormButtonField.m */; };
+		A90B8FDF986854FC59F2F6D410F6A261 /* ILPDFString.h in Headers */ = {isa = PBXBuildFile; fileRef = 8CE48141C50C655E7B78648DEB5380CC /* ILPDFString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9599F3A8DEB85276E050A8CB785DDED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792165F2CA033667D6F57205316D40A1 /* Foundation.framework */; };
+		AA509F0AC2FB6CB8C18934454F8FA0F6 /* RowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954B379F7EEA4C33AD21F522D77C5CBF /* RowType.swift */; };
+		B02CBD3403FD10C8FE0D4780AF6FAE5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792165F2CA033667D6F57205316D40A1 /* Foundation.framework */; };
+		B0B6E7AF3530C966687B5A9B54656FE7 /* SelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FD20080FCC612542C61B2C336124B8 /* SelectorRow.swift */; };
+		B0C3C583B9E00FF6C234619045E1AE99 /* ListCheckRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BFBD1B380988169A578F9EBF3CB3E13 /* ListCheckRow.swift */; };
+		B28019C82567D30E055C30506D3E1B6E /* ILPDFArray.h in Headers */ = {isa = PBXBuildFile; fileRef = FB538DCE0DD2AC847B2EDCD90F9377F1 /* ILPDFArray.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB0D693D4BE99F09A6B8400EA5805814 /* ILPDFNull.h in Headers */ = {isa = PBXBuildFile; fileRef = 80A03CAF7030472D49F3F676FD996D2C /* ILPDFNull.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD7345A2B1BCE6CA4C291E705826E1C3 /* PickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D2F3ECDB5FA2320785BB624615E492 /* PickerRow.swift */; };
+		BD9DA9B71AFF8AB4F8AFE637BEB3E838 /* ILPDFDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 44B6AA1775F0927FB380F9C6BE3CF9F2 /* ILPDFDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDDCDE8EA5CEBB138DCA20C215F0456A /* ILPDFString.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E90ED371DD9A161829F007C267E1004 /* ILPDFString.m */; };
+		C04EED96C46CB9FB0CDA0827BA71D18F /* ILPDFPage.h in Headers */ = {isa = PBXBuildFile; fileRef = D761779BB0BB9A3695ED20B823009137 /* ILPDFPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C070D528F3D2C64549E579FBB1712282 /* ILPDFName.m in Sources */ = {isa = PBXBuildFile; fileRef = 158D35024349302745348A6BEE973FE7 /* ILPDFName.m */; };
+		C16ED425F997743940AF643D85FAA219 /* ILPDFFormTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A14649409115DE30DFA8EED14483089 /* ILPDFFormTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C45A122400FE773783B05466ED1CE8FD /* ILPDFNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A36F41769A5D944D661AF3EE2EBAC80 /* ILPDFNumber.m */; };
+		C9DF0516E214282A15FF10AA75FE34DF /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2B2D2AB83F55B8E3D605F78FDD6DC9 /* Cell.swift */; };
+		CA9621BACB59DE6CE1E96A543F69B493 /* ILPDFViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 03C775B27D8421D31034B47C628D20D4 /* ILPDFViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC354898FDC9CD0A2A4A378B476F50DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 695DA86B20FEA7BF7EA40FA7DB65A479 /* UIKit.framework */; };
+		CCE47794953C5D52EA2B77C07D5DAE6B /* DecimalFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D50A639D3474051BB9759F8A7A4250F4 /* DecimalFormatter.swift */; };
+		CF0A08F0F5575A614C3F2555CD516695 /* ILPDFKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 12699D465035D8A32F4F15CDC47A82E0 /* ILPDFKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D23CB5F1512A1AA56AF7BD915017784E /* Pods-popsmoke-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F6AEC156C24469D3C298CD936C2945 /* Pods-popsmoke-dummy.m */; };
+		D2EC9ACE9BD4AD0B38B3ECA668A91552 /* ILPDFWidgetAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A261A6A5CA7DEF430E9EFA9E7DCDF5E /* ILPDFWidgetAnnotationView.m */; };
+		D32A19D6DCF9C97FF52A32064E98D31B /* ActionSheetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6EEBFFB61F03AEECADAA24AEF17FB6 /* ActionSheetRow.swift */; };
+		D44D50A0F4B440E2F734B40650D8D3E6 /* Eureka-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE63E99CDC74DD5DD934DAB2B6F7B167 /* Eureka-dummy.m */; };
+		D4DCB812EF0C361D56D86DB8E4748CFA /* ILPDFFormChoiceField.m in Sources */ = {isa = PBXBuildFile; fileRef = 36BD688067D50311EFADFA0EBFE24452 /* ILPDFFormChoiceField.m */; };
+		D66A42F368FA210AE2DA7D83301906E0 /* ILPDFForm.h in Headers */ = {isa = PBXBuildFile; fileRef = 548E59AA041F2D6B663C9E7E46C405B5 /* ILPDFForm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC9647DB284A9DFF08032C74B129C751 /* CheckRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100FAF297D4257AAB0D82E393184DC23 /* CheckRow.swift */; };
+		DEA0ED61EE365AA71BD69BEC1A499A6A /* GenericMultipleSelectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DB3A1D03BEFC5D5A0AACFB73743722 /* GenericMultipleSelectorRow.swift */; };
+		E173F29FA92E88C68BC87C595774AE4B /* DatePickerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE6F3B275CC497057A356E2A4B5C954B /* DatePickerRow.swift */; };
+		E72156DDE49863B8294FBB45054F6DDE /* ILPDFFormSignatureField.h in Headers */ = {isa = PBXBuildFile; fileRef = 18E66ABE7C966B3F3F9E1F573F5E0096 /* ILPDFFormSignatureField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA441B0FF3815E28448729890243DC3D /* DateInlineFieldRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0182DE25F59721E89D26ECC9A22B6193 /* DateInlineFieldRow.swift */; };
+		EAF1099915C9BFC7DB0705844B8A62F3 /* RuleRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = D569FCA6738D9CEBAF2506E4F913998E /* RuleRange.swift */; };
+		EE133A6D74F712F3352268F720BC1717 /* PresenterRowType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBF2667272DF9749F4F3A323890600A1 /* PresenterRowType.swift */; };
+		F12023B5AEC4D1B1AE99FE88B0E5F087 /* ILPDFKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C439391EFB23C83411C702A9C7B98CA2 /* ILPDFKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1D480A83F3306E5912A23EC45A2E4C4 /* DateInlineRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A487D9B1510A1EAF30DEC8852C86B4E7 /* DateInlineRow.swift */; };
+		F46CFFB5B95AA5FC553C15A1AEBA014F /* ILPDFDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BEB2D93DDC532391C666F466F4B98B /* ILPDFDocument.m */; };
+		F52FF858639D2C7030F77672DBF4DDB4 /* ILPDFFormTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D8FF534CFC49DD9DD44159D41A1F0715 /* ILPDFFormTextField.m */; };
+		F65CDA7D8F8B9EF18F5B20E5C706F3EC /* DateRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDE728A4A2338B6DFBBF9434910BB718 /* DateRow.swift */; };
+		F664E4F0DACA46282265CCE37A2B7B6D /* ILPDFWidgetAnnotationView.h in Headers */ = {isa = PBXBuildFile; fileRef = 48C93471795481DD55000D46A0B895D1 /* ILPDFWidgetAnnotationView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F86C6091601F2271D8F5D7415BE96693 /* ILPDFKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0015E3DC38B727898AA7F7564C7969 /* ILPDFKit-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C5490A60B37C5906D4368DE484858C53 /* PBXContainerItemProxy */ = {
+		64B3EBC8C1BC13F55D09AFC79ACE9AC8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 665E2A3B777A58B7E2FA4BA7EC7769EA;
-			remoteInfo = ILPDFKit;
-		};
-		CD22693548BEAF12F356F361648BBDB7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 873B1A0D84F1FF2C0ECD8A2440705B43;
+			remoteGlobalIDString = EE774F234E810C0DD8263855D7A1A166;
 			remoteInfo = Eureka;
+		};
+		AB2094F564FD462FD86E8303FF17A22A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0FD5B749751EAE29FAE355FB9DBD3FBA;
+			remoteInfo = ILPDFKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -146,9 +146,8 @@
 		06D91A3B2E40CABFCCC0AC90A3412518 /* Pods-popsmoke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-popsmoke.debug.xcconfig"; sourceTree = "<group>"; };
 		087BDCF1067540BE10DAD8D055EE32BE /* SegmentedRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SegmentedRow.swift; path = Source/Rows/SegmentedRow.swift; sourceTree = "<group>"; };
 		0E90ED371DD9A161829F007C267E1004 /* ILPDFString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ILPDFString.m; path = ILPDFKit/Model/Objects/ILPDFString.m; sourceTree = "<group>"; };
-		0F2331BAF78D4EDDCD400CF6388C7978 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		0F41E598CDDAA32260AC3F25489C2AC9 /* CellType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CellType.swift; path = Source/Core/CellType.swift; sourceTree = "<group>"; };
-		0F52CB7AC69FB671827443B3AA93019F /* Eureka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Eureka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F52CB7AC69FB671827443B3AA93019F /* Eureka.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Eureka.framework; path = Eureka.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		100FAF297D4257AAB0D82E393184DC23 /* CheckRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckRow.swift; path = Source/Rows/CheckRow.swift; sourceTree = "<group>"; };
 		12699D465035D8A32F4F15CDC47A82E0 /* ILPDFKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ILPDFKit.h; path = ILPDFKit/ILPDFKit.h; sourceTree = "<group>"; };
 		132C6BD8633AD5312FD0D2B64E698112 /* ILPDFObjectParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ILPDFObjectParser.h; path = ILPDFKit/Utility/ILPDFObjectParser.h; sourceTree = "<group>"; };
@@ -161,7 +160,7 @@
 		19D12FD14E47642769A88C809EB6CAFD /* ButtonRowWithPresent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonRowWithPresent.swift; path = Source/Rows/ButtonRowWithPresent.swift; sourceTree = "<group>"; };
 		1A36F41769A5D944D661AF3EE2EBAC80 /* ILPDFNumber.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ILPDFNumber.m; path = ILPDFKit/Model/Objects/ILPDFNumber.m; sourceTree = "<group>"; };
 		1C6EEBFFB61F03AEECADAA24AEF17FB6 /* ActionSheetRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActionSheetRow.swift; path = Source/Rows/ActionSheetRow.swift; sourceTree = "<group>"; };
-		1CB68B7804BC44A7B60524B36A89FA12 /* Eureka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Eureka.modulemap; sourceTree = "<group>"; };
+		1CB68B7804BC44A7B60524B36A89FA12 /* Eureka.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Eureka.modulemap; sourceTree = "<group>"; };
 		20428316A7059E8CCE0948BA63153A4E /* ILPDFFormContainer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ILPDFFormContainer.h; path = ILPDFKit/Model/ILPDFFormContainer.h; sourceTree = "<group>"; };
 		262E8F5539C7627663A46C06FB9501D0 /* RowProtocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowProtocols.swift; path = Source/Core/RowProtocols.swift; sourceTree = "<group>"; };
 		2796B0C508C84FB43FF1318733323FBA /* ILPDFView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ILPDFView.h; path = ILPDFKit/View/ILPDFView.h; sourceTree = "<group>"; };
@@ -173,7 +172,6 @@
 		36538E9E6C096D0DE051E3AD59FC29AF /* SelectableRowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectableRowType.swift; path = Source/Core/SelectableRowType.swift; sourceTree = "<group>"; };
 		36BD688067D50311EFADFA0EBFE24452 /* ILPDFFormChoiceField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ILPDFFormChoiceField.m; path = ILPDFKit/View/ILPDFFormChoiceField.m; sourceTree = "<group>"; };
 		3C4FE1D7C27582A2EC9E7F76C9AD541E /* Protocols.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Protocols.swift; path = Source/Rows/Common/Protocols.swift; sourceTree = "<group>"; };
-		3C9854452B704969D40D932335DEE0FF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3E791270FFCC03A3AC284903600704DB /* ILPDFView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ILPDFView.m; path = ILPDFKit/View/ILPDFView.m; sourceTree = "<group>"; };
 		3E9CBB5FB0E74AE41EDD15132CB96BDA /* ILPDFFormSignatureField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ILPDFFormSignatureField.m; path = ILPDFKit/View/ILPDFFormSignatureField.m; sourceTree = "<group>"; };
 		3EC1DF3CF94C9362DC4762EE7042E3F9 /* SelectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorViewController.swift; path = Source/Rows/Controllers/SelectorViewController.swift; sourceTree = "<group>"; };
@@ -186,12 +184,14 @@
 		49E82395916BBE3E9D05A356FA413553 /* PushRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PushRow.swift; path = Source/Rows/PushRow.swift; sourceTree = "<group>"; };
 		4A261A6A5CA7DEF430E9EFA9E7DCDF5E /* ILPDFWidgetAnnotationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ILPDFWidgetAnnotationView.m; path = ILPDFKit/View/ILPDFWidgetAnnotationView.m; sourceTree = "<group>"; };
 		4B21056A332FA48FC1DDB7F63B7B32DF /* Eureka.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Eureka.xcconfig; sourceTree = "<group>"; };
+		4D9AD02E9CEE9B012A246B3874CF4587 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		51B9EA466909A89B320637A2C1F8A603 /* ILPDFUtility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ILPDFUtility.h; path = ILPDFKit/Utility/ILPDFUtility.h; sourceTree = "<group>"; };
 		548E59AA041F2D6B663C9E7E46C405B5 /* ILPDFForm.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ILPDFForm.h; path = ILPDFKit/Model/ILPDFForm.h; sourceTree = "<group>"; };
 		55F54873FE205692382FADCD432615CB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56E9BF61C6CCA44F62F5BF608B21FA8B /* ILPDFPage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ILPDFPage.m; path = ILPDFKit/Model/ILPDFPage.m; sourceTree = "<group>"; };
 		5B62325702D368137721F375C2D92D21 /* RuleRequired.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleRequired.swift; path = Source/Validations/RuleRequired.swift; sourceTree = "<group>"; };
-		67F57425DCF36E386E3A72BEB5F2F9AC /* Pods-popsmoke.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-popsmoke.modulemap"; sourceTree = "<group>"; };
+		67F57425DCF36E386E3A72BEB5F2F9AC /* Pods-popsmoke.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-popsmoke.modulemap"; sourceTree = "<group>"; };
+		695DA86B20FEA7BF7EA40FA7DB65A479 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		6C1AF397247FE1875EF25F288E9F1D57 /* SliderRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SliderRow.swift; path = Source/Rows/SliderRow.swift; sourceTree = "<group>"; };
 		6D0015E3DC38B727898AA7F7564C7969 /* ILPDFKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ILPDFKit-dummy.m"; sourceTree = "<group>"; };
 		6DBF0A1C5004650246ADCB627A67AAA4 /* RuleClosure.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleClosure.swift; path = Source/Validations/RuleClosure.swift; sourceTree = "<group>"; };
@@ -199,7 +199,8 @@
 		773FBA3EFDC5CBD6EA92995EDC8163EB /* ILPDFStream.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ILPDFStream.h; path = ILPDFKit/Model/Objects/ILPDFStream.h; sourceTree = "<group>"; };
 		777D19F24FD4B038B11213AB2C61B31D /* MultipleSelectorViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipleSelectorViewController.swift; path = Source/Rows/Controllers/MultipleSelectorViewController.swift; sourceTree = "<group>"; };
 		78431C05A794FD42869F6DC3099797EC /* PopoverSelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopoverSelectorRow.swift; path = Source/Rows/PopoverSelectorRow.swift; sourceTree = "<group>"; };
-		7972B657282B3411A3121E9C05061B82 /* Pods_popsmoke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_popsmoke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		792165F2CA033667D6F57205316D40A1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7972B657282B3411A3121E9C05061B82 /* Pods_popsmoke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_popsmoke.framework; path = "Pods-popsmoke.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C2B2D2AB83F55B8E3D605F78FDD6DC9 /* Cell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cell.swift; path = Source/Core/Cell.swift; sourceTree = "<group>"; };
 		7C545BE253427E87259863A4C43019F9 /* FieldsRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FieldsRow.swift; path = Source/Rows/FieldsRow.swift; sourceTree = "<group>"; };
 		7C9AD71CAFBA71C9A8BA4B27452A2A04 /* ILPDFArray.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ILPDFArray.m; path = ILPDFKit/Model/Objects/ILPDFArray.m; sourceTree = "<group>"; };
@@ -211,7 +212,7 @@
 		8A14649409115DE30DFA8EED14483089 /* ILPDFFormTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ILPDFFormTextField.h; path = ILPDFKit/View/ILPDFFormTextField.h; sourceTree = "<group>"; };
 		8AB9D4DFA77AE75E6D01E725CB158681 /* RuleURL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RuleURL.swift; path = Source/Validations/RuleURL.swift; sourceTree = "<group>"; };
 		8CE48141C50C655E7B78648DEB5380CC /* ILPDFString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ILPDFString.h; path = ILPDFKit/Model/Objects/ILPDFString.h; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		952134E08848F1ECEC39DD70BBE38AEF /* Form.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Form.swift; path = Source/Core/Form.swift; sourceTree = "<group>"; };
 		954B379F7EEA4C33AD21F522D77C5CBF /* RowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowType.swift; path = Source/Core/RowType.swift; sourceTree = "<group>"; };
 		95FD20080FCC612542C61B2C336124B8 /* SelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectorRow.swift; path = Source/Rows/Common/SelectorRow.swift; sourceTree = "<group>"; };
@@ -233,7 +234,6 @@
 		B1609BF4911128E6F5267D4479AB70C0 /* LabelRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelRow.swift; path = Source/Rows/LabelRow.swift; sourceTree = "<group>"; };
 		B16C2CC5B8517D3474819142903E22D3 /* MultipleSelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipleSelectorRow.swift; path = Source/Rows/MultipleSelectorRow.swift; sourceTree = "<group>"; };
 		B36EC9DA03738FADEB511E6F253BC11A /* ILPDFFormChoiceField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ILPDFFormChoiceField.h; path = ILPDFKit/View/ILPDFFormChoiceField.h; sourceTree = "<group>"; };
-		B4CCDF0ACEE37ED4308724E62FCDE939 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		BB149F0A052D93D29DD600E0F769F189 /* RowControllerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RowControllerType.swift; path = Source/Core/RowControllerType.swift; sourceTree = "<group>"; };
 		BD5D46EDB4B196C1EB283042D3F34F9F /* ILPDFForm.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ILPDFForm.m; path = ILPDFKit/Model/ILPDFForm.m; sourceTree = "<group>"; };
 		BDE728A4A2338B6DFBBF9434910BB718 /* DateRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateRow.swift; path = Source/Rows/DateRow.swift; sourceTree = "<group>"; };
@@ -262,7 +262,7 @@
 		E55C65AA7DB4100503F4735ECC833601 /* Row.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Row.swift; path = Source/Core/Row.swift; sourceTree = "<group>"; };
 		E7F762B6CD6C7C15FD32D52930C634AB /* AlertRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertRow.swift; path = Source/Rows/AlertRow.swift; sourceTree = "<group>"; };
 		EBF2667272DF9749F4F3A323890600A1 /* PresenterRowType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PresenterRowType.swift; path = Source/Core/PresenterRowType.swift; sourceTree = "<group>"; };
-		EC2A8D0250AA312C697910C453D48ED2 /* ILPDFKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ILPDFKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC2A8D0250AA312C697910C453D48ED2 /* ILPDFKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ILPDFKit.framework; path = ILPDFKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37E5AA1C6C1B76515B71AA69F6767B0 /* OptionsRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OptionsRow.swift; path = Source/Rows/Common/OptionsRow.swift; sourceTree = "<group>"; };
 		F73DBFB6552E8555DF89865050564427 /* ILPDFSerializer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ILPDFSerializer.m; path = ILPDFKit/Controller/ILPDFSerializer.m; sourceTree = "<group>"; };
 		F8DB3A1D03BEFC5D5A0AACFB73743722 /* GenericMultipleSelectorRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GenericMultipleSelectorRow.swift; path = Source/Rows/Common/GenericMultipleSelectorRow.swift; sourceTree = "<group>"; };
@@ -272,53 +272,43 @@
 		FB538DCE0DD2AC847B2EDCD90F9377F1 /* ILPDFArray.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ILPDFArray.h; path = ILPDFKit/Model/Objects/ILPDFArray.h; sourceTree = "<group>"; };
 		FC0657DDBC5608232D60903FD822F796 /* FieldRow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FieldRow.swift; path = Source/Rows/Common/FieldRow.swift; sourceTree = "<group>"; };
 		FD0574AB5E476F2A3C1C3D0E2A15CC7C /* ILPDFKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ILPDFKit.xcconfig; sourceTree = "<group>"; };
-		FFA5A25173CCEB588491D94277FAFD6C /* ILPDFKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ILPDFKit.modulemap; sourceTree = "<group>"; };
+		FFA5A25173CCEB588491D94277FAFD6C /* ILPDFKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ILPDFKit.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		76C04754C85BCB0587D96439B2A84AF4 /* Frameworks */ = {
+		621E9C983B53DDCA046F7E8DFCC61500 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C66BDF1EAAA37656E8E9AC65CCEDFA49 /* Foundation.framework in Frameworks */,
+				894517E7B39B26DF599A3BAB01246AD8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE2B83EC0FCE8537BA433BCAA8B14FF5 /* Frameworks */ = {
+		D0DD60D6B4C850E3EDCAAF797E1D4A6A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				072CA9CCA2B930B776F567EAC7BC1666 /* Foundation.framework in Frameworks */,
-				2C5B95B3105F48DCBD0DF12B4EB099D9 /* UIKit.framework in Frameworks */,
+				B02CBD3403FD10C8FE0D4780AF6FAE5B /* Foundation.framework in Frameworks */,
+				CC354898FDC9CD0A2A4A378B476F50DB /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D6D85903BCBF2B16548F7DEAC31A9131 /* Frameworks */ = {
+		F59F4F3EFC0FA0022372E17F344C6BA8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5880B35AC6965546C400A621795B7881 /* CoreGraphics.framework in Frameworks */,
-				B02EC6219AC21B862A0F5E710E270FC0 /* Foundation.framework in Frameworks */,
+				A7A976B72C3F91C8B88A1B5B840CE22B /* CoreGraphics.framework in Frameworks */,
+				A9599F3A8DEB85276E050A8CB785DDED /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0A68FE8A6158D395EC4CB10F8472F165 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				B4CCDF0ACEE37ED4308724E62FCDE939 /* CoreGraphics.framework */,
-				3C9854452B704969D40D932335DEE0FF /* Foundation.framework */,
-				0F2331BAF78D4EDDCD400CF6388C7978 /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0A68FE8A6158D395EC4CB10F8472F165 /* iOS */,
+				2D185E38271E1279D6AC3E7A00CAF9BA /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -335,6 +325,16 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Eureka";
+			sourceTree = "<group>";
+		};
+		2D185E38271E1279D6AC3E7A00CAF9BA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4D9AD02E9CEE9B012A246B3874CF4587 /* CoreGraphics.framework */,
+				792165F2CA033667D6F57205316D40A1 /* Foundation.framework */,
+				695DA86B20FEA7BF7EA40FA7DB65A479 /* UIKit.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		3E05E2449464DADB0D8A26AB570AE276 /* ILPDFKit */ = {
@@ -386,6 +386,7 @@
 				4A261A6A5CA7DEF430E9EFA9E7DCDF5E /* ILPDFWidgetAnnotationView.m */,
 				A782D16984D0C6478B975733121BC2B8 /* Support Files */,
 			);
+			name = ILPDFKit;
 			path = ILPDFKit;
 			sourceTree = "<group>";
 		};
@@ -463,6 +464,7 @@
 				890D575E6CF65584D08FF3D64444DCA8 /* Resources */,
 				281AFBE843E8B389EEF82945AE3A5AB2 /* Support Files */,
 			);
+			name = Eureka;
 			path = Eureka;
 			sourceTree = "<group>";
 		};
@@ -537,82 +539,63 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		46A8F015FF72B8873D7849C18F597FD0 /* Headers */ = {
+		380423700B39D73F28939C94CA182E08 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C15E44B6003282E5BE62A3D32D85A2A /* Eureka-umbrella.h in Headers */,
+				07C0E1B303CDA3055827C429352E4763 /* Eureka-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8BC8F9AD2D37C5075D7FD06DEAB114F6 /* Headers */ = {
+		6A5F20E08DE94C0836A0A9ED25B1C605 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC9FA1F088EBA3873C420DCADDD3E33B /* Pods-popsmoke-umbrella.h in Headers */,
+				08C0622082BE3ABEA2BCF55645FBE538 /* Pods-popsmoke-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F16A0A5258F2B8EE5056088B84EF5CF3 /* Headers */ = {
+		F633618BB9CCEF1F18C6613FF6C7731C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F47D56CB10F5749946C3EAF36226DCE /* ILPDFArray.h in Headers */,
-				409F854D0E4E93B9B87D25A36790DFBE /* ILPDFDictionary.h in Headers */,
-				B0EDDC8F692CA781D3D292BA50EAE92E /* ILPDFDocument.h in Headers */,
-				CD9C64EC77FC24F6CC3A13781DB65425 /* ILPDFForm.h in Headers */,
-				FF50A156244F9293864036077B039BD2 /* ILPDFFormButtonField.h in Headers */,
-				FCD68F9D09DC45BF99C0C5A642C31DA3 /* ILPDFFormChoiceField.h in Headers */,
-				4481DA169650163649760DEF1B024098 /* ILPDFFormContainer.h in Headers */,
-				C7CDCF70B8AC0E79A38E1DDDB2D9DC3E /* ILPDFFormSignatureField.h in Headers */,
-				BD6289F8EAB7B892656DE97035EB984D /* ILPDFFormTextField.h in Headers */,
-				2DB4B95698BE06240687E05B6D4146BB /* ILPDFKit-umbrella.h in Headers */,
-				60CE7809D84AE3546C329F49B9A5CC90 /* ILPDFKit.h in Headers */,
-				F81BBAD35E3095048B7331A4FE61A388 /* ILPDFName.h in Headers */,
-				8A414B24776F28D731B81E50CCD457A2 /* ILPDFNull.h in Headers */,
-				62461E1AE08A42FDFE45468063125331 /* ILPDFNumber.h in Headers */,
-				F937E2005D34828CC2E7194689DA7546 /* ILPDFObject.h in Headers */,
-				8437DB9006B3307DE47EAF11E52E21AF /* ILPDFObjectParser.h in Headers */,
-				372B3CE67A785D44D118A64F842577C4 /* ILPDFPage.h in Headers */,
-				0E059091C3520C4884751C4C0AA00085 /* ILPDFSerializer.h in Headers */,
-				A02C7158F19AACF3338714F3E01263F4 /* ILPDFStream.h in Headers */,
-				629D0E429D121D2DF247C8EB46325E0D /* ILPDFString.h in Headers */,
-				A1C9CC38A58B6F9665F7FFB8428ACA52 /* ILPDFUtility.h in Headers */,
-				2FC85028E55C625418DE34DF1006E6AA /* ILPDFView.h in Headers */,
-				443D609AC2A51A834BD8D04EF54747DD /* ILPDFViewController.h in Headers */,
-				BBB8A6E0E1766DF3D4EAEE509A1733B7 /* ILPDFWidgetAnnotationView.h in Headers */,
+				B28019C82567D30E055C30506D3E1B6E /* ILPDFArray.h in Headers */,
+				467B76C8FE82774E4B2329DE997868CF /* ILPDFDictionary.h in Headers */,
+				BD9DA9B71AFF8AB4F8AFE637BEB3E838 /* ILPDFDocument.h in Headers */,
+				D66A42F368FA210AE2DA7D83301906E0 /* ILPDFForm.h in Headers */,
+				5FD26A590F931040EE62E7C842D8B0D8 /* ILPDFFormButtonField.h in Headers */,
+				43DA26FF2638202E70513A0E0482F71B /* ILPDFFormChoiceField.h in Headers */,
+				9CDBAE9B6102007F1A9107978AA18C7C /* ILPDFFormContainer.h in Headers */,
+				E72156DDE49863B8294FBB45054F6DDE /* ILPDFFormSignatureField.h in Headers */,
+				C16ED425F997743940AF643D85FAA219 /* ILPDFFormTextField.h in Headers */,
+				F12023B5AEC4D1B1AE99FE88B0E5F087 /* ILPDFKit-umbrella.h in Headers */,
+				CF0A08F0F5575A614C3F2555CD516695 /* ILPDFKit.h in Headers */,
+				1AE64F5755FAA61E702EB3EFC724FDE4 /* ILPDFName.h in Headers */,
+				BB0D693D4BE99F09A6B8400EA5805814 /* ILPDFNull.h in Headers */,
+				1D814D4D57B7BBC24EB564E8813525E4 /* ILPDFNumber.h in Headers */,
+				721FDB022114135D18FC43CE6EEC6F28 /* ILPDFObject.h in Headers */,
+				663D883D78C1EA3EBC73ACAA2EFCA0EE /* ILPDFObjectParser.h in Headers */,
+				C04EED96C46CB9FB0CDA0827BA71D18F /* ILPDFPage.h in Headers */,
+				A1156578184448640B1BE97B07734A43 /* ILPDFSerializer.h in Headers */,
+				652CDE8987C676E2842FE57D4C7EBB6D /* ILPDFStream.h in Headers */,
+				A90B8FDF986854FC59F2F6D410F6A261 /* ILPDFString.h in Headers */,
+				890B1215C79ECEE103997B5F2C308638 /* ILPDFUtility.h in Headers */,
+				1A93C16E9103C8BEA772AF8E7A7E6280 /* ILPDFView.h in Headers */,
+				CA9621BACB59DE6CE1E96A543F69B493 /* ILPDFViewController.h in Headers */,
+				F664E4F0DACA46282265CCE37A2B7B6D /* ILPDFWidgetAnnotationView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1B4DDAD256072DBCEED512D3EFCDDDB4 /* Pods-popsmoke */ = {
+		0FD5B749751EAE29FAE355FB9DBD3FBA /* ILPDFKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9AEA245848FE6CF58FC1F80D6003C6C0 /* Build configuration list for PBXNativeTarget "Pods-popsmoke" */;
+			buildConfigurationList = CEEBD86A0D551174DEF88D38ECA62A64 /* Build configuration list for PBXNativeTarget "ILPDFKit" */;
 			buildPhases = (
-				188EC3134B46A9407D67D4B32980CCFA /* Sources */,
-				76C04754C85BCB0587D96439B2A84AF4 /* Frameworks */,
-				8BC8F9AD2D37C5075D7FD06DEAB114F6 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				462DDD7173F456E38AC157F8753CF60F /* PBXTargetDependency */,
-				20D0EB7AC0C8BDFB6C0B28DE32D3EB9C /* PBXTargetDependency */,
-			);
-			name = "Pods-popsmoke";
-			productName = "Pods-popsmoke";
-			productReference = 7972B657282B3411A3121E9C05061B82 /* Pods_popsmoke.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		665E2A3B777A58B7E2FA4BA7EC7769EA /* ILPDFKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C0250DCFE1D4FA3E26A80E165CE8725E /* Build configuration list for PBXNativeTarget "ILPDFKit" */;
-			buildPhases = (
-				19E7BA90E07F4C0DC51DB07099925089 /* Sources */,
-				D6D85903BCBF2B16548F7DEAC31A9131 /* Frameworks */,
-				F16A0A5258F2B8EE5056088B84EF5CF3 /* Headers */,
+				736F5F779EAF534319213D8EE25A9919 /* Sources */,
+				F59F4F3EFC0FA0022372E17F344C6BA8 /* Frameworks */,
+				F633618BB9CCEF1F18C6613FF6C7731C /* Headers */,
 			);
 			buildRules = (
 			);
@@ -623,14 +606,33 @@
 			productReference = EC2A8D0250AA312C697910C453D48ED2 /* ILPDFKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		873B1A0D84F1FF2C0ECD8A2440705B43 /* Eureka */ = {
+		276660AD5146684E1A7DBC06BFC5D961 /* Pods-popsmoke */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE17FD22F754341BD6DBF1E339AAF8A4 /* Build configuration list for PBXNativeTarget "Eureka" */;
+			buildConfigurationList = 55696CD1BA29520FFC2205DECA0115D5 /* Build configuration list for PBXNativeTarget "Pods-popsmoke" */;
 			buildPhases = (
-				C43AAC6F8D19904C0EB7666E96B8B1D6 /* Sources */,
-				CE2B83EC0FCE8537BA433BCAA8B14FF5 /* Frameworks */,
-				52DC994007D06EF6E18A6327FC53EFFE /* Resources */,
-				46A8F015FF72B8873D7849C18F597FD0 /* Headers */,
+				6A5EF3CD119E66BECB0E37064D100558 /* Sources */,
+				621E9C983B53DDCA046F7E8DFCC61500 /* Frameworks */,
+				6A5F20E08DE94C0836A0A9ED25B1C605 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0507B73E85FF53A174D3DE922C7527D /* PBXTargetDependency */,
+				CD590062F4EDE819B89BC517BBF8DEC1 /* PBXTargetDependency */,
+			);
+			name = "Pods-popsmoke";
+			productName = "Pods-popsmoke";
+			productReference = 7972B657282B3411A3121E9C05061B82 /* Pods_popsmoke.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EE774F234E810C0DD8263855D7A1A166 /* Eureka */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38A5E606898250553937D75BD0BB4518 /* Build configuration list for PBXNativeTarget "Eureka" */;
+			buildPhases = (
+				78DF18C3DC3D8EA36BB51849CE12500D /* Sources */,
+				D0DD60D6B4C850E3EDCAAF797E1D4A6A /* Frameworks */,
+				34A77CC47F264C123033C4E680CA28E0 /* Resources */,
+				380423700B39D73F28939C94CA182E08 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -649,14 +651,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					1B4DDAD256072DBCEED512D3EFCDDDB4 = {
-						LastSwiftMigration = 0810;
-					};
-					873B1A0D84F1FF2C0ECD8A2440705B43 = {
-						LastSwiftMigration = 0810;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -670,147 +664,215 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				873B1A0D84F1FF2C0ECD8A2440705B43 /* Eureka */,
-				665E2A3B777A58B7E2FA4BA7EC7769EA /* ILPDFKit */,
-				1B4DDAD256072DBCEED512D3EFCDDDB4 /* Pods-popsmoke */,
+				EE774F234E810C0DD8263855D7A1A166 /* Eureka */,
+				0FD5B749751EAE29FAE355FB9DBD3FBA /* ILPDFKit */,
+				276660AD5146684E1A7DBC06BFC5D961 /* Pods-popsmoke */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		52DC994007D06EF6E18A6327FC53EFFE /* Resources */ = {
+		34A77CC47F264C123033C4E680CA28E0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1A551C55FCF0AAB8BE1CBBD05B73BC4 /* Eureka.bundle in Resources */,
+				3185C0AF2C79E04DDA0B76FD50D05561 /* Eureka.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		188EC3134B46A9407D67D4B32980CCFA /* Sources */ = {
+		6A5EF3CD119E66BECB0E37064D100558 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EE9E8561BC120679990B9472824700A /* Pods-popsmoke-dummy.m in Sources */,
+				D23CB5F1512A1AA56AF7BD915017784E /* Pods-popsmoke-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		19E7BA90E07F4C0DC51DB07099925089 /* Sources */ = {
+		736F5F779EAF534319213D8EE25A9919 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBB8BF916F7987CF6012C1C5FBF1E560 /* ILPDFArray.m in Sources */,
-				2CA7DD784E7461A325A7C9EB64E14A8F /* ILPDFDictionary.m in Sources */,
-				DF9AD2DEBA1DA64FC24C16DFD8FE1392 /* ILPDFDocument.m in Sources */,
-				9BA505C7EC041432D3ABBE58FBED3617 /* ILPDFForm.m in Sources */,
-				91DEA9BB97B764048501C3BDE7D0CD11 /* ILPDFFormButtonField.m in Sources */,
-				F53FE96D116C1B62BAE885A8A408414D /* ILPDFFormChoiceField.m in Sources */,
-				F1AA327203CDBC5A462F6E60B348D95B /* ILPDFFormContainer.m in Sources */,
-				8B03BFC33F0EC79684941687E3E975F8 /* ILPDFFormSignatureField.m in Sources */,
-				717B194C46439157FFA2C24D48651C2B /* ILPDFFormTextField.m in Sources */,
-				5F8F70DE6415A3F95D974FBABAA9494B /* ILPDFKit-dummy.m in Sources */,
-				A58F1085E3C355795A7AB64698FB319A /* ILPDFName.m in Sources */,
-				34B7DC92D8F8C86BA8ADC7F71D26AA72 /* ILPDFNull.m in Sources */,
-				AA637C505780FD3D9CAC036977EE76E1 /* ILPDFNumber.m in Sources */,
-				0A33E23970FB74BADA077C76A63ADDFC /* ILPDFObjectParser.m in Sources */,
-				7A4D5F8C29CBA33E139BF8BBBE890330 /* ILPDFPage.m in Sources */,
-				AF9ADF4358A984E49EAC36314B6E023E /* ILPDFSerializer.m in Sources */,
-				39C09650F85773B4BE14DE0D80DECB87 /* ILPDFStream.m in Sources */,
-				0E2B0F2591BCCC860712EE1EBB0C1DD6 /* ILPDFString.m in Sources */,
-				BE2AF7E9117DBDCF3613D527C476ACFC /* ILPDFUtility.m in Sources */,
-				6A2ADB55FB3683AF91BF54B8C9BC4258 /* ILPDFView.m in Sources */,
-				3B1B5FB542F59351EE3DED922BEDEDE9 /* ILPDFViewController.m in Sources */,
-				20D4363F1C932AAE0EB8AB41694ABE98 /* ILPDFWidgetAnnotationView.m in Sources */,
+				26C745E82887D1E0061316E1F3F83322 /* ILPDFArray.m in Sources */,
+				769D8839CF85F423B0DC441DED88C076 /* ILPDFDictionary.m in Sources */,
+				F46CFFB5B95AA5FC553C15A1AEBA014F /* ILPDFDocument.m in Sources */,
+				939CFADE0173CCC73C7BDCC22D17DC15 /* ILPDFForm.m in Sources */,
+				A83EB60FE479ECA3E510B82FD68E1974 /* ILPDFFormButtonField.m in Sources */,
+				D4DCB812EF0C361D56D86DB8E4748CFA /* ILPDFFormChoiceField.m in Sources */,
+				46E4958A0168E3B9323E2691413232C9 /* ILPDFFormContainer.m in Sources */,
+				5C7CD3732EF7833D56D4BF75B8666768 /* ILPDFFormSignatureField.m in Sources */,
+				F52FF858639D2C7030F77672DBF4DDB4 /* ILPDFFormTextField.m in Sources */,
+				F86C6091601F2271D8F5D7415BE96693 /* ILPDFKit-dummy.m in Sources */,
+				C070D528F3D2C64549E579FBB1712282 /* ILPDFName.m in Sources */,
+				016FE6D3CBBED0D64EC03707BB35B40D /* ILPDFNull.m in Sources */,
+				C45A122400FE773783B05466ED1CE8FD /* ILPDFNumber.m in Sources */,
+				7262A911457796B85FB0092C90BCF50D /* ILPDFObjectParser.m in Sources */,
+				A046977C46F5A93E349E95D83EC44454 /* ILPDFPage.m in Sources */,
+				36961169E639D1BE613A1C42AFA6195D /* ILPDFSerializer.m in Sources */,
+				057C2F5535DF957D0BA789C79A290BAC /* ILPDFStream.m in Sources */,
+				BDDCDE8EA5CEBB138DCA20C215F0456A /* ILPDFString.m in Sources */,
+				330D62440CE2773D0D4D802EEE1180B8 /* ILPDFUtility.m in Sources */,
+				0E65A142157699C5B0FC8574311DE098 /* ILPDFView.m in Sources */,
+				408350EBBA15504F8BD621BDA3EAF24B /* ILPDFViewController.m in Sources */,
+				D2EC9ACE9BD4AD0B38B3ECA668A91552 /* ILPDFWidgetAnnotationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C43AAC6F8D19904C0EB7666E96B8B1D6 /* Sources */ = {
+		78DF18C3DC3D8EA36BB51849CE12500D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1039256A7B0AFBEB51D1BCD1DE192C30 /* ActionSheetRow.swift in Sources */,
-				278DA7CAFEDFF0B3E479BF7310999C84 /* AlertRow.swift in Sources */,
-				43B9A00DB9436E7BD6D705E2872E26E8 /* BaseRow.swift in Sources */,
-				2AC217E55DBAE620E9B1F36F371DE4BF /* ButtonRow.swift in Sources */,
-				DC59E613604D47744BB4D92C5265B0EF /* ButtonRowWithPresent.swift in Sources */,
-				2A84006D7A3BDF4D776324C3AD9D9F2F /* Cell.swift in Sources */,
-				78808B8338BDEF0959D8B0F3DA3BA891 /* CellType.swift in Sources */,
-				549A01629691F7DB092B3F8176AECD68 /* CheckRow.swift in Sources */,
-				55582C1B0D02D5A84F1FBB731CDE35D9 /* Core.swift in Sources */,
-				AEA1BD08FC0BF44288F2B7B87C020AB3 /* DateFieldRow.swift in Sources */,
-				7614C1B751242708E332B18FF2684B19 /* DateInlineFieldRow.swift in Sources */,
-				6EA26283A0E32D5594BDA55FF3F704A0 /* DateInlineRow.swift in Sources */,
-				68DFF9A114D3807FABAAC3CF260F21BE /* DatePickerRow.swift in Sources */,
-				2AFAE16062416674764562F22E85FB88 /* DateRow.swift in Sources */,
-				C3C0FF320CC9DE76423E6CDF1F8058EE /* DecimalFormatter.swift in Sources */,
-				CD59136C12F97B812062B4AA0862AEC0 /* Eureka-dummy.m in Sources */,
-				498223C7F76DB7D28AE38C4B78829F9A /* FieldRow.swift in Sources */,
-				2F005065D096AE7E2DCEE8C7FAB91A2E /* FieldsRow.swift in Sources */,
-				98B82309DB2678065E73E3120988819A /* Form.swift in Sources */,
-				F8E3F64EA6FEDF34A2D5F5DB83EF044E /* GenericMultipleSelectorRow.swift in Sources */,
-				7B9DC82FC3E433E06CC2FFBDDFE080B2 /* HeaderFooterView.swift in Sources */,
-				AB3126F1CC735C7FD7D09DB7392FD4CA /* Helpers.swift in Sources */,
-				114B8967240AF21C565B7645215F8F44 /* InlineRowType.swift in Sources */,
-				520E9F67AFBBC78EBE66297B8D52C6D2 /* LabelRow.swift in Sources */,
-				D38C4C82C4397D964431454DB9BA6B98 /* ListCheckRow.swift in Sources */,
-				24B52E4528FE1CA5BBB438CF11441FA5 /* MultipleSelectorRow.swift in Sources */,
-				C60F11C7D5479F0153B43DC78B6DA97D /* MultipleSelectorViewController.swift in Sources */,
-				5CB85FC0E9168E9EC0CCD33A63FCBC1A /* NavigationAccessoryView.swift in Sources */,
-				004C8AAA5143637A4360B55CAD850E4F /* Operators.swift in Sources */,
-				79E5ACA311F3FD7FF5A52E73A822CE2D /* OptionsRow.swift in Sources */,
-				130795E873137DA419183E8BBC2D2F9B /* PickerInlineRow.swift in Sources */,
-				6FBB071D9E7FE75CB93CD0F7A12CB69D /* PickerRow.swift in Sources */,
-				8036FBD9863FF1D763DD7A646B05CB5E /* PopoverSelectorRow.swift in Sources */,
-				3991DF903EE4C5D986052514554B67F6 /* PresenterRowType.swift in Sources */,
-				30AAD30F48EB6531526A83E529E716BA /* Protocols.swift in Sources */,
-				1D2C3F458A7EC5E133380C552CF8DA90 /* PushRow.swift in Sources */,
-				4DF81955654DBE4E02E806802D1D49B0 /* Row.swift in Sources */,
-				ED6498AD627581D3216938680A6D4614 /* RowControllerType.swift in Sources */,
-				B5D1D75F4DFB50ECDBD359388B708E4A /* RowProtocols.swift in Sources */,
-				0E7232F55A0147C548BF0C1D91AD29DC /* RowType.swift in Sources */,
-				5D49089662AC20A1CB3F05D33635229D /* RuleClosure.swift in Sources */,
-				311CF93EE9E301E3FAFD46BA0A62E3B8 /* RuleEmail.swift in Sources */,
-				D042F97BD6E9018B1E6AF3B78695F2F6 /* RuleLength.swift in Sources */,
-				BE3AFC46419AC438FE1D409B7B0BFED4 /* RuleRange.swift in Sources */,
-				C812952EC34CF6C37FA7B066870741B4 /* RuleRegExp.swift in Sources */,
-				653F5F8E52EED5D8B9CF3FBDB0712CDD /* RuleRequired.swift in Sources */,
-				4EE521ADDD025747F450378FDDE95372 /* RuleURL.swift in Sources */,
-				2ACBF08CF311E49CB4BA1F75D7F7209C /* Section.swift in Sources */,
-				14085738C1B57648ADD19DDB9E7AA93F /* SegmentedRow.swift in Sources */,
-				2395F5D2B2E9E8CDCC9B2C03F31A59B6 /* SelectableRowType.swift in Sources */,
-				05E44C82FAED17D346EE349295CF4603 /* SelectableSection.swift in Sources */,
-				598FA42A947DB0A73BF837326DFDB13C /* SelectorAlertController.swift in Sources */,
-				402EA4A022E376724E25504C36C522CD /* SelectorRow.swift in Sources */,
-				B8E82D98499955A6B39BDBCB56E048D8 /* SelectorViewController.swift in Sources */,
-				C4E1ACB5AED0442E0212211FAFDA7975 /* SliderRow.swift in Sources */,
-				FF23400BEFE014C4818111FB1F2EB3EB /* StepperRow.swift in Sources */,
-				F3247CD95148E670D550CC747A769404 /* SwitchRow.swift in Sources */,
-				37E2FFC149E2115469E943E6953CDE15 /* TextAreaRow.swift in Sources */,
-				4325E0AC8D1557CE015B4F35423277DA /* Validation.swift in Sources */,
+				D32A19D6DCF9C97FF52A32064E98D31B /* ActionSheetRow.swift in Sources */,
+				7EFE374DF078F735CF525C6AC1251F71 /* AlertRow.swift in Sources */,
+				2894B1B84AD8464300463F01D6671515 /* BaseRow.swift in Sources */,
+				2EA998FF3BA8B43AD2CBFD20217784EB /* ButtonRow.swift in Sources */,
+				A43EECA0E036098BD01ED456F43799D2 /* ButtonRowWithPresent.swift in Sources */,
+				C9DF0516E214282A15FF10AA75FE34DF /* Cell.swift in Sources */,
+				60B7F597141DB5B2D19558DF01DFC1B8 /* CellType.swift in Sources */,
+				DC9647DB284A9DFF08032C74B129C751 /* CheckRow.swift in Sources */,
+				82FC241E5B93AEF32FC2765F8CC8F2E7 /* Core.swift in Sources */,
+				818B729716B3A3BC2E50D998F65AA116 /* DateFieldRow.swift in Sources */,
+				EA441B0FF3815E28448729890243DC3D /* DateInlineFieldRow.swift in Sources */,
+				F1D480A83F3306E5912A23EC45A2E4C4 /* DateInlineRow.swift in Sources */,
+				E173F29FA92E88C68BC87C595774AE4B /* DatePickerRow.swift in Sources */,
+				F65CDA7D8F8B9EF18F5B20E5C706F3EC /* DateRow.swift in Sources */,
+				CCE47794953C5D52EA2B77C07D5DAE6B /* DecimalFormatter.swift in Sources */,
+				D44D50A0F4B440E2F734B40650D8D3E6 /* Eureka-dummy.m in Sources */,
+				7A8FBDE62A4BD3D0C375A6160FBE0ED3 /* FieldRow.swift in Sources */,
+				8EB17810A5730131D22B04871EB2EF86 /* FieldsRow.swift in Sources */,
+				380C785F98D63C7BD5ED39053D6562E9 /* Form.swift in Sources */,
+				DEA0ED61EE365AA71BD69BEC1A499A6A /* GenericMultipleSelectorRow.swift in Sources */,
+				362CEB31FF646FFA058013C6CC73DABC /* HeaderFooterView.swift in Sources */,
+				197157CE3C03C879F25B541359548B9E /* Helpers.swift in Sources */,
+				A4871ECA5485794F6AB396141847E8E7 /* InlineRowType.swift in Sources */,
+				378D202D64D7A141AB67663E789FA54D /* LabelRow.swift in Sources */,
+				B0C3C583B9E00FF6C234619045E1AE99 /* ListCheckRow.swift in Sources */,
+				1962E976387CAEF3C3FEBA706DE8338A /* MultipleSelectorRow.swift in Sources */,
+				081C9655DCBDE20D3CD2928B6D27B84F /* MultipleSelectorViewController.swift in Sources */,
+				1BF69D3262D9E7BCE3AE768533161CFE /* NavigationAccessoryView.swift in Sources */,
+				85FF667A47F8D4DE82837B244C57B3C8 /* Operators.swift in Sources */,
+				4E52362D826CC8B93BBE8B5864066C82 /* OptionsRow.swift in Sources */,
+				5EC7334F080BE482D98AD5C076BD7D4C /* PickerInlineRow.swift in Sources */,
+				BD7345A2B1BCE6CA4C291E705826E1C3 /* PickerRow.swift in Sources */,
+				66D2023A877EBFD52E4E1C15ED887527 /* PopoverSelectorRow.swift in Sources */,
+				EE133A6D74F712F3352268F720BC1717 /* PresenterRowType.swift in Sources */,
+				8B3D40F6022D6E6BDF38B5545B38A2C4 /* Protocols.swift in Sources */,
+				188D37BE684D152DBF28D1A19CB4F0BA /* PushRow.swift in Sources */,
+				0663F21E91FD40DD55F248D70E2B6F63 /* Row.swift in Sources */,
+				17CF21D19CC486B52F9025A0FB15B667 /* RowControllerType.swift in Sources */,
+				4A37980C75DCCB4309E5A4D39633BF05 /* RowProtocols.swift in Sources */,
+				AA509F0AC2FB6CB8C18934454F8FA0F6 /* RowType.swift in Sources */,
+				961C9FE5FADC72D0A1DB876AF0834739 /* RuleClosure.swift in Sources */,
+				A71869CF6BD3EA25E59BF11021D67746 /* RuleEmail.swift in Sources */,
+				274A0946844B4BDEAA9C66D16F4D6638 /* RuleLength.swift in Sources */,
+				EAF1099915C9BFC7DB0705844B8A62F3 /* RuleRange.swift in Sources */,
+				946DBE5935C9D90DAC22550F3EBAF9D1 /* RuleRegExp.swift in Sources */,
+				2AC11AADC16DD50F3C122E080027B0B0 /* RuleRequired.swift in Sources */,
+				0A20BA0694544A723D19F3B31497AA22 /* RuleURL.swift in Sources */,
+				5584C6BA4CCF3F5F4D266D6764A3783B /* Section.swift in Sources */,
+				A74E045E42BCDD35A6E35C5F170321B4 /* SegmentedRow.swift in Sources */,
+				2DF1D2A7FDCB8403D76162E5E94D471C /* SelectableRowType.swift in Sources */,
+				18EB997AC9E1DB890F564886BD402EAD /* SelectableSection.swift in Sources */,
+				A6ADA5015850563CC2082C85F91BDAFD /* SelectorAlertController.swift in Sources */,
+				B0B6E7AF3530C966687B5A9B54656FE7 /* SelectorRow.swift in Sources */,
+				39B9AF905697B761591D02D5E02FFCB3 /* SelectorViewController.swift in Sources */,
+				7A96647E526A36C9CBF714EE9661BBB3 /* SliderRow.swift in Sources */,
+				6FA79DECFD53550668E4A61AF0B08E68 /* StepperRow.swift in Sources */,
+				0CF04E8CACF30C49068A2A23FDD62FBB /* SwitchRow.swift in Sources */,
+				4C0C430C74FD0ADC96D90E58F9AB37F4 /* TextAreaRow.swift in Sources */,
+				034F80EC837A155A77F38361B6BD6E67 /* Validation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		20D0EB7AC0C8BDFB6C0B28DE32D3EB9C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ILPDFKit;
-			target = 665E2A3B777A58B7E2FA4BA7EC7769EA /* ILPDFKit */;
-			targetProxy = C5490A60B37C5906D4368DE484858C53 /* PBXContainerItemProxy */;
-		};
-		462DDD7173F456E38AC157F8753CF60F /* PBXTargetDependency */ = {
+		C0507B73E85FF53A174D3DE922C7527D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Eureka;
-			target = 873B1A0D84F1FF2C0ECD8A2440705B43 /* Eureka */;
-			targetProxy = CD22693548BEAF12F356F361648BBDB7 /* PBXContainerItemProxy */;
+			target = EE774F234E810C0DD8263855D7A1A166 /* Eureka */;
+			targetProxy = 64B3EBC8C1BC13F55D09AFC79ACE9AC8 /* PBXContainerItemProxy */;
+		};
+		CD590062F4EDE819B89BC517BBF8DEC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ILPDFKit;
+			target = 0FD5B749751EAE29FAE355FB9DBD3FBA /* ILPDFKit */;
+			targetProxy = AB2094F564FD462FD86E8303FF17A22A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		034014829C1E4434983CF3A690C12017 /* Debug */ = {
+		05C76D25558C2E7F2B85746373932968 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8E2654100E5CB2FBF248C9B821B2FE5 /* Pods-popsmoke.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-popsmoke/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-popsmoke/Pods-popsmoke.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_popsmoke;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		2027CE8814A12015C76E5F21355C4803 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B21056A332FA48FC1DDB7F63B7B32DF /* Eureka.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Eureka/Eureka-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Eureka/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Eureka/Eureka.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Eureka;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -828,6 +890,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -847,114 +910,19 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		228012454CB74D2E012AF145E9D8F055 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD0574AB5E476F2A3C1C3D0E2A15CC7C /* ILPDFKit.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/ILPDFKit/ILPDFKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ILPDFKit/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ILPDFKit/ILPDFKit.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = ILPDFKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		6E770C54F2D04869304A6C3E69866A9C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06D91A3B2E40CABFCCC0AC90A3412518 /* Pods-popsmoke.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-popsmoke/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-popsmoke/Pods-popsmoke.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_popsmoke;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		77DB107065BB6981B4C56E43177BC0EE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8E2654100E5CB2FBF248C9B821B2FE5 /* Pods-popsmoke.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-popsmoke/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-popsmoke/Pods-popsmoke.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_popsmoke;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		BC8DC3A854D565F912B76A6C3221CA92 /* Release */ = {
+		6E4CBAD6C31766BDAE04EBD1910DCD8F /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4B21056A332FA48FC1DDB7F63B7B32DF /* Eureka.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -980,7 +948,7 @@
 			};
 			name = Release;
 		};
-		C7E474A03CAE21F1CB6046E7344C59BD /* Release */ = {
+		B7324857C38B065FEB1EEE3105C2367A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -998,6 +966,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1012,17 +981,88 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		CC675C9E700B044114F9B024CC507140 /* Debug */ = {
+		B83DEF6F89AAF95FAED82E14379B228E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FD0574AB5E476F2A3C1C3D0E2A15CC7C /* ILPDFKit.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ILPDFKit/ILPDFKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ILPDFKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ILPDFKit/ILPDFKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ILPDFKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BD830EEE2ADA394FA89FA56F471B4784 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06D91A3B2E40CABFCCC0AC90A3412518 /* Pods-popsmoke.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-popsmoke/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-popsmoke/Pods-popsmoke.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_popsmoke;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DD5381DF5F9FBE51E6AFF3F7E53DBF5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD0574AB5E476F2A3C1C3D0E2A15CC7C /* ILPDFKit.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
@@ -1041,36 +1081,6 @@
 				PRODUCT_NAME = ILPDFKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DC8D47EE59AC1899EDC9037E221C10FF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B21056A332FA48FC1DDB7F63B7B32DF /* Eureka.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Eureka/Eureka-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Eureka/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Eureka/Eureka.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Eureka;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1084,35 +1094,35 @@
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				034014829C1E4434983CF3A690C12017 /* Debug */,
-				C7E474A03CAE21F1CB6046E7344C59BD /* Release */,
+				59B042A655B7C20CBAB90E385BF4E4C7 /* Debug */,
+				B7324857C38B065FEB1EEE3105C2367A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9AEA245848FE6CF58FC1F80D6003C6C0 /* Build configuration list for PBXNativeTarget "Pods-popsmoke" */ = {
+		38A5E606898250553937D75BD0BB4518 /* Build configuration list for PBXNativeTarget "Eureka" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E770C54F2D04869304A6C3E69866A9C /* Debug */,
-				77DB107065BB6981B4C56E43177BC0EE /* Release */,
+				2027CE8814A12015C76E5F21355C4803 /* Debug */,
+				6E4CBAD6C31766BDAE04EBD1910DCD8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C0250DCFE1D4FA3E26A80E165CE8725E /* Build configuration list for PBXNativeTarget "ILPDFKit" */ = {
+		55696CD1BA29520FFC2205DECA0115D5 /* Build configuration list for PBXNativeTarget "Pods-popsmoke" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CC675C9E700B044114F9B024CC507140 /* Debug */,
-				228012454CB74D2E012AF145E9D8F055 /* Release */,
+				BD830EEE2ADA394FA89FA56F471B4784 /* Debug */,
+				05C76D25558C2E7F2B85746373932968 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CE17FD22F754341BD6DBF1E339AAF8A4 /* Build configuration list for PBXNativeTarget "Eureka" */ = {
+		CEEBD86A0D551174DEF88D38ECA62A64 /* Build configuration list for PBXNativeTarget "ILPDFKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DC8D47EE59AC1899EDC9037E221C10FF /* Debug */,
-				BC8DC3A854D565F912B76A6C3221CA92 /* Release */,
+				DD5381DF5F9FBE51E6AFF3F7E53DBF5D /* Debug */,
+				B83DEF6F89AAF95FAED82E14379B228E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
