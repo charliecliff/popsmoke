@@ -98,6 +98,17 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)initWithPath:(NSString *)path NS_DESIGNATED_INITIALIZER;
 
 /**---------------------------------------------------------------------------------------
+ * @name Saving a ILPDFDocument to Disk
+ *  ---------------------------------------------------------------------------------------
+ */
+
+/** Creates a new instance of ILPDFDocument.
+ 
+ @param path Points to PDF file to save.
+ */
+- (void)saveToPath:(NSString *)path;
+
+/**---------------------------------------------------------------------------------------
  * @name Finding Document Structure
  *  ---------------------------------------------------------------------------------------
  */

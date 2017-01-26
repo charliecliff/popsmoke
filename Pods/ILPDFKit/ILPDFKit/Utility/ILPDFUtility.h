@@ -67,12 +67,21 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (CGPDFDocumentRef)createPDFDocumentRefFromPath:(NSString *)pathToPdfDoc CF_RETURNS_NOT_RETAINED;
 
+/**---------------------------------------------------------------------------------------
+ * @name Saving a PDF Document
+ *  ---------------------------------------------------------------------------------------
+ */
+
+/** Saves a PDF Document.
+ @param pdfDocument
+ @param pathToPdfDoc
+ */
++ (void)savePDFDocument:(CGPDFDocumentRef *)pdfDocument toPath:(NSString *)pathToPdfDoc;
 
 /**---------------------------------------------------------------------------------------
  * @name Character Sets and Encodings
  *  ---------------------------------------------------------------------------------------
  */
-
 
 /**
  @return The whitespace character set as defined by the PDF standard.

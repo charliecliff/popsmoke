@@ -1,0 +1,17 @@
+convert -density 1200 -background none -resize 20x20 AppIcon.png 20_1.png
+convert -density 1200 -background none -resize 29x29 AppIcon.png 29_1.png
+convert -density 1200 -background none -resize 40x40 AppIcon.png 40_1.png
+convert -density 1200 -background none -resize 40x40 AppIcon.png 40_2.png
+convert -density 1200 -background none -resize 40x40 AppIcon.png 40_3.png
+convert -density 1200 -background none -resize 60x60 AppIcon.png 60_1.png
+convert -density 1200 -background none -resize 58x58 AppIcon.png 58_1.png
+convert -density 1200 -background none -resize 58x58 AppIcon.png 58_2.png
+convert -density 1200 -background none -resize 76x76 AppIcon.png 76_1.png
+convert -density 1200 -background none -resize 80x80 AppIcon.png 80_1.png
+convert -density 1200 -background none -resize 80x80 AppIcon.png 80_2.png
+convert -density 1200 -background none -resize 87x87 AppIcon.png 87_1.png
+convert -density 1200 -background none -resize 120x120 AppIcon.png 120_1.png
+convert -density 1200 -background none -resize 120x120 AppIcon.png 120_2.png
+convert -density 1200 -background none -resize 152x152 AppIcon.png 152_1.png
+convert -density 1200 -background none -resize 167x167 AppIcon.png 167_1.png
+convert -density 1200 -background none -resize 180x180 AppIcon.png 180_1.png

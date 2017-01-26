@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>documents</key>
+	<array>
+		<dict>
+			<key>type</key>
+			<string>form</string>
+			<key>form_type</key>
+			<string>da31</string>
+			<key>name</key>
+			<string>DA 31</string>
+			<key>icon</key>
+			<string>icon_form_empty</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>form</string>
+			<key>form_type</key>
+			<string>trips</string>
+			<key>name</key>
+			<string>TRiPS</string>
+			<key>icon</key>
+			<string>icon_form_empty</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>attachment</string>
+			<key>attachment_type</key>
+			<string>insurance</string>
+			<key>name</key>
+			<string>Insurance Card</string>
+			<key>icon</key>
+			<string>icon_id_empty</string>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>attachment</string>
+			<key>attachment_type</key>
+			<string>drivers_license</string>
+			<key>name</key>
+			<string>Drivers License</string>
+			<key>icon</key>
+			<string>icon_id_empty</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -30,10 +30,15 @@ let da31_pdf_date_from			= "Date-From"
 
 class DA31PDFFiller: NSObject {
 
-	let document = ILPDFDocument(resource:"DA_31")
-
-	func fillPDFQithFormData(dictionary: [String: Any?]) {
+	class func fillPDFWithFormData(dictionary: [String: Any?]) -> ILPDFDocument? {
 		
+		// Generate PDF Form
+		guard let path = Bundle.main.path(forResource: "DA_31", ofType: "pdf") else {
+			return nil
+		}
+		let document = ILPDFDocument(path: path)
+
+		// Fill out the PDF
 		if let controlNumber = dictionary[da31_control_number] as? Int {
 			document.forms!.setValue(String(controlNumber), forFormWithName: da31_pdf_control_number)
 		}
@@ -118,20 +123,45 @@ class DA31PDFFiller: NSObject {
 		if let rank = dictionary[personal_info_rank] as? String {
 			document.forms!.setValue(rank, forFormWithName: da31_pdf_rank)
 		}
+		
+		// Return PDF Form
+		let data = document.savedStaticPDFData()
+		let savedVCDocument = ILPDFDocument(data: data)
+		return savedVCDocument
 	}
 	
 	class func fullNameFrom(firstName:String, middleInitial: String, lastName: String) -> String {
-		
 		return "\(lastName), \(firstName) \(middleInitial)."
 	}
 	
 	class func addressFrom(street:String, city: String, state: String, zip: String, phoneNumber: String) -> String {
-		
 		return "\(street), \(city) \(state), \(zip), \(phoneNumber)"
 	}
 	
 	class func stationFrom(station:String, orgn: String, phone: String) -> String {
-		
 		return "\(station), \(orgn) \(phone)"
+	}
+	
+	class func createNewPDFFile() -> String? {
+	
+		let path = Bundle.main.path(forResource: "DA_31", ofType: "pdf")
+		guard let doumentDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first as String? else {
+			return nil
+		}
+		guard let uuid = CFUUIDCreateString(nil, CFUUIDCreate(nil)) else {
+			return nil
+		}
+		guard let  destinationPath = doumentDirectoryPath.appending("/\(uuid).pdf") as String? else {
+			return nil
+		}
+		do {
+			try FileManager.default.copyItem(atPath:path!, toPath:destinationPath)
+			return destinationPath
+		}
+		catch let error as NSError {
+			print("Ooops! Something went wrong: \(error)")
+			assert(false)
+		}
+		return nil
 	}
 }

@@ -8,19 +8,37 @@
 
 /* Begin PBXBuildFile section */
 		9B67C06752341A3162C34B41 /* Pods_popsmoke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC98E59EDB289071AD09144 /* Pods_popsmoke.framework */; };
+		DA00512D1E37ABDA008E7035 /* PSPacketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00512C1E37ABDA008E7035 /* PSPacketViewController.swift */; };
+		DA0051321E37AEC3008E7035 /* PSDocumentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0051311E37AEC3008E7035 /* PSDocumentCollectionViewCell.swift */; };
+		DA0051361E37B36F008E7035 /* PSDocumentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA0051351E37B36F008E7035 /* PSDocumentCollectionViewCell.xib */; };
+		DA00513A1E37B743008E7035 /* PSPacketUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0051391E37B743008E7035 /* PSPacketUtilities.swift */; };
+		DA00513E1E37C8CB008E7035 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA00513D1E37C8CB008E7035 /* Icons.xcassets */; };
+		DA01F0141E392D4C00B7FB04 /* UILabel+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01F0131E392D4C00B7FB04 /* UILabel+Size.swift */; };
+		DA01F0171E39617C00B7FB04 /* PSPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01F0161E39617C00B7FB04 /* PSPacket.swift */; };
+		DA01F0191E3961D100B7FB04 /* PSDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01F0181E3961D100B7FB04 /* PSDocument.swift */; };
+		DA01F01B1E39A9C700B7FB04 /* UIViewController+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01F01A1E39A9C700B7FB04 /* UIViewController+Transition.swift */; };
+		DA01F01D1E39AA9100B7FB04 /* PSPDFContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01F01C1E39AA9100B7FB04 /* PSPDFContainerViewController.swift */; };
+		DA01F01F1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA01F01E1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard */; };
+		DA01F0221E39AC6E00B7FB04 /* DA31FormFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01F0211E39AC6E00B7FB04 /* DA31FormFactory.swift */; };
+		DA01F0281E39ACA700B7FB04 /* DA31_Packet.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA01F0251E39ACA700B7FB04 /* DA31_Packet.plist */; };
+		DA01F0291E39ACA700B7FB04 /* DA_31.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DA01F0271E39ACA700B7FB04 /* DA_31.pdf */; };
+		DA01F02B1E39ACF800B7FB04 /* PSFormViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01F02A1E39ACF800B7FB04 /* PSFormViewControllerFactory.swift */; };
+		DA01F02D1E39AE9000B7FB04 /* PSPDFContainerViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01F02C1E39AE8F00B7FB04 /* PSPDFContainerViewFactory.swift */; };
+		DA01F02F1E39B42700B7FB04 /* PSPacketViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01F02E1E39B42700B7FB04 /* PSPacketViewFactory.swift */; };
+		DA01F0311E39B5AA00B7FB04 /* PSFormContainerViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01F0301E39B5AA00B7FB04 /* PSFormContainerViewFactory.swift */; };
+		DA01F0331E39B9D700B7FB04 /* PSDocumentViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01F0321E39B9D700B7FB04 /* PSDocumentViewFactory.swift */; };
+		DA0B26871E362A62000CC2DC /* PSMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B26861E362A62000CC2DC /* PSMainViewController.swift */; };
+		DA0B26891E362A6D000CC2DC /* PSMainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */; };
 		DA5007F31E28BBA80038A5E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5007F21E28BBA80038A5E8 /* AppDelegate.swift */; };
-		DA5007F51E28BBA80038A5E8 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5007F41E28BBA80038A5E8 /* MasterViewController.swift */; };
-		DA5007F71E28BBA80038A5E8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5007F61E28BBA80038A5E8 /* DetailViewController.swift */; };
-		DA5007FA1E28BBA80038A5E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5007F81E28BBA80038A5E8 /* Main.storyboard */; };
 		DA5007FC1E28BBA80038A5E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA5007FB1E28BBA80038A5E8 /* Assets.xcassets */; };
 		DA5007FF1E28BBA80038A5E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5007FD1E28BBA80038A5E8 /* LaunchScreen.storyboard */; };
 		DA50080A1E28BBA80038A5E8 /* popsmokeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5008091E28BBA80038A5E8 /* popsmokeTests.swift */; };
-		DA861A941E30F1C700C9D4E0 /* DA_31.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DA861A931E30F1C700C9D4E0 /* DA_31.pdf */; };
-		DA861AA11E3250FE00C9D4E0 /* DA31Form.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA861A9C1E3250FE00C9D4E0 /* DA31Form.storyboard */; };
-		DA861AA21E3250FE00C9D4E0 /* DA31FormFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA861A9D1E3250FE00C9D4E0 /* DA31FormFactory.swift */; };
 		DA861AA31E3250FE00C9D4E0 /* DA31FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA861A9E1E3250FE00C9D4E0 /* DA31FormViewController.swift */; };
 		DA861AA41E3250FE00C9D4E0 /* DA31PDFFiller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA861A9F1E3250FE00C9D4E0 /* DA31PDFFiller.swift */; };
-		DA861AA51E3250FE00C9D4E0 /* DA31ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA861AA01E3250FE00C9D4E0 /* DA31ViewController.swift */; };
+		DAB08D9A1E38F68100F2E263 /* PSFormContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB08D981E38F68100F2E263 /* PSFormContainer.storyboard */; };
+		DAB08D9B1E38F68100F2E263 /* PSFormContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB08D991E38F68100F2E263 /* PSFormContainerViewController.swift */; };
+		DAB08D9D1E38F91F00F2E263 /* PSPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB08D9C1E38F91F00F2E263 /* PSPhotoViewController.swift */; };
+		DAB08D9F1E38FCC900F2E263 /* PSPhotoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB08D9E1E38FCC900F2E263 /* PSPhotoViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,23 +54,41 @@
 /* Begin PBXFileReference section */
 		806BE71F1492C1D0CBD2D68B /* Pods-popsmoke.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-popsmoke.release.xcconfig"; path = "Pods/Target Support Files/Pods-popsmoke/Pods-popsmoke.release.xcconfig"; sourceTree = "<group>"; };
 		BF7A1374A4C3B2C13DB1B11A /* Pods-popsmoke.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-popsmoke.debug.xcconfig"; path = "Pods/Target Support Files/Pods-popsmoke/Pods-popsmoke.debug.xcconfig"; sourceTree = "<group>"; };
+		DA00512C1E37ABDA008E7035 /* PSPacketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPacketViewController.swift; sourceTree = "<group>"; };
+		DA0051311E37AEC3008E7035 /* PSDocumentCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSDocumentCollectionViewCell.swift; sourceTree = "<group>"; };
+		DA0051351E37B36F008E7035 /* PSDocumentCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSDocumentCollectionViewCell.xib; sourceTree = "<group>"; };
+		DA0051391E37B743008E7035 /* PSPacketUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPacketUtilities.swift; sourceTree = "<group>"; };
+		DA00513D1E37C8CB008E7035 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		DA01F0131E392D4C00B7FB04 /* UILabel+Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Size.swift"; sourceTree = "<group>"; };
+		DA01F0161E39617C00B7FB04 /* PSPacket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPacket.swift; sourceTree = "<group>"; };
+		DA01F0181E3961D100B7FB04 /* PSDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSDocument.swift; sourceTree = "<group>"; };
+		DA01F01A1E39A9C700B7FB04 /* UIViewController+Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Transition.swift"; sourceTree = "<group>"; };
+		DA01F01C1E39AA9100B7FB04 /* PSPDFContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPDFContainerViewController.swift; sourceTree = "<group>"; };
+		DA01F01E1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSPDFContainerViewController.storyboard; sourceTree = "<group>"; };
+		DA01F0211E39AC6E00B7FB04 /* DA31FormFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DA31FormFactory.swift; path = Forms/DA31FormFactory.swift; sourceTree = "<group>"; };
+		DA01F0251E39ACA700B7FB04 /* DA31_Packet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DA31_Packet.plist; sourceTree = "<group>"; };
+		DA01F0271E39ACA700B7FB04 /* DA_31.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = DA_31.pdf; sourceTree = "<group>"; };
+		DA01F02A1E39ACF800B7FB04 /* PSFormViewControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSFormViewControllerFactory.swift; sourceTree = "<group>"; };
+		DA01F02C1E39AE8F00B7FB04 /* PSPDFContainerViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPDFContainerViewFactory.swift; sourceTree = "<group>"; };
+		DA01F02E1E39B42700B7FB04 /* PSPacketViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPacketViewFactory.swift; sourceTree = "<group>"; };
+		DA01F0301E39B5AA00B7FB04 /* PSFormContainerViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSFormContainerViewFactory.swift; sourceTree = "<group>"; };
+		DA01F0321E39B9D700B7FB04 /* PSDocumentViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSDocumentViewFactory.swift; sourceTree = "<group>"; };
+		DA0B26861E362A62000CC2DC /* PSMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSMainViewController.swift; sourceTree = "<group>"; };
+		DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSMainStoryboard.storyboard; sourceTree = "<group>"; };
 		DA5007EF1E28BBA80038A5E8 /* popsmoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = popsmoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5007F21E28BBA80038A5E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DA5007F41E28BBA80038A5E8 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		DA5007F61E28BBA80038A5E8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		DA5007F91E28BBA80038A5E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA5007FB1E28BBA80038A5E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA5007FE1E28BBA80038A5E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA5008001E28BBA80038A5E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA5008051E28BBA80038A5E8 /* popsmokeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = popsmokeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5008091E28BBA80038A5E8 /* popsmokeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popsmokeTests.swift; sourceTree = "<group>"; };
 		DA50080B1E28BBA80038A5E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA861A931E30F1C700C9D4E0 /* DA_31.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = DA_31.pdf; sourceTree = "<group>"; };
-		DA861A9C1E3250FE00C9D4E0 /* DA31Form.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DA31Form.storyboard; sourceTree = "<group>"; };
-		DA861A9D1E3250FE00C9D4E0 /* DA31FormFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DA31FormFactory.swift; sourceTree = "<group>"; };
 		DA861A9E1E3250FE00C9D4E0 /* DA31FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DA31FormViewController.swift; sourceTree = "<group>"; };
 		DA861A9F1E3250FE00C9D4E0 /* DA31PDFFiller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DA31PDFFiller.swift; sourceTree = "<group>"; };
-		DA861AA01E3250FE00C9D4E0 /* DA31ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DA31ViewController.swift; sourceTree = "<group>"; };
+		DAB08D981E38F68100F2E263 /* PSFormContainer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSFormContainer.storyboard; sourceTree = "<group>"; };
+		DAB08D991E38F68100F2E263 /* PSFormContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSFormContainerViewController.swift; sourceTree = "<group>"; };
+		DAB08D9C1E38F91F00F2E263 /* PSPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPhotoViewController.swift; sourceTree = "<group>"; };
+		DAB08D9E1E38FCC900F2E263 /* PSPhotoViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSPhotoViewController.storyboard; sourceTree = "<group>"; };
 		DCC98E59EDB289071AD09144 /* Pods_popsmoke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_popsmoke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -83,6 +119,87 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DA00512E1E37AE7A008E7035 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DA0051351E37B36F008E7035 /* PSDocumentCollectionViewCell.xib */,
+				DA0051311E37AEC3008E7035 /* PSDocumentCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DA01F0121E392D3600B7FB04 /* UICategories */ = {
+			isa = PBXGroup;
+			children = (
+				DA01F0131E392D4C00B7FB04 /* UILabel+Size.swift */,
+				DA01F01A1E39A9C700B7FB04 /* UIViewController+Transition.swift */,
+			);
+			path = UICategories;
+			sourceTree = "<group>";
+		};
+		DA01F0151E39612F00B7FB04 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA01F0161E39617C00B7FB04 /* PSPacket.swift */,
+				DA01F0181E3961D100B7FB04 /* PSDocument.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DA01F0201E39AC3600B7FB04 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				DA01F0211E39AC6E00B7FB04 /* DA31FormFactory.swift */,
+				DA01F0321E39B9D700B7FB04 /* PSDocumentViewFactory.swift */,
+				DA01F0301E39B5AA00B7FB04 /* PSFormContainerViewFactory.swift */,
+				DA01F02A1E39ACF800B7FB04 /* PSFormViewControllerFactory.swift */,
+				DA01F02C1E39AE8F00B7FB04 /* PSPDFContainerViewFactory.swift */,
+				DA01F02E1E39B42700B7FB04 /* PSPacketViewFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		DA01F0231E39ACA700B7FB04 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DA01F0241E39ACA700B7FB04 /* Packet Data */,
+				DA01F0261E39ACA700B7FB04 /* PDFs */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DA01F0241E39ACA700B7FB04 /* Packet Data */ = {
+			isa = PBXGroup;
+			children = (
+				DA01F0251E39ACA700B7FB04 /* DA31_Packet.plist */,
+			);
+			path = "Packet Data";
+			sourceTree = "<group>";
+		};
+		DA01F0261E39ACA700B7FB04 /* PDFs */ = {
+			isa = PBXGroup;
+			children = (
+				DA01F0271E39ACA700B7FB04 /* DA_31.pdf */,
+			);
+			path = PDFs;
+			sourceTree = "<group>";
+		};
+		DA0B26851E362A20000CC2DC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DAB08D981E38F68100F2E263 /* PSFormContainer.storyboard */,
+				DAB08D991E38F68100F2E263 /* PSFormContainerViewController.swift */,
+				DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */,
+				DA0B26861E362A62000CC2DC /* PSMainViewController.swift */,
+				DA00512C1E37ABDA008E7035 /* PSPacketViewController.swift */,
+				DA01F01E1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard */,
+				DA01F01C1E39AA9100B7FB04 /* PSPDFContainerViewController.swift */,
+				DAB08D9E1E38FCC900F2E263 /* PSPhotoViewController.storyboard */,
+				DAB08D9C1E38F91F00F2E263 /* PSPhotoViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		DA5007E61E28BBA80038A5E8 = {
 			isa = PBXGroup;
 			children = (
@@ -106,13 +223,17 @@
 		DA5007F11E28BBA80038A5E8 /* popsmoke */ = {
 			isa = PBXGroup;
 			children = (
-				DA861A9B1E3250FE00C9D4E0 /* DA31 */,
-				DA861A921E30F1C700C9D4E0 /* Forms */,
+				DA01F0121E392D3600B7FB04 /* UICategories */,
 				DA5007F21E28BBA80038A5E8 /* AppDelegate.swift */,
-				DA5007F41E28BBA80038A5E8 /* MasterViewController.swift */,
-				DA5007F61E28BBA80038A5E8 /* DetailViewController.swift */,
-				DA5007F81E28BBA80038A5E8 /* Main.storyboard */,
+				DA0051391E37B743008E7035 /* PSPacketUtilities.swift */,
+				DA00512E1E37AE7A008E7035 /* Cells */,
+				DA861A9B1E3250FE00C9D4E0 /* DA31 */,
+				DA01F0201E39AC3600B7FB04 /* Factories */,
+				DA01F0151E39612F00B7FB04 /* Models */,
+				DA0B26851E362A20000CC2DC /* ViewControllers */,
 				DA5007FB1E28BBA80038A5E8 /* Assets.xcassets */,
+				DA00513D1E37C8CB008E7035 /* Icons.xcassets */,
+				DA01F0231E39ACA700B7FB04 /* Resources */,
 				DA5007FD1E28BBA80038A5E8 /* LaunchScreen.storyboard */,
 				DA5008001E28BBA80038A5E8 /* Info.plist */,
 			);
@@ -128,22 +249,11 @@
 			path = popsmokeTests;
 			sourceTree = "<group>";
 		};
-		DA861A921E30F1C700C9D4E0 /* Forms */ = {
-			isa = PBXGroup;
-			children = (
-				DA861A931E30F1C700C9D4E0 /* DA_31.pdf */,
-			);
-			path = Forms;
-			sourceTree = "<group>";
-		};
 		DA861A9B1E3250FE00C9D4E0 /* DA31 */ = {
 			isa = PBXGroup;
 			children = (
-				DA861A9C1E3250FE00C9D4E0 /* DA31Form.storyboard */,
-				DA861A9D1E3250FE00C9D4E0 /* DA31FormFactory.swift */,
 				DA861A9E1E3250FE00C9D4E0 /* DA31FormViewController.swift */,
 				DA861A9F1E3250FE00C9D4E0 /* DA31PDFFiller.swift */,
-				DA861AA01E3250FE00C9D4E0 /* DA31ViewController.swift */,
 			);
 			path = DA31;
 			sourceTree = "<group>";
@@ -170,6 +280,7 @@
 				DA5007ED1E28BBA80038A5E8 /* Resources */,
 				47EDEDEF7CB5C9823A88A58F /* [CP] Embed Pods Frameworks */,
 				25E2718FC399EB3F4822CC78 /* [CP] Copy Pods Resources */,
+				DA01F0341E3A43E700B7FB04 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -249,9 +360,14 @@
 			files = (
 				DA5007FF1E28BBA80038A5E8 /* LaunchScreen.storyboard in Resources */,
 				DA5007FC1E28BBA80038A5E8 /* Assets.xcassets in Resources */,
-				DA5007FA1E28BBA80038A5E8 /* Main.storyboard in Resources */,
-				DA861A941E30F1C700C9D4E0 /* DA_31.pdf in Resources */,
-				DA861AA11E3250FE00C9D4E0 /* DA31Form.storyboard in Resources */,
+				DA01F01F1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard in Resources */,
+				DAB08D9A1E38F68100F2E263 /* PSFormContainer.storyboard in Resources */,
+				DA01F0281E39ACA700B7FB04 /* DA31_Packet.plist in Resources */,
+				DA00513E1E37C8CB008E7035 /* Icons.xcassets in Resources */,
+				DAB08D9F1E38FCC900F2E263 /* PSPhotoViewController.storyboard in Resources */,
+				DA0B26891E362A6D000CC2DC /* PSMainStoryboard.storyboard in Resources */,
+				DA0051361E37B36F008E7035 /* PSDocumentCollectionViewCell.xib in Resources */,
+				DA01F0291E39ACA700B7FB04 /* DA_31.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +426,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-popsmoke/Pods-popsmoke-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		DA01F0341E3A43E700B7FB04 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "TAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -317,13 +446,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA5007F71E28BBA80038A5E8 /* DetailViewController.swift in Sources */,
-				DA861AA21E3250FE00C9D4E0 /* DA31FormFactory.swift in Sources */,
+				DA01F02F1E39B42700B7FB04 /* PSPacketViewFactory.swift in Sources */,
+				DA01F0171E39617C00B7FB04 /* PSPacket.swift in Sources */,
 				DA861AA31E3250FE00C9D4E0 /* DA31FormViewController.swift in Sources */,
 				DA861AA41E3250FE00C9D4E0 /* DA31PDFFiller.swift in Sources */,
-				DA861AA51E3250FE00C9D4E0 /* DA31ViewController.swift in Sources */,
-				DA5007F51E28BBA80038A5E8 /* MasterViewController.swift in Sources */,
+				DA0B26871E362A62000CC2DC /* PSMainViewController.swift in Sources */,
+				DA01F02D1E39AE9000B7FB04 /* PSPDFContainerViewFactory.swift in Sources */,
+				DA0051321E37AEC3008E7035 /* PSDocumentCollectionViewCell.swift in Sources */,
+				DA01F0221E39AC6E00B7FB04 /* DA31FormFactory.swift in Sources */,
+				DA01F0141E392D4C00B7FB04 /* UILabel+Size.swift in Sources */,
+				DAB08D9D1E38F91F00F2E263 /* PSPhotoViewController.swift in Sources */,
+				DA01F0191E3961D100B7FB04 /* PSDocument.swift in Sources */,
+				DA00513A1E37B743008E7035 /* PSPacketUtilities.swift in Sources */,
+				DAB08D9B1E38F68100F2E263 /* PSFormContainerViewController.swift in Sources */,
+				DA01F01D1E39AA9100B7FB04 /* PSPDFContainerViewController.swift in Sources */,
+				DA01F01B1E39A9C700B7FB04 /* UIViewController+Transition.swift in Sources */,
+				DA01F0311E39B5AA00B7FB04 /* PSFormContainerViewFactory.swift in Sources */,
 				DA5007F31E28BBA80038A5E8 /* AppDelegate.swift in Sources */,
+				DA01F02B1E39ACF800B7FB04 /* PSFormViewControllerFactory.swift in Sources */,
+				DA00512D1E37ABDA008E7035 /* PSPacketViewController.swift in Sources */,
+				DA01F0331E39B9D700B7FB04 /* PSDocumentViewFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,14 +488,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DA5007F81E28BBA80038A5E8 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DA5007F91E28BBA80038A5E8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DA5007FD1E28BBA80038A5E8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -383,6 +517,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -433,6 +568,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -462,13 +598,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BF7A1374A4C3B2C13DB1B11A /* Pods-popsmoke.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 23CZC4883B;
 				INFOPLIST_FILE = popsmoke/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nomad.popsmoke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -476,13 +615,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 806BE71F1492C1D0CBD2D68B /* Pods-popsmoke.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 23CZC4883B;
 				INFOPLIST_FILE = popsmoke/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nomad.popsmoke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

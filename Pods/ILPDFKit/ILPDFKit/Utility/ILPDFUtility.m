@@ -58,6 +58,42 @@
     return pdf;
 }
 
++ (void)savePDFDocument:(CGPDFDocumentRef)pdfDocument toPath:(NSString *)pathToPdfDoc {
+	
+	//Create the pdf context
+	CGPDFPageRef page = CGPDFDocumentGetPage(pdfDocument, 1); //Pages are numbered starting at 1
+	CGRect pageRect = CGPDFPageGetBoxRect(page, kCGPDFMediaBox);
+	CFMutableDataRef mutableData = CFDataCreateMutable(NULL, 0);
+	
+	//NSLog(@"w:%2.2f, h:%2.2f",pageRect.size.width, pageRect.size.height);
+	CGDataConsumerRef dataConsumer = CGDataConsumerCreateWithCFData(mutableData);
+	CGContextRef pdfContext = CGPDFContextCreate(dataConsumer, &pageRect, NULL);
+	
+	
+	if (CGPDFDocumentGetNumberOfPages(pdfDocument) > 0)
+	{
+		//Draw the page onto the new context
+		//page = CGPDFDocumentGetPage(document, 1); //Pages are numbered starting at 1
+		
+		CGPDFContextBeginPage(pdfContext, NULL);
+		CGContextDrawPDFPage(pdfContext, page);
+		CGPDFContextEndPage(pdfContext);
+	}
+	else
+	{
+		NSLog(@"Failed to create the document");
+	}
+	
+	CGContextRelease(pdfContext); //Release before writing data to disk.
+	
+	//Write to disk
+	[(__bridge NSData *)mutableData writeToFile:pathToPdfDoc atomically:YES];
+	
+	//Clean up
+	CGDataConsumerRelease(dataConsumer);
+	CGPDFDocumentRelease(pdfDocument);
+	CFRelease(mutableData);
+}
 
 #pragma mark - Character Sets and Encodings
 

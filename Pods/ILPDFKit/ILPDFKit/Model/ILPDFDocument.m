@@ -110,6 +110,10 @@ static void renderPage(NSUInteger page, CGContextRef ctx, CGPDFDocumentRef doc, 
     _document = [ILPDFUtility createPDFDocumentRefFromData:self.documentData];
 }
 
+- (void)saveToPath:(NSString *)path {
+	[ILPDFUtility savePDFDocument:self.document toPath:path];
+}
+
 #pragma mark - Getters
 
 - (ILPDFFormContainer *)forms {
