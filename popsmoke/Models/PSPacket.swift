@@ -17,7 +17,6 @@ class PSPacket: NSObject {
 	
 	init(dictionary : [String : Any?]) {
 		super.init()
-		
 		guard let inputDocuments = dictionary[kDocuments] as? [Any?] else {
 			return
 		}
@@ -28,5 +27,14 @@ class PSPacket: NSObject {
 			let document = PSDocument.init(dictionary: tmp)
 			documents.append(document)
 		}
+	}
+	
+	func isCompleted() -> Bool {
+		for document in documents {
+			if (document.filePath == nil) {
+				return false
+			}
+		}
+		return true
 	}
 }

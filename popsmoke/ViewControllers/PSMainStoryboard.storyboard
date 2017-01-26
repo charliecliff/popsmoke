@@ -119,7 +119,7 @@
                                         <state key="normal" title="SUBMIT"/>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Mqv-eu-cAM" secondAttribute="trailing" id="BZY-fy-TiQ"/>
                                     <constraint firstItem="Mqv-eu-cAM" firstAttribute="leading" secondItem="oCG-Tw-MqB" secondAttribute="leading" id="GVp-0V-pbK"/>
@@ -150,6 +150,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="PEr-4L-5df" id="GHI-Yi-pFP"/>
+                        <outlet property="submitButton" destination="Mqv-eu-cAM" id="xkC-ey-OLE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3aP-v5-COb" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -17,6 +17,7 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 	private var packet: PSPacket?
 	private var widthPerItem  = CGFloat(0)
 	private var heightPerItem = CGFloat(0)
+	@IBOutlet weak var submitButton: UIButton?
 	@IBOutlet weak var collectionView: UICollectionView?
 
     override func viewDidLoad() {
@@ -27,6 +28,11 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
+		if packet != nil {
+			submitButton?.isHidden = !(packet!.isCompleted())
+		} else {
+			submitButton?.isHidden = true
+		}
 		self.collectionView?.reloadData()
 	}
 	
