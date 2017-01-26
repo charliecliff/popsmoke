@@ -17,16 +17,6 @@ class PSPDFContainerViewController: UIViewController {
 	@IBOutlet public var saveButton: UIButton?
 	@IBOutlet public var editButton: UIButton?
 	
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
-//		self.navigationController?.isNavigationBarHidden = true
-	}
-
-	override func viewWillDisappear(_ animated: Bool) {
-		super.viewWillDisappear(animated)
-//		self.navigationController?.isNavigationBarHidden = false
-	}
-	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == pdf_container_segue {
 			guard let destinationVC = segue.destination as? ILPDFViewController else {

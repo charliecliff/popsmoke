@@ -23,14 +23,12 @@ class PSMainViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
 		NotificationCenter.default.addObserver(self, selector: #selector(self.toggleNavDrawer), name: NOTIFICATION_TOGGLE_NAV_DRAWER, object: nil)
 		NotificationCenter.default.addObserver(self, selector: #selector(self.showNavDrawer), name: NOTIFICATION_SHOW_NAV_DRAWER, object: nil)
 		NotificationCenter.default.addObserver(self, selector: #selector(self.hideNavDrawer), name: NOTIFICATION_HIDE_NAV_DRAWER, object: nil)
     }
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		
 		if segue.identifier == navigation_container_segue {
 			guard let navVC = segue.destination as? UINavigationController else {
 				return
@@ -50,7 +48,6 @@ class PSMainViewController: UIViewController {
 	// MARK: - Animations
 
 	func toggleNavDrawer() {
-		
 		if navDrawerIsHidden {
 			showNavDrawer()
 		} else {
@@ -59,7 +56,6 @@ class PSMainViewController: UIViewController {
 	}
 	
 	func showNavDrawer() {
-		
 		guard let delta = navBarWidthConstraint?.constant else {
 			return
 		}
@@ -72,7 +68,6 @@ class PSMainViewController: UIViewController {
 	}
 	
 	func hideNavDrawer() {
-		
 		trailingConstraint?.constant = 0
 		leadingConstraint?.constant  = 0
 		UIView.animate(withDuration: 0.5) {

@@ -112,6 +112,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @name Finding Document Structure
  *  ---------------------------------------------------------------------------------------
  */
+
 /** Returns the number of pages in the document.
  
  @return The page count.

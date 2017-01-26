@@ -40,6 +40,7 @@
 		DAF836881E3AA677003178C4 /* PSPDFContainerViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF836821E3AA677003178C4 /* PSPDFContainerViewFactory.swift */; };
 		DAF8368D1E3AA68E003178C4 /* DA31FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF8368B1E3AA68E003178C4 /* DA31FormViewController.swift */; };
 		DAF8368E1E3AA68E003178C4 /* DA31PDFFiller.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF8368C1E3AA68E003178C4 /* DA31PDFFiller.swift */; };
+		DAF836911E3AA747003178C4 /* PSPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF836901E3AA747003178C4 /* PSPersistenceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		DAF836821E3AA677003178C4 /* PSPDFContainerViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPDFContainerViewFactory.swift; sourceTree = "<group>"; };
 		DAF8368B1E3AA68E003178C4 /* DA31FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DA31FormViewController.swift; sourceTree = "<group>"; };
 		DAF8368C1E3AA68E003178C4 /* DA31PDFFiller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DA31PDFFiller.swift; sourceTree = "<group>"; };
+		DAF836901E3AA747003178C4 /* PSPersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPersistenceManager.swift; sourceTree = "<group>"; };
 		DCC98E59EDB289071AD09144 /* Pods_popsmoke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_popsmoke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -219,6 +221,7 @@
 				DA3585F31E3A7DE00014AE10 /* PSConstants.swift */,
 				DA00512E1E37AE7A008E7035 /* Cells */,
 				DAF836891E3AA68E003178C4 /* Forms */,
+				DAF8368F1E3AA73A003178C4 /* Managers */,
 				DA01F0151E39612F00B7FB04 /* Models */,
 				DA0B26851E362A20000CC2DC /* ViewControllers */,
 				DA5007FB1E28BBA80038A5E8 /* Assets.xcassets */,
@@ -275,6 +278,14 @@
 				DAF8368C1E3AA68E003178C4 /* DA31PDFFiller.swift */,
 			);
 			path = DA31;
+			sourceTree = "<group>";
+		};
+		DAF8368F1E3AA73A003178C4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DAF836901E3AA747003178C4 /* PSPersistenceManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		FCC2DAAEF0D2A4DAB4837FF9 /* Pods */ = {
@@ -466,6 +477,7 @@
 			files = (
 				DA3585F21E3A7ABF0014AE10 /* UIImageView+Tint.swift in Sources */,
 				DAF836881E3AA677003178C4 /* PSPDFContainerViewFactory.swift in Sources */,
+				DAF836911E3AA747003178C4 /* PSPersistenceManager.swift in Sources */,
 				DA01F0171E39617C00B7FB04 /* PSPacket.swift in Sources */,
 				DA0B26871E362A62000CC2DC /* PSMainViewController.swift in Sources */,
 				DA3585F41E3A7DE00014AE10 /* PSConstants.swift in Sources */,

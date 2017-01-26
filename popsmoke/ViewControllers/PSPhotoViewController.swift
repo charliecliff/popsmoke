@@ -15,22 +15,16 @@ class PSImagePickerController: UIImagePickerController, UIImagePickerControllerD
 	// MARK: - UIImagePickerControllerDelegate
 	
 	func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-		
 		guard let chosenImage = info[UIImagePickerControllerEditedImage] as? UIImage else {
 			return
 		}
-		
-		if let data = UIImagePNGRepresentation(chosenImage) {
-			let filename = getDocumentsDirectory().appendingPathComponent("copy.png")
-			try? data.write(to: filename)
-		}
-		
+		let filePath = PSPersistenceManager.newPNGFilePath()
+		PSPersistenceManager.save(image: chosenImage, fileName: filePath!)
+		document?.filePath = filePath
 		dismiss(animated: true, completion: nil)
 	}
 	
 	func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-		
-		
 		dismiss(animated: true, completion: nil)
 	}
 }

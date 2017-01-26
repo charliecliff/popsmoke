@@ -18,7 +18,6 @@ class PSFormContainerViewController: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
 		guard document != nil else {
 			//TODO: Handle the errors in a global error alert
 			return
@@ -28,21 +27,16 @@ class PSFormContainerViewController: UIViewController {
 	}
 	
 	@IBAction func didSelectCompletionButton(_ sender: UIButton) {
-		
 		guard let form = formViewController?.form else {
 			//TODO: Handle the errors in a global error alert
 			return
 		}
-		
-		// Validate
-/**		let errors = form.validate()
+/**		let errors = form.validate() // Validate
 		if errors.count > 0 {
 			// TODO: Display Warning Message
 			return
 		} */
-		
-		// Generate PDF Form
-		let formData = DA31FormFactory.toDictionary(form: form)
+		let formData = DA31FormFactory.toDictionary(form: form) // Generate PDF Form
 		guard let pdf = DA31PDFFiller.fillPDFWithFormData(dictionary: formData) else {
 			//TODO: Handle the errors in a global error alert
 			return
@@ -55,7 +49,6 @@ class PSFormContainerViewController: UIViewController {
 	}
 
 	func add(formViewController: FormViewController) {
-		
 		guard containerView != nil else {
 			//TODO: Handle the errors in a global error alert
 			return
