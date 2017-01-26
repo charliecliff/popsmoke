@@ -19,6 +19,12 @@ class PSImagePickerController: UIImagePickerController, UIImagePickerControllerD
 		guard let chosenImage = info[UIImagePickerControllerEditedImage] as? UIImage else {
 			return
 		}
+		
+		if let data = UIImagePNGRepresentation(chosenImage) {
+			let filename = getDocumentsDirectory().appendingPathComponent("copy.png")
+			try? data.write(to: filename)
+		}
+		
 		dismiss(animated: true, completion: nil)
 	}
 	
