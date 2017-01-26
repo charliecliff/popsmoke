@@ -28,7 +28,6 @@ class PSPDFContainerViewController: UIViewController {
 	}
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-		
 		if segue.identifier == pdf_container_segue {
 			guard let destinationVC = segue.destination as? ILPDFViewController else {
 				return
@@ -45,22 +44,18 @@ class PSPDFContainerViewController: UIViewController {
 	}
 	
 	@IBAction func didSelectSaveButton(_ sender: UIButton) {
-		
-		// FIXME: This is Test Code to test the Persistence of PDFs
-		guard let doumentDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first as String? else {
+		guard let  destinationPath = PSPacketUtilities.newPDFFilePath() else {
+			// TODO: Handle the Saving Errors
 			return
 		}
-		guard let uuid = CFUUIDCreateString(nil, CFUUIDCreate(nil)) else {
-			return
+		var error : NSError?
+		pdf?.save(toPath: destinationPath, error: &error)
+		if error != nil {
+			// TODO: Handle the Saving Errors
 		}
-		guard let  destinationPath = doumentDirectoryPath.appending("/\(uuid).pdf") as String? else {
-			return
-		}
-		
-		pdf?.save(toPath:destinationPath)
-		
+		document?.filePath = destinationPath
 		if self.navigationController != nil {
-			self.navigationController?.popToRootViewController(animated: true)
+			self.navigationController!.popToRootViewController(animated: true)
 			return
 		}
 		self.dismiss(animated: true, completion: nil)

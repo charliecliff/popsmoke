@@ -34,5 +34,16 @@ class PSDocumentCollectionViewCell: UICollectionViewCell {
 		documentType	= document.documentType
 		formType		= document.formType
 		attachmentType	= document.formType
+		
+		set(completed: (self.document?.filePath != nil))
+	}
+	
+	func set(completed: Bool) {
+		
+		if completed {
+			backgroundImageView?.backgroundColor = .green
+		} else {
+			backgroundImageView?.backgroundColor = .red
+		}
 	}
 }

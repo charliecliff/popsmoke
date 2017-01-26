@@ -33,4 +33,16 @@ enum AttachmentType: String {
 
 class PSPacketUtilities: NSObject {
 
+	class func newPDFFilePath() -> String? {
+		guard let doumentDirectoryPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first as String? else {
+			return nil
+		}
+		guard let uuid = CFUUIDCreateString(nil, CFUUIDCreate(nil)) else {
+			return nil
+		}
+		guard let destinationPath = doumentDirectoryPath.appending("/\(uuid).pdf") as String? else {
+			return nil
+		}
+		return destinationPath
+	}
 }

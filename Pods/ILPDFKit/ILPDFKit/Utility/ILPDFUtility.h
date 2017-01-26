@@ -76,7 +76,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param pdfDocument
  @param pathToPdfDoc
  */
-+ (void)savePDFDocument:(CGPDFDocumentRef *)pdfDocument toPath:(NSString *)pathToPdfDoc;
++ (void)savePDFDocument:(CGPDFDocumentRef)pdfDocument toPath:(NSString *)pathToPdfDoc error:(NSError **)error;
 
 /**---------------------------------------------------------------------------------------
  * @name Character Sets and Encodings

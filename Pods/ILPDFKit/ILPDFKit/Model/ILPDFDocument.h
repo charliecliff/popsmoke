@@ -106,7 +106,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @param path Points to PDF file to save.
  */
-- (void)saveToPath:(NSString *)path;
+- (void)saveToPath:(NSString *)path error:(NSError **)error;
 
 /**---------------------------------------------------------------------------------------
  * @name Finding Document Structure

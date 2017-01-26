@@ -21,9 +21,13 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
 		let documentNib = UINib(nibName: "PSDocumentCollectionViewCell", bundle:nil)
 		self.collectionView?.register(documentNib, forCellWithReuseIdentifier: cellReuseIdentifier)
+	}
+	
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+		self.collectionView?.reloadData()
 	}
 	
 	@IBAction func didPressSettingButton(sender: UIButton) {
@@ -33,7 +37,6 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 	// MARK: - Setting the Packet Data
 	
 	func set(packetType: PacketType) {
-		
 		switch packetType {
 		case .leave:
 			self.loadPacketFileFor(name: "DA31_Packet")
@@ -43,7 +46,6 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 	}
 	
 	private func loadPacketFileFor(name: String) {
-		
 		guard let path = Bundle.main.path(forResource: name, ofType:"plist") else {
 			return
 		}
@@ -61,7 +63,6 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		
 		guard packet != nil else {
 			return 0
 		}
@@ -69,7 +70,6 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		
 		let index = indexPath.item
 		guard let document = packet?.documents[index] else {
 			let errorCell = UICollectionViewCell()
@@ -88,7 +88,6 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 	// MARK: UICollectionViewDelegate
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		
 		guard let cell = collectionView.cellForItem(at: indexPath) as? PSDocumentCollectionViewCell else {
 			//TODO: Handle the errors in a global error alert
 			return
@@ -103,7 +102,6 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 	// MARK: UICollectionViewDelegateFlowLayout
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
 		guard let size = self.collectionView?.frame.size else {
 			return CGSize(width: 50, height: 50)
 		}
