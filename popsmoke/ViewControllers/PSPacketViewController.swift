@@ -36,11 +36,7 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 		self.collectionView?.reloadData()
 	}
 	
-	@IBAction func didPressSettingButton(sender: UIButton) {
-		NotificationCenter.default.post(name: NOTIFICATION_TOGGLE_NAV_DRAWER, object: nil)
-	}
-	
-	// MARK: - Setting the Packet Data
+	// MARK: Setting the Packet Data
 	
 	func set(packetType: PacketType) {
 		switch packetType {
@@ -60,6 +56,17 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 		}
 		packet = PSPacket.init(dictionary: packetDictionary)
 		self.collectionView?.reloadData()
+	}
+	
+	// MARK: Actions
+
+	@IBAction func didPressSettingButton(sender: UIButton) {
+		NotificationCenter.default.post(name: NOTIFICATION_TOGGLE_NAV_DRAWER, object: nil)
+	}
+
+	@IBAction func didPressHistoryButton(sender: UIButton) {
+		
+		
 	}
 	
     // MARK: - UICollectionViewDataSource
@@ -103,7 +110,7 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 		return UICollectionReusableView()
 	}
 	
-	// MARK: UICollectionViewDelegate
+	// MARK: - UICollectionViewDelegate
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		guard let cell = collectionView.cellForItem(at: indexPath) as? PSDocumentCollectionViewCell else {
@@ -117,7 +124,7 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 		segueTo(viewController: vc)
 	}
 	
-	// MARK: UICollectionViewDelegateFlowLayout
+	// MARK: - UICollectionViewDelegateFlowLayout
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		guard let size = self.collectionView?.frame.size else {
