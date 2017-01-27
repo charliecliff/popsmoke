@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import MessageUI
 
 fileprivate let minSpacing			= CGFloat(0)
 fileprivate let sectionInsets		= UIEdgeInsets(top: 0.0, left: 20.0, bottom: 0.0, right: 20.0)
 fileprivate let cellReuseIdentifier	= "document_cell"
 
-class PSPacketViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class PSPacketViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate {
 
 	private var packet: PSPacket?
 	private var widthPerItem  = CGFloat(0)
@@ -66,15 +67,14 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 
 	@IBAction func didPressHistoryButton(sender: UIButton) {
 		
-		
 	}
 	
 	@IBAction func didPressSubmitButton(sender: UIButton) {
-		
 		guard packet != nil else {
 			return
 		}
 		let mailComposer = PSMailComposerFactory.mailComposerFor(packet: packet!)
+		mailComposer.mailComposeDelegate = self
 		present(mailComposer, animated: true, completion: nil)
 	}
 	
@@ -153,5 +153,11 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat{
 		return minSpacing
+	}
+	
+	// MARK: - MFMailCompseViewControllerDelegate
+	
+	func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?){
+		controller.dismiss(animated: true, completion: nil)
 	}
 }
