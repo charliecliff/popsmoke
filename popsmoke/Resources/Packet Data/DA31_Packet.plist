@@ -14,36 +14,6 @@
 			<key>icon</key>
 			<string>icon_form</string>
 		</dict>
-		<dict>
-			<key>type</key>
-			<string>form</string>
-			<key>form_type</key>
-			<string>trips</string>
-			<key>name</key>
-			<string>TRiPS</string>
-			<key>icon</key>
-			<string>icon_form</string>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>attachment</string>
-			<key>attachment_type</key>
-			<string>insurance</string>
-			<key>name</key>
-			<string>Insurance Card</string>
-			<key>icon</key>
-			<string>icon_id</string>
-		</dict>
-		<dict>
-			<key>type</key>
-			<string>attachment</string>
-			<key>attachment_type</key>
-			<string>drivers_license</string>
-			<key>name</key>
-			<string>Drivers License</string>
-			<key>icon</key>
-			<string>icon_id</string>
-		</dict>
 	</array>
 </dict>
 </plist>

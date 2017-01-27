@@ -77,6 +77,7 @@
 	[(__bridge NSData *)mutableData writeToFile:pathToPdfDoc atomically:YES]; //Write to disk
 	CGDataConsumerRelease(dataConsumer); //Clean up
 	CFRelease(mutableData);
+
 }
 
 #pragma mark - Character Sets and Encodings

@@ -117,6 +117,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="SUBMIT"/>
+                                        <connections>
+                                            <action selector="didPressSubmitButtonWithSender:" destination="gaH-Hg-8aN" eventType="touchUpInside" id="O8m-HN-msZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -140,14 +143,7 @@
                             <constraint firstItem="HBg-ml-fKL" firstAttribute="top" secondItem="oCG-Tw-MqB" secondAttribute="bottom" id="vGg-Fj-8Kd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="PopSmoke" id="9vL-GM-D5F">
-                        <barButtonItem key="leftBarButtonItem" image="gear" id="cIl-qg-ADZ">
-                            <connections>
-                                <action selector="didPressSettingButtonWithSender:" destination="gaH-Hg-8aN" id="Bcb-2v-XSw"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="icon_documents" id="IXH-JZ-O0Z"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="PopSmoke" id="9vL-GM-D5F"/>
                     <connections>
                         <outlet property="collectionView" destination="PEr-4L-5df" id="GHI-Yi-pFP"/>
                         <outlet property="submitButton" destination="Mqv-eu-cAM" id="xkC-ey-OLE"/>
@@ -198,8 +194,4 @@
             <point key="canvasLocation" x="-66.400000000000006" y="518.59070464767615"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="gear" width="22" height="22"/>
-        <image name="icon_documents" width="22" height="22"/>
-    </resources>
 </document>

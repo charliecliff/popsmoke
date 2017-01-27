@@ -43,6 +43,7 @@
 		DAF836911E3AA747003178C4 /* PSPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF836901E3AA747003178C4 /* PSPersistenceManager.swift */; };
 		DAF836941E3AAFC2003178C4 /* TRIPSFormFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF836931E3AAFC2003178C4 /* TRIPSFormFactory.swift */; };
 		DAF836961E3AB1B3003178C4 /* TRIPSFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF836951E3AB1B3003178C4 /* TRIPSFormViewController.swift */; };
+		DAF836981E3B96D8003178C4 /* PSMailComposerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF836971E3B96D8003178C4 /* PSMailComposerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		DAF836901E3AA747003178C4 /* PSPersistenceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPersistenceManager.swift; sourceTree = "<group>"; };
 		DAF836931E3AAFC2003178C4 /* TRIPSFormFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRIPSFormFactory.swift; sourceTree = "<group>"; };
 		DAF836951E3AB1B3003178C4 /* TRIPSFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRIPSFormViewController.swift; sourceTree = "<group>"; };
+		DAF836971E3B96D8003178C4 /* PSMailComposerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSMailComposerFactory.swift; sourceTree = "<group>"; };
 		DCC98E59EDB289071AD09144 /* Pods_popsmoke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_popsmoke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -253,6 +255,7 @@
 				DAF8367E1E3AA677003178C4 /* PSDocumentViewFactory.swift */,
 				DAF8367F1E3AA677003178C4 /* PSFormContainerViewFactory.swift */,
 				DAF836801E3AA677003178C4 /* PSFormViewControllerFactory.swift */,
+				DAF836971E3B96D8003178C4 /* PSMailComposerFactory.swift */,
 				DAF836811E3AA677003178C4 /* PSPacketViewFactory.swift */,
 				DAF836821E3AA677003178C4 /* PSPDFContainerViewFactory.swift */,
 			);
@@ -480,7 +483,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "TAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"\n";
+			shellScript = "
+";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -505,6 +509,7 @@
 				DA00513A1E37B743008E7035 /* PSPacketUtilities.swift in Sources */,
 				DAF836831E3AA677003178C4 /* DA31FormFactory.swift in Sources */,
 				DAB08D9B1E38F68100F2E263 /* PSFormContainerViewController.swift in Sources */,
+				DAF836981E3B96D8003178C4 /* PSMailComposerFactory.swift in Sources */,
 				DAF836841E3AA677003178C4 /* PSDocumentViewFactory.swift in Sources */,
 				DA01F01D1E39AA9100B7FB04 /* PSPDFContainerViewController.swift in Sources */,
 				DAF8368E1E3AA68E003178C4 /* DA31PDFFiller.swift in Sources */,

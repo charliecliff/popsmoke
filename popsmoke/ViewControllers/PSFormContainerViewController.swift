@@ -27,6 +27,7 @@ class PSFormContainerViewController: UIViewController {
 	}
 	
 	@IBAction func didSelectCompletionButton(_ sender: UIButton) {
+		
 		guard let form = formViewController?.form else {
 			//TODO: Handle the errors in a global error alert
 			return

@@ -33,7 +33,7 @@ class DA31PDFFiller: NSObject {
 	class func fillPDFWithFormData(dictionary: [String: Any?]) -> ILPDFDocument? {
 		
 		// Generate PDF Form
-		guard let path = Bundle.main.path(forResource: "DA_31", ofType: "pdf") else {
+		guard let path = PSPacketUtilities.copyPDF(pdfName: "DA_31") else {
 			return nil
 		}
 		let document = ILPDFDocument(path: path)

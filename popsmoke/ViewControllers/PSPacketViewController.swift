@@ -69,6 +69,15 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 		
 	}
 	
+	@IBAction func didPressSubmitButton(sender: UIButton) {
+		
+		guard packet != nil else {
+			return
+		}
+		let mailComposer = PSMailComposerFactory.mailComposerFor(packet: packet!)
+		present(mailComposer, animated: true, completion: nil)
+	}
+	
     // MARK: - UICollectionViewDataSource
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
