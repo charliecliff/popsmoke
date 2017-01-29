@@ -17,7 +17,7 @@ enum DocumentType: String {
 	case error		= "ERROR"
 	case form		= "form"
 	case attachment	= "attachment"
-	case website	= "web_site"
+	case web		= "web"
 }
 
 enum FormType: String {

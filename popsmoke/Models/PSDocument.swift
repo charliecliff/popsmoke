@@ -14,12 +14,14 @@ let kDocumentFilePath		= "path"
 let kDocumentType			= "type"
 let kDocumentFormType		= "form_type"
 let kDocumentAttachmentType	= "attachment_type"
+let kDocumentWebURL			= "url"
 
 class PSDocument: NSObject {
 
 	var icon: String?
 	var title: String?
 	var filePath: String?
+	var webAddress: String?
 	var documentType: DocumentType		= DocumentType.error
 	var formType: FormType				= FormType.error
 	var attachmentType: AttachmentType	= AttachmentType.error
@@ -41,6 +43,9 @@ class PSDocument: NSObject {
 		}
 		if let tmp = dictionary[kDocumentAttachmentType] as? String? {
 			attachmentType = AttachmentType(rawValue: tmp!)!
+		}
+		if let tmp = dictionary[kDocumentWebURL] as? String? {
+			webAddress = tmp
 		}
 	}
 }
