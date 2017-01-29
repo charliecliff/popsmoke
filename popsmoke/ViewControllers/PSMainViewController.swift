@@ -37,7 +37,6 @@ class PSMainViewController: UIViewController {
 				return
 			}
 			packetVC = vc
-//			packetVC.packet = PSUserManager.sharedInstance.packet
 		}
 	}
 	

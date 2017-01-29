@@ -13,7 +13,7 @@ class PSPacketHistoryTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		let documentNib = UINib(nibName: "PSPacketTableViewCell", bundle:nil)
-		self.tableView?.register(documentNib, forCellReuseIdentifier: "tmp")
+		self.tableView?.register(documentNib, forCellReuseIdentifier: "cell")
 		tableView.separatorStyle = .none
     }
 
@@ -28,10 +28,11 @@ class PSPacketHistoryTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "tmp", for: indexPath)
-
-        // Configure the cell...
-
-        return UITableViewCell()
+		
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? PSPacketTableViewCell else {
+			return UITableViewCell()
+		}
+		cell.configureFor(packet: PSUserManager.sharedInstance.completedPackets[indexPath.row])
+        return cell
     }
 }

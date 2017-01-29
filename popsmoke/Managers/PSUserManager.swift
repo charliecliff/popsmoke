@@ -33,9 +33,10 @@ class PSUserManager {
 	// MARK: - Packet Builder
 	
 	func beginPacketBuilding() {
-		
 		do {
 			try packet = PSPacketFactory.createDA31()
+			reloadCurrentPacket.value = true
+			reloadCurrentPacket.value = false
 		} catch PersistenceError.packetPersistence {
 			print("Invalid Selection.")
 		} catch {
@@ -44,7 +45,6 @@ class PSUserManager {
 	}
 
 	func savePacket(packet: PSPacket) {
-		
 		PSPersistenceManager.save(packet: packet)
 		completedPackets.append(packet)
 		beginPacketBuilding()
