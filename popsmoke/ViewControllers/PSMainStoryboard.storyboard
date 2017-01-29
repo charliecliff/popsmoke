@@ -143,13 +143,7 @@
                             <constraint firstItem="HBg-ml-fKL" firstAttribute="top" secondItem="oCG-Tw-MqB" secondAttribute="bottom" id="vGg-Fj-8Kd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="PopSmoke" id="9vL-GM-D5F">
-                        <barButtonItem key="rightBarButtonItem" image="icon_documents" id="O8M-91-yIe">
-                            <connections>
-                                <action selector="didPressHistoryButtonWithSender:" destination="gaH-Hg-8aN" id="XEL-fD-jZG"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="PopSmoke" id="9vL-GM-D5F"/>
                     <connections>
                         <outlet property="collectionView" destination="PEr-4L-5df" id="GHI-Yi-pFP"/>
                         <outlet property="submitButton" destination="Mqv-eu-cAM" id="xkC-ey-OLE"/>
@@ -200,7 +194,4 @@
             <point key="canvasLocation" x="-66.400000000000006" y="518.59070464767615"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="icon_documents" width="22" height="22"/>
-    </resources>
 </document>

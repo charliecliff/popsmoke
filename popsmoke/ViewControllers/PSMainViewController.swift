@@ -31,9 +31,11 @@ class PSMainViewController: UIViewController {
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == navigation_container_segue {
 			guard let navVC = segue.destination as? UINavigationController else {
+				//TODO: Handle the errors in a global error alert
 				return
 			}
 			guard let vc = navVC.viewControllers.first as? PSPacketViewController else {
+				//TODO: Handle the errors in a global error alert
 				return
 			}
 			packetVC = vc
