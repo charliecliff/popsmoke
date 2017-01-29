@@ -8,6 +8,8 @@
 
 import UIKit
 import MessageUI
+import RxSwift
+import RxCocoa
 
 fileprivate let minSpacing			= CGFloat(0)
 fileprivate let sectionInsets		= UIEdgeInsets(top: 0.0, left: 20.0, bottom: 0.0, right: 20.0)
@@ -24,6 +26,12 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
         super.viewDidLoad()
 		let documentNib = UINib(nibName: "PSDocumentCollectionViewCell", bundle:nil)
 		self.collectionView?.register(documentNib, forCellWithReuseIdentifier: cellReuseIdentifier)
+		
+		_ = PSUserManager.sharedInstance.reloadCurrentPacket.asObservable().subscribe(onNext: {
+			if $0 {
+				// TODO: Reload Here
+			}
+		})
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {

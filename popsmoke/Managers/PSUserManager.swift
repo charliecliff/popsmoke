@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class PSUserManager {
 	
@@ -16,7 +18,13 @@ class PSUserManager {
 	private(set) var completedPackets = [PSPacket]()
 	
 	private(set) var completedPacketFiePaths = [String]()
-
+	
+	
+	
+	private(set) var reloadCurrentPacket = Variable( false )
+	
+	
+	
 	init() {
 		
 		beginPacketBuilding()
@@ -34,6 +42,8 @@ class PSUserManager {
 		PSPersistenceManager.save(packet: packet)
 		completedPackets.append(packet)
 		beginPacketBuilding()
+		reloadCurrentPacket.value = true
+		reloadCurrentPacket.value = false
 	}
 	
 	func deletePacket(packet: PSPacket) {
