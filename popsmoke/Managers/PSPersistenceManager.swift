@@ -9,8 +9,19 @@
 import UIKit
 import ILPDFKit
 
+enum PersistenceError: Error {
+	case packetPersistence
+	case imagePersistence
+}
+
 class PSPersistenceManager: NSObject {
 
+	private class func getDocumentURL(packetID: String) -> String {
+		var path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as String
+		path.append(packetID)
+		return path
+	}
+	
 	private class func getDocumentsDirectory() -> URL {
 		let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
 		let documentsDirectory = paths[0]
@@ -21,19 +32,14 @@ class PSPersistenceManager: NSObject {
  * @name Saving Objects
  * ---------------------------------------------------------------------------------------
  */
-
 	class func save(packet: PSPacket) {
-		guard let filePath = packet.filepath else {
-			//TODO: Handle the errors in a global error alert
-			return
-		}
+		let filePath = PSPersistenceManager.getDocumentURL(packetID: packet.packetID!)
 		NSKeyedArchiver.archiveRootObject(packet, toFile: filePath)
 	}
 	
-	class func save(image: UIImage, fileName: String) {
+	class func save(image: UIImage, fileName: String) throws {
 		guard let data = UIImagePNGRepresentation(image) else {
-			//TODO: Handle the errors in a global error alert
-			return
+			throw PersistenceError.imagePersistence
 		}
 		let filePath = getDocumentsDirectory().appendingPathComponent("\(fileName)")
 		do {
@@ -46,11 +52,9 @@ class PSPersistenceManager: NSObject {
  * @name Loading Objects
  * ---------------------------------------------------------------------------------------
  */
-	
-	class func loadPacket(filePath: String) -> PSPacket? {
+	class func loadPacket(filePath: String) throws -> PSPacket? {
 		guard let packet = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? PSPacket else {
-			//TODO: Handle the errors in a global error alert
-			return nil
+			throw PersistenceError.packetPersistence
 		}
 		return packet
 	}

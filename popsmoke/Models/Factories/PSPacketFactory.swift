@@ -10,7 +10,7 @@ import UIKit
 
 class PSPacketFactory: NSObject {
 
-	
+	@available(*, deprecated)
 	class func newFilePath() -> String? {
 		
 		guard let uuid = CFUUIDCreateString(nil, CFUUIDCreate(nil)) else {
@@ -19,17 +19,19 @@ class PSPacketFactory: NSObject {
 		}
 		let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as String
 		let url1 = NSURL(fileURLWithPath: path)
-		let destinationPath = url1.appendingPathComponent("\(uuid).pdf")?.path
+		let destinationPath = url1.appendingPathComponent("\(uuid)")?.path
 		return destinationPath
 	}
 	
-	
-	class func createDA31() -> PSPacket? {
-		
-		guard let packetFilePath = PSPacketFactory.newFilePath() else {
+	class func newPacketID() -> String? {
+		guard let uuid = CFUUIDCreateString(nil, CFUUIDCreate(nil)) else {
 			//TODO: Handle the errors in a global error alert
 			return nil
 		}
+		return "\(uuid)"
+	}
+
+	class func createDA31() -> PSPacket? {
 		guard let path = Bundle.main.path(forResource: "DA31_Packet", ofType:"plist") else {
 			//TODO: Handle the errors in a global error alert
 			return nil
@@ -39,7 +41,9 @@ class PSPacketFactory: NSObject {
 			return nil
 		}
 		let packet = PSPacket.init(dictionary: packetDictionary)
-		packet.filepath = packetFilePath
+		if let newPacketID = PSPacketFactory.newPacketID() {
+			packet.packetID = newPacketID
+		}
 		return packet
 	}
 }

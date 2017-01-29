@@ -31,9 +31,9 @@ class PSUserManager {
 
 	func savePacket(packet: PSPacket) {
 		
-		
-		
-		
+		PSPersistenceManager.save(packet: packet)
+		completedPackets.append(packet)
+		beginPacketBuilding()
 	}
 	
 	func deletePacket(packet: PSPacket) {

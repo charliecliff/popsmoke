@@ -70,8 +70,8 @@ class PSDocument: NSObject, NSCoding {
 		aCoder.encode(title, forKey: kDocumentTitle)
 		aCoder.encode(filePath, forKey: kDocumentFilePath)
 		aCoder.encode(webAddress, forKey: kDocumentWebURL)
-		aCoder.encode(documentType, forKey: kDocumentType)
-		aCoder.encode(formType, forKey: kDocumentFormType)
-		aCoder.encode(attachmentType, forKey: kDocumentAttachmentType)
+		aCoder.encode(documentType.rawValue, forKey: kDocumentType)
+		aCoder.encode(formType.rawValue, forKey: kDocumentFormType)
+		aCoder.encode(attachmentType.rawValue, forKey: kDocumentAttachmentType)
 	}
 }
