@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ILPDFKit
 
 class PSPersistenceManager: NSObject {
 
@@ -17,9 +18,17 @@ class PSPersistenceManager: NSObject {
 	}
 	
 /**---------------------------------------------------------------------------------------
- * @name Creating New File Names
+ * @name Saving Objects
  * ---------------------------------------------------------------------------------------
  */
+
+	class func save(packet: PSPacket) {
+		guard let filePath = packet.filepath else {
+			//TODO: Handle the errors in a global error alert
+			return
+		}
+		NSKeyedArchiver.archiveRootObject(packet, toFile: filePath)
+	}
 	
 	class func save(image: UIImage, fileName: String) {
 		guard let data = UIImagePNGRepresentation(image) else {
@@ -31,6 +40,19 @@ class PSPersistenceManager: NSObject {
 			try? data.write(to: filePath)
 			return
 		}
+	}
+
+/**---------------------------------------------------------------------------------------
+ * @name Loading Objects
+ * ---------------------------------------------------------------------------------------
+ */
+	
+	class func loadPacket(filePath: String) -> PSPacket? {
+		guard let packet = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? PSPacket else {
+			//TODO: Handle the errors in a global error alert
+			return nil
+		}
+		return packet
 	}
 	
 /**---------------------------------------------------------------------------------------

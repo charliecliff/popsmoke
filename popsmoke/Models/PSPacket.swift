@@ -10,9 +10,14 @@ import UIKit
 
 let kDocuments	= "documents"
 
-class PSPacket: NSObject {
+let kPacketTitle		= "title"
+let kPacketFilePath		= "filepath"
+let kPacketDocuments	= "documents"
+
+class PSPacket: NSObject, NSCoding {
 
 	var title = "ERROR"
+	var filepath: String?
 	var documents = [PSDocument]()
 	
 	init(dictionary : [String : Any?]) {
@@ -36,5 +41,19 @@ class PSPacket: NSObject {
 			}
 		}
 		return true
+	}
+
+	// MARK: - NSCoding
+	
+	required init(coder aDecoder: NSCoder) {
+		title = aDecoder.decodeObject(forKey: kPacketTitle) as? String ?? ""
+		filepath = aDecoder.decodeObject(forKey: kPacketFilePath) as? String ?? ""
+		documents = aDecoder.decodeObject(forKey: kPacketDocuments) as? [PSDocument] ?? [PSDocument]()
+	}
+	
+	func encode(with aCoder: NSCoder) {
+		aCoder.encode(title, forKey: kPacketTitle)
+		aCoder.encode(filepath, forKey: kPacketFilePath)
+		aCoder.encode(documents, forKey: kPacketDocuments)
 	}
 }

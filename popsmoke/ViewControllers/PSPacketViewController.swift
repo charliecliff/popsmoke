@@ -15,9 +15,8 @@ fileprivate let cellReuseIdentifier	= "document_cell"
 
 class PSPacketViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate {
 
-	private var packet: PSPacket?
+	var packet: PSPacket?
 	private var widthPerItem  = CGFloat(0)
-	private var heightPerItem = CGFloat(0)
 	@IBOutlet weak var submitButton: UIButton?
 	@IBOutlet weak var collectionView: UICollectionView?
 
@@ -29,33 +28,10 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
+		submitButton?.isHidden = true
 		if packet != nil {
 			submitButton?.isHidden = !(packet!.isCompleted())
-		} else {
-			submitButton?.isHidden = true
 		}
-		self.collectionView?.reloadData()
-	}
-	
-	// MARK: Setting the Packet Data
-	
-	func set(packetType: PacketType) {
-		switch packetType {
-		case .leave:
-			self.loadPacketFileFor(name: "DA31_Packet")
-		default:
-			return
-		}
-	}
-	
-	private func loadPacketFileFor(name: String) {
-		guard let path = Bundle.main.path(forResource: name, ofType:"plist") else {
-			return
-		}
-		guard let packetDictionary = NSDictionary(contentsOfFile:path) as? [String : Any?] else {
-			return
-		}
-		packet = PSPacket.init(dictionary: packetDictionary)
 		self.collectionView?.reloadData()
 	}
 	
@@ -66,11 +42,13 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 	}
 
 	@IBAction func didPressHistoryButton(sender: UIButton) {
-		
+		let vc = PSPacketHistoryTableViewController()
+		segueTo(viewController: vc)
 	}
 	
 	@IBAction func didPressSubmitButton(sender: UIButton) {
 		guard packet != nil else {
+			//TODO: Handle the errors in a global error alert
 			return
 		}
 		let mailComposer = PSMailComposerFactory.mailComposerFor(packet: packet!)
@@ -94,14 +72,10 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let index = indexPath.item
 		guard let document = packet?.documents[index] else {
-			let errorCell = UICollectionViewCell()
-			errorCell.backgroundColor = .red
-			return errorCell
+			return UICollectionViewCell()
 		}
 		guard let documentCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as? PSDocumentCollectionViewCell else {
-			let errorCell = UICollectionViewCell()
-			errorCell.backgroundColor = .red
-			return errorCell
+			return UICollectionViewCell()
 		}
 		documentCell.configure(document: document)
 		return documentCell
@@ -158,6 +132,11 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 	// MARK: - MFMailCompseViewControllerDelegate
 	
 	func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?){
+		if error != nil {
+			//TODO: Handle the errors in a global error alert
+		} else {
+			PSUserManager.sharedInstance.savePacket(packet: packet!)
+		}
 		controller.dismiss(animated: true, completion: nil)
 	}
 }

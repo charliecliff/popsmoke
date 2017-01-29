@@ -48,6 +48,11 @@
 		DAF8369C1E3D6CBB003178C4 /* PSWebFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF8369B1E3D6CBB003178C4 /* PSWebFormViewController.swift */; };
 		DAF8369E1E3D6D04003178C4 /* PSWebViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAF8369D1E3D6D04003178C4 /* PSWebViewController.storyboard */; };
 		DAF836A01E3D976F003178C4 /* NSURLRequest+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF8369F1E3D976F003178C4 /* NSURLRequest+Category.swift */; };
+		DAF836A31E3E3CBE003178C4 /* PSPacketBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF836A21E3E3CBE003178C4 /* PSPacketBuilder.swift */; };
+		DAF836A51E3E3E5D003178C4 /* PSPacketFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF836A41E3E3E5D003178C4 /* PSPacketFactory.swift */; };
+		DAF836A71E3E4330003178C4 /* PSPacketHistoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF836A61E3E4330003178C4 /* PSPacketHistoryTableViewController.swift */; };
+		DAF836A91E3E4692003178C4 /* PSPacketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF836A81E3E4692003178C4 /* PSPacketTableViewCell.swift */; };
+		DAF836AB1E3E469F003178C4 /* PSPacketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAF836AA1E3E469F003178C4 /* PSPacketTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +112,11 @@
 		DAF8369B1E3D6CBB003178C4 /* PSWebFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSWebFormViewController.swift; sourceTree = "<group>"; };
 		DAF8369D1E3D6D04003178C4 /* PSWebViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSWebViewController.storyboard; sourceTree = "<group>"; };
 		DAF8369F1E3D976F003178C4 /* NSURLRequest+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLRequest+Category.swift"; sourceTree = "<group>"; };
+		DAF836A21E3E3CBE003178C4 /* PSPacketBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPacketBuilder.swift; sourceTree = "<group>"; };
+		DAF836A41E3E3E5D003178C4 /* PSPacketFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPacketFactory.swift; sourceTree = "<group>"; };
+		DAF836A61E3E4330003178C4 /* PSPacketHistoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPacketHistoryTableViewController.swift; sourceTree = "<group>"; };
+		DAF836A81E3E4692003178C4 /* PSPacketTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPacketTableViewCell.swift; sourceTree = "<group>"; };
+		DAF836AA1E3E469F003178C4 /* PSPacketTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSPacketTableViewCell.xib; sourceTree = "<group>"; };
 		DCC98E59EDB289071AD09144 /* Pods_popsmoke.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_popsmoke.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -142,6 +152,8 @@
 			children = (
 				DA0051351E37B36F008E7035 /* PSDocumentCollectionViewCell.xib */,
 				DA0051311E37AEC3008E7035 /* PSDocumentCollectionViewCell.swift */,
+				DAF836AA1E3E469F003178C4 /* PSPacketTableViewCell.xib */,
+				DAF836A81E3E4692003178C4 /* PSPacketTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -200,6 +212,7 @@
 				DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */,
 				DA0B26861E362A62000CC2DC /* PSMainViewController.swift */,
 				DA00512C1E37ABDA008E7035 /* PSPacketViewController.swift */,
+				DAF836A61E3E4330003178C4 /* PSPacketHistoryTableViewController.swift */,
 				DA01F01E1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard */,
 				DA01F01C1E39AA9100B7FB04 /* PSPDFContainerViewController.swift */,
 				DAB08D9C1E38F91F00F2E263 /* PSPhotoViewController.swift */,
@@ -240,6 +253,7 @@
 				DAF836891E3AA68E003178C4 /* Forms */,
 				DAF8368F1E3AA73A003178C4 /* Managers */,
 				DA01F0151E39612F00B7FB04 /* Models */,
+				DAF836A11E3E3CA6003178C4 /* Protocols */,
 				DA0B26851E362A20000CC2DC /* ViewControllers */,
 				DA5007FB1E28BBA80038A5E8 /* Assets.xcassets */,
 				DA00513D1E37C8CB008E7035 /* Icons.xcassets */,
@@ -269,6 +283,7 @@
 				DAF836971E3B96D8003178C4 /* PSMailComposerFactory.swift */,
 				DAF836811E3AA677003178C4 /* PSPacketViewFactory.swift */,
 				DAF836821E3AA677003178C4 /* PSPDFContainerViewFactory.swift */,
+				DAF836A41E3E3E5D003178C4 /* PSPacketFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -315,6 +330,14 @@
 				DAF836951E3AB1B3003178C4 /* TRIPSFormViewController.swift */,
 			);
 			path = TRIPS;
+			sourceTree = "<group>";
+		};
+		DAF836A11E3E3CA6003178C4 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DAF836A21E3E3CBE003178C4 /* PSPacketBuilder.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		FCC2DAAEF0D2A4DAB4837FF9 /* Pods */ = {
@@ -422,6 +445,7 @@
 				DA5007FC1E28BBA80038A5E8 /* Assets.xcassets in Resources */,
 				DA01F01F1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard in Resources */,
 				DAB08D9A1E38F68100F2E263 /* PSFormContainer.storyboard in Resources */,
+				DAF836AB1E3E469F003178C4 /* PSPacketTableViewCell.xib in Resources */,
 				DA01F0281E39ACA700B7FB04 /* DA31_Packet.plist in Resources */,
 				DA00513E1E37C8CB008E7035 /* Icons.xcassets in Resources */,
 				DA0B26891E362A6D000CC2DC /* PSMainStoryboard.storyboard in Resources */,
@@ -519,13 +543,17 @@
 				DA01F0141E392D4C00B7FB04 /* UILabel+Size.swift in Sources */,
 				DAB08D9D1E38F91F00F2E263 /* PSPhotoViewController.swift in Sources */,
 				DA01F0191E3961D100B7FB04 /* PSDocument.swift in Sources */,
+				DAF836A31E3E3CBE003178C4 /* PSPacketBuilder.swift in Sources */,
 				DAF836961E3AB1B3003178C4 /* TRIPSFormViewController.swift in Sources */,
 				DA00513A1E37B743008E7035 /* PSPacketUtilities.swift in Sources */,
 				DAF836831E3AA677003178C4 /* DA31FormFactory.swift in Sources */,
 				DAF836A01E3D976F003178C4 /* NSURLRequest+Category.swift in Sources */,
 				DAB08D9B1E38F68100F2E263 /* PSFormContainerViewController.swift in Sources */,
 				DAF836981E3B96D8003178C4 /* PSMailComposerFactory.swift in Sources */,
+				DAF836A91E3E4692003178C4 /* PSPacketTableViewCell.swift in Sources */,
 				DAF836841E3AA677003178C4 /* PSDocumentViewFactory.swift in Sources */,
+				DAF836A51E3E3E5D003178C4 /* PSPacketFactory.swift in Sources */,
+				DAF836A71E3E4330003178C4 /* PSPacketHistoryTableViewController.swift in Sources */,
 				DA01F01D1E39AA9100B7FB04 /* PSPDFContainerViewController.swift in Sources */,
 				DAF8368E1E3AA68E003178C4 /* DA31PDFFiller.swift in Sources */,
 				DAF836871E3AA677003178C4 /* PSPacketViewFactory.swift in Sources */,

@@ -16,7 +16,7 @@ let kDocumentFormType		= "form_type"
 let kDocumentAttachmentType	= "attachment_type"
 let kDocumentWebURL			= "url"
 
-class PSDocument: NSObject {
+class PSDocument: NSObject, NSCoding {
 
 	var icon: String?
 	var title: String?
@@ -35,6 +35,9 @@ class PSDocument: NSObject {
 		if let tmp = dictionary[kDocumentIcon] as? String? {
 			icon = tmp
 		}
+		if let tmp = dictionary[kDocumentWebURL] as? String? {
+			webAddress = tmp
+		}
 		if let tmp = dictionary[kDocumentType] as? String? {
 			documentType = DocumentType(rawValue: tmp!)!
 		}
@@ -44,8 +47,31 @@ class PSDocument: NSObject {
 		if let tmp = dictionary[kDocumentAttachmentType] as? String? {
 			attachmentType = AttachmentType(rawValue: tmp!)!
 		}
-		if let tmp = dictionary[kDocumentWebURL] as? String? {
-			webAddress = tmp
-		}
+
+	}
+	
+	// MARK: - NSCoding
+
+	required init(coder aDecoder: NSCoder) {
+		icon = aDecoder.decodeObject(forKey: kDocumentIcon) as? String ?? ""
+		title = aDecoder.decodeObject(forKey: kDocumentTitle) as? String ?? ""
+		filePath = aDecoder.decodeObject(forKey: kDocumentFilePath) as? String ?? ""
+		webAddress = aDecoder.decodeObject(forKey: kDocumentWebURL) as? String ?? ""
+		let tmp1 = aDecoder.decodeObject(forKey: kDocumentType) as? String ?? "ERROR"
+		documentType = DocumentType(rawValue: tmp1)!
+		let tmp2 = aDecoder.decodeObject(forKey: kDocumentFormType) as? String ?? "ERROR"
+		formType = FormType(rawValue: tmp2)!
+		let tmp3 = aDecoder.decodeObject(forKey: kDocumentAttachmentType) as? String ?? "ERROR"
+		attachmentType = AttachmentType(rawValue: tmp3)!
+	}
+	
+	func encode(with aCoder: NSCoder) {
+		aCoder.encode(icon, forKey: kDocumentIcon)
+		aCoder.encode(title, forKey: kDocumentTitle)
+		aCoder.encode(filePath, forKey: kDocumentFilePath)
+		aCoder.encode(webAddress, forKey: kDocumentWebURL)
+		aCoder.encode(documentType, forKey: kDocumentType)
+		aCoder.encode(formType, forKey: kDocumentFormType)
+		aCoder.encode(attachmentType, forKey: kDocumentAttachmentType)
 	}
 }
