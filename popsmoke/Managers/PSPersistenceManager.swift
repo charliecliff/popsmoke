@@ -41,11 +41,7 @@ class PSPersistenceManager: NSObject {
 		guard let data = UIImagePNGRepresentation(image) else {
 			throw PersistenceError.imagePersistence
 		}
-		let filePath = getDocumentsDirectory().appendingPathComponent("\(fileName)")
-		do {
-			try? data.write(to: filePath)
-			return
-		}
+		FileManager.default.createFile(atPath: fileName, contents: data, attributes: nil)
 	}
 
 /**---------------------------------------------------------------------------------------

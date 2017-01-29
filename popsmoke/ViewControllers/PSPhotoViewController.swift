@@ -19,8 +19,6 @@ class PSImagePickerController: UIImagePickerController, UIImagePickerControllerD
 			return
 		}
 		let filePath = PSPersistenceManager.newPNGFilePath()
-		
-		
 		do {
 			try PSPersistenceManager.save(image: chosenImage, fileName: filePath!)
 		} catch PersistenceError.packetPersistence {

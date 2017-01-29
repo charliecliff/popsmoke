@@ -25,7 +25,8 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
         super.viewDidLoad()
 		let documentNib = UINib(nibName: "PSDocumentCollectionViewCell", bundle:nil)
 		self.collectionView?.register(documentNib, forCellWithReuseIdentifier: cellReuseIdentifier)
-		
+
+		// RXSWift Bindings
 		_ = PSUserManager.sharedInstance.reloadCurrentPacket.asObservable().subscribe(onNext: {
 			if $0 {
 				self.reloadFromManager()
@@ -41,6 +42,7 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 	// MARK: Actions
 	
 	func reloadFromManager() {
+		submitButton?.isHidden = !PSUserManager.sharedInstance.packet.isCompleted()
 		self.collectionView?.reloadData()
 	}
 	
