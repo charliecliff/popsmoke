@@ -22,6 +22,14 @@ class PSPacket: NSObject, NSCoding {
 	var packetID: String?
 	var documents = [PSDocument]()
 	
+	override init() {
+		super.init()
+		title = "Error"
+		filepath = "Error"
+		packetID = "Error"
+		documents = [PSDocument]()
+	}
+	
 	init(dictionary : [String : Any?]) {
 		super.init()
 		guard let inputDocuments = dictionary[kDocuments] as? [Any?] else {

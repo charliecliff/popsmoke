@@ -17,7 +17,6 @@ fileprivate let cellReuseIdentifier	= "document_cell"
 
 class PSPacketViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate {
 
-	var packet: PSPacket?
 	private var widthPerItem  = CGFloat(0)
 	@IBOutlet weak var submitButton: UIButton?
 	@IBOutlet weak var collectionView: UICollectionView?
@@ -29,17 +28,19 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 		
 		_ = PSUserManager.sharedInstance.reloadCurrentPacket.asObservable().subscribe(onNext: {
 			if $0 {
-				// TODO: Reload Here
+				self.reloadFromManager()
 			}
 		})
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-		submitButton?.isHidden = true
-		if packet != nil {
-			submitButton?.isHidden = !(packet!.isCompleted())
-		}
+		reloadFromManager()
+	}
+
+	// MARK: Actions
+	
+	func reloadFromManager() {
 		self.collectionView?.reloadData()
 	}
 	
@@ -55,11 +56,7 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 	}
 	
 	@IBAction func didPressSubmitButton(sender: UIButton) {
-		guard packet != nil else {
-			//TODO: Handle the errors in a global error alert
-			return
-		}
-		let mailComposer = PSMailComposerFactory.mailComposerFor(packet: packet!)
+		let mailComposer = PSMailComposerFactory.mailComposerFor(packet: PSUserManager.sharedInstance.packet)
 		mailComposer.mailComposeDelegate = self
 		present(mailComposer, animated: true, completion: nil)
 	}
@@ -71,17 +68,12 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		guard packet != nil else {
-			return 0
-		}
-        return packet!.documents.count
+        return PSUserManager.sharedInstance.packet.documents.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let index = indexPath.item
-		guard let document = packet?.documents[index] else {
-			return UICollectionViewCell()
-		}
+		let document = PSUserManager.sharedInstance.packet.documents[index]
 		guard let documentCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as? PSDocumentCollectionViewCell else {
 			return UICollectionViewCell()
 		}
@@ -143,7 +135,7 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 		if error != nil {
 			//TODO: Handle the errors in a global error alert
 		} else {
-			PSUserManager.sharedInstance.savePacket(packet: packet!)
+			PSUserManager.sharedInstance.savePacket(packet: PSUserManager.sharedInstance.packet)
 		}
 		controller.dismiss(animated: true, completion: nil)
 	}

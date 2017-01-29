@@ -31,14 +31,12 @@ class PSPacketFactory: NSObject {
 		return "\(uuid)"
 	}
 
-	class func createDA31() -> PSPacket? {
+	class func createDA31() throws -> PSPacket {
 		guard let path = Bundle.main.path(forResource: "DA31_Packet", ofType:"plist") else {
-			//TODO: Handle the errors in a global error alert
-			return nil
+			throw PacketError.fileError
 		}
 		guard let packetDictionary = NSDictionary(contentsOfFile:path) as? [String : Any?] else {
-			//TODO: Handle the errors in a global error alert
-			return nil
+			throw PacketError.createError
 		}
 		let packet = PSPacket.init(dictionary: packetDictionary)
 		if let newPacketID = PSPacketFactory.newPacketID() {

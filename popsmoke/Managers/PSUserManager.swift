@@ -10,23 +10,23 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+enum PacketError: Error {
+	case fileError
+	case createError
+}
+
 class PSUserManager {
 	
 	static let sharedInstance = PSUserManager()
 	
-	private(set) var packet: PSPacket?
+	private(set) var packet = PSPacket()
 	private(set) var completedPackets = [PSPacket]()
 	
 	private(set) var completedPacketFiePaths = [String]()
 	
-	
-	
 	private(set) var reloadCurrentPacket = Variable( false )
 	
-	
-	
 	init() {
-		
 		beginPacketBuilding()
 	}
 	
@@ -34,7 +34,13 @@ class PSUserManager {
 	
 	func beginPacketBuilding() {
 		
-		packet = PSPacketFactory.createDA31()
+		do {
+			try packet = PSPacketFactory.createDA31()
+		} catch PersistenceError.packetPersistence {
+			print("Invalid Selection.")
+		} catch {
+			print("Invalid Selection.")
+		}
 	}
 
 	func savePacket(packet: PSPacket) {
