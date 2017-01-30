@@ -25,6 +25,7 @@
 		DA0B26891E362A6D000CC2DC /* PSMainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */; };
 		DA3585F21E3A7ABF0014AE10 /* UIImageView+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3585F11E3A7ABF0014AE10 /* UIImageView+Tint.swift */; };
 		DA3585F41E3A7DE00014AE10 /* PSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3585F31E3A7DE00014AE10 /* PSConstants.swift */; };
+		DA4C6CEA1E3FE5B600AC175A /* PSServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4C6CE91E3FE5B600AC175A /* PSServerManager.swift */; };
 		DA5007F31E28BBA80038A5E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5007F21E28BBA80038A5E8 /* AppDelegate.swift */; };
 		DA5007FC1E28BBA80038A5E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA5007FB1E28BBA80038A5E8 /* Assets.xcassets */; };
 		DA5007FF1E28BBA80038A5E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5007FD1E28BBA80038A5E8 /* LaunchScreen.storyboard */; };
@@ -83,6 +84,7 @@
 		DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSMainStoryboard.storyboard; sourceTree = "<group>"; };
 		DA3585F11E3A7ABF0014AE10 /* UIImageView+Tint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Tint.swift"; sourceTree = "<group>"; };
 		DA3585F31E3A7DE00014AE10 /* PSConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSConstants.swift; sourceTree = "<group>"; };
+		DA4C6CE91E3FE5B600AC175A /* PSServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSServerManager.swift; sourceTree = "<group>"; };
 		DA5007EF1E28BBA80038A5E8 /* popsmoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = popsmoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5007F21E28BBA80038A5E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA5007FB1E28BBA80038A5E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -314,6 +316,7 @@
 			children = (
 				DAF836901E3AA747003178C4 /* PSPersistenceManager.swift */,
 				DAF836991E3D6B46003178C4 /* PSUserManager.swift */,
+				DA4C6CE91E3FE5B600AC175A /* PSServerManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				DA0B26871E362A62000CC2DC /* PSMainViewController.swift in Sources */,
 				DA3585F41E3A7DE00014AE10 /* PSConstants.swift in Sources */,
 				DA0051321E37AEC3008E7035 /* PSDocumentCollectionViewCell.swift in Sources */,
+				DA4C6CEA1E3FE5B600AC175A /* PSServerManager.swift in Sources */,
 				DAF836941E3AAFC2003178C4 /* TRIPSFormFactory.swift in Sources */,
 				DAF8368D1E3AA68E003178C4 /* DA31FormViewController.swift in Sources */,
 				DA01F0141E392D4C00B7FB04 /* UILabel+Size.swift in Sources */,
