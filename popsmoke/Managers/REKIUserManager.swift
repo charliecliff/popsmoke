@@ -24,19 +24,24 @@ protocol PSLoginStateMachine: class {
 class REKIUserManager {
     
 	static let sharedInstance = REKIUserManager()
-	internal var userProvider : PSUserProvider?
+	
+	private var userProvider : PSUserProvider?
 
 	private var _socialMediaToken: String?
 
 	var hasCompletedOnboarding  = false
 	
-	var user = PSUser()
+	private(set) var user = PSUser()
 	var hasValidUser = Variable( false )
 	
 	init() {
 		userProvider = PSParseClient()
 	}
-
+	
+	private func set(user: PSUser) {
+		self.user = user
+	}
+	
 	func validateUserForSocialMediaToken(token: String?, completion: ((_ error: NSError?) -> Void)?) {
 		
 		REKIFacebookClient.getUserDataForToken(token: (token)!, completion: { (userData, error) in
@@ -48,11 +53,8 @@ class REKIUserManager {
 				}
 				return
 			}
-			
 			let userID = PSUserFactory.userIDFromDictionary(userDictionary: userData!)
-			
-			self.userProvider?.getUserForUserID(userID: userID, completion: { (user, error) in
-				
+						self.userProvider?.getUserForUserID(userID: userID, completion: { (user, error) in
 				guard error == nil else {
 					self.createUserForSocialMediaToken(token: token, completion: completion)
 					return
@@ -60,12 +62,8 @@ class REKIUserManager {
 				guard (user != nil) else {
 					return
 				}
-
-				// TODO: Set User
-				
-				if completion != nil {
-					completion!(nil)
-				}
+				self.set(user: user!)
+				completion?(nil)
 			})
 			
 		})
@@ -78,13 +76,11 @@ class REKIUserManager {
 			guard userData != nil else {
 				return
 			}
-			
 			guard let newUser = PSUserFactory.userForDictionary(userDictionary: userData!) else {
 				return
 			}
-			self.user = newUser
-//			self.setUser(newUser)
-			self.userProvider?.postUser(user: self.user, completion: completion)			
+			self.set(user: newUser)
+			self.userProvider?.postUser(user: self.user, completion: completion)
 		})
 	}
 	

@@ -16,12 +16,9 @@ class PSUserFactory: NSObject {
 	
 	class func userForDictionary(userDictionary: [String: String]) -> PSUser? {
 		let newUser = PSUser()
-//		newUser.firstName = userDictionary[kKeyFirstName]
-//		newUser.lastName  = userDictionary[kKeyLastName]
-//		newUser.userid    = userDictionary[kKeyUserID]
-//		newUser.curatedTripIDs      = [String]()
-//		newUser.recommendedTripIDs  = [String]()
-//		newUser.promotedTripIDs     = [String]()
+		newUser.userID    = userDictionary[kKeyUserID]
+		newUser.firstName = userDictionary[kKeyFirstName]
+		newUser.lastName  = userDictionary[kKeyLastName]
 		return newUser
 	}
 }
