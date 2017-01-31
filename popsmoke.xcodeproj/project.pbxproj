@@ -27,6 +27,12 @@
 		DA0287A01E40E69E008B481B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA02879C1E40E69E008B481B /* FBSDKShareKit.framework */; };
 		DA0287A21E40E8A2008B481B /* PSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287A11E40E8A2008B481B /* PSLoginViewController.swift */; };
 		DA0287A41E40E907008B481B /* PSLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0287A31E40E907008B481B /* PSLogin.storyboard */; };
+		DA0287A61E40EDE9008B481B /* PSUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287A51E40EDE9008B481B /* PSUser.swift */; };
+		DA0287A91E40F3E7008B481B /* REKIFacebookClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287A81E40F3E7008B481B /* REKIFacebookClient.swift */; };
+		DA0287AB1E40F3F1008B481B /* REKIUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287AA1E40F3F1008B481B /* REKIUserManager.swift */; };
+		DA0287AD1E40F7EC008B481B /* PSUserFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287AC1E40F7EC008B481B /* PSUserFactory.swift */; };
+		DA0287AF1E40FC59008B481B /* PSUserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287AE1E40FC59008B481B /* PSUserProvider.swift */; };
+		DA0287B11E40FDBA008B481B /* PSParseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287B01E40FDBA008B481B /* PSParseClient.swift */; };
 		DA0B26871E362A62000CC2DC /* PSMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B26861E362A62000CC2DC /* PSMainViewController.swift */; };
 		DA0B26891E362A6D000CC2DC /* PSMainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */; };
 		DA3585F21E3A7ABF0014AE10 /* UIImageView+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3585F11E3A7ABF0014AE10 /* UIImageView+Tint.swift */; };
@@ -92,6 +98,12 @@
 		DA02879C1E40E69E008B481B /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Facebook/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		DA0287A11E40E8A2008B481B /* PSLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSLoginViewController.swift; sourceTree = "<group>"; };
 		DA0287A31E40E907008B481B /* PSLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSLogin.storyboard; sourceTree = "<group>"; };
+		DA0287A51E40EDE9008B481B /* PSUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSUser.swift; sourceTree = "<group>"; };
+		DA0287A81E40F3E7008B481B /* REKIFacebookClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REKIFacebookClient.swift; sourceTree = "<group>"; };
+		DA0287AA1E40F3F1008B481B /* REKIUserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REKIUserManager.swift; sourceTree = "<group>"; };
+		DA0287AC1E40F7EC008B481B /* PSUserFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSUserFactory.swift; sourceTree = "<group>"; };
+		DA0287AE1E40FC59008B481B /* PSUserProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSUserProvider.swift; sourceTree = "<group>"; };
+		DA0287B01E40FDBA008B481B /* PSParseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSParseClient.swift; sourceTree = "<group>"; };
 		DA0B26861E362A62000CC2DC /* PSMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSMainViewController.swift; sourceTree = "<group>"; };
 		DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSMainStoryboard.storyboard; sourceTree = "<group>"; };
 		DA3585F11E3A7ABF0014AE10 /* UIImageView+Tint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Tint.swift"; sourceTree = "<group>"; };
@@ -193,6 +205,7 @@
 				DAF8367B1E3AA677003178C4 /* Factories */,
 				DA01F0161E39617C00B7FB04 /* PSPacket.swift */,
 				DA01F0181E3961D100B7FB04 /* PSDocument.swift */,
+				DA0287A51E40EDE9008B481B /* PSUser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,6 +233,15 @@
 				DA01F0271E39ACA700B7FB04 /* DA_31.pdf */,
 			);
 			path = PDFs;
+			sourceTree = "<group>";
+		};
+		DA0287A71E40F3E7008B481B /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				DA0287A81E40F3E7008B481B /* REKIFacebookClient.swift */,
+				DA0287B01E40FDBA008B481B /* PSParseClient.swift */,
+			);
+			path = Clients;
 			sourceTree = "<group>";
 		};
 		DA0B26851E362A20000CC2DC /* ViewControllers */ = {
@@ -268,6 +290,7 @@
 				DA0051391E37B743008E7035 /* PSPacketUtilities.swift */,
 				DA3585F31E3A7DE00014AE10 /* PSConstants.swift */,
 				DA00512E1E37AE7A008E7035 /* Cells */,
+				DA0287A71E40F3E7008B481B /* Clients */,
 				DAF836891E3AA68E003178C4 /* Forms */,
 				DAF8368F1E3AA73A003178C4 /* Managers */,
 				DA01F0151E39612F00B7FB04 /* Models */,
@@ -302,6 +325,7 @@
 				DAF836811E3AA677003178C4 /* PSPacketViewFactory.swift */,
 				DAF836821E3AA677003178C4 /* PSPDFContainerViewFactory.swift */,
 				DAF836A41E3E3E5D003178C4 /* PSPacketFactory.swift */,
+				DA0287AC1E40F7EC008B481B /* PSUserFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -336,6 +360,7 @@
 		DAF8368F1E3AA73A003178C4 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				DA0287AA1E40F3F1008B481B /* REKIUserManager.swift */,
 				DAF836901E3AA747003178C4 /* PSPersistenceManager.swift */,
 				DAF836991E3D6B46003178C4 /* PSUserManager.swift */,
 				DA4C6CE91E3FE5B600AC175A /* PSServerManager.swift */,
@@ -354,6 +379,7 @@
 		DAF836A11E3E3CA6003178C4 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				DA0287AE1E40FC59008B481B /* PSUserProvider.swift */,
 				DAF836A21E3E3CBE003178C4 /* PSPacketBuilder.swift */,
 			);
 			path = Protocols;
@@ -558,8 +584,11 @@
 				DA0051321E37AEC3008E7035 /* PSDocumentCollectionViewCell.swift in Sources */,
 				DA4C6CEA1E3FE5B600AC175A /* PSServerManager.swift in Sources */,
 				DA0287A21E40E8A2008B481B /* PSLoginViewController.swift in Sources */,
+				DA0287AF1E40FC59008B481B /* PSUserProvider.swift in Sources */,
 				DAF836941E3AAFC2003178C4 /* TRIPSFormFactory.swift in Sources */,
 				DAF8368D1E3AA68E003178C4 /* DA31FormViewController.swift in Sources */,
+				DA0287AD1E40F7EC008B481B /* PSUserFactory.swift in Sources */,
+				DA0287AB1E40F3F1008B481B /* REKIUserManager.swift in Sources */,
 				DA01F0141E392D4C00B7FB04 /* UILabel+Size.swift in Sources */,
 				DAB08D9D1E38F91F00F2E263 /* PSPhotoViewController.swift in Sources */,
 				DA01F0191E3961D100B7FB04 /* PSDocument.swift in Sources */,
@@ -572,12 +601,15 @@
 				DAF836981E3B96D8003178C4 /* PSMailComposerFactory.swift in Sources */,
 				DAF836A91E3E4692003178C4 /* PSPacketTableViewCell.swift in Sources */,
 				DAF836841E3AA677003178C4 /* PSDocumentViewFactory.swift in Sources */,
+				DA0287B11E40FDBA008B481B /* PSParseClient.swift in Sources */,
 				DAF836A51E3E3E5D003178C4 /* PSPacketFactory.swift in Sources */,
+				DA0287A61E40EDE9008B481B /* PSUser.swift in Sources */,
 				DAF836A71E3E4330003178C4 /* PSPacketHistoryTableViewController.swift in Sources */,
 				DA01F01D1E39AA9100B7FB04 /* PSPDFContainerViewController.swift in Sources */,
 				DAF8368E1E3AA68E003178C4 /* DA31PDFFiller.swift in Sources */,
 				DAF836871E3AA677003178C4 /* PSPacketViewFactory.swift in Sources */,
 				DA01F01B1E39A9C700B7FB04 /* UIViewController+Transition.swift in Sources */,
+				DA0287A91E40F3E7008B481B /* REKIFacebookClient.swift in Sources */,
 				DAF836861E3AA677003178C4 /* PSFormViewControllerFactory.swift in Sources */,
 				DA5007F31E28BBA80038A5E8 /* AppDelegate.swift in Sources */,
 				DAF836851E3AA677003178C4 /* PSFormContainerViewFactory.swift in Sources */,

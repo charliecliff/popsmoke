@@ -19,6 +19,8 @@ class PSUserManager {
 	
 	static let sharedInstance = PSUserManager()
 	
+	var user = PSUser()
+	
 	private(set) var packet = PSPacket()
 	private(set) var completedPackets = [PSPacket]()
 	
