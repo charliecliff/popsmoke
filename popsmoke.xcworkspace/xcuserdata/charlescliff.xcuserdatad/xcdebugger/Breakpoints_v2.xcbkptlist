@@ -138,7 +138,7 @@
                   moduleName = "popsmoke"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/charlescliff/Documents/popsmoke/popsmoke/Managers/PSServerManager.swift"
-                  timestampString = "507507768.368527"
+                  timestampString = "507571525.298707"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -153,7 +153,7 @@
                   moduleName = "popsmoke"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/charlescliff/Documents/popsmoke/popsmoke/Managers/PSServerManager.swift"
-                  timestampString = "507507768.372895"
+                  timestampString = "507571525.301751"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "16"
@@ -176,6 +176,22 @@
             startingLineNumber = "26"
             endingLineNumber = "26"
             landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "popsmoke/ViewControllers/PSLoginViewController.swift"
+            timestampString = "507570642.66579"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "loginButtonDidLogOut(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -21,6 +21,12 @@
 		DA01F01F1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA01F01E1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard */; };
 		DA01F0281E39ACA700B7FB04 /* DA31_Packet.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA01F0251E39ACA700B7FB04 /* DA31_Packet.plist */; };
 		DA01F0291E39ACA700B7FB04 /* DA_31.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DA01F0271E39ACA700B7FB04 /* DA_31.pdf */; };
+		DA02879D1E40E69E008B481B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA0287991E40E69E008B481B /* Bolts.framework */; };
+		DA02879E1E40E69E008B481B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA02879A1E40E69E008B481B /* FBSDKCoreKit.framework */; };
+		DA02879F1E40E69E008B481B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA02879B1E40E69E008B481B /* FBSDKLoginKit.framework */; };
+		DA0287A01E40E69E008B481B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA02879C1E40E69E008B481B /* FBSDKShareKit.framework */; };
+		DA0287A21E40E8A2008B481B /* PSLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287A11E40E8A2008B481B /* PSLoginViewController.swift */; };
+		DA0287A41E40E907008B481B /* PSLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0287A31E40E907008B481B /* PSLogin.storyboard */; };
 		DA0B26871E362A62000CC2DC /* PSMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B26861E362A62000CC2DC /* PSMainViewController.swift */; };
 		DA0B26891E362A6D000CC2DC /* PSMainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */; };
 		DA3585F21E3A7ABF0014AE10 /* UIImageView+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3585F11E3A7ABF0014AE10 /* UIImageView+Tint.swift */; };
@@ -80,6 +86,12 @@
 		DA01F01E1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSPDFContainerViewController.storyboard; sourceTree = "<group>"; };
 		DA01F0251E39ACA700B7FB04 /* DA31_Packet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DA31_Packet.plist; sourceTree = "<group>"; };
 		DA01F0271E39ACA700B7FB04 /* DA_31.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = DA_31.pdf; sourceTree = "<group>"; };
+		DA0287991E40E69E008B481B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Facebook/Bolts.framework; sourceTree = "<group>"; };
+		DA02879A1E40E69E008B481B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Facebook/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		DA02879B1E40E69E008B481B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Facebook/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		DA02879C1E40E69E008B481B /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Facebook/FBSDKShareKit.framework; sourceTree = "<group>"; };
+		DA0287A11E40E8A2008B481B /* PSLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSLoginViewController.swift; sourceTree = "<group>"; };
+		DA0287A31E40E907008B481B /* PSLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSLogin.storyboard; sourceTree = "<group>"; };
 		DA0B26861E362A62000CC2DC /* PSMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSMainViewController.swift; sourceTree = "<group>"; };
 		DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSMainStoryboard.storyboard; sourceTree = "<group>"; };
 		DA3585F11E3A7ABF0014AE10 /* UIImageView+Tint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Tint.swift"; sourceTree = "<group>"; };
@@ -124,6 +136,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B67C06752341A3162C34B41 /* Pods_popsmoke.framework in Frameworks */,
+				DA02879E1E40E69E008B481B /* FBSDKCoreKit.framework in Frameworks */,
+				DA0287A01E40E69E008B481B /* FBSDKShareKit.framework in Frameworks */,
+				DA02879F1E40E69E008B481B /* FBSDKLoginKit.framework in Frameworks */,
+				DA02879D1E40E69E008B481B /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +156,10 @@
 		2FF9F775991F4E34B089FFD7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA0287991E40E69E008B481B /* Bolts.framework */,
+				DA02879A1E40E69E008B481B /* FBSDKCoreKit.framework */,
+				DA02879B1E40E69E008B481B /* FBSDKLoginKit.framework */,
+				DA02879C1E40E69E008B481B /* FBSDKShareKit.framework */,
 				DCC98E59EDB289071AD09144 /* Pods_popsmoke.framework */,
 			);
 			name = Frameworks;
@@ -207,6 +227,8 @@
 			children = (
 				DAB08D981E38F68100F2E263 /* PSFormContainer.storyboard */,
 				DAB08D991E38F68100F2E263 /* PSFormContainerViewController.swift */,
+				DA0287A31E40E907008B481B /* PSLogin.storyboard */,
+				DA0287A11E40E8A2008B481B /* PSLoginViewController.swift */,
 				DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */,
 				DA0B26861E362A62000CC2DC /* PSMainViewController.swift */,
 				DA00512C1E37ABDA008E7035 /* PSPacketViewController.swift */,
@@ -441,6 +463,7 @@
 				DA5007FC1E28BBA80038A5E8 /* Assets.xcassets in Resources */,
 				DA01F01F1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard in Resources */,
 				DAB08D9A1E38F68100F2E263 /* PSFormContainer.storyboard in Resources */,
+				DA0287A41E40E907008B481B /* PSLogin.storyboard in Resources */,
 				DAF836AB1E3E469F003178C4 /* PSPacketTableViewCell.xib in Resources */,
 				DA01F0281E39ACA700B7FB04 /* DA31_Packet.plist in Resources */,
 				DA00513E1E37C8CB008E7035 /* Icons.xcassets in Resources */,
@@ -534,6 +557,7 @@
 				DA3585F41E3A7DE00014AE10 /* PSConstants.swift in Sources */,
 				DA0051321E37AEC3008E7035 /* PSDocumentCollectionViewCell.swift in Sources */,
 				DA4C6CEA1E3FE5B600AC175A /* PSServerManager.swift in Sources */,
+				DA0287A21E40E8A2008B481B /* PSLoginViewController.swift in Sources */,
 				DAF836941E3AAFC2003178C4 /* TRIPSFormFactory.swift in Sources */,
 				DAF8368D1E3AA68E003178C4 /* DA31FormViewController.swift in Sources */,
 				DA01F0141E392D4C00B7FB04 /* UILabel+Size.swift in Sources */,
@@ -693,6 +717,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 23CZC4883B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Facebook",
+				);
 				INFOPLIST_FILE = popsmoke/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -710,6 +739,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 23CZC4883B;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Facebook",
+				);
 				INFOPLIST_FILE = popsmoke/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
