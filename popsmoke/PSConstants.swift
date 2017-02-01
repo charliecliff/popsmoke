@@ -9,7 +9,8 @@
 import UIKit
 
 // MARK: - Storyboard IDs
-let kMainStoryboard = "PSMainStoryboard"
+let kMainStoryboard		= "PSMainStoryboard"
+let kLoginStoryboard	= "PSLogin"
 
 // MARK: - User Factory
 let kKeyUserID      = "id"

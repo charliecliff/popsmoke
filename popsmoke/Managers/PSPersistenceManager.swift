@@ -6,16 +6,21 @@
 //  Copyright © 2017 Charles Cliff. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import ILPDFKit
 
 enum PersistenceError: Error {
 	case packetPersistence
 	case imagePersistence
+	case userPersistence
 }
 
 class PSPersistenceManager: NSObject {
 
+/**---------------------------------------------------------------------------------------
+ * @name Creating Documents
+ * ---------------------------------------------------------------------------------------
+ */
 	private class func getDocumentURL(packetID: String) -> String {
 		var path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as String
 		path.append(packetID)
@@ -32,6 +37,12 @@ class PSPersistenceManager: NSObject {
  * @name Saving Objects
  * ---------------------------------------------------------------------------------------
  */
+	class func save(user: PSUser) {
+		var filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as String
+		filePath.append("current_user")
+		NSKeyedArchiver.archiveRootObject(user, toFile: filePath)
+	}
+	
 	class func save(packet: PSPacket) {
 		let filePath = PSPersistenceManager.getDocumentURL(packetID: packet.packetID!)
 		NSKeyedArchiver.archiveRootObject(packet, toFile: filePath)
@@ -48,6 +59,15 @@ class PSPersistenceManager: NSObject {
  * @name Loading Objects
  * ---------------------------------------------------------------------------------------
  */
+	class func loadUser() throws -> PSUser? {
+		var filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as String
+		filePath.append("current_user")
+		guard let user = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? PSUser else {
+			throw PersistenceError.userPersistence
+		}
+		return user
+	}
+	
 	class func loadPacket(filePath: String) throws -> PSPacket? {
 		guard let packet = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? PSPacket else {
 			throw PersistenceError.packetPersistence

@@ -6,15 +6,15 @@
 //  Copyright © 2017 Charles Cliff. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-let kDocumentIcon			= "icon"
-let kDocumentTitle			= "name"
-let kDocumentFilePath		= "path"
-let kDocumentType			= "type"
-let kDocumentFormType		= "form_type"
-let kDocumentAttachmentType	= "attachment_type"
-let kDocumentWebURL			= "url"
+fileprivate let kDocumentIcon			= "icon"
+fileprivate let kDocumentTitle			= "name"
+fileprivate let kDocumentFilePath		= "path"
+fileprivate let kDocumentType			= "type"
+fileprivate let kDocumentFormType		= "form_type"
+fileprivate let kDocumentAttachmentType	= "attachment_type"
+fileprivate let kDocumentWebURL			= "url"
 
 class PSDocument: NSObject, NSCoding {
 
@@ -47,7 +47,6 @@ class PSDocument: NSObject, NSCoding {
 		if let tmp = dictionary[kDocumentAttachmentType] as? String? {
 			attachmentType = AttachmentType(rawValue: tmp!)!
 		}
-
 	}
 	
 	// MARK: - NSCoding

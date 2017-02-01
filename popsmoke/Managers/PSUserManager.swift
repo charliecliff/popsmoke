@@ -24,18 +24,14 @@ protocol PSLoginStateMachine: class {
 class PSUserManager {
     
 	static let sharedInstance = PSUserManager()
-	
-	private var userProvider : PSUserProvider?
-
+	private var _userProvider : PSUserProvider?
 	private var _socialMediaToken: String?
-
-	var hasCompletedOnboarding  = false
-	
 	private(set) var user = PSUser()
-	var hasValidUser = Variable( false )
+	private(set) var hasValidUser = Variable( false )
 	
 	init() {
-		userProvider = PSParseClient()
+		_userProvider = PSParseClient()
+		loadUser()
 	}
 	
 	private func set(user: PSUser) {
@@ -43,11 +39,28 @@ class PSUserManager {
 		hasValidUser.value = false
 		hasValidUser.value = true
 	}
+
+	// MARK: - Persistence
+	
+	private func saveUser() {
+		PSPersistenceManager.save(user: user)
+	}
+	
+	private func loadUser() {
+		do {
+			let user = try PSPersistenceManager.loadUser()
+			set(user: user!)
+		} catch PersistenceError.userPersistence {
+			//TODO: Handle the errors in a global error alert
+		} catch {
+			//TODO: Handle the errors in a global error alert
+		}
+	}
+	
+	// MARK: - Facebook Interactions
 	
 	func validateUserForSocialMediaToken(token: String?, completion: ((_ error: NSError?) -> Void)?) {
-		
 		REKIFacebookClient.getUserDataForToken(token: (token)!, completion: { (userData, error) in
-			
 			guard userData != nil else {
 				if completion != nil {
 					// TODO: Define Social Media Error Codes
@@ -56,7 +69,7 @@ class PSUserManager {
 				return
 			}
 			let userID = PSUserFactory.userIDFromDictionary(userDictionary: userData!)
-						self.userProvider?.getUserForUserID(userID: userID, completion: { (user, error) in
+						self._userProvider?.getUserForUserID(userID: userID, completion: { (user, error) in
 				guard error == nil else {
 					self.createUserForSocialMediaToken(token: token, completion: completion)
 					return
@@ -67,12 +80,10 @@ class PSUserManager {
 				self.set(user: user!)
 				completion?(nil)
 			})
-			
 		})
 	}
 	
 	func createUserForSocialMediaToken(token: String?, completion: ((_ error: NSError?) -> Void)?) {
-		
 		hasValidUser.value = false
 		REKIFacebookClient.getUserDataForToken(token: (token)!, completion: { (userData, error) in
 			guard userData != nil else {
@@ -82,21 +93,20 @@ class PSUserManager {
 				return
 			}
 			self.set(user: newUser)
-			self.userProvider?.postUser(user: self.user, completion: completion)
+			self._userProvider?.postUser(user: self.user, completion: completion)
 		})
 	}
 	
 	// MARK: - PSLoginStateMachine
 	
 	func didCompleteOnboarding() {
-		hasCompletedOnboarding = true
-		// TODO: Save User to Disk
+		saveUser()
 	}
 	
 	func didCompleteSignInWithToken(token: String?) {
 		_socialMediaToken = token
-		self.validateUserForSocialMediaToken(token: token) { (error) in
-			// TODO: Save User to Disk
+		validateUserForSocialMediaToken(token: token) { (error) in
+			self.saveUser()
 		}
 	}
 }
