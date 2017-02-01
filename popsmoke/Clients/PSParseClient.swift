@@ -40,9 +40,16 @@ class PSParseClient: PSUserProvider {
 	func postUser(user: PSUser, completion: ((_ error: NSError?) -> Void)?) {
 		
 		let player = PFObject(className: parseUserKey)
-		player.setObject(user.firstName, forKey: parseFirstNameKey)
-		player.setObject(user.lastName, forKey: parseLastNameKey)
-		player.setObject(user.userID, forKey: parseUserIDKey)
+		if let tmp = user.firstName as Any? {
+			player.setObject(tmp, forKey: parseFirstNameKey)
+
+		}
+		if let tmp = user.lastName as Any? {
+			player.setObject(tmp, forKey: parseLastNameKey)
+		}
+		if let tmp = user.userID as Any? {
+			player.setObject(tmp, forKey: parseUserIDKey)
+		}
 		player.saveInBackground { (succeeded, error) -> Void in
 			if completion != nil {
 				completion!(error as NSError?) // TODO: Fix these type casting calls

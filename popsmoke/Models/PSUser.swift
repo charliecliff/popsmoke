@@ -18,7 +18,7 @@ class PSUser: NSObject, NSCoding {
 	var firstName: String?
 	var middleInitial: String?
 	var lastName: String?
-
+	var rank: USArmyRank?
 	
 	var hasIndividualLicense: Bool?
 	

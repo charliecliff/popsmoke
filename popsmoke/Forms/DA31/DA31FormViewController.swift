@@ -18,7 +18,7 @@ class DA31FormViewController: FormViewController {
 		}
 		
 		//DA31FormFactory.appendLeaveDetailsToForm(form: form)
-		DA31FormFactory.appendPersonalInformationToForm(form: form)
+		PSPersonalInfoFormFactory.appendPersonalInformationToForm(form: form)
 		DA31FormFactory.appendAddressToForm(form: form)
 		DA31FormFactory.appendStationToForm(form: form)
 		DA31FormFactory.appendLeaveDaysToForm(form: form)

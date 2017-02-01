@@ -8,12 +8,7 @@
 
 import Eureka
 
-let personal_info_first_name		= "FIRST NAME"
-let personal_info_last_name			= "LAST NAME"
-let personal_info_middle_initial	= "MIDDLE INITIAL"
-let personal_info_ssn				= "SSN"
-let personal_info_rank				= "RANK"
-let personal_info_phone				= "PHONE"
+
 let address_street					= "STREET"
 let address_city					= "CITY"
 let address_state					= "STATE"
@@ -56,11 +51,8 @@ class DA31FormFactory: NSObject {
 					row.title = da31_date
 					row.value = Date(timeIntervalSinceReferenceDate: 0)
 					row.add(rule: RuleRequired())
-				
-				
-				row.cell.textLabel?.textColor = .blue
-				
-				
+				// TODO: Change the color of Date Rows during verification
+					row.cell.textLabel?.textColor = .blue
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						cell.textLabel?.textColor = .red
@@ -81,61 +73,6 @@ class DA31FormFactory: NSObject {
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						
-					}
-				}
-	}
-	
-	class func appendPersonalInformationToForm(form: Form) {
-		
-		form +++ Section("PERSONAL INFORMATION")
-			<<< TextRow(){ row in
-					row.tag = personal_info_first_name
-					row.title = personal_info_first_name
-					row.placeholder = "Enter text here"
-					row.add(rule: RuleRequired())
-				}.cellUpdate { cell, row in
-					if !row.isValid {
-						cell.titleLabel?.textColor = .red
-					}
-				}
-			<<< TextRow(){ row in
-					row.tag = personal_info_middle_initial
-					row.title = personal_info_middle_initial
-					row.placeholder = "Enter text here"
-					row.add(rule: RuleRequired())
-				}.cellUpdate { cell, row in
-					if !row.isValid {
-						cell.titleLabel?.textColor = .red
-					}
-				}
-			<<< TextRow(){ row in
-					row.tag = personal_info_last_name
-					row.title = personal_info_last_name
-					row.placeholder = "Enter text here"
-					row.add(rule: RuleRequired())
-				}.cellUpdate { cell, row in
-					if !row.isValid {
-						cell.titleLabel?.textColor = .red
-					}
-				}
-			<<< IntRow(){ row in
-					row.tag = personal_info_ssn
-					row.title = personal_info_ssn
-					row.placeholder = "Enter text here"
-					row.add(rule: RuleRequired())
-				}.cellUpdate { cell, row in
-					if !row.isValid {
-						cell.titleLabel?.textColor = .red
-					}
-				}
-			<<< TextRow(){ row in // TODO: Custom Rank Row
-					row.tag = personal_info_rank
-					row.title = personal_info_rank
-					row.placeholder = "Enter text here"
-					row.add(rule: RuleRequired())
-				}.cellUpdate { cell, row in
-					if !row.isValid {
-						cell.titleLabel?.textColor = .red
 					}
 				}
 	}
@@ -163,15 +100,11 @@ class DA31FormFactory: NSObject {
 						cell.titleLabel?.textColor = .red
 					}
 				}
-			<<< TextRow() { row in
+			<<< PickerInlineRow<USState>() { (row : PickerInlineRow<USState>) -> Void in
 					row.tag = address_state
 					row.title = address_state
-					row.placeholder = "Enter text here"
-					row.add(rule: RuleRequired())
-				}.cellUpdate { cell, row in
-					if !row.isValid {
-						cell.titleLabel?.textColor = .red
-					}
+					row.options = PSAddressUtilities.states()
+					row.value = row.options.first
 				}
 			<<< ZipCodeRow() { row in
 					row.tag = address_zip

@@ -22,7 +22,7 @@ class PSLoginViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		bindToObservables()
+		bindToUserManager()
 		
 		facebookLoginButton = FBSDKLoginButton.init()
 		facebookLoginButton?.readPermissions = ["public_profile", "email", "user_friends"]
@@ -41,10 +41,6 @@ class PSLoginViewController: UIViewController {
 		let storyboard = UIStoryboard(name: kMainStoryboard, bundle: nil)
 		let vc = storyboard.instantiateInitialViewController()
 		present(vc!, animated: true, completion:nil)
-	}
-	
-	private func bindToObservables(){ // TODO: Pull this into a PopSmoke View Controller Super Class
-		bindToUserManager()
 	}
 	
 	private func bindToUserManager() {

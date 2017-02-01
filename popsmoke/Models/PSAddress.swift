@@ -12,7 +12,7 @@ class PSAddress: NSObject {
 
 	var street: String?
 	var city: String?
-	var state: String?
+	var state: USState?
 	var zipcode: String?
 	var phoneNumber: String?
 }
