@@ -143,7 +143,13 @@
                             <constraint firstItem="HBg-ml-fKL" firstAttribute="top" secondItem="oCG-Tw-MqB" secondAttribute="bottom" id="vGg-Fj-8Kd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="PopSmoke" id="9vL-GM-D5F"/>
+                    <navigationItem key="navigationItem" title="PopSmoke" id="9vL-GM-D5F">
+                        <barButtonItem key="leftBarButtonItem" image="gear" id="9o7-DO-aCD">
+                            <connections>
+                                <action selector="didPressSettingButtonWithSender:" destination="gaH-Hg-8aN" id="JWv-kh-8ul"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="PEr-4L-5df" id="GHI-Yi-pFP"/>
                         <outlet property="submitButton" destination="Mqv-eu-cAM" id="xkC-ey-OLE"/>
@@ -163,7 +169,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="nav_shelf_section" id="bGF-Os-r2g">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="nav_shelf_cell" id="bGF-Os-r2g">
                                 <rect key="frame" x="0.0" y="28" width="240" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bGF-Os-r2g" id="pvv-wE-oiz">
@@ -205,4 +211,7 @@
             <point key="canvasLocation" x="-66.400000000000006" y="518.59070464767615"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gear" width="22" height="22"/>
+    </resources>
 </document>

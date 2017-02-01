@@ -34,6 +34,8 @@
 		DA0287AF1E40FC59008B481B /* PSUserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287AE1E40FC59008B481B /* PSUserProvider.swift */; };
 		DA0287B11E40FDBA008B481B /* PSParseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287B01E40FDBA008B481B /* PSParseClient.swift */; };
 		DA0287B51E423918008B481B /* PSNavShelfTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287B41E423918008B481B /* PSNavShelfTableViewController.swift */; };
+		DA0287B81E4262FC008B481B /* PSProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287B71E4262FC008B481B /* PSProfileHeaderView.swift */; };
+		DA0287BA1E42646E008B481B /* PSProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA0287B91E42646E008B481B /* PSProfileHeaderView.xib */; };
 		DA0B26871E362A62000CC2DC /* PSMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B26861E362A62000CC2DC /* PSMainViewController.swift */; };
 		DA0B26891E362A6D000CC2DC /* PSMainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */; };
 		DA3585F21E3A7ABF0014AE10 /* UIImageView+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3585F11E3A7ABF0014AE10 /* UIImageView+Tint.swift */; };
@@ -105,6 +107,8 @@
 		DA0287AE1E40FC59008B481B /* PSUserProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSUserProvider.swift; sourceTree = "<group>"; };
 		DA0287B01E40FDBA008B481B /* PSParseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSParseClient.swift; sourceTree = "<group>"; };
 		DA0287B41E423918008B481B /* PSNavShelfTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSNavShelfTableViewController.swift; sourceTree = "<group>"; };
+		DA0287B71E4262FC008B481B /* PSProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSProfileHeaderView.swift; sourceTree = "<group>"; };
+		DA0287B91E42646E008B481B /* PSProfileHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSProfileHeaderView.xib; sourceTree = "<group>"; };
 		DA0B26861E362A62000CC2DC /* PSMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSMainViewController.swift; sourceTree = "<group>"; };
 		DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSMainStoryboard.storyboard; sourceTree = "<group>"; };
 		DA3585F11E3A7ABF0014AE10 /* UIImageView+Tint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Tint.swift"; sourceTree = "<group>"; };
@@ -244,6 +248,15 @@
 			path = Clients;
 			sourceTree = "<group>";
 		};
+		DA0287B61E4262E8008B481B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DA0287B71E4262FC008B481B /* PSProfileHeaderView.swift */,
+				DA0287B91E42646E008B481B /* PSProfileHeaderView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		DA0B26851E362A20000CC2DC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +310,7 @@
 				DA01F0151E39612F00B7FB04 /* Models */,
 				DAF836A11E3E3CA6003178C4 /* Protocols */,
 				DA0B26851E362A20000CC2DC /* ViewControllers */,
+				DA0287B61E4262E8008B481B /* Views */,
 				DA5007FB1E28BBA80038A5E8 /* Assets.xcassets */,
 				DA00513D1E37C8CB008E7035 /* Icons.xcassets */,
 				DA01F0231E39ACA700B7FB04 /* Resources */,
@@ -485,6 +499,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA0287BA1E42646E008B481B /* PSProfileHeaderView.xib in Resources */,
 				DA5007FF1E28BBA80038A5E8 /* LaunchScreen.storyboard in Resources */,
 				DA5007FC1E28BBA80038A5E8 /* Assets.xcassets in Resources */,
 				DA01F01F1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard in Resources */,
@@ -613,6 +628,7 @@
 				DAF836861E3AA677003178C4 /* PSFormViewControllerFactory.swift in Sources */,
 				DA5007F31E28BBA80038A5E8 /* AppDelegate.swift in Sources */,
 				DAF836851E3AA677003178C4 /* PSFormContainerViewFactory.swift in Sources */,
+				DA0287B81E4262FC008B481B /* PSProfileHeaderView.swift in Sources */,
 				DA00512D1E37ABDA008E7035 /* PSPacketViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
