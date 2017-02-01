@@ -36,6 +36,8 @@
 		DA0287B51E423918008B481B /* PSNavShelfTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287B41E423918008B481B /* PSNavShelfTableViewController.swift */; };
 		DA0287B81E4262FC008B481B /* PSProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287B71E4262FC008B481B /* PSProfileHeaderView.swift */; };
 		DA0287BA1E42646E008B481B /* PSProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA0287B91E42646E008B481B /* PSProfileHeaderView.xib */; };
+		DA0287BC1E4265FE008B481B /* PSAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287BB1E4265FE008B481B /* PSAddress.swift */; };
+		DA0287BE1E426637008B481B /* PSAddressUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287BD1E426637008B481B /* PSAddressUtilities.swift */; };
 		DA0B26871E362A62000CC2DC /* PSMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B26861E362A62000CC2DC /* PSMainViewController.swift */; };
 		DA0B26891E362A6D000CC2DC /* PSMainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */; };
 		DA3585F21E3A7ABF0014AE10 /* UIImageView+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3585F11E3A7ABF0014AE10 /* UIImageView+Tint.swift */; };
@@ -109,6 +111,8 @@
 		DA0287B41E423918008B481B /* PSNavShelfTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSNavShelfTableViewController.swift; sourceTree = "<group>"; };
 		DA0287B71E4262FC008B481B /* PSProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSProfileHeaderView.swift; sourceTree = "<group>"; };
 		DA0287B91E42646E008B481B /* PSProfileHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSProfileHeaderView.xib; sourceTree = "<group>"; };
+		DA0287BB1E4265FE008B481B /* PSAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSAddress.swift; sourceTree = "<group>"; };
+		DA0287BD1E426637008B481B /* PSAddressUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSAddressUtilities.swift; sourceTree = "<group>"; };
 		DA0B26861E362A62000CC2DC /* PSMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSMainViewController.swift; sourceTree = "<group>"; };
 		DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSMainStoryboard.storyboard; sourceTree = "<group>"; };
 		DA3585F11E3A7ABF0014AE10 /* UIImageView+Tint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Tint.swift"; sourceTree = "<group>"; };
@@ -210,6 +214,7 @@
 				DA01F0161E39617C00B7FB04 /* PSPacket.swift */,
 				DA01F0181E3961D100B7FB04 /* PSDocument.swift */,
 				DA0287A51E40EDE9008B481B /* PSUser.swift */,
+				DA0287BB1E4265FE008B481B /* PSAddress.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 				DA01F0121E392D3600B7FB04 /* UICategories */,
 				DA5007F21E28BBA80038A5E8 /* AppDelegate.swift */,
 				DA0051391E37B743008E7035 /* PSPacketUtilities.swift */,
+				DA0287BD1E426637008B481B /* PSAddressUtilities.swift */,
 				DA3585F31E3A7DE00014AE10 /* PSConstants.swift */,
 				DA00512E1E37AE7A008E7035 /* Cells */,
 				DA0287A71E40F3E7008B481B /* Clients */,
@@ -596,6 +602,7 @@
 				DA01F0171E39617C00B7FB04 /* PSPacket.swift in Sources */,
 				DA0B26871E362A62000CC2DC /* PSMainViewController.swift in Sources */,
 				DA3585F41E3A7DE00014AE10 /* PSConstants.swift in Sources */,
+				DA0287BE1E426637008B481B /* PSAddressUtilities.swift in Sources */,
 				DA0287B51E423918008B481B /* PSNavShelfTableViewController.swift in Sources */,
 				DA0051321E37AEC3008E7035 /* PSDocumentCollectionViewCell.swift in Sources */,
 				DA0287A21E40E8A2008B481B /* PSLoginViewController.swift in Sources */,
@@ -608,6 +615,7 @@
 				DAB08D9D1E38F91F00F2E263 /* PSPhotoViewController.swift in Sources */,
 				DA01F0191E3961D100B7FB04 /* PSDocument.swift in Sources */,
 				DAF836A31E3E3CBE003178C4 /* PSPacketBuilder.swift in Sources */,
+				DA0287BC1E4265FE008B481B /* PSAddress.swift in Sources */,
 				DAF836961E3AB1B3003178C4 /* TRIPSFormViewController.swift in Sources */,
 				DA00513A1E37B743008E7035 /* PSPacketUtilities.swift in Sources */,
 				DAF836831E3AA677003178C4 /* DA31FormFactory.swift in Sources */,
