@@ -13,6 +13,7 @@ fileprivate let applicationId	= "popsmoke"
 fileprivate let clientKey		= "popsmokemasterkey"
 
 fileprivate let parseUserKey	= "USER"
+fileprivate let parsePacketKey	= "PACKET"
 
 class PSParseClient: PSUserProvider {
 
@@ -35,20 +36,19 @@ class PSParseClient: PSUserProvider {
 	}
 	
 	func postUser(user: PSUser, completion: ((_ error: NSError?) -> Void)?) {
+		
 		let player = PFObject(className: parseUserKey)
 		player.setObject("John", forKey: "Name")
 		player.setObject(1230, forKey: "Score")
 		player.saveInBackground { (succeeded, error) -> Void in
-//		completion?(error: error)
-			if succeeded {
-				print("Object Uploaded")
-			} else {
-				print("Error: \(error)")
+			if completion != nil {
+				completion!(error as NSError?) // TODO: Fix these type casting calls
 			}
 		}
 	}
 	
 	func putUser(user: PSUser, completion: ((_ error: NSError?) -> Void)?) {
+		
 		self.postUser(user: user, completion: completion)
 	}
 }
