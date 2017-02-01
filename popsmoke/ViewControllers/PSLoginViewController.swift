@@ -35,7 +35,7 @@ class PSLoginViewController: UIViewController {
 	}
 	
 	private func bindToUserManager() {
-		_ = REKIUserManager.sharedInstance.hasValidUser.asObservable().subscribe(onNext: {
+		_ = PSUserManager.sharedInstance.hasValidUser.asObservable().subscribe(onNext: {
 			if $0 {
 				self.segueToMainViewController()
 			}
@@ -51,7 +51,7 @@ extension PSLoginViewController: FBSDKLoginButtonDelegate {
 		}
 		SVProgressHUD.show()
 		let token = FBSDKAccessToken.current().tokenString
-		REKIUserManager.sharedInstance.didCompleteSignInWithToken(token: token)
+		PSUserManager.sharedInstance.didCompleteSignInWithToken(token: token)
 	}
 	
 	func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {

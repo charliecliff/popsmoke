@@ -29,7 +29,7 @@
 		DA0287A41E40E907008B481B /* PSLogin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0287A31E40E907008B481B /* PSLogin.storyboard */; };
 		DA0287A61E40EDE9008B481B /* PSUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287A51E40EDE9008B481B /* PSUser.swift */; };
 		DA0287A91E40F3E7008B481B /* REKIFacebookClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287A81E40F3E7008B481B /* REKIFacebookClient.swift */; };
-		DA0287AB1E40F3F1008B481B /* REKIUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287AA1E40F3F1008B481B /* REKIUserManager.swift */; };
+		DA0287AB1E40F3F1008B481B /* PSUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287AA1E40F3F1008B481B /* PSUserManager.swift */; };
 		DA0287AD1E40F7EC008B481B /* PSUserFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287AC1E40F7EC008B481B /* PSUserFactory.swift */; };
 		DA0287AF1E40FC59008B481B /* PSUserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287AE1E40FC59008B481B /* PSUserProvider.swift */; };
 		DA0287B11E40FDBA008B481B /* PSParseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287B01E40FDBA008B481B /* PSParseClient.swift */; };
@@ -57,7 +57,7 @@
 		DAF836941E3AAFC2003178C4 /* TRIPSFormFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF836931E3AAFC2003178C4 /* TRIPSFormFactory.swift */; };
 		DAF836961E3AB1B3003178C4 /* TRIPSFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF836951E3AB1B3003178C4 /* TRIPSFormViewController.swift */; };
 		DAF836981E3B96D8003178C4 /* PSMailComposerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF836971E3B96D8003178C4 /* PSMailComposerFactory.swift */; };
-		DAF8369A1E3D6B46003178C4 /* PSUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF836991E3D6B46003178C4 /* PSUserManager.swift */; };
+		DAF8369A1E3D6B46003178C4 /* PSPacketManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF836991E3D6B46003178C4 /* PSPacketManager.swift */; };
 		DAF836A01E3D976F003178C4 /* NSURLRequest+Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF8369F1E3D976F003178C4 /* NSURLRequest+Category.swift */; };
 		DAF836A31E3E3CBE003178C4 /* PSPacketBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF836A21E3E3CBE003178C4 /* PSPacketBuilder.swift */; };
 		DAF836A51E3E3E5D003178C4 /* PSPacketFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF836A41E3E3E5D003178C4 /* PSPacketFactory.swift */; };
@@ -100,7 +100,7 @@
 		DA0287A31E40E907008B481B /* PSLogin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSLogin.storyboard; sourceTree = "<group>"; };
 		DA0287A51E40EDE9008B481B /* PSUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSUser.swift; sourceTree = "<group>"; };
 		DA0287A81E40F3E7008B481B /* REKIFacebookClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REKIFacebookClient.swift; sourceTree = "<group>"; };
-		DA0287AA1E40F3F1008B481B /* REKIUserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = REKIUserManager.swift; sourceTree = "<group>"; };
+		DA0287AA1E40F3F1008B481B /* PSUserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSUserManager.swift; sourceTree = "<group>"; };
 		DA0287AC1E40F7EC008B481B /* PSUserFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSUserFactory.swift; sourceTree = "<group>"; };
 		DA0287AE1E40FC59008B481B /* PSUserProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSUserProvider.swift; sourceTree = "<group>"; };
 		DA0287B01E40FDBA008B481B /* PSParseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSParseClient.swift; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 		DAF836931E3AAFC2003178C4 /* TRIPSFormFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRIPSFormFactory.swift; sourceTree = "<group>"; };
 		DAF836951E3AB1B3003178C4 /* TRIPSFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRIPSFormViewController.swift; sourceTree = "<group>"; };
 		DAF836971E3B96D8003178C4 /* PSMailComposerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSMailComposerFactory.swift; sourceTree = "<group>"; };
-		DAF836991E3D6B46003178C4 /* PSUserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSUserManager.swift; sourceTree = "<group>"; };
+		DAF836991E3D6B46003178C4 /* PSPacketManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPacketManager.swift; sourceTree = "<group>"; };
 		DAF8369F1E3D976F003178C4 /* NSURLRequest+Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLRequest+Category.swift"; sourceTree = "<group>"; };
 		DAF836A21E3E3CBE003178C4 /* PSPacketBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPacketBuilder.swift; sourceTree = "<group>"; };
 		DAF836A41E3E3E5D003178C4 /* PSPacketFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPacketFactory.swift; sourceTree = "<group>"; };
@@ -360,9 +360,9 @@
 		DAF8368F1E3AA73A003178C4 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				DA0287AA1E40F3F1008B481B /* REKIUserManager.swift */,
+				DA0287AA1E40F3F1008B481B /* PSUserManager.swift */,
 				DAF836901E3AA747003178C4 /* PSPersistenceManager.swift */,
-				DAF836991E3D6B46003178C4 /* PSUserManager.swift */,
+				DAF836991E3D6B46003178C4 /* PSPacketManager.swift */,
 				DA4C6CE91E3FE5B600AC175A /* PSServerManager.swift */,
 			);
 			path = Managers;
@@ -574,7 +574,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAF8369A1E3D6B46003178C4 /* PSUserManager.swift in Sources */,
+				DAF8369A1E3D6B46003178C4 /* PSPacketManager.swift in Sources */,
 				DA3585F21E3A7ABF0014AE10 /* UIImageView+Tint.swift in Sources */,
 				DAF836881E3AA677003178C4 /* PSPDFContainerViewFactory.swift in Sources */,
 				DAF836911E3AA747003178C4 /* PSPersistenceManager.swift in Sources */,
@@ -588,7 +588,7 @@
 				DAF836941E3AAFC2003178C4 /* TRIPSFormFactory.swift in Sources */,
 				DAF8368D1E3AA68E003178C4 /* DA31FormViewController.swift in Sources */,
 				DA0287AD1E40F7EC008B481B /* PSUserFactory.swift in Sources */,
-				DA0287AB1E40F3F1008B481B /* REKIUserManager.swift in Sources */,
+				DA0287AB1E40F3F1008B481B /* PSUserManager.swift in Sources */,
 				DA01F0141E392D4C00B7FB04 /* UILabel+Size.swift in Sources */,
 				DAB08D9D1E38F91F00F2E263 /* PSPhotoViewController.swift in Sources */,
 				DA01F0191E3961D100B7FB04 /* PSDocument.swift in Sources */,

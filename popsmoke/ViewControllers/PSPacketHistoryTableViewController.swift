@@ -24,7 +24,7 @@ class PSPacketHistoryTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return PSUserManager.sharedInstance.completedPackets.count
+        return PSPacketManager.sharedInstance.completedPackets.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -32,7 +32,7 @@ class PSPacketHistoryTableViewController: UITableViewController {
 		guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? PSPacketTableViewCell else {
 			return UITableViewCell()
 		}
-		cell.configureFor(packet: PSUserManager.sharedInstance.completedPackets[indexPath.row])
+		cell.configureFor(packet: PSPacketManager.sharedInstance.completedPackets[indexPath.row])
         return cell
     }
 }

@@ -27,7 +27,7 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 		self.collectionView?.register(documentNib, forCellWithReuseIdentifier: cellReuseIdentifier)
 
 		// RXSWift Bindings
-		_ = PSUserManager.sharedInstance.reloadCurrentPacket.asObservable().subscribe(onNext: {
+		_ = PSPacketManager.sharedInstance.reloadCurrentPacket.asObservable().subscribe(onNext: {
 			if $0 {
 				self.reloadFromManager()
 			}
@@ -42,7 +42,7 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 	// MARK: - 
 	
 	func reloadFromManager() {
-		submitButton?.isHidden = !PSUserManager.sharedInstance.packet.isCompleted()
+		submitButton?.isHidden = !PSPacketManager.sharedInstance.packet.isCompleted()
 		self.collectionView?.reloadData()
 	}
 	
@@ -58,7 +58,7 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 	}
 	
 	@IBAction func didPressSubmitButton(sender: UIButton) {
-		let mailComposer = PSMailComposerFactory.mailComposerFor(packet: PSUserManager.sharedInstance.packet)
+		let mailComposer = PSMailComposerFactory.mailComposerFor(packet: PSPacketManager.sharedInstance.packet)
 		mailComposer.mailComposeDelegate = self
 		present(mailComposer, animated: true, completion: nil)
 	}
@@ -70,12 +70,12 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return PSUserManager.sharedInstance.packet.documents.count
+        return PSPacketManager.sharedInstance.packet.documents.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let index = indexPath.item
-		let document = PSUserManager.sharedInstance.packet.documents[index]
+		let document = PSPacketManager.sharedInstance.packet.documents[index]
 		guard let documentCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath) as? PSDocumentCollectionViewCell else {
 			return UICollectionViewCell()
 		}
@@ -137,7 +137,7 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 		if error != nil {
 			//TODO: Handle the errors in a global error alert
 		} else {
-			PSUserManager.sharedInstance.savePacket(packet: PSUserManager.sharedInstance.packet)
+			PSPacketManager.sharedInstance.savePacket(packet: PSPacketManager.sharedInstance.packet)
 		}
 		controller.dismiss(animated: true, completion: nil)
 	}
