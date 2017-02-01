@@ -15,6 +15,10 @@ fileprivate let clientKey		= "popsmokemasterkey"
 fileprivate let parseUserKey	= "USER"
 fileprivate let parsePacketKey	= "PACKET"
 
+fileprivate let parseFirstNameKey	= "first_name"
+fileprivate let parseLastNameKey	= "last_name"
+fileprivate let parseUserIDKey		= "user_id"
+
 class PSParseClient: PSUserProvider {
 
 	init() {
@@ -38,8 +42,9 @@ class PSParseClient: PSUserProvider {
 	func postUser(user: PSUser, completion: ((_ error: NSError?) -> Void)?) {
 		
 		let player = PFObject(className: parseUserKey)
-		player.setObject("John", forKey: "Name")
-		player.setObject(1230, forKey: "Score")
+		player.setObject(user.firstName, forKey: parseFirstNameKey)
+		player.setObject(user.lastName, forKey: parseLastNameKey)
+		player.setObject(user.userID, forKey: parseUserIDKey)
 		player.saveInBackground { (succeeded, error) -> Void in
 			if completion != nil {
 				completion!(error as NSError?) // TODO: Fix these type casting calls

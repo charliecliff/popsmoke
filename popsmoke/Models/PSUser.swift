@@ -13,4 +13,5 @@ class PSUser: NSObject {
 	var userID: String?
 	var firstName: String?
 	var lastName: String?
+	var hasIndividualLicense: Bool?
 }
