@@ -7,4 +7,6 @@ target 'popsmoke' do
 	pod 'ILPDFKit', '1.0.5'
 	pod 'RxSwift', '~> 3.0'
 	pod 'RxCocoa', '~> 3.0'
+	pod 'Parse'
+	pod 'SVProgressHUD'
 end

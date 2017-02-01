@@ -26,29 +26,6 @@ class PSFormContainerViewController: UIViewController {
 		add(formViewController: formViewController!)
 	}
 	
-	@IBAction func didSelectCompletionButton(_ sender: UIButton) {
-		
-		guard let form = formViewController?.form else {
-			//TODO: Handle the errors in a global error alert
-			return
-		}
-/**		let errors = form.validate() // Validate
-		if errors.count > 0 {
-			// TODO: Display Warning Message
-			return
-		} */
-		let formData = DA31FormFactory.toDictionary(form: form) // Generate PDF Form
-		guard let pdf = DA31PDFFiller.fillPDFWithFormData(dictionary: formData) else {
-			//TODO: Handle the errors in a global error alert
-			return
-		}
-		guard let pdfVC = PSPDFContainerViewFactory.pdfContainerViewController(withDocument: document!, withPDF: pdf) else {
-			//TODO: Handle the errors in a global error alert
-			return
-		}
-		segueTo(viewController: pdfVC)
-	}
-
 	func add(formViewController: FormViewController) {
 		guard containerView != nil else {
 			//TODO: Handle the errors in a global error alert
@@ -64,5 +41,28 @@ class PSFormContainerViewController: UIViewController {
 			formViewController.view.bottomAnchor.constraint(equalTo: containerView!.bottomAnchor)
 			])
 		formViewController.didMove(toParentViewController: self)
+	}
+	
+	@IBAction func didSelectCompletionButton(_ sender: UIButton) {
+		
+		guard let form = formViewController?.form else {
+			//TODO: Handle the errors in a global error alert
+			return
+		}
+		/**		let errors = form.validate() // Validate
+		if errors.count > 0 {
+		// TODO: Display Warning Message
+		return
+		} */
+		let formData = DA31FormFactory.toDictionary(form: form) // Generate PDF Form
+		guard let pdf = DA31PDFFiller.fillPDFWithFormData(dictionary: formData) else {
+			//TODO: Handle the errors in a global error alert
+			return
+		}
+		guard let pdfVC = PSPDFContainerViewFactory.pdfContainerViewController(withDocument: document!, withPDF: pdf) else {
+			//TODO: Handle the errors in a global error alert
+			return
+		}
+		segueTo(viewController: pdfVC)
 	}
 }

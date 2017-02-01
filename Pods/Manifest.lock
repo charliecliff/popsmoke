@@ -1,22 +1,31 @@
 PODS:
+  - Bolts/Tasks (1.8.4)
   - Eureka (2.0.0-beta.1)
   - ILPDFKit (1.0.5)
+  - Parse (1.14.2):
+    - Bolts/Tasks (~> 1.8)
   - RxCocoa (3.1.0):
     - RxSwift (~> 3.1)
   - RxSwift (3.1.0)
+  - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
   - Eureka (= 2.0.0-beta.1)
   - ILPDFKit (= 1.0.5)
+  - Parse
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
   ILPDFKit: e208473cc97dd889c1cdf97711816be1ec64f8fe
+  Parse: 4335d65f40cb3d43190d723144bbe1afb9c38230
   RxCocoa: 50d7564866da9299161e86a263ce12a0873904d8
   RxSwift: 83ff553e7593fdfdcb2562933a64c0284dffdadc
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: e99180210e095e5885cfe73ca16fe08082122877
+PODFILE CHECKSUM: 2b0e50f33b9f964803a3a36eb98b4e1781b7dc4d
 
 COCOAPODS: 1.1.1
