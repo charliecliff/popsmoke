@@ -16,10 +16,9 @@ class DA31FormViewController: FormViewController {
 		form +++ Section() {
 			$0.header = HeaderFooterView<EurekaLogoView>(.class)
 		}
-		
-		//DA31FormFactory.appendLeaveDetailsToForm(form: form)
 		PSPersonalInfoFormFactory.appendPersonalInformationToForm(form: form)
-		DA31FormFactory.appendAddressToForm(form: form)
+		DA31FormFactory.appendLeaveAddressToForm(form: form)
+		DA31FormFactory.appendLeaveTypeToForm(form: form)
 		DA31FormFactory.appendStationToForm(form: form)
 		DA31FormFactory.appendLeaveDaysToForm(form: form)
 		DA31FormFactory.appendLeaveDatesToForm(form: form)

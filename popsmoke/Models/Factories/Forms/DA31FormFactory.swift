@@ -33,39 +33,16 @@ let da31_leave_type_other		= "OTHER"
 
 class DA31FormFactory: NSObject {
 
-	class func appendLeaveDetailsToForm(form: Form) {
+	class func appendLeaveTypeToForm(form: Form) {
 		
-		form +++ Section()
-			<<<	IntRow(){ row in
-					row.tag = da31_control_number
-					row.title = da31_control_number
-					row.placeholder = "Enter control number here"
-					row.add(rule: RuleRequired())
-				}.cellUpdate { cell, row in
-					if !row.isValid {
-						cell.titleLabel?.textColor = .red
-					}
-				}
-			<<< DateRow(){ row in
-					row.tag = da31_date
-					row.title = da31_date
-					row.value = Date(timeIntervalSinceReferenceDate: 0)
-					row.add(rule: RuleRequired())
-				// TODO: Change the color of Date Rows during verification
-					row.cell.textLabel?.textColor = .blue
-				}.cellUpdate { cell, row in
-					if !row.isValid {
-						cell.textLabel?.textColor = .red
-//						cell.titleLabel?.textColor = .red
-					}
-				}
+		form +++ Section("LEAVE TYPE")
 			<<< AlertRow<String>() { row in
-					row.tag = da31_leave_type
-					row.title = da31_leave_type
-					row.selectorTitle = "Please Select Type of Leave"
-					row.options = DA31FormFactory.leaveTypes()
-					row.value = DA31FormFactory.leaveTypes()[0]
-					row.add(rule: RuleRequired())
+				row.tag = da31_leave_type
+				row.title = da31_leave_type
+				row.selectorTitle = "Please Select Type of Leave"
+				row.options = DA31FormFactory.leaveTypes()
+				row.value = DA31FormFactory.leaveTypes()[0]
+				row.add(rule: RuleRequired())
 				}.onChange { row in
 					print(row.value ?? "No Value")
 				}.onPresent{ _, to in
@@ -77,7 +54,7 @@ class DA31FormFactory: NSObject {
 				}
 	}
 	
-	class func appendAddressToForm(form: Form) {
+	class func appendLeaveAddressToForm(form: Form) {
 		
 		form +++ Section("LEAVE ADDRESS")
 			<<< TextRow() { row in

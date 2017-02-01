@@ -39,13 +39,10 @@ class DA31PDFFiller: NSObject {
 			return nil
 		}
 		let document = ILPDFDocument(path: path)
-
+		
 		// Fill out the PDF
-		// Block 1 - This sould be left blank
-		if let controlNumber = dictionary[da31_control_number] as? Int {
-			document.forms!.setValue(String(controlNumber), forFormWithName: da31_pdf_control_number)
-		}
-		// Block 2
+		// Block 1 - BLANK
+		// Block 2 - Name
 		let firstName = dictionary[personal_info_first_name] as? String
 		let middleInitial = dictionary[personal_info_middle_initial] as? String
 		let lastName = dictionary[personal_info_last_name] as? String
@@ -53,16 +50,20 @@ class DA31PDFFiller: NSObject {
 			let fullName = DA31PDFFiller.fullNameFrom(firstName: firstName!, middleInitial: middleInitial!, lastName: lastName!)
 			document.forms!.setValue(fullName, forFormWithName: da31_pdf_name)
 		}
-		// Block 3
+		// Block 3 -  Last 4 Digits of SSN
 		if let ssn = dictionary[personal_info_ssn] as? Int {
 			document.forms!.setValue("xxx-xx-\(String(ssn))", forFormWithName: da31_pdf_ssn)
 		}
-		if let date = dictionary[da31_date] as? Date {
-			let dateFormatter = DateFormatter()
-			dateFormatter.dateFormat = da31_pdf_date_format
-			let dateString = dateFormatter.string(from: date)
-			document.forms!.setValue(dateString, forFormWithName: da31_pdf_date)
+		// Block 4 - Rank
+		if let rank = dictionary[personal_info_rank] as? String {
+			document.forms!.setValue(rank, forFormWithName: da31_pdf_rank)
 		}
+		// Block 5 - Current Date
+		let currentDate = Date(timeIntervalSinceReferenceDate: 0)
+		let dateFormatter = DateFormatter()
+		dateFormatter.dateFormat = da31_pdf_date_format
+		let dateString = dateFormatter.string(from: currentDate)
+		document.forms!.setValue(dateString, forFormWithName: da31_pdf_date)
 		// Block 6 - Leave Address
 		let street = dictionary[address_street] as? String
 		let city = dictionary[address_city] as? String
@@ -72,7 +73,22 @@ class DA31PDFFiller: NSObject {
 			let address = DA31PDFFiller.addressFrom(street: street!, city: city!, state: state!, phoneNumber: phone!)
 			document.forms!.setValue(address, forFormWithName: da31_pdf_address)
 		}
-		
+		// Block 7 - Leave Type
+		if let leaveType = dictionary[da31_leave_type] as? String {
+			if leaveType == da31_leave_type_ordinary {
+				document.forms!.setValue("Yes", forFormWithName: da31_pdf_leave_ordinary)
+			}
+			if leaveType == da31_leave_type_emergency {
+				document.forms!.setValue("Yes", forFormWithName: da31_pdf_leave_emergency)
+			}
+			if leaveType == da31_leave_type_permissive {
+				document.forms!.setValue("Yes", forFormWithName: da31_pdf_leave_permissive)
+			}
+			if leaveType == da31_leave_type_other {
+				document.forms!.setValue("Yes", forFormWithName: da31_pdf_leave_other)
+			}
+		}
+		// BLock 8
 		let stationOrgn = dictionary[da31_station_orgn] as? String
 		let station = dictionary[da31_station] as? String
 		let stationPhone = dictionary[da31_station_phone] as? String
@@ -80,6 +96,7 @@ class DA31PDFFiller: NSObject {
 			let address = DA31PDFFiller.stationFrom(station: station!, orgn: stationOrgn!, phone: stationPhone!)
 			document.forms!.setValue(address, forFormWithName: da31_pdf_station)
 		}
+		// Block 9
 		if let accruedLeave = dictionary[da31_accrued_leave] as? Int {
 			document.forms!.setValue(String(accruedLeave), forFormWithName: da31_pdf_accrued_leave)
 		} else {
@@ -100,6 +117,7 @@ class DA31PDFFiller: NSObject {
 		} else {
 			document.forms!.setValue("0", forFormWithName: da31_pdf_excess_leave)
 		}
+		// Block 10
 		if let date = dictionary[da31_leave_date_from] as? Date {
 			let dateFormatter = DateFormatter()
 			dateFormatter.dateFormat = da31_pdf_date_format
@@ -112,24 +130,6 @@ class DA31PDFFiller: NSObject {
 			let dateString = dateFormatter.string(from: date)
 			document.forms!.setValue(dateString, forFormWithName: da31_pdf_date_to)
 		}
-		if let leaveType = dictionary[da31_leave_type] as? String {
-			if leaveType == da31_leave_type_ordinary {
-				document.forms!.setValue("Yes", forFormWithName: da31_pdf_leave_ordinary)
-			}
-			if leaveType == da31_leave_type_emergency {
-				document.forms!.setValue("Yes", forFormWithName: da31_pdf_leave_emergency)
-			}
-			if leaveType == da31_leave_type_permissive {
-				document.forms!.setValue("Yes", forFormWithName: da31_pdf_leave_permissive)
-			}
-			if leaveType == da31_leave_type_other {
-				document.forms!.setValue("Yes", forFormWithName: da31_pdf_leave_other)
-			}
-		}
-		if let rank = dictionary[personal_info_rank] as? String {
-			document.forms!.setValue(rank, forFormWithName: da31_pdf_rank)
-		}
-		
 		// Return PDF Form
 		let data = document.savedStaticPDFData()
 		let savedVCDocument = ILPDFDocument(data: data)
