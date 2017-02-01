@@ -13,9 +13,9 @@ class PSServerManager {
 	init() {
 		
 		let clientConfig  = ParseClientConfiguration.init { (configuration) in
-			configuration.server = "http://popsmokeapp.herokuapp.com/parse"
+			configuration.server		= "http://popsmokeapp.herokuapp.com/parse"
 			configuration.applicationId = "popsmoke"
-			configuration.clientKey = "popsmokemasterkey"
+			configuration.clientKey		= "popsmokemasterkey"
 		}
 		Parse.initialize(with: clientConfig)
 		

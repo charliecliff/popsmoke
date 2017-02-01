@@ -40,6 +40,8 @@ class REKIUserManager {
 	
 	private func set(user: PSUser) {
 		self.user = user
+		hasValidUser.value = false
+		hasValidUser.value = true
 	}
 	
 	func validateUserForSocialMediaToken(token: String?, completion: ((_ error: NSError?) -> Void)?) {

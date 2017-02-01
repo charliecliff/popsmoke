@@ -9,38 +9,49 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import SVProgressHUD
 
 class PSLoginViewController: UIViewController {
 
+	var progressHUD: SVProgressHUD?
 	@IBOutlet weak var facebookLoginButton: FBSDKLoginButton?
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-
-		self.facebookLoginButton?.readPermissions = ["public_profile", "email", "user_friends"]
-		self.facebookLoginButton?.delegate = self
+		bindToObservables()
+		facebookLoginButton?.readPermissions = ["public_profile", "email", "user_friends"]
+		facebookLoginButton?.delegate = self
     }
 	
 	private func segueToMainViewController() {
-		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+		SVProgressHUD.dismiss()
+		let storyboard = UIStoryboard(name: kMainStoryboard, bundle: nil)
 		let vc = storyboard.instantiateInitialViewController()
-		self.present(vc!, animated: true, completion:nil)
+		present(vc!, animated: true, completion:nil)
+	}
+	
+	private func bindToObservables(){ // TODO: Pull this into a PopSmoke View Controller Super Class
+		bindToUserManager()
+	}
+	
+	private func bindToUserManager() {
+		_ = REKIUserManager.sharedInstance.hasValidUser.asObservable().subscribe(onNext: {
+			if $0 {
+				self.segueToMainViewController()
+			}
+		})
 	}
 }
 
 extension PSLoginViewController: FBSDKLoginButtonDelegate {
 	
 	func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-		if ((error) != nil) {
+		if ((error) != nil) || result.isCancelled {
 			return
 		}
-		if result.isCancelled {
-			return
-		}
-		else {
-			let token = FBSDKAccessToken.current().tokenString
-			REKIUserManager.sharedInstance.didCompleteSignInWithToken(token: token)
-		}
+		SVProgressHUD.show()
+		let token = FBSDKAccessToken.current().tokenString
+		REKIUserManager.sharedInstance.didCompleteSignInWithToken(token: token)
 	}
 	
 	func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {

@@ -8,4 +8,5 @@ target 'popsmoke' do
 	pod 'RxSwift', '~> 3.0'
 	pod 'RxCocoa', '~> 3.0'
 	pod 'Parse'
+	pod 'SVProgressHUD'
 end

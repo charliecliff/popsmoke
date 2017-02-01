@@ -7,6 +7,7 @@ PODS:
   - RxCocoa (3.1.0):
     - RxSwift (~> 3.1)
   - RxSwift (3.1.0)
+  - SVProgressHUD (2.1.2)
 
 DEPENDENCIES:
   - Eureka (= 2.0.0-beta.1)
@@ -14,6 +15,7 @@ DEPENDENCIES:
   - Parse
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
+  - SVProgressHUD
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -22,7 +24,8 @@ SPEC CHECKSUMS:
   Parse: 4335d65f40cb3d43190d723144bbe1afb9c38230
   RxCocoa: 50d7564866da9299161e86a263ce12a0873904d8
   RxSwift: 83ff553e7593fdfdcb2562933a64c0284dffdadc
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
 
-PODFILE CHECKSUM: 404a916829211d4ccb64e49673051ede517c6aab
+PODFILE CHECKSUM: 2b0e50f33b9f964803a3a36eb98b4e1781b7dc4d
 
 COCOAPODS: 1.1.1

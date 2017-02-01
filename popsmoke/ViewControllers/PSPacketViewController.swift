@@ -39,7 +39,7 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 		reloadFromManager()
 	}
 
-	// MARK: Actions
+	// MARK: - 
 	
 	func reloadFromManager() {
 		submitButton?.isHidden = !PSUserManager.sharedInstance.packet.isCompleted()
