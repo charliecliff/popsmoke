@@ -79,7 +79,7 @@ class DA31FormFactory: NSObject {
 	
 	class func appendAddressToForm(form: Form) {
 		
-		form +++ Section("ADDRESS")
+		form +++ Section("LEAVE ADDRESS")
 			<<< TextRow() { row in
 					row.tag = address_street
 					row.title = address_street
@@ -105,16 +105,6 @@ class DA31FormFactory: NSObject {
 					row.title = address_state
 					row.options = PSAddressUtilities.states()
 					row.value = row.options.first
-				}
-			<<< ZipCodeRow() { row in
-					row.tag = address_zip
-					row.title = address_zip
-					row.placeholder = "Enter text here"
-					row.add(rule: RuleRequired())
-				}.cellUpdate { cell, row in
-					if !row.isValid {
-						cell.titleLabel?.textColor = .red
-					}
 				}
 			<<< PhoneRow() { row in
 					row.tag = personal_info_phone

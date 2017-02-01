@@ -67,12 +67,12 @@ class DA31PDFFiller: NSObject {
 		let street = dictionary[address_street] as? String
 		let city = dictionary[address_city] as? String
 		let state = dictionary[address_state] as? USState
-		let zip = dictionary[address_zip] as? String
 		let phone = dictionary[personal_info_phone] as? String
-		if street != nil  && city != nil && state != nil && zip != nil && phone != nil {
-			let address = DA31PDFFiller.addressFrom(street: street!, city: city!, state: state!, zip: zip!, phoneNumber: phone!)
+		if street != nil  && city != nil && state != nil && phone != nil {
+			let address = DA31PDFFiller.addressFrom(street: street!, city: city!, state: state!, phoneNumber: phone!)
 			document.forms!.setValue(address, forFormWithName: da31_pdf_address)
 		}
+		
 		let stationOrgn = dictionary[da31_station_orgn] as? String
 		let station = dictionary[da31_station] as? String
 		let stationPhone = dictionary[da31_station_phone] as? String
@@ -157,7 +157,7 @@ class DA31PDFFiller: NSObject {
 	}
 	
 	
-	class func addressFrom(street:String, city: String, state: USState, zip: String, phoneNumber: String) -> String {
+	class func addressFrom(street:String, city: String, state: USState, phoneNumber: String) -> String {
 		let formatedPhoneNumber = DA31PDFFiller.formattedPhonNumber(phoneNumber: phoneNumber)
 		return "\(street)\n\(city), \(state.rawValue)\n\(formatedPhoneNumber)"
 	}
