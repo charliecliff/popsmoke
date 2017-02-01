@@ -28,6 +28,8 @@ let da31_pdf_requested_leave	= "Requested"
 let da31_pdf_date_to			= "Date-To"
 let da31_pdf_date_from			= "Date-From"
 
+fileprivate let da31_pdf_date_format	= "yyyy/mm/dd"
+
 class DA31PDFFiller: NSObject {
 
 	class func fillPDFWithFormData(dictionary: [String: Any?]) -> ILPDFDocument? {
@@ -39,18 +41,11 @@ class DA31PDFFiller: NSObject {
 		let document = ILPDFDocument(path: path)
 
 		// Fill out the PDF
+		// Block 1 - This sould be left blank
 		if let controlNumber = dictionary[da31_control_number] as? Int {
 			document.forms!.setValue(String(controlNumber), forFormWithName: da31_pdf_control_number)
 		}
-		if let ssn = dictionary[personal_info_ssn] as? Int {
-			document.forms!.setValue(String(ssn), forFormWithName: da31_pdf_ssn)
-		}
-		if let date = dictionary[da31_date] as? Date {
-			let dateFormatter = DateFormatter()
-			dateFormatter.dateFormat = "yyyy-MM-dd"
-			let dateString = dateFormatter.string(from: date)
-			document.forms!.setValue(dateString, forFormWithName: da31_pdf_date)
-		}
+		// Block 2
 		let firstName = dictionary[personal_info_first_name] as? String
 		let middleInitial = dictionary[personal_info_middle_initial] as? String
 		let lastName = dictionary[personal_info_last_name] as? String
@@ -58,9 +53,20 @@ class DA31PDFFiller: NSObject {
 			let fullName = DA31PDFFiller.fullNameFrom(firstName: firstName!, middleInitial: middleInitial!, lastName: lastName!)
 			document.forms!.setValue(fullName, forFormWithName: da31_pdf_name)
 		}
+		// Block 3
+		if let ssn = dictionary[personal_info_ssn] as? Int {
+			document.forms!.setValue("xxx-xx-\(String(ssn))", forFormWithName: da31_pdf_ssn)
+		}
+		if let date = dictionary[da31_date] as? Date {
+			let dateFormatter = DateFormatter()
+			dateFormatter.dateFormat = da31_pdf_date_format
+			let dateString = dateFormatter.string(from: date)
+			document.forms!.setValue(dateString, forFormWithName: da31_pdf_date)
+		}
+		// Block 6 - Leave Address
 		let street = dictionary[address_street] as? String
 		let city = dictionary[address_city] as? String
-		let state = dictionary[address_state] as? String
+		let state = dictionary[address_state] as? USState
 		let zip = dictionary[address_zip] as? String
 		let phone = dictionary[personal_info_phone] as? String
 		if street != nil  && city != nil && state != nil && zip != nil && phone != nil {
@@ -96,13 +102,13 @@ class DA31PDFFiller: NSObject {
 		}
 		if let date = dictionary[da31_leave_date_from] as? Date {
 			let dateFormatter = DateFormatter()
-			dateFormatter.dateFormat = "yyyy-MM-dd"
+			dateFormatter.dateFormat = da31_pdf_date_format
 			let dateString = dateFormatter.string(from: date)
 			document.forms!.setValue(dateString, forFormWithName: da31_pdf_date_from)
 		}
 		if let date = dictionary[da31_leave_date_to] as? Date {
 			let dateFormatter = DateFormatter()
-			dateFormatter.dateFormat = "yyyy-MM-dd"
+			dateFormatter.dateFormat = da31_pdf_date_format
 			let dateString = dateFormatter.string(from: date)
 			document.forms!.setValue(dateString, forFormWithName: da31_pdf_date_to)
 		}
@@ -133,9 +139,27 @@ class DA31PDFFiller: NSObject {
 	class func fullNameFrom(firstName:String, middleInitial: String, lastName: String) -> String {
 		return "\(lastName), \(firstName) \(middleInitial)."
 	}
+
+	class func formattedPhonNumber(phoneNumber: String) -> String {
+		var start = phoneNumber.index(phoneNumber.startIndex, offsetBy: 0)
+		var end = phoneNumber.index(phoneNumber.startIndex, offsetBy: 3)
+		var range = Range(uncheckedBounds: (lower: start, upper: end))
+		let areaCode = phoneNumber.substring(with: range)
+		start = phoneNumber.index(phoneNumber.startIndex, offsetBy: 3)
+		end = phoneNumber.index(phoneNumber.startIndex, offsetBy: 6)
+		range = Range(uncheckedBounds: (lower: start, upper: end))
+		let firstThreeDigits = phoneNumber.substring(with: range)
+		start = phoneNumber.index(phoneNumber.startIndex, offsetBy: 6)
+		end = phoneNumber.index(phoneNumber.startIndex, offsetBy: 10)
+		range = Range(uncheckedBounds: (lower: start, upper: end))
+		let lastFourDigits = phoneNumber.substring(with: range)
+		return "(\(areaCode)) \(firstThreeDigits)-\(lastFourDigits)"
+	}
 	
-	class func addressFrom(street:String, city: String, state: String, zip: String, phoneNumber: String) -> String {
-		return "\(street), \(city) \(state), \(zip), \(phoneNumber)"
+	
+	class func addressFrom(street:String, city: String, state: USState, zip: String, phoneNumber: String) -> String {
+		let formatedPhoneNumber = DA31PDFFiller.formattedPhonNumber(phoneNumber: phoneNumber)
+		return "\(street)\n\(city), \(state.rawValue)\n\(formatedPhoneNumber)"
 	}
 	
 	class func stationFrom(station:String, orgn: String, phone: String) -> String {
