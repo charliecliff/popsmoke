@@ -6,14 +6,13 @@
 //  Copyright © 2017 Charles Cliff. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
-let kDocuments	= "documents"
-
-let kPacketTitle		= "title"
-let kPacketID			= "id"
-let kPacketFilePath		= "filepath"
-let kPacketDocuments	= "documents"
+fileprivate let kDocuments			= "documents"
+fileprivate let kPacketTitle		= "title"
+fileprivate let kPacketID			= "id"
+fileprivate let kPacketFilePath		= "filepath"
+fileprivate let kPacketDocuments	= "documents"
 
 class PSPacket: NSObject, NSCoding {
 

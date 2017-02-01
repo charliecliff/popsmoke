@@ -6,7 +6,7 @@
 //  Copyright © 2017 Charles Cliff. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import RxSwift
 import RxCocoa
 
@@ -38,9 +38,9 @@ class PSPacketManager {
 			reloadCurrentPacket.value = true
 			reloadCurrentPacket.value = false
 		} catch PersistenceError.packetPersistence {
-			print("Invalid Selection.")
+			//TODO: Handle the errors in a global error alert
 		} catch {
-			print("Invalid Selection.")
+			//TODO: Handle the errors in a global error alert
 		}
 	}
 

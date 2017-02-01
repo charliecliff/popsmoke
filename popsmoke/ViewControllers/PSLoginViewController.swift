@@ -13,15 +13,28 @@ import SVProgressHUD
 
 class PSLoginViewController: UIViewController {
 
+	private var centerX: NSLayoutConstraint?
+	private var centerY: NSLayoutConstraint?
+	
 	var progressHUD: SVProgressHUD?
-	@IBOutlet weak var facebookLoginButton: FBSDKLoginButton?
+	var facebookLoginButton: FBSDKLoginButton?
+	@IBOutlet weak var bottomView: UIView?
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 		bindToObservables()
+		
+		facebookLoginButton = FBSDKLoginButton.init()
 		facebookLoginButton?.readPermissions = ["public_profile", "email", "user_friends"]
 		facebookLoginButton?.delegate = self
-    }
+		facebookLoginButton?.translatesAutoresizingMaskIntoConstraints = false
+		view.addSubview(facebookLoginButton!)
+		
+		centerX = NSLayoutConstraint.init(item: facebookLoginButton as Any, attribute: .centerX, relatedBy: .equal, toItem: bottomView, attribute: .centerX, multiplier: 1.0, constant: 0.0)
+		centerY = NSLayoutConstraint.init(item: facebookLoginButton as Any, attribute: .centerY, relatedBy: .equal, toItem: bottomView, attribute: .centerY, multiplier: 1.0, constant: 0.0)
+		view?.addConstraint(centerX!)
+		view?.addConstraint(centerY!)
+	}
 	
 	private func segueToMainViewController() {
 		SVProgressHUD.dismiss()

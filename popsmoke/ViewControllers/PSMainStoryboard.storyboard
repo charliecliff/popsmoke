@@ -33,7 +33,7 @@
                                     <constraint firstAttribute="width" constant="240" id="mMs-Fg-lbW"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="F9b-KA-vhw" kind="embed" id="bCg-1h-z5A"/>
+                                    <segue destination="zE8-PO-sRz" kind="embed" id="Ckt-3d-z1E"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -153,23 +153,34 @@
             </objects>
             <point key="canvasLocation" x="665" y="518"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="VBH-Jw-gDG">
+        <!--Nav Shelf Table View Controller-->
+        <scene sceneID="AZo-BO-0sa">
             <objects>
-                <viewController id="F9b-KA-vhw" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="npd-py-3Wf"/>
-                        <viewControllerLayoutGuide type="bottom" id="WCN-6s-fsZ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="abp-Dj-sNp">
+                <tableViewController id="zE8-PO-sRz" customClass="PSNavShelfTableViewController" customModule="popsmoke" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6la-1W-xi6">
                         <rect key="frame" x="0.0" y="0.0" width="240" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3tv-GZ-cWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="nav_shelf_section" id="bGF-Os-r2g">
+                                <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bGF-Os-r2g" id="pvv-wE-oiz">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zE8-PO-sRz" id="6Nc-tM-9Kd"/>
+                            <outlet property="delegate" destination="zE8-PO-sRz" id="9Wp-DB-GUy"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vea-0V-UDo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-134" y="-199"/>
+            <point key="canvasLocation" x="-174" y="-145"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lay-jP-FAD">
