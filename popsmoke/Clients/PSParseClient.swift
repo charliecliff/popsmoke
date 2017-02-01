@@ -8,13 +8,11 @@
 
 import Parse
 
-fileprivate let server			= "http://popsmokeapp.herokuapp.com/parse"
-fileprivate let applicationId	= "popsmoke"
-fileprivate let clientKey		= "popsmokemasterkey"
-
-fileprivate let parseUserKey	= "USER"
-fileprivate let parsePacketKey	= "PACKET"
-
+fileprivate let server				= "http://popsmokeapp.herokuapp.com/parse"
+fileprivate let applicationId		= "popsmoke"
+fileprivate let clientKey			= "popsmokemasterkey"
+fileprivate let parseUserKey		= "USER"
+fileprivate let parsePacketKey		= "PACKET"
 fileprivate let parseFirstNameKey	= "first_name"
 fileprivate let parseLastNameKey	= "last_name"
 fileprivate let parseUserIDKey		= "user_id"
