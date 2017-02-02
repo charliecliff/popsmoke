@@ -61,6 +61,7 @@
 		DAB08D9A1E38F68100F2E263 /* PSFormContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB08D981E38F68100F2E263 /* PSFormContainer.storyboard */; };
 		DAB08D9B1E38F68100F2E263 /* PSFormContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB08D991E38F68100F2E263 /* PSFormContainerViewController.swift */; };
 		DAB08D9D1E38F91F00F2E263 /* PSPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB08D9C1E38F91F00F2E263 /* PSPhotoViewController.swift */; };
+		DAD367311E43ACD5009980DC /* PSSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD367301E43ACD5009980DC /* PSSettingsViewController.swift */; };
 		DAF836831E3AA677003178C4 /* DA31FormFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF8367D1E3AA677003178C4 /* DA31FormFactory.swift */; };
 		DAF836841E3AA677003178C4 /* PSDocumentViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF8367E1E3AA677003178C4 /* PSDocumentViewFactory.swift */; };
 		DAF836851E3AA677003178C4 /* PSFormContainerViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF8367F1E3AA677003178C4 /* PSFormContainerViewFactory.swift */; };
@@ -154,6 +155,7 @@
 		DAB08D981E38F68100F2E263 /* PSFormContainer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSFormContainer.storyboard; sourceTree = "<group>"; };
 		DAB08D991E38F68100F2E263 /* PSFormContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSFormContainerViewController.swift; sourceTree = "<group>"; };
 		DAB08D9C1E38F91F00F2E263 /* PSPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPhotoViewController.swift; sourceTree = "<group>"; };
+		DAD367301E43ACD5009980DC /* PSSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSSettingsViewController.swift; sourceTree = "<group>"; };
 		DAF8367D1E3AA677003178C4 /* DA31FormFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DA31FormFactory.swift; sourceTree = "<group>"; };
 		DAF8367E1E3AA677003178C4 /* PSDocumentViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSDocumentViewFactory.swift; sourceTree = "<group>"; };
 		DAF8367F1E3AA677003178C4 /* PSFormContainerViewFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSFormContainerViewFactory.swift; sourceTree = "<group>"; };
@@ -336,6 +338,7 @@
 				DA01F01E1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard */,
 				DA01F01C1E39AA9100B7FB04 /* PSPDFContainerViewController.swift */,
 				DAB08D9C1E38F91F00F2E263 /* PSPhotoViewController.swift */,
+				DAD367301E43ACD5009980DC /* PSSettingsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -695,6 +698,7 @@
 				DA00513A1E37B743008E7035 /* PSPacketUtilities.swift in Sources */,
 				DAF836831E3AA677003178C4 /* DA31FormFactory.swift in Sources */,
 				DAF836A01E3D976F003178C4 /* NSURLRequest+Category.swift in Sources */,
+				DAD367311E43ACD5009980DC /* PSSettingsViewController.swift in Sources */,
 				DAB08D9B1E38F68100F2E263 /* PSFormContainerViewController.swift in Sources */,
 				DAF836981E3B96D8003178C4 /* PSMailComposerFactory.swift in Sources */,
 				DA0287F11E439FD4008B481B /* SkullAndBonesMenuView.m in Sources */,

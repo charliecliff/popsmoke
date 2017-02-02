@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -60,7 +61,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="n5O-OU-aoi" firstAttribute="centerY" secondItem="HOC-mC-p2e" secondAttribute="centerY" id="0tS-is-eed"/>
                                     <constraint firstItem="n5O-OU-aoi" firstAttribute="width" secondItem="lh4-NX-xdL" secondAttribute="width" id="5NA-c1-Ozf"/>
@@ -258,14 +259,66 @@
             </objects>
             <point key="canvasLocation" x="-66.400000000000006" y="518.59070464767615"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="5Je-K9-yhy">
             <objects>
-                <viewController id="2eP-cI-VJv" sceneMemberID="viewController">
+                <viewController id="2eP-cI-VJv" customClass="PSSettingsViewController" customModule="popsmoke" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iT4-XB-c6T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8MV-mq-QLI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrZ-t1-XWk" userLabel="Logout Containert">
+                                <rect key="frame" x="133" y="451" width="108" height="108"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="lce-XZ-xTv">
+                                        <rect key="frame" x="14" y="0.0" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="OBL-1J-7xC"/>
+                                            <constraint firstAttribute="height" constant="80" id="elZ-Ix-R5g"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGOUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRe-KI-EoH">
+                                        <rect key="frame" x="0.0" y="80" width="108" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="LCH-Ja-WWl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjV-X0-IWz">
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="108"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="vRe-KI-EoH" secondAttribute="bottom" id="6N6-dn-vLf"/>
+                                    <constraint firstItem="vRe-KI-EoH" firstAttribute="top" secondItem="lce-XZ-xTv" secondAttribute="bottom" id="8yi-Bm-BlB"/>
+                                    <constraint firstAttribute="trailing" secondItem="hjV-X0-IWz" secondAttribute="trailing" id="Fed-rV-taA"/>
+                                    <constraint firstItem="hjV-X0-IWz" firstAttribute="leading" secondItem="rrZ-t1-XWk" secondAttribute="leading" id="HtD-Qh-XZ5"/>
+                                    <constraint firstItem="vRe-KI-EoH" firstAttribute="leading" secondItem="rrZ-t1-XWk" secondAttribute="leading" id="Mru-Va-lCN"/>
+                                    <constraint firstAttribute="width" secondItem="rrZ-t1-XWk" secondAttribute="height" id="VOp-us-NDF"/>
+                                    <constraint firstAttribute="bottom" secondItem="hjV-X0-IWz" secondAttribute="bottom" id="bli-ET-OK1"/>
+                                    <constraint firstItem="hjV-X0-IWz" firstAttribute="top" secondItem="rrZ-t1-XWk" secondAttribute="top" id="bnj-TY-sVm"/>
+                                    <constraint firstAttribute="trailing" secondItem="vRe-KI-EoH" secondAttribute="trailing" id="mBM-5E-0G4"/>
+                                    <constraint firstItem="lce-XZ-xTv" firstAttribute="centerX" secondItem="rrZ-t1-XWk" secondAttribute="centerX" id="nkU-jr-eKm"/>
+                                    <constraint firstItem="lce-XZ-xTv" firstAttribute="top" secondItem="rrZ-t1-XWk" secondAttribute="top" id="u3v-TQ-w68"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rrZ-t1-XWk" firstAttribute="centerX" secondItem="iT4-XB-c6T" secondAttribute="centerX" id="4Tf-Qt-csC"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="rrZ-t1-XWk" secondAttribute="bottom" constant="64" id="GeF-DI-PoS"/>
+                            <constraint firstAttribute="bottom" secondItem="8MV-mq-QLI" secondAttribute="bottom" id="LD1-n6-hGw"/>
+                            <constraint firstItem="8MV-mq-QLI" firstAttribute="leading" secondItem="iT4-XB-c6T" secondAttribute="leading" id="LNO-Km-AS9"/>
+                            <constraint firstItem="8MV-mq-QLI" firstAttribute="top" secondItem="iT4-XB-c6T" secondAttribute="top" id="NdZ-iA-i99"/>
+                            <constraint firstAttribute="trailing" secondItem="8MV-mq-QLI" secondAttribute="trailing" id="aKA-aw-g6E"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTa-yn-kCW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -274,6 +327,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="facebook" width="80" height="80"/>
         <image name="gear" width="22" height="22"/>
     </resources>
 </document>
