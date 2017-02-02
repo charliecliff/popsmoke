@@ -15,11 +15,22 @@ let NOTIFICATION_HIDE_NAV_DRAWER	= Notification.Name("NOTIFICATION_HIDE_NAV_DRAW
 class PSMainViewController: UIViewController {
 
 	private let navigation_container_segue = "navigation_container_segue"
+
 	private var navDrawerIsHidden = true
+	private var settingVCIsHidden = true
+
 	private var packetVC: PSPacketViewController?
 	@IBOutlet weak var leadingConstraint: NSLayoutConstraint?
 	@IBOutlet weak var trailingConstraint: NSLayoutConstraint?
 	@IBOutlet weak var navBarWidthConstraint: NSLayoutConstraint?
+
+	@IBOutlet weak var settingView: UIView?
+	@IBOutlet weak var settingTopConstraint: NSLayoutConstraint?
+
+	
+	@IBOutlet weak var menuView: SkullAndBonesMenuView?
+
+	
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +55,17 @@ class PSMainViewController: UIViewController {
 	
 	deinit {
 		NotificationCenter.default.removeObserver(self)
+	}
+	
+	// MARK: Actions
+	
+	@IBAction func didPressSettingButton(sender: UIButton) {
+		if settingVCIsHidden {
+			menuView?.addSkullAppearAnimation()
+		} else {
+			menuView?.removeSkullAppearAnimation()
+		}
+		toggleSettings()
 	}
 	
 	// MARK: - Animations
@@ -74,6 +96,33 @@ class PSMainViewController: UIViewController {
 		UIView.animate(withDuration: 0.5) {
 			self.view.layoutIfNeeded()
 			self.navDrawerIsHidden = true
+		}
+	}
+	
+	func toggleSettings() {
+		if settingVCIsHidden {
+			showSettings()
+		} else {
+			hideSetting()
+		}
+	}
+	
+	func showSettings() {
+		guard let delta = settingView?.frame.size.height else {
+			return
+		}
+		settingTopConstraint?.constant = -delta
+		UIView.animate(withDuration: 0.3) {
+			self.view.layoutIfNeeded()
+			self.settingVCIsHidden = false
+		}
+	}
+	
+	func hideSetting() {
+		settingTopConstraint?.constant = -0
+		UIView.animate(withDuration: 0.3) {
+			self.view.layoutIfNeeded()
+			self.settingVCIsHidden = true
 		}
 	}
 }

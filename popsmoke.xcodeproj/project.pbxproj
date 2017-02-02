@@ -41,6 +41,15 @@
 		DA0287C01E426B1A008B481B /* DA31Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287BF1E426B1A008B481B /* DA31Constants.swift */; };
 		DA0287C51E427104008B481B /* PSPersonalInfoUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287C41E427104008B481B /* PSPersonalInfoUtilities.swift */; };
 		DA0287C71E427AF9008B481B /* PSPersonalInfoFormFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287C61E427AF9008B481B /* PSPersonalInfoFormFactory.swift */; };
+		DA0287E91E439FD4008B481B /* bottomBar.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0287DF1E439FD4008B481B /* bottomBar.png */; };
+		DA0287EA1E439FD4008B481B /* bottomBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0287E01E439FD4008B481B /* bottomBar@2x.png */; };
+		DA0287EB1E439FD4008B481B /* middleBar.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0287E11E439FD4008B481B /* middleBar.png */; };
+		DA0287EC1E439FD4008B481B /* middleBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0287E21E439FD4008B481B /* middleBar@2x.png */; };
+		DA0287ED1E439FD4008B481B /* SkullandBones.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0287E31E439FD4008B481B /* SkullandBones.png */; };
+		DA0287EE1E439FD4008B481B /* SkullandBones@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0287E41E439FD4008B481B /* SkullandBones@2x.png */; };
+		DA0287EF1E439FD4008B481B /* topBar.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0287E51E439FD4008B481B /* topBar.png */; };
+		DA0287F01E439FD4008B481B /* topBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0287E61E439FD4008B481B /* topBar@2x.png */; };
+		DA0287F11E439FD4008B481B /* SkullAndBonesMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0287E81E439FD4008B481B /* SkullAndBonesMenuView.m */; };
 		DA0B26871E362A62000CC2DC /* PSMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B26861E362A62000CC2DC /* PSMainViewController.swift */; };
 		DA0B26891E362A6D000CC2DC /* PSMainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */; };
 		DA3585F21E3A7ABF0014AE10 /* UIImageView+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3585F11E3A7ABF0014AE10 /* UIImageView+Tint.swift */; };
@@ -119,6 +128,17 @@
 		DA0287BF1E426B1A008B481B /* DA31Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DA31Constants.swift; sourceTree = "<group>"; };
 		DA0287C41E427104008B481B /* PSPersonalInfoUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPersonalInfoUtilities.swift; sourceTree = "<group>"; };
 		DA0287C61E427AF9008B481B /* PSPersonalInfoFormFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPersonalInfoFormFactory.swift; sourceTree = "<group>"; };
+		DA0287DD1E439FD3008B481B /* popsmoke-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "popsmoke-Bridging-Header.h"; path = "Core Animator/SkullAndBonesMenu/popsmoke-Bridging-Header.h"; sourceTree = "<group>"; };
+		DA0287DF1E439FD4008B481B /* bottomBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottomBar.png; sourceTree = "<group>"; };
+		DA0287E01E439FD4008B481B /* bottomBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottomBar@2x.png"; sourceTree = "<group>"; };
+		DA0287E11E439FD4008B481B /* middleBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = middleBar.png; sourceTree = "<group>"; };
+		DA0287E21E439FD4008B481B /* middleBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "middleBar@2x.png"; sourceTree = "<group>"; };
+		DA0287E31E439FD4008B481B /* SkullandBones.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SkullandBones.png; sourceTree = "<group>"; };
+		DA0287E41E439FD4008B481B /* SkullandBones@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SkullandBones@2x.png"; sourceTree = "<group>"; };
+		DA0287E51E439FD4008B481B /* topBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = topBar.png; sourceTree = "<group>"; };
+		DA0287E61E439FD4008B481B /* topBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "topBar@2x.png"; sourceTree = "<group>"; };
+		DA0287E71E439FD4008B481B /* SkullAndBonesMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkullAndBonesMenuView.h; sourceTree = "<group>"; };
+		DA0287E81E439FD4008B481B /* SkullAndBonesMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkullAndBonesMenuView.m; sourceTree = "<group>"; };
 		DA0B26861E362A62000CC2DC /* PSMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSMainViewController.swift; sourceTree = "<group>"; };
 		DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSMainStoryboard.storyboard; sourceTree = "<group>"; };
 		DA3585F11E3A7ABF0014AE10 /* UIImageView+Tint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Tint.swift"; sourceTree = "<group>"; };
@@ -268,6 +288,39 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		DA0287C81E439E55008B481B /* Core Animator */ = {
+			isa = PBXGroup;
+			children = (
+				DA0287C91E439E55008B481B /* SkullAndBonesMenu */,
+			);
+			path = "Core Animator";
+			sourceTree = "<group>";
+		};
+		DA0287C91E439E55008B481B /* SkullAndBonesMenu */ = {
+			isa = PBXGroup;
+			children = (
+				DA0287DE1E439FD4008B481B /* images */,
+				DA0287E71E439FD4008B481B /* SkullAndBonesMenuView.h */,
+				DA0287E81E439FD4008B481B /* SkullAndBonesMenuView.m */,
+			);
+			path = SkullAndBonesMenu;
+			sourceTree = "<group>";
+		};
+		DA0287DE1E439FD4008B481B /* images */ = {
+			isa = PBXGroup;
+			children = (
+				DA0287DF1E439FD4008B481B /* bottomBar.png */,
+				DA0287E01E439FD4008B481B /* bottomBar@2x.png */,
+				DA0287E11E439FD4008B481B /* middleBar.png */,
+				DA0287E21E439FD4008B481B /* middleBar@2x.png */,
+				DA0287E31E439FD4008B481B /* SkullandBones.png */,
+				DA0287E41E439FD4008B481B /* SkullandBones@2x.png */,
+				DA0287E51E439FD4008B481B /* topBar.png */,
+				DA0287E61E439FD4008B481B /* topBar@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
 		DA0B26851E362A20000CC2DC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,8 +369,10 @@
 				DA0287BD1E426637008B481B /* PSAddressUtilities.swift */,
 				DA0287C41E427104008B481B /* PSPersonalInfoUtilities.swift */,
 				DA3585F31E3A7DE00014AE10 /* PSConstants.swift */,
+				DA0287DD1E439FD3008B481B /* popsmoke-Bridging-Header.h */,
 				DA00512E1E37AE7A008E7035 /* Cells */,
 				DA0287A71E40F3E7008B481B /* Clients */,
+				DA0287C81E439E55008B481B /* Core Animator */,
 				DAF836891E3AA68E003178C4 /* Forms */,
 				DAF8368F1E3AA73A003178C4 /* Managers */,
 				DA01F0151E39612F00B7FB04 /* Models */,
@@ -478,7 +533,7 @@
 					DA5007EE1E28BBA80038A5E8 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 23CZC4883B;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					DA5008041E28BBA80038A5E8 = {
@@ -514,15 +569,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA0287EE1E439FD4008B481B /* SkullandBones@2x.png in Resources */,
+				DA0287E91E439FD4008B481B /* bottomBar.png in Resources */,
+				DA0287EC1E439FD4008B481B /* middleBar@2x.png in Resources */,
 				DA0287BA1E42646E008B481B /* PSProfileHeaderView.xib in Resources */,
+				DA0287ED1E439FD4008B481B /* SkullandBones.png in Resources */,
 				DA5007FF1E28BBA80038A5E8 /* LaunchScreen.storyboard in Resources */,
 				DA5007FC1E28BBA80038A5E8 /* Assets.xcassets in Resources */,
 				DA01F01F1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard in Resources */,
+				DA0287EA1E439FD4008B481B /* bottomBar@2x.png in Resources */,
 				DAB08D9A1E38F68100F2E263 /* PSFormContainer.storyboard in Resources */,
+				DA0287F01E439FD4008B481B /* topBar@2x.png in Resources */,
+				DA0287EF1E439FD4008B481B /* topBar.png in Resources */,
 				DA0287A41E40E907008B481B /* PSLogin.storyboard in Resources */,
 				DAF836AB1E3E469F003178C4 /* PSPacketTableViewCell.xib in Resources */,
 				DA01F0281E39ACA700B7FB04 /* DA31_Packet.plist in Resources */,
 				DA00513E1E37C8CB008E7035 /* Icons.xcassets in Resources */,
+				DA0287EB1E439FD4008B481B /* middleBar.png in Resources */,
 				DA0B26891E362A6D000CC2DC /* PSMainStoryboard.storyboard in Resources */,
 				DA0051361E37B36F008E7035 /* PSDocumentCollectionViewCell.xib in Resources */,
 				DA01F0291E39ACA700B7FB04 /* DA_31.pdf in Resources */,
@@ -634,6 +697,7 @@
 				DAF836A01E3D976F003178C4 /* NSURLRequest+Category.swift in Sources */,
 				DAB08D9B1E38F68100F2E263 /* PSFormContainerViewController.swift in Sources */,
 				DAF836981E3B96D8003178C4 /* PSMailComposerFactory.swift in Sources */,
+				DA0287F11E439FD4008B481B /* SkullAndBonesMenuView.m in Sources */,
 				DAF836A91E3E4692003178C4 /* PSPacketTableViewCell.swift in Sources */,
 				DAF836841E3AA677003178C4 /* PSDocumentViewFactory.swift in Sources */,
 				DA0287B11E40FDBA008B481B /* PSParseClient.swift in Sources */,
@@ -784,6 +848,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 23CZC4883B;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -795,6 +860,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nomad.popsmoke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "popsmoke/Core Animator/SkullAndBonesMenu/popsmoke-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -806,6 +873,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 23CZC4883B;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -817,6 +885,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.nomad.popsmoke;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "popsmoke/Core Animator/SkullAndBonesMenu/popsmoke-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
