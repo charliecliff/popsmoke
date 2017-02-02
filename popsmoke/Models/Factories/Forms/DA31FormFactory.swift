@@ -17,9 +17,19 @@ let address_zip						= "ZIP"
 let da31_control_number			= "CONTROL NUMBER"
 let da31_date					= "DATE"
 let da31_leave_type				= "LEAVE TYPE"
-let da31_station_orgn			= "ORGN"
-let da31_station				= "STATION"
+
+
+
+let da31_station_platoon		= "PLATOON"
+let da31_station_company		= "COMPANY"
+let da31_station_battalion		= "BATTALION"
+let da31_station_brigade		= "BRIGADE"
+let da31_station_division		= "DIVISION"
+let da31_station_post			= "POST"
 let da31_station_phone			= "PHONE NO."
+
+
+
 let da31_accrued_leave			= "ACCRUED"
 let da31_requested_leave		= "REQUESTED"
 let da31_advanced_leave			= "ADVANCED"
@@ -34,7 +44,6 @@ let da31_leave_type_other		= "OTHER"
 class DA31FormFactory: NSObject {
 
 	class func appendLeaveTypeToForm(form: Form) {
-		
 		form +++ Section("LEAVE TYPE")
 			<<< AlertRow<String>() { row in
 				row.tag = da31_leave_type
@@ -55,7 +64,6 @@ class DA31FormFactory: NSObject {
 	}
 	
 	class func appendLeaveAddressToForm(form: Form) {
-		
 		form +++ Section("LEAVE ADDRESS")
 			<<< TextRow() { row in
 					row.tag = address_street
@@ -96,11 +104,10 @@ class DA31FormFactory: NSObject {
 	}
 	
 	class func appendStationToForm(form: Form) {
-		
 		form +++ Section("STATION INFORMATION")
 			<<< TextRow() { row in
-					row.tag = da31_station_orgn
-					row.title = da31_station_orgn
+					row.tag = da31_station_platoon
+					row.title = da31_station_platoon
 					row.placeholder = "Enter text here"
 					row.add(rule: RuleRequired())
 				}.cellUpdate { cell, row in
@@ -109,10 +116,50 @@ class DA31FormFactory: NSObject {
 					}
 				}
 			<<< TextRow() { row in
-					row.tag = da31_station
-					row.title = da31_station
+					row.tag = da31_station_company
+					row.title = da31_station_company
 					row.placeholder = "Enter text here"
 					row.add(rule: RuleRequired())
+				}.cellUpdate { cell, row in
+					if !row.isValid {
+						cell.titleLabel?.textColor = .red
+					}
+				}
+			<<< TextRow() { row in
+				row.tag = da31_station_battalion
+				row.title = da31_station_battalion
+				row.placeholder = "Enter text here"
+				row.add(rule: RuleRequired())
+				}.cellUpdate { cell, row in
+					if !row.isValid {
+						cell.titleLabel?.textColor = .red
+					}
+				}
+			<<< TextRow() { row in
+				row.tag = da31_station_brigade
+				row.title = da31_station_brigade
+				row.placeholder = "Enter text here"
+				row.add(rule: RuleRequired())
+				}.cellUpdate { cell, row in
+					if !row.isValid {
+						cell.titleLabel?.textColor = .red
+					}
+				}
+			<<< TextRow() { row in
+				row.tag = da31_station_division
+				row.title = da31_station_division
+				row.placeholder = "Enter text here"
+				row.add(rule: RuleRequired())
+				}.cellUpdate { cell, row in
+					if !row.isValid {
+						cell.titleLabel?.textColor = .red
+					}
+				}
+			<<< TextRow() { row in
+				row.tag = da31_station_post
+				row.title = da31_station_post
+				row.placeholder = "Enter text here"
+				row.add(rule: RuleRequired())
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						cell.titleLabel?.textColor = .red
@@ -131,7 +178,6 @@ class DA31FormFactory: NSObject {
 	}
 	
 	class func appendLeaveDaysToForm(form: Form) {
-		
 		form +++ Section("NUMBER OF DAYS LEAVE")
 			<<< IntRow() { row in
 					row.tag = da31_accrued_leave
@@ -172,7 +218,6 @@ class DA31FormFactory: NSObject {
 	}
 	
 	class func appendLeaveDatesToForm(form: Form) {
-		
 		form +++ Section("LEAVE DATES")
 			<<< DateRow() { row in
 					row.tag = da31_leave_date_from
@@ -195,12 +240,10 @@ class DA31FormFactory: NSObject {
 	}
 	
 	class func toDictionary(form: Form) -> [String: Any?] {
-		
 		return form.values()
 	}
 	
 	class func leaveTypes() -> [String] {
-		
 		return [da31_leave_type_ordinary, da31_leave_type_emergency, da31_leave_type_permissive, da31_leave_type_other]
 	}
 }

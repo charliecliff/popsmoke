@@ -88,14 +88,22 @@ class DA31PDFFiller: NSObject {
 				document.forms!.setValue("Yes", forFormWithName: da31_pdf_leave_other)
 			}
 		}
-		// BLock 8
-		let stationOrgn = dictionary[da31_station_orgn] as? String
-		let station = dictionary[da31_station] as? String
+		// Block 8
+		let platoon = dictionary[da31_station_platoon] as? String
+		let company = dictionary[da31_station_company] as? String
+		let battalion = dictionary[da31_station_battalion] as? String
+		var stationString = "\(platoon), \(company), \(battalion)"
+		
+		let brigade = dictionary[da31_station_brigade] as? String
+		let division = dictionary[da31_station_division] as? String
+		stationString = "\(stationString)\n\(brigade), \(division)"
+
+		let post = dictionary[da31_station_post] as? String
 		let stationPhone = dictionary[da31_station_phone] as? String
-		if stationOrgn != nil  && station != nil && stationPhone != nil {
-			let address = DA31PDFFiller.stationFrom(station: station!, orgn: stationOrgn!, phone: stationPhone!)
-			document.forms!.setValue(address, forFormWithName: da31_pdf_station)
-		}
+		stationString = "\(stationString)\n\(post), \(stationPhone)"
+		
+		document.forms!.setValue(stationString, forFormWithName: da31_pdf_station)
+		
 		// Block 9
 		if let accruedLeave = dictionary[da31_accrued_leave] as? Int {
 			document.forms!.setValue(String(accruedLeave), forFormWithName: da31_pdf_accrued_leave)
