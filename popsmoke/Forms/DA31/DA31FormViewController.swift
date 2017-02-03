@@ -12,10 +12,6 @@ class DA31FormViewController: FormViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-		form +++ Section() {
-			$0.header = HeaderFooterView<EurekaLogoView>(.class)
-		}
 		PSPersonalInfoFormFactory.appendPersonalInformationToForm(form: form)
 		DA31FormFactory.appendLeaveAddressToForm(form: form)
 		DA31FormFactory.appendLeaveTypeToForm(form: form)

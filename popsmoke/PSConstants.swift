@@ -19,5 +19,6 @@ let kKeyLastName    = "last_name"
 
 // MARK: - Colors
 let dark_grey = UIColor.init(colorLiteralRed: 65.0/255, green: 65.0/255, blue: 65.0/255, alpha: 1.0)
+let form_row_background = UIColor.init(colorLiteralRed: 1, green: 1, blue: 1, alpha: 0.5)
 
 // MARK: - Errors

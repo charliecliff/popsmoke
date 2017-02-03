@@ -56,6 +56,8 @@ class DA31FormFactory: NSObject {
 					print(row.value ?? "No Value")
 				}.onPresent{ _, to in
 					to.view.tintColor = .purple
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						
@@ -70,6 +72,8 @@ class DA31FormFactory: NSObject {
 					row.title = address_street
 					row.placeholder = "Enter text here"
 					row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						cell.titleLabel?.textColor = .red
@@ -80,6 +84,8 @@ class DA31FormFactory: NSObject {
 					row.title = address_city
 					row.placeholder = "Enter text here"
 					row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						cell.titleLabel?.textColor = .red
@@ -90,12 +96,16 @@ class DA31FormFactory: NSObject {
 					row.title = address_state
 					row.options = PSAddressUtilities.states()
 					row.value = row.options.first
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}
 			<<< PhoneRow() { row in
 					row.tag = personal_info_phone
 					row.title = personal_info_phone
 					row.placeholder = "And numbers here"
 					row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						cell.titleLabel?.textColor = .red
@@ -110,6 +120,8 @@ class DA31FormFactory: NSObject {
 					row.title = da31_station_platoon
 					row.placeholder = "Enter text here"
 					row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						cell.titleLabel?.textColor = .red
@@ -120,6 +132,8 @@ class DA31FormFactory: NSObject {
 					row.title = da31_station_company
 					row.placeholder = "Enter text here"
 					row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						cell.titleLabel?.textColor = .red
@@ -130,6 +144,8 @@ class DA31FormFactory: NSObject {
 				row.title = da31_station_battalion
 				row.placeholder = "Enter text here"
 				row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						cell.titleLabel?.textColor = .red
@@ -140,6 +156,8 @@ class DA31FormFactory: NSObject {
 				row.title = da31_station_brigade
 				row.placeholder = "Enter text here"
 				row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						cell.titleLabel?.textColor = .red
@@ -150,6 +168,8 @@ class DA31FormFactory: NSObject {
 				row.title = da31_station_division
 				row.placeholder = "Enter text here"
 				row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						cell.titleLabel?.textColor = .red
@@ -160,6 +180,8 @@ class DA31FormFactory: NSObject {
 				row.title = da31_station_post
 				row.placeholder = "Enter text here"
 				row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						cell.titleLabel?.textColor = .red
@@ -170,6 +192,8 @@ class DA31FormFactory: NSObject {
 					row.title = da31_station_phone
 					row.placeholder = "And numbers here"
 					row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						cell.titleLabel?.textColor = .red
@@ -183,6 +207,8 @@ class DA31FormFactory: NSObject {
 					row.tag = da31_accrued_leave
 					row.title = da31_accrued_leave
 					row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						cell.titleLabel?.textColor = .red
@@ -192,6 +218,8 @@ class DA31FormFactory: NSObject {
 					row.tag = da31_requested_leave
 					row.title = da31_requested_leave
 					row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						cell.titleLabel?.textColor = .red
@@ -201,6 +229,8 @@ class DA31FormFactory: NSObject {
 					row.tag = da31_advanced_leave
 					row.title = da31_advanced_leave
 					row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						cell.titleLabel?.textColor = .red
@@ -210,6 +240,8 @@ class DA31FormFactory: NSObject {
 					row.tag = da31_excess_leave
 					row.title = da31_excess_leave
 					row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						cell.titleLabel?.textColor = .red
@@ -223,6 +255,8 @@ class DA31FormFactory: NSObject {
 					row.tag = da31_leave_date_from
 					row.title = da31_leave_date_from
 					row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						
@@ -232,6 +266,8 @@ class DA31FormFactory: NSObject {
 					row.tag = da31_leave_date_to
 					row.title = da31_leave_date_to
 					row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						

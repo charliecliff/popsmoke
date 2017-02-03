@@ -8,35 +8,21 @@
 
 import UIKit
 
-let NOTIFICATION_TOGGLE_NAV_DRAWER	= Notification.Name("NOTIFICATION_TOGGLE_NAV_DRAWER")
-let NOTIFICATION_SHOW_NAV_DRAWER	= Notification.Name("NOTIFICATION_SHOW_NAV_DRAWER")
-let NOTIFICATION_HIDE_NAV_DRAWER	= Notification.Name("NOTIFICATION_HIDE_NAV_DRAWER")
-
 class PSMainViewController: UIViewController {
 
 	private let navigation_container_segue = "navigation_container_segue"
 
-	private var navDrawerIsHidden = true
 	private var settingVCIsHidden = true
 
 	private var packetVC: PSPacketViewController?
-	@IBOutlet weak var leadingConstraint: NSLayoutConstraint?
-	@IBOutlet weak var trailingConstraint: NSLayoutConstraint?
-	@IBOutlet weak var navBarWidthConstraint: NSLayoutConstraint?
 
+	@IBOutlet weak var overlay: UIImageView?
 	@IBOutlet weak var settingView: UIView?
 	@IBOutlet weak var settingTopConstraint: NSLayoutConstraint?
-
-	
 	@IBOutlet weak var menuView: SkullAndBonesMenuView?
 
-	
-	
     override func viewDidLoad() {
         super.viewDidLoad()
-		NotificationCenter.default.addObserver(self, selector: #selector(self.toggleNavDrawer), name: NOTIFICATION_TOGGLE_NAV_DRAWER, object: nil)
-		NotificationCenter.default.addObserver(self, selector: #selector(self.showNavDrawer), name: NOTIFICATION_SHOW_NAV_DRAWER, object: nil)
-		NotificationCenter.default.addObserver(self, selector: #selector(self.hideNavDrawer), name: NOTIFICATION_HIDE_NAV_DRAWER, object: nil)
     }
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -53,56 +39,20 @@ class PSMainViewController: UIViewController {
 		}
 	}
 	
-	deinit {
-		NotificationCenter.default.removeObserver(self)
-	}
-	
 	// MARK: Actions
 	
 	@IBAction func didPressSettingButton(sender: UIButton) {
-		if settingVCIsHidden {
-			menuView?.addSkullAppearAnimation()
-		} else {
-			menuView?.removeSkullAppearAnimation()
-		}
 		toggleSettings()
 	}
 	
 	// MARK: - Animations
-
-	func toggleNavDrawer() {
-		if navDrawerIsHidden {
-			showNavDrawer()
-		} else {
-			hideNavDrawer()
-		}
-	}
-	
-	func showNavDrawer() {
-		guard let delta = navBarWidthConstraint?.constant else {
-			return
-		}
-		trailingConstraint?.constant = -delta
-		leadingConstraint?.constant  = delta
-		UIView.animate(withDuration: 0.5) {
-			self.view.layoutIfNeeded()
-			self.navDrawerIsHidden = false
-		}
-	}
-	
-	func hideNavDrawer() {
-		trailingConstraint?.constant = 0
-		leadingConstraint?.constant  = 0
-		UIView.animate(withDuration: 0.5) {
-			self.view.layoutIfNeeded()
-			self.navDrawerIsHidden = true
-		}
-	}
 	
 	func toggleSettings() {
 		if settingVCIsHidden {
+			menuView?.addSkullAppearAnimation()
 			showSettings()
 		} else {
+			menuView?.removeSkullAppearAnimation()
 			hideSetting()
 		}
 	}
@@ -115,6 +65,7 @@ class PSMainViewController: UIViewController {
 		UIView.animate(withDuration: 0.3) {
 			self.view.layoutIfNeeded()
 			self.settingVCIsHidden = false
+			self.overlay?.alpha = 0.8
 		}
 	}
 	
@@ -123,6 +74,7 @@ class PSMainViewController: UIViewController {
 		UIView.animate(withDuration: 0.3) {
 			self.view.layoutIfNeeded()
 			self.settingVCIsHidden = true
+			self.overlay?.alpha = 0.0
 		}
 	}
 }
