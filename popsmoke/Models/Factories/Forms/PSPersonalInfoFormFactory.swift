@@ -31,6 +31,8 @@ class PSPersonalInfoFormFactory: NSObject {
 				row.title = personal_info_first_name
 				row.placeholder = first_name_placeholder_text
 				row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						cell.titleLabel?.textColor = .red
@@ -41,6 +43,8 @@ class PSPersonalInfoFormFactory: NSObject {
 				row.title = personal_info_middle_initial
 				row.placeholder = middle_initial_placeholder_text
 				row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						cell.titleLabel?.textColor = .red
@@ -51,6 +55,8 @@ class PSPersonalInfoFormFactory: NSObject {
 				row.title = personal_info_last_name
 				row.placeholder = last_name_placeholder_text
 				row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						cell.titleLabel?.textColor = .red
@@ -63,6 +69,8 @@ class PSPersonalInfoFormFactory: NSObject {
 				row.add(rule: RuleRequired())
 				row.add(rule: RuleSmallerOrEqualThan(max: 9999))
 				row.add(rule: RuleGreaterOrEqualThan(min: 0000))
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						cell.titleLabel?.textColor = .red
@@ -74,6 +82,8 @@ class PSPersonalInfoFormFactory: NSObject {
 				row.options = PSPersonalInfoUtilities.ranks()
 				row.value = row.options.first
 				row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
 						cell.textLabel?.textColor = .red

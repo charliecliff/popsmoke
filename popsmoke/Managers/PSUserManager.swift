@@ -58,6 +58,17 @@ class PSUserManager {
 	}
 	
 	// MARK: - Facebook Interactions
+
+	func logout() {
+		do {
+			try PSPersistenceManager.clearUser()
+			REKIFacebookClient.logout()
+			hasValidUser.value = false
+		}
+		catch {
+			//TODO: Handle the errors in a global error alert
+		}
+	}
 	
 	func validateUserForSocialMediaToken(token: String?, completion: ((_ error: NSError?) -> Void)?) {
 		REKIFacebookClient.getUserDataForToken(token: (token)!, completion: { (userData, error) in

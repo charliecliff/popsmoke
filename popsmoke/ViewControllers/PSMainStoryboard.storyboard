@@ -249,6 +249,9 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjV-X0-IWz">
                                         <rect key="frame" x="0.0" y="0.0" width="108" height="108"/>
+                                        <connections>
+                                            <action selector="didPressLogoutButtonWithSender:" destination="2eP-cI-VJv" eventType="touchUpInside" id="dod-FN-E9j"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -293,7 +296,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="XhI-6Z-NAO" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hnQ-9D-kRk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hnQ-9D-kRk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

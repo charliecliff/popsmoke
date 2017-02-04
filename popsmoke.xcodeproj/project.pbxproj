@@ -11,7 +11,6 @@
 		DA00512D1E37ABDA008E7035 /* PSPacketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA00512C1E37ABDA008E7035 /* PSPacketViewController.swift */; };
 		DA0051321E37AEC3008E7035 /* PSDocumentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0051311E37AEC3008E7035 /* PSDocumentCollectionViewCell.swift */; };
 		DA0051361E37B36F008E7035 /* PSDocumentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA0051351E37B36F008E7035 /* PSDocumentCollectionViewCell.xib */; };
-		DA00513A1E37B743008E7035 /* PSPacketUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0051391E37B743008E7035 /* PSPacketUtilities.swift */; };
 		DA00513E1E37C8CB008E7035 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA00513D1E37C8CB008E7035 /* Icons.xcassets */; };
 		DA01F0141E392D4C00B7FB04 /* UILabel+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01F0131E392D4C00B7FB04 /* UILabel+Size.swift */; };
 		DA01F0171E39617C00B7FB04 /* PSPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01F0161E39617C00B7FB04 /* PSPacket.swift */; };
@@ -37,9 +36,7 @@
 		DA0287B81E4262FC008B481B /* PSProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287B71E4262FC008B481B /* PSProfileHeaderView.swift */; };
 		DA0287BA1E42646E008B481B /* PSProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA0287B91E42646E008B481B /* PSProfileHeaderView.xib */; };
 		DA0287BC1E4265FE008B481B /* PSAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287BB1E4265FE008B481B /* PSAddress.swift */; };
-		DA0287BE1E426637008B481B /* PSAddressUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287BD1E426637008B481B /* PSAddressUtilities.swift */; };
 		DA0287C01E426B1A008B481B /* DA31Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287BF1E426B1A008B481B /* DA31Constants.swift */; };
-		DA0287C51E427104008B481B /* PSPersonalInfoUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287C41E427104008B481B /* PSPersonalInfoUtilities.swift */; };
 		DA0287C71E427AF9008B481B /* PSPersonalInfoFormFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287C61E427AF9008B481B /* PSPersonalInfoFormFactory.swift */; };
 		DA0287E91E439FD4008B481B /* bottomBar.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0287DF1E439FD4008B481B /* bottomBar.png */; };
 		DA0287EA1E439FD4008B481B /* bottomBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA0287E01E439FD4008B481B /* bottomBar@2x.png */; };
@@ -52,8 +49,11 @@
 		DA0287F11E439FD4008B481B /* SkullAndBonesMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0287E81E439FD4008B481B /* SkullAndBonesMenuView.m */; };
 		DA0B26871E362A62000CC2DC /* PSMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B26861E362A62000CC2DC /* PSMainViewController.swift */; };
 		DA0B26891E362A6D000CC2DC /* PSMainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */; };
+		DA1402281E44F608005EEE31 /* PSAddressUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1402241E44F608005EEE31 /* PSAddressUtilities.swift */; };
+		DA1402291E44F608005EEE31 /* PSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1402251E44F608005EEE31 /* PSConstants.swift */; };
+		DA14022A1E44F608005EEE31 /* PSPacketUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1402261E44F608005EEE31 /* PSPacketUtilities.swift */; };
+		DA14022B1E44F608005EEE31 /* PSPersonalInfoUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1402271E44F608005EEE31 /* PSPersonalInfoUtilities.swift */; };
 		DA3585F21E3A7ABF0014AE10 /* UIImageView+Tint.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3585F11E3A7ABF0014AE10 /* UIImageView+Tint.swift */; };
-		DA3585F41E3A7DE00014AE10 /* PSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3585F31E3A7DE00014AE10 /* PSConstants.swift */; };
 		DA5007F31E28BBA80038A5E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5007F21E28BBA80038A5E8 /* AppDelegate.swift */; };
 		DA5007FC1E28BBA80038A5E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA5007FB1E28BBA80038A5E8 /* Assets.xcassets */; };
 		DA5007FF1E28BBA80038A5E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA5007FD1E28BBA80038A5E8 /* LaunchScreen.storyboard */; };
@@ -119,7 +119,6 @@
 		DA00512C1E37ABDA008E7035 /* PSPacketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPacketViewController.swift; sourceTree = "<group>"; };
 		DA0051311E37AEC3008E7035 /* PSDocumentCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSDocumentCollectionViewCell.swift; sourceTree = "<group>"; };
 		DA0051351E37B36F008E7035 /* PSDocumentCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSDocumentCollectionViewCell.xib; sourceTree = "<group>"; };
-		DA0051391E37B743008E7035 /* PSPacketUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPacketUtilities.swift; sourceTree = "<group>"; };
 		DA00513D1E37C8CB008E7035 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		DA01F0131E392D4C00B7FB04 /* UILabel+Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Size.swift"; sourceTree = "<group>"; };
 		DA01F0161E39617C00B7FB04 /* PSPacket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPacket.swift; sourceTree = "<group>"; };
@@ -145,9 +144,7 @@
 		DA0287B71E4262FC008B481B /* PSProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSProfileHeaderView.swift; sourceTree = "<group>"; };
 		DA0287B91E42646E008B481B /* PSProfileHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSProfileHeaderView.xib; sourceTree = "<group>"; };
 		DA0287BB1E4265FE008B481B /* PSAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSAddress.swift; sourceTree = "<group>"; };
-		DA0287BD1E426637008B481B /* PSAddressUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSAddressUtilities.swift; sourceTree = "<group>"; };
 		DA0287BF1E426B1A008B481B /* DA31Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DA31Constants.swift; sourceTree = "<group>"; };
-		DA0287C41E427104008B481B /* PSPersonalInfoUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPersonalInfoUtilities.swift; sourceTree = "<group>"; };
 		DA0287C61E427AF9008B481B /* PSPersonalInfoFormFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPersonalInfoFormFactory.swift; sourceTree = "<group>"; };
 		DA0287DD1E439FD3008B481B /* popsmoke-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "popsmoke-Bridging-Header.h"; path = "Core Animator/SkullAndBonesMenu/popsmoke-Bridging-Header.h"; sourceTree = "<group>"; };
 		DA0287DF1E439FD4008B481B /* bottomBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottomBar.png; sourceTree = "<group>"; };
@@ -162,8 +159,11 @@
 		DA0287E81E439FD4008B481B /* SkullAndBonesMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkullAndBonesMenuView.m; sourceTree = "<group>"; };
 		DA0B26861E362A62000CC2DC /* PSMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSMainViewController.swift; sourceTree = "<group>"; };
 		DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSMainStoryboard.storyboard; sourceTree = "<group>"; };
+		DA1402241E44F608005EEE31 /* PSAddressUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSAddressUtilities.swift; sourceTree = "<group>"; };
+		DA1402251E44F608005EEE31 /* PSConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSConstants.swift; sourceTree = "<group>"; };
+		DA1402261E44F608005EEE31 /* PSPacketUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPacketUtilities.swift; sourceTree = "<group>"; };
+		DA1402271E44F608005EEE31 /* PSPersonalInfoUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPersonalInfoUtilities.swift; sourceTree = "<group>"; };
 		DA3585F11E3A7ABF0014AE10 /* UIImageView+Tint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Tint.swift"; sourceTree = "<group>"; };
-		DA3585F31E3A7DE00014AE10 /* PSConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSConstants.swift; sourceTree = "<group>"; };
 		DA5007EF1E28BBA80038A5E8 /* popsmoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = popsmoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA5007F21E28BBA80038A5E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA5007FB1E28BBA80038A5E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -384,6 +384,17 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		DA1402231E44F608005EEE31 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				DA1402241E44F608005EEE31 /* PSAddressUtilities.swift */,
+				DA1402251E44F608005EEE31 /* PSConstants.swift */,
+				DA1402261E44F608005EEE31 /* PSPacketUtilities.swift */,
+				DA1402271E44F608005EEE31 /* PSPersonalInfoUtilities.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		DA5007E61E28BBA80038A5E8 = {
 			isa = PBXGroup;
 			children = (
@@ -408,14 +419,9 @@
 			isa = PBXGroup;
 			children = (
 				DA01F0121E392D3600B7FB04 /* UICategories */,
-				DA5007F21E28BBA80038A5E8 /* AppDelegate.swift */,
-				DA0051391E37B743008E7035 /* PSPacketUtilities.swift */,
-				DA0287BD1E426637008B481B /* PSAddressUtilities.swift */,
-				DA0287C41E427104008B481B /* PSPersonalInfoUtilities.swift */,
-				DA3585F31E3A7DE00014AE10 /* PSConstants.swift */,
-				DA0287DD1E439FD3008B481B /* popsmoke-Bridging-Header.h */,
 				DA00512E1E37AE7A008E7035 /* Cells */,
 				DA0287A71E40F3E7008B481B /* Clients */,
+				DA1402231E44F608005EEE31 /* Constants */,
 				DA0287C81E439E55008B481B /* Core Animator */,
 				DAF836891E3AA68E003178C4 /* Forms */,
 				DAF8368F1E3AA73A003178C4 /* Managers */,
@@ -423,6 +429,8 @@
 				DAF836A11E3E3CA6003178C4 /* Protocols */,
 				DA0B26851E362A20000CC2DC /* ViewControllers */,
 				DA0287B61E4262E8008B481B /* Views */,
+				DA5007F21E28BBA80038A5E8 /* AppDelegate.swift */,
+				DA0287DD1E439FD3008B481B /* popsmoke-Bridging-Header.h */,
 				DA5007FB1E28BBA80038A5E8 /* Assets.xcassets */,
 				DA00513D1E37C8CB008E7035 /* Icons.xcassets */,
 				DA01F0231E39ACA700B7FB04 /* Resources */,
@@ -762,28 +770,26 @@
 				DAF8369A1E3D6B46003178C4 /* PSPacketManager.swift in Sources */,
 				DA3585F21E3A7ABF0014AE10 /* UIImageView+Tint.swift in Sources */,
 				DA0287C71E427AF9008B481B /* PSPersonalInfoFormFactory.swift in Sources */,
+				DA1402281E44F608005EEE31 /* PSAddressUtilities.swift in Sources */,
 				DAF836881E3AA677003178C4 /* PSPDFContainerViewFactory.swift in Sources */,
 				DAF836911E3AA747003178C4 /* PSPersistenceManager.swift in Sources */,
 				DA01F0171E39617C00B7FB04 /* PSPacket.swift in Sources */,
 				DA0B26871E362A62000CC2DC /* PSMainViewController.swift in Sources */,
-				DA3585F41E3A7DE00014AE10 /* PSConstants.swift in Sources */,
-				DA0287BE1E426637008B481B /* PSAddressUtilities.swift in Sources */,
 				DA0287B51E423918008B481B /* PSNavShelfTableViewController.swift in Sources */,
 				DA0051321E37AEC3008E7035 /* PSDocumentCollectionViewCell.swift in Sources */,
 				DA0287A21E40E8A2008B481B /* PSLoginViewController.swift in Sources */,
 				DA0287AF1E40FC59008B481B /* PSUserProvider.swift in Sources */,
 				DAF836941E3AAFC2003178C4 /* TRIPSFormFactory.swift in Sources */,
 				DAF8368D1E3AA68E003178C4 /* DA31FormViewController.swift in Sources */,
+				DA14022A1E44F608005EEE31 /* PSPacketUtilities.swift in Sources */,
 				DA0287AD1E40F7EC008B481B /* PSUserFactory.swift in Sources */,
 				DA0287AB1E40F3F1008B481B /* PSUserManager.swift in Sources */,
 				DA01F0141E392D4C00B7FB04 /* UILabel+Size.swift in Sources */,
-				DA0287C51E427104008B481B /* PSPersonalInfoUtilities.swift in Sources */,
 				DAB08D9D1E38F91F00F2E263 /* PSPhotoViewController.swift in Sources */,
 				DA01F0191E3961D100B7FB04 /* PSDocument.swift in Sources */,
 				DAF836A31E3E3CBE003178C4 /* PSPacketBuilder.swift in Sources */,
 				DA0287BC1E4265FE008B481B /* PSAddress.swift in Sources */,
 				DAF836961E3AB1B3003178C4 /* TRIPSFormViewController.swift in Sources */,
-				DA00513A1E37B743008E7035 /* PSPacketUtilities.swift in Sources */,
 				DAF836831E3AA677003178C4 /* DA31FormFactory.swift in Sources */,
 				DAF836A01E3D976F003178C4 /* NSURLRequest+Category.swift in Sources */,
 				DAD367311E43ACD5009980DC /* PSSettingsViewController.swift in Sources */,
@@ -799,6 +805,8 @@
 				DA01F01D1E39AA9100B7FB04 /* PSPDFContainerViewController.swift in Sources */,
 				DAF8368E1E3AA68E003178C4 /* DA31PDFFiller.swift in Sources */,
 				DAF836871E3AA677003178C4 /* PSPacketViewFactory.swift in Sources */,
+				DA14022B1E44F608005EEE31 /* PSPersonalInfoUtilities.swift in Sources */,
+				DA1402291E44F608005EEE31 /* PSConstants.swift in Sources */,
 				DA01F01B1E39A9C700B7FB04 /* UIViewController+Transition.swift in Sources */,
 				DA0287A91E40F3E7008B481B /* REKIFacebookClient.swift in Sources */,
 				DAF836861E3AA677003178C4 /* PSFormViewControllerFactory.swift in Sources */,

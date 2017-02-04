@@ -39,7 +39,7 @@ class PSMainViewController: UIViewController {
 		}
 	}
 	
-	// MARK: Actions
+	// MARK: - Actions
 	
 	@IBAction func didPressSettingButton(sender: UIButton) {
 		toggleSettings()

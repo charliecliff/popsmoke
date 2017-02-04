@@ -50,7 +50,7 @@ class PSFormContainerViewController: UIViewController {
 	}
 
 	@IBAction func didBackButton(_ sender: UIButton) {
-		navigationController?.popViewController(animated: true)
+		_ = navigationController?.popViewController(animated: true)
 	}
 	
 	@IBAction func didSelectCompletionButton(_ sender: UIButton) {

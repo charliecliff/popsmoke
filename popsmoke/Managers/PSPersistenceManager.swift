@@ -76,6 +76,20 @@ class PSPersistenceManager: NSObject {
 	}
 	
 /**---------------------------------------------------------------------------------------
+ * @name Deleting Objects
+ * ---------------------------------------------------------------------------------------
+ */
+	class func clearUser() throws {
+		var filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as String
+		filePath.append("current_user")
+		do {
+			try FileManager.default.removeItem(atPath: filePath)
+		}
+		catch {
+			throw PersistenceError.userPersistence
+		}
+	}
+/**---------------------------------------------------------------------------------------
  * @name Creating New File Names
  * ---------------------------------------------------------------------------------------
  */
