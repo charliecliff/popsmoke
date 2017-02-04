@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>black-ops-one.regular</string>
 		<string>MontserratAlternates-Thin</string>
 		<string>MontserratAlternates-SemiBold</string>
 		<string>MontserratAlternates-Regular</string>
