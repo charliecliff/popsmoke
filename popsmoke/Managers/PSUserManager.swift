@@ -36,8 +36,6 @@ class PSUserManager {
 	
 	private func set(user: PSUser) {
 		self.user = user
-		hasValidUser.value = false
-		hasValidUser.value = true
 	}
 
 	// MARK: - Persistence
@@ -50,6 +48,7 @@ class PSUserManager {
 		do {
 			let user = try PSPersistenceManager.loadUser()
 			set(user: user!)
+			hasValidUser.value = true
 		} catch PersistenceError.userPersistence {
 			//TODO: Handle the errors in a global error alert
 		} catch {
@@ -58,6 +57,17 @@ class PSUserManager {
 	}
 	
 	// MARK: - Facebook Interactions
+
+	func logout() {
+		do {
+			try PSPersistenceManager.clearUser()
+			REKIFacebookClient.logout()
+			hasValidUser.value = false
+		}
+		catch {
+			//TODO: Handle the errors in a global error alert
+		}
+	}
 	
 	func validateUserForSocialMediaToken(token: String?, completion: ((_ error: NSError?) -> Void)?) {
 		REKIFacebookClient.getUserDataForToken(token: (token)!, completion: { (userData, error) in
@@ -84,7 +94,6 @@ class PSUserManager {
 	}
 	
 	func createUserForSocialMediaToken(token: String?, completion: ((_ error: NSError?) -> Void)?) {
-		hasValidUser.value = false
 		REKIFacebookClient.getUserDataForToken(token: (token)!, completion: { (userData, error) in
 			guard userData != nil else {
 				return
@@ -93,6 +102,7 @@ class PSUserManager {
 				return
 			}
 			self.set(user: newUser)
+			self.hasValidUser.value = true
 			self._userProvider?.postUser(user: self.user, completion: completion)
 		})
 	}

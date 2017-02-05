@@ -9,6 +9,11 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="black-ops-one.regular.ttf">
+            <string>BlackOpsOne-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Login View Controller-->
         <scene sceneID="QIk-nm-8r9">
@@ -26,11 +31,51 @@
                                 <rect key="frame" x="16" y="333.5" width="343" height="333.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ief-cQ-nIl">
+                                <rect key="frame" x="16" y="110" width="343" height="120"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Av-WS-ViR">
+                                        <rect key="frame" x="171.5" y="0.0" width="171.5" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smoke" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hl-lJ-DgU">
+                                        <rect key="frame" x="0.0" y="60" width="343" height="60"/>
+                                        <fontDescription key="fontDescription" name="BlackOpsOne-Regular" family="Black Ops One" pointSize="60"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POP" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zdt-k5-TD0">
+                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="60"/>
+                                        <fontDescription key="fontDescription" name="BlackOpsOne-Regular" family="Black Ops One" pointSize="60"/>
+                                        <color key="textColor" red="0.86666666670000003" green="0.043137254899999998" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="4hl-lJ-DgU" firstAttribute="top" secondItem="Zdt-k5-TD0" secondAttribute="bottom" id="1U9-v1-LqY"/>
+                                    <constraint firstItem="0Av-WS-ViR" firstAttribute="top" secondItem="Ief-cQ-nIl" secondAttribute="top" id="6iq-YY-Fgo"/>
+                                    <constraint firstItem="0Av-WS-ViR" firstAttribute="width" secondItem="Zdt-k5-TD0" secondAttribute="width" id="Auu-gh-Tnf"/>
+                                    <constraint firstAttribute="bottom" secondItem="4hl-lJ-DgU" secondAttribute="bottom" id="LLm-xC-nX9"/>
+                                    <constraint firstItem="Zdt-k5-TD0" firstAttribute="leading" secondItem="Ief-cQ-nIl" secondAttribute="leading" id="Nd5-LK-9uQ"/>
+                                    <constraint firstItem="4hl-lJ-DgU" firstAttribute="leading" secondItem="Ief-cQ-nIl" secondAttribute="leading" id="Nsr-LF-Jdv"/>
+                                    <constraint firstItem="0Av-WS-ViR" firstAttribute="leading" secondItem="Zdt-k5-TD0" secondAttribute="trailing" id="PP6-vQ-hSZ"/>
+                                    <constraint firstItem="4hl-lJ-DgU" firstAttribute="height" secondItem="Zdt-k5-TD0" secondAttribute="height" id="aYX-b7-pT0"/>
+                                    <constraint firstItem="Zdt-k5-TD0" firstAttribute="top" secondItem="Ief-cQ-nIl" secondAttribute="top" id="gSQ-Vd-RPW"/>
+                                    <constraint firstAttribute="trailing" secondItem="4hl-lJ-DgU" secondAttribute="trailing" id="lF1-Dp-t26"/>
+                                    <constraint firstItem="0Av-WS-ViR" firstAttribute="height" secondItem="Zdt-k5-TD0" secondAttribute="height" id="mbI-gI-LIp"/>
+                                    <constraint firstAttribute="height" constant="120" id="tU5-w3-9AT"/>
+                                    <constraint firstAttribute="trailing" secondItem="0Av-WS-ViR" secondAttribute="trailing" id="xHK-R7-K3K"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Ief-cQ-nIl" firstAttribute="leading" secondItem="PIt-mw-rEj" secondAttribute="leadingMargin" id="1F6-IT-lNK"/>
                             <constraint firstItem="n14-5C-uLk" firstAttribute="top" secondItem="4OE-GZ-8Kp" secondAttribute="bottom" id="5Z9-sj-cxV"/>
+                            <constraint firstItem="Ief-cQ-nIl" firstAttribute="top" secondItem="dSa-cl-i4T" secondAttribute="bottom" constant="90" id="Efa-yd-wT2"/>
                             <constraint firstItem="4OE-GZ-8Kp" firstAttribute="leading" secondItem="PIt-mw-rEj" secondAttribute="leadingMargin" id="FXq-Xn-UE8"/>
+                            <constraint firstItem="Ief-cQ-nIl" firstAttribute="trailing" secondItem="PIt-mw-rEj" secondAttribute="trailingMargin" id="Iks-B7-A3k"/>
                             <constraint firstItem="4OE-GZ-8Kp" firstAttribute="height" secondItem="PIt-mw-rEj" secondAttribute="height" multiplier="0.5" id="Xtt-tq-Cfx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4OE-GZ-8Kp" secondAttribute="trailing" id="eg5-SN-3ZJ"/>
                         </constraints>
@@ -41,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nj6-JC-ubc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-298" y="113"/>
+            <point key="canvasLocation" x="-298.39999999999998" y="112.89355322338831"/>
         </scene>
     </scenes>
 </document>

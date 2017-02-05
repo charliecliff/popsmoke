@@ -37,7 +37,7 @@ class PSDocumentCollectionViewCell: UICollectionViewCell {
 	
 	func set(completed: Bool) {
 		if completed {
-			self.iconImageView?.renderWithColor(color: .green)
+			self.iconImageView?.image = UIImage.init(named: "form_complete")
 		} else {
 			self.iconImageView?.renderWithColor(color: dark_grey)
 		}

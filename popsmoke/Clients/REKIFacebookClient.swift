@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKCoreKit
+import FBSDKLoginKit
 
 /**
 {
@@ -84,5 +85,9 @@ class REKIFacebookClient: NSObject {
 				completion!(userData, nil)
 			}
 		})
+	}
+	
+	class func logout() {
+		FBSDKLoginManager().logOut()
 	}
 }

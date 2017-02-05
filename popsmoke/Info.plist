@@ -2,6 +2,29 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>black-ops-one.regular</string>
+		<string>MontserratAlternates-Thin</string>
+		<string>MontserratAlternates-SemiBold</string>
+		<string>MontserratAlternates-Regular</string>
+		<string>MontserratAlternates-Medium</string>
+		<string>MontserratAlternates-Light</string>
+		<string>MontserratAlternates-ExtraLight</string>
+		<string>MontserratAlternates-ExtraBold</string>
+		<string>MontserratAlternates-Bold</string>
+		<string>MontserratAlternates-Black</string>
+		<string>Montserrat-UltraLight</string>
+		<string>Montserrat-Thin</string>
+		<string>Montserrat-SemiBold</string>
+		<string>Montserrat-Regular</string>
+		<string>Montserrat-Light</string>
+		<string>Montserrat-Hairline</string>
+		<string>Montserrat-ExtraLight</string>
+		<string>Montserrat-ExtraBold</string>
+		<string>Montserrat-Bold</string>
+		<string>Montserrat-Black</string>
+	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -39,6 +62,8 @@
 	</array>
 	<key>UIStatusBarHidden</key>
 	<true/>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 	<key>UIStatusBarTintParameters</key>
 	<dict>
 		<key>UINavigationBar</key>

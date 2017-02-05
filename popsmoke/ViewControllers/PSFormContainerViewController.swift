@@ -31,6 +31,12 @@ class PSFormContainerViewController: UIViewController {
 			//TODO: Handle the errors in a global error alert
 			return
 		}
+		
+		formViewController.view.backgroundColor = .clear
+		formViewController.tableView?.backgroundColor = .clear
+		formViewController.tableView?.separatorStyle = .none
+		formViewController.tableView?.showsVerticalScrollIndicator = false
+		
 		addChildViewController(formViewController)
 		formViewController.view.translatesAutoresizingMaskIntoConstraints = false
 		containerView!.addSubview(formViewController.view)
@@ -41,6 +47,10 @@ class PSFormContainerViewController: UIViewController {
 			formViewController.view.bottomAnchor.constraint(equalTo: containerView!.bottomAnchor)
 			])
 		formViewController.didMove(toParentViewController: self)
+	}
+
+	@IBAction func didBackButton(_ sender: UIButton) {
+		_ = navigationController?.popViewController(animated: true)
 	}
 	
 	@IBAction func didSelectCompletionButton(_ sender: UIButton) {

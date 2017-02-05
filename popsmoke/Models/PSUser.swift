@@ -16,7 +16,10 @@ class PSUser: NSObject, NSCoding {
 
 	var userID: String?
 	var firstName: String?
+	var middleInitial: String?
 	var lastName: String?
+	var rank: USArmyRank?
+	
 	var hasIndividualLicense: Bool?
 	
 	override init() {

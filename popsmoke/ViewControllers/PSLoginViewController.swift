@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 import FBSDKCoreKit
 import FBSDKLoginKit
 import SVProgressHUD
@@ -15,14 +17,13 @@ class PSLoginViewController: UIViewController {
 
 	private var centerX: NSLayoutConstraint?
 	private var centerY: NSLayoutConstraint?
-	
+	private var subscription : Disposable?
 	var progressHUD: SVProgressHUD?
 	var facebookLoginButton: FBSDKLoginButton?
 	@IBOutlet weak var bottomView: UIView?
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		bindToObservables()
 		
 		facebookLoginButton = FBSDKLoginButton.init()
 		facebookLoginButton?.readPermissions = ["public_profile", "email", "user_friends"]
@@ -36,6 +37,17 @@ class PSLoginViewController: UIViewController {
 		view?.addConstraint(centerY!)
 	}
 	
+	
+	override func viewDidDisappear(_ animated: Bool) {
+		subscription?.dispose()
+		super.viewDidDisappear(true)
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(true)
+		bindToUserManager()
+	}
+	
 	private func segueToMainViewController() {
 		SVProgressHUD.dismiss()
 		let storyboard = UIStoryboard(name: kMainStoryboard, bundle: nil)
@@ -43,12 +55,8 @@ class PSLoginViewController: UIViewController {
 		present(vc!, animated: true, completion:nil)
 	}
 	
-	private func bindToObservables(){ // TODO: Pull this into a PopSmoke View Controller Super Class
-		bindToUserManager()
-	}
-	
 	private func bindToUserManager() {
-		_ = PSUserManager.sharedInstance.hasValidUser.asObservable().subscribe(onNext: {
+		subscription = PSUserManager.sharedInstance.hasValidUser.asObservable().subscribe(onNext: {
 			if $0 {
 				self.segueToMainViewController()
 			}

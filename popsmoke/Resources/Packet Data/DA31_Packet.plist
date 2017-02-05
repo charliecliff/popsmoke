@@ -20,7 +20,7 @@
 			<key>attachment_type</key>
 			<string>insurance</string>
 			<key>name</key>
-			<string>Insurance Card</string>
+			<string>INSURANCE CARD</string>
 			<key>icon</key>
 			<string>icon_id</string>
 		</dict>
@@ -30,7 +30,7 @@
 			<key>attachment_type</key>
 			<string>drivers_license</string>
 			<key>name</key>
-			<string>Drivers License</string>
+			<string>DRIVERS LICENSE</string>
 			<key>icon</key>
 			<string>icon_id</string>
 		</dict>

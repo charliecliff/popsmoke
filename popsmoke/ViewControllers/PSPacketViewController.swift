@@ -48,10 +48,6 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 	
 	// MARK: Actions
 
-	@IBAction func didPressSettingButton(sender: UIButton) {
-		NotificationCenter.default.post(name: NOTIFICATION_TOGGLE_NAV_DRAWER, object: nil)
-	}
-
 	@IBAction func didPressHistoryButton(sender: UIButton) {
 		let vc = PSPacketHistoryTableViewController()
 		segueTo(viewController: vc)
