@@ -48,6 +48,7 @@ class PSUserManager {
 		do {
 			let user = try PSPersistenceManager.loadUser()
 			set(user: user!)
+			hasValidUser.value = true
 		} catch PersistenceError.userPersistence {
 			//TODO: Handle the errors in a global error alert
 		} catch {
