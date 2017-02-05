@@ -36,8 +36,6 @@ class PSUserManager {
 	
 	private func set(user: PSUser) {
 		self.user = user
-		hasValidUser.value = false
-		hasValidUser.value = true
 	}
 
 	// MARK: - Persistence
@@ -95,7 +93,6 @@ class PSUserManager {
 	}
 	
 	func createUserForSocialMediaToken(token: String?, completion: ((_ error: NSError?) -> Void)?) {
-		hasValidUser.value = false
 		REKIFacebookClient.getUserDataForToken(token: (token)!, completion: { (userData, error) in
 			guard userData != nil else {
 				return
@@ -104,6 +101,7 @@ class PSUserManager {
 				return
 			}
 			self.set(user: newUser)
+			self.hasValidUser.value = true
 			self._userProvider?.postUser(user: self.user, completion: completion)
 		})
 	}

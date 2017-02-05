@@ -11,6 +11,9 @@
         <array key="Montserrat-Regular.otf">
             <string>Montserrat-Regular</string>
         </array>
+        <array key="black-ops-one.regular.ttf">
+            <string>BlackOpsOne-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Form Container View Controller-->
@@ -34,7 +37,8 @@
                                             <constraint firstAttribute="height" constant="44" id="OuR-3X-cj9"/>
                                             <constraint firstAttribute="width" constant="44" id="k7p-yF-7ql"/>
                                         </constraints>
-                                        <state key="normal" image="bullet"/>
+                                        <fontDescription key="fontDescription" name="BlackOpsOne-Regular" family="Black Ops One" pointSize="15"/>
+                                        <state key="normal" title="BACK"/>
                                         <connections>
                                             <action selector="didBackButton:" destination="Q4p-3r-vta" eventType="touchUpInside" id="9Ch-XO-Ws3"/>
                                         </connections>
@@ -92,7 +96,4 @@
             <point key="canvasLocation" x="-15.199999999999999" y="-433.13343328335833"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="bullet" width="44" height="44"/>
-    </resources>
 </document>

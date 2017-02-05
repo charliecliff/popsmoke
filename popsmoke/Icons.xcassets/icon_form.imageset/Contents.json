@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "icon_form@1x.png",
+      "filename" : "icon_form.png",
       "scale" : "1x"
     },
     {
@@ -12,7 +12,7 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "icon-form@3x.png",
+      "filename" : "icon_form@3x.png",
       "scale" : "3x"
     }
   ],
