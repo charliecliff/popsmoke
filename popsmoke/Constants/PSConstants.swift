@@ -23,3 +23,6 @@ let dark_grey = UIColor.init(colorLiteralRed: 65.0/255, green: 65.0/255, blue: 6
 let form_row_background = UIColor.init(colorLiteralRed: 1, green: 1, blue: 1, alpha: 0.5)
 
 // MARK: - Errors
+
+// MARK: - FileNames
+let kUserFileName = "/current_user.txt"

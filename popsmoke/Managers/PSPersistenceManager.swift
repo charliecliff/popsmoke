@@ -39,7 +39,7 @@ class PSPersistenceManager: NSObject {
  */
 	class func save(user: PSUser) {
 		var filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as String
-		filePath.append("/current_user.txt")
+		filePath.append(kUserFileName)
 		NSKeyedArchiver.archiveRootObject(user, toFile: filePath)
 	}
 	
@@ -61,7 +61,7 @@ class PSPersistenceManager: NSObject {
  */
 	class func loadUser() throws -> PSUser? {
 		var filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as String
-		filePath.append("/current_user.txt")
+		filePath.append(kUserFileName)
 		guard let user = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? PSUser else {
 			throw PersistenceError.userPersistence
 		}
@@ -81,7 +81,7 @@ class PSPersistenceManager: NSObject {
  */
 	class func clearUser() throws {
 		var filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as String
-		filePath.append("current_user")
+		filePath.append(kUserFileName)
 		do {
 			try FileManager.default.removeItem(atPath: filePath)
 		}
