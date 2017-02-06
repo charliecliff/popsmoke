@@ -51,8 +51,10 @@ class PSUserManager {
 			hasValidUser.value = true
 		} catch PersistenceError.userPersistence {
 			//TODO: Handle the errors in a global error alert
+			
 		} catch {
 			//TODO: Handle the errors in a global error alert
+			
 		}
 	}
 	
@@ -87,7 +89,7 @@ class PSUserManager {
 				guard (user != nil) else {
 					return
 				}
-				self.set(user: user!)
+				self.user = user!
 				completion?(nil)
 			})
 		})
