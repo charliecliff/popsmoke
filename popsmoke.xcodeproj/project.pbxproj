@@ -15,7 +15,6 @@
 		DA01F0141E392D4C00B7FB04 /* UILabel+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01F0131E392D4C00B7FB04 /* UILabel+Size.swift */; };
 		DA01F0171E39617C00B7FB04 /* PSPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01F0161E39617C00B7FB04 /* PSPacket.swift */; };
 		DA01F0191E3961D100B7FB04 /* PSDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01F0181E3961D100B7FB04 /* PSDocument.swift */; };
-		DA01F01B1E39A9C700B7FB04 /* UIViewController+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01F01A1E39A9C700B7FB04 /* UIViewController+Transition.swift */; };
 		DA01F01D1E39AA9100B7FB04 /* PSPDFContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01F01C1E39AA9100B7FB04 /* PSPDFContainerViewController.swift */; };
 		DA01F01F1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA01F01E1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard */; };
 		DA01F0281E39ACA700B7FB04 /* DA31_Packet.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA01F0251E39ACA700B7FB04 /* DA31_Packet.plist */; };
@@ -32,9 +31,6 @@
 		DA0287AD1E40F7EC008B481B /* PSUserFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287AC1E40F7EC008B481B /* PSUserFactory.swift */; };
 		DA0287AF1E40FC59008B481B /* PSUserProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287AE1E40FC59008B481B /* PSUserProvider.swift */; };
 		DA0287B11E40FDBA008B481B /* PSParseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287B01E40FDBA008B481B /* PSParseClient.swift */; };
-		DA0287B51E423918008B481B /* PSNavShelfTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287B41E423918008B481B /* PSNavShelfTableViewController.swift */; };
-		DA0287B81E4262FC008B481B /* PSProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287B71E4262FC008B481B /* PSProfileHeaderView.swift */; };
-		DA0287BA1E42646E008B481B /* PSProfileHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA0287B91E42646E008B481B /* PSProfileHeaderView.xib */; };
 		DA0287BC1E4265FE008B481B /* PSAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287BB1E4265FE008B481B /* PSAddress.swift */; };
 		DA0287C01E426B1A008B481B /* DA31Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287BF1E426B1A008B481B /* DA31Constants.swift */; };
 		DA0287C71E427AF9008B481B /* PSPersonalInfoFormFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0287C61E427AF9008B481B /* PSPersonalInfoFormFactory.swift */; };
@@ -62,7 +58,7 @@
 		DA53E22F1E46F76300F95D6B /* PSLoading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA53E22E1E46F76300F95D6B /* PSLoading.storyboard */; };
 		DAB08D9A1E38F68100F2E263 /* PSFormContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB08D981E38F68100F2E263 /* PSFormContainer.storyboard */; };
 		DAB08D9B1E38F68100F2E263 /* PSFormContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB08D991E38F68100F2E263 /* PSFormContainerViewController.swift */; };
-		DAB08D9D1E38F91F00F2E263 /* PSPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB08D9C1E38F91F00F2E263 /* PSPhotoViewController.swift */; };
+		DAB08D9D1E38F91F00F2E263 /* PSImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB08D9C1E38F91F00F2E263 /* PSImagePickerController.swift */; };
 		DAD367311E43ACD5009980DC /* PSSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD367301E43ACD5009980DC /* PSSettingsViewController.swift */; };
 		DAD367471E4429B1009980DC /* Montserrat-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = DAD367331E4429B1009980DC /* Montserrat-Black.otf */; };
 		DAD367481E4429B1009980DC /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DAD367341E4429B1009980DC /* Montserrat-Bold.otf */; };
@@ -126,7 +122,6 @@
 		DA01F0131E392D4C00B7FB04 /* UILabel+Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Size.swift"; sourceTree = "<group>"; };
 		DA01F0161E39617C00B7FB04 /* PSPacket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPacket.swift; sourceTree = "<group>"; };
 		DA01F0181E3961D100B7FB04 /* PSDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSDocument.swift; sourceTree = "<group>"; };
-		DA01F01A1E39A9C700B7FB04 /* UIViewController+Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Transition.swift"; sourceTree = "<group>"; };
 		DA01F01C1E39AA9100B7FB04 /* PSPDFContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPDFContainerViewController.swift; sourceTree = "<group>"; };
 		DA01F01E1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSPDFContainerViewController.storyboard; sourceTree = "<group>"; };
 		DA01F0251E39ACA700B7FB04 /* DA31_Packet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DA31_Packet.plist; sourceTree = "<group>"; };
@@ -143,9 +138,6 @@
 		DA0287AC1E40F7EC008B481B /* PSUserFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSUserFactory.swift; sourceTree = "<group>"; };
 		DA0287AE1E40FC59008B481B /* PSUserProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSUserProvider.swift; sourceTree = "<group>"; };
 		DA0287B01E40FDBA008B481B /* PSParseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSParseClient.swift; sourceTree = "<group>"; };
-		DA0287B41E423918008B481B /* PSNavShelfTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSNavShelfTableViewController.swift; sourceTree = "<group>"; };
-		DA0287B71E4262FC008B481B /* PSProfileHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSProfileHeaderView.swift; sourceTree = "<group>"; };
-		DA0287B91E42646E008B481B /* PSProfileHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSProfileHeaderView.xib; sourceTree = "<group>"; };
 		DA0287BB1E4265FE008B481B /* PSAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSAddress.swift; sourceTree = "<group>"; };
 		DA0287BF1E426B1A008B481B /* DA31Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DA31Constants.swift; sourceTree = "<group>"; };
 		DA0287C61E427AF9008B481B /* PSPersonalInfoFormFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPersonalInfoFormFactory.swift; sourceTree = "<group>"; };
@@ -179,7 +171,7 @@
 		DA53E22E1E46F76300F95D6B /* PSLoading.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSLoading.storyboard; sourceTree = "<group>"; };
 		DAB08D981E38F68100F2E263 /* PSFormContainer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSFormContainer.storyboard; sourceTree = "<group>"; };
 		DAB08D991E38F68100F2E263 /* PSFormContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSFormContainerViewController.swift; sourceTree = "<group>"; };
-		DAB08D9C1E38F91F00F2E263 /* PSPhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPhotoViewController.swift; sourceTree = "<group>"; };
+		DAB08D9C1E38F91F00F2E263 /* PSImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSImagePickerController.swift; sourceTree = "<group>"; };
 		DAD367301E43ACD5009980DC /* PSSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSSettingsViewController.swift; sourceTree = "<group>"; };
 		DAD367331E4429B1009980DC /* Montserrat-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Black.otf"; sourceTree = "<group>"; };
 		DAD367341E4429B1009980DC /* Montserrat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
@@ -276,7 +268,6 @@
 				DAF8369F1E3D976F003178C4 /* NSURLRequest+Category.swift */,
 				DA3585F11E3A7ABF0014AE10 /* UIImageView+Tint.swift */,
 				DA01F0131E392D4C00B7FB04 /* UILabel+Size.swift */,
-				DA01F01A1E39A9C700B7FB04 /* UIViewController+Transition.swift */,
 			);
 			path = UICategories;
 			sourceTree = "<group>";
@@ -328,15 +319,6 @@
 			path = Clients;
 			sourceTree = "<group>";
 		};
-		DA0287B61E4262E8008B481B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				DA0287B71E4262FC008B481B /* PSProfileHeaderView.swift */,
-				DA0287B91E42646E008B481B /* PSProfileHeaderView.xib */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		DA0287C81E439E55008B481B /* Core Animator */ = {
 			isa = PBXGroup;
 			children = (
@@ -381,12 +363,11 @@
 				DA0287A11E40E8A2008B481B /* PSLoginViewController.swift */,
 				DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */,
 				DA0B26861E362A62000CC2DC /* PSMainViewController.swift */,
-				DA0287B41E423918008B481B /* PSNavShelfTableViewController.swift */,
 				DA00512C1E37ABDA008E7035 /* PSPacketViewController.swift */,
 				DAF836A61E3E4330003178C4 /* PSPacketHistoryTableViewController.swift */,
 				DA01F01E1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard */,
 				DA01F01C1E39AA9100B7FB04 /* PSPDFContainerViewController.swift */,
-				DAB08D9C1E38F91F00F2E263 /* PSPhotoViewController.swift */,
+				DAB08D9C1E38F91F00F2E263 /* PSImagePickerController.swift */,
 				DAD367301E43ACD5009980DC /* PSSettingsViewController.swift */,
 			);
 			path = ViewControllers;
@@ -436,7 +417,6 @@
 				DA01F0151E39612F00B7FB04 /* Models */,
 				DAF836A11E3E3CA6003178C4 /* Protocols */,
 				DA0B26851E362A20000CC2DC /* ViewControllers */,
-				DA0287B61E4262E8008B481B /* Views */,
 				DA5007F21E28BBA80038A5E8 /* AppDelegate.swift */,
 				DA0287DD1E439FD3008B481B /* popsmoke-Bridging-Header.h */,
 				DA5007FB1E28BBA80038A5E8 /* Assets.xcassets */,
@@ -668,7 +648,6 @@
 				DAD367501E4429B1009980DC /* Montserrat-UltraLight.otf in Resources */,
 				DA0287EC1E439FD4008B481B /* middleBar@2x.png in Resources */,
 				DAD367591E4429B1009980DC /* MontserratAlternates-Thin.otf in Resources */,
-				DA0287BA1E42646E008B481B /* PSProfileHeaderView.xib in Resources */,
 				DAD367551E4429B1009980DC /* MontserratAlternates-Light.otf in Resources */,
 				DAD3675A1E4429B1009980DC /* SIL Open Font License.txt in Resources */,
 				DAD367491E4429B1009980DC /* Montserrat-ExtraBold.otf in Resources */,
@@ -786,7 +765,6 @@
 				DAF836911E3AA747003178C4 /* PSPersistenceManager.swift in Sources */,
 				DA01F0171E39617C00B7FB04 /* PSPacket.swift in Sources */,
 				DA0B26871E362A62000CC2DC /* PSMainViewController.swift in Sources */,
-				DA0287B51E423918008B481B /* PSNavShelfTableViewController.swift in Sources */,
 				DA0051321E37AEC3008E7035 /* PSDocumentCollectionViewCell.swift in Sources */,
 				DA0287A21E40E8A2008B481B /* PSLoginViewController.swift in Sources */,
 				DA0287AF1E40FC59008B481B /* PSUserProvider.swift in Sources */,
@@ -796,7 +774,7 @@
 				DA0287AD1E40F7EC008B481B /* PSUserFactory.swift in Sources */,
 				DA0287AB1E40F3F1008B481B /* PSUserManager.swift in Sources */,
 				DA01F0141E392D4C00B7FB04 /* UILabel+Size.swift in Sources */,
-				DAB08D9D1E38F91F00F2E263 /* PSPhotoViewController.swift in Sources */,
+				DAB08D9D1E38F91F00F2E263 /* PSImagePickerController.swift in Sources */,
 				DA01F0191E3961D100B7FB04 /* PSDocument.swift in Sources */,
 				DAF836A31E3E3CBE003178C4 /* PSPacketBuilder.swift in Sources */,
 				DA0287BC1E4265FE008B481B /* PSAddress.swift in Sources */,
@@ -818,13 +796,11 @@
 				DAF836871E3AA677003178C4 /* PSPacketViewFactory.swift in Sources */,
 				DA14022B1E44F608005EEE31 /* PSPersonalInfoUtilities.swift in Sources */,
 				DA1402291E44F608005EEE31 /* PSConstants.swift in Sources */,
-				DA01F01B1E39A9C700B7FB04 /* UIViewController+Transition.swift in Sources */,
 				DA0287A91E40F3E7008B481B /* REKIFacebookClient.swift in Sources */,
 				DA53E22C1E46F61D00F95D6B /* PSLoadingViewController.swift in Sources */,
 				DAF836861E3AA677003178C4 /* PSFormViewControllerFactory.swift in Sources */,
 				DA5007F31E28BBA80038A5E8 /* AppDelegate.swift in Sources */,
 				DAF836851E3AA677003178C4 /* PSFormContainerViewFactory.swift in Sources */,
-				DA0287B81E4262FC008B481B /* PSProfileHeaderView.swift in Sources */,
 				DA00512D1E37ABDA008E7035 /* PSPacketViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

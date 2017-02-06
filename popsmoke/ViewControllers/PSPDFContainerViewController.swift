@@ -9,13 +9,13 @@
 import UIKit
 import ILPDFKit
 
+fileprivate let pdf_container_segue = "pdf_container_segue"
+
 class PSPDFContainerViewController: UIViewController {
 
-	private let pdf_container_segue = "pdf_container_segue"
 	weak var document: PSDocument?
 	var pdf: ILPDFDocument?
 	@IBOutlet public var saveButton: UIButton?
-	@IBOutlet public var editButton: UIButton?
 	
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == pdf_container_segue {
@@ -28,9 +28,8 @@ class PSPDFContainerViewController: UIViewController {
 		}
 	}
 	
-	@IBAction func didSelectEditButton(_ sender: UIButton) {
-		
-		
+	@IBAction func didSelectBackButton(_ sender: UIButton) {
+		navigationController!.popViewController(animated: true)
 	}
 	
 	@IBAction func didSelectSaveButton(_ sender: UIButton) {
@@ -44,10 +43,6 @@ class PSPDFContainerViewController: UIViewController {
 			// TODO: Handle the Saving Errors
 		}
 		document?.filePath = destinationPath
-		if self.navigationController != nil {
-			self.navigationController!.popToRootViewController(animated: true)
-			return
-		}
-		self.dismiss(animated: true, completion: nil)
+		navigationController!.popToRootViewController(animated: true)
 	}
 }

@@ -73,6 +73,6 @@ class PSFormContainerViewController: UIViewController {
 			//TODO: Handle the errors in a global error alert
 			return
 		}
-		segueTo(viewController: pdfVC)
+		navigationController?.pushViewController(pdfVC, animated: true)
 	}
 }

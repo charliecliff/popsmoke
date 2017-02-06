@@ -77,6 +77,7 @@ class DA31PDFFiller: NSObject {
 		if let leaveType = dictionary[da31_leave_type] as? String {
 			if leaveType == da31_leave_type_ordinary {
 				document.forms!.setValue("Yes", forFormWithName: da31_pdf_leave_ordinary)
+				
 			}
 			if leaveType == da31_leave_type_emergency {
 				document.forms!.setValue("Yes", forFormWithName: da31_pdf_leave_emergency)

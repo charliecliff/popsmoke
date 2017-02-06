@@ -49,8 +49,7 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 	// MARK: Actions
 
 	@IBAction func didPressHistoryButton(sender: UIButton) {
-		let vc = PSPacketHistoryTableViewController()
-		segueTo(viewController: vc)
+		
 	}
 	
 	@IBAction func didPressSubmitButton(sender: UIButton) {
@@ -102,7 +101,11 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 			//TODO: Handle the errors in a global error alert
 			return
 		}
-		segueTo(viewController: vc)
+		if vc is PSImagePickerController {
+			present(vc, animated: true, completion: nil)
+			return
+		}
+		navigationController?.pushViewController(vc, animated: true)
 	}
 	
 	// MARK: - UICollectionViewDelegateFlowLayout

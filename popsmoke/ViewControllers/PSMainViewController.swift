@@ -10,9 +10,10 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+fileprivate let navigation_container_segue = "navigation_container_segue"
+
 class PSMainViewController: UIViewController {
 
-	private let navigation_container_segue = "navigation_container_segue"
 	private var subscription : Disposable?
 	private var settingVCIsHidden = true
 	private var packetVC: PSPacketViewController?

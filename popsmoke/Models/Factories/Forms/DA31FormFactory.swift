@@ -9,16 +9,14 @@
 import Eureka
 
 
-let address_street					= "STREET"
-let address_city					= "CITY"
-let address_state					= "STATE"
-let address_zip						= "ZIP"
+let address_street	= "STREET"
+let address_city	= "CITY"
+let address_state	= "STATE"
+let address_zip	= "ZIP"
 
 let da31_control_number			= "CONTROL NUMBER"
 let da31_date					= "DATE"
 let da31_leave_type				= "LEAVE TYPE"
-
-
 
 let da31_station_platoon		= "PLATOON"
 let da31_station_company		= "COMPANY"
@@ -28,18 +26,17 @@ let da31_station_division		= "DIVISION"
 let da31_station_post			= "POST"
 let da31_station_phone			= "PHONE NO."
 
-
-
 let da31_accrued_leave			= "ACCRUED"
 let da31_requested_leave		= "REQUESTED"
 let da31_advanced_leave			= "ADVANCED"
 let da31_excess_leave			= "EXCESS"
 let da31_leave_date_from		= "FROM"
 let da31_leave_date_to			= "TO"
+
 let da31_leave_type_ordinary	= "ORDINARY"
 let da31_leave_type_emergency	= "EMERGENCY"
 let da31_leave_type_permissive	= "PERMISSIVE TDY"
-let da31_leave_type_other		= "OTHER"
+let da31_leave_type_other		= "OTHER / PASS"
 
 class DA31FormFactory: NSObject {
 
@@ -280,6 +277,6 @@ class DA31FormFactory: NSObject {
 	}
 	
 	class func leaveTypes() -> [String] {
-		return [da31_leave_type_ordinary, da31_leave_type_emergency, da31_leave_type_permissive, da31_leave_type_other]
+		return [da31_leave_type_other, da31_leave_type_ordinary, da31_leave_type_emergency, da31_leave_type_permissive]
 	}
 }
