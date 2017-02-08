@@ -39,28 +39,34 @@ let da31_leave_type_emergency	= "EMERGENCY"
 let da31_leave_type_permissive	= "PERMISSIVE TDY"
 let da31_leave_type_other		= "OTHER / PASS"
 
+enum DA31LeaveType: String {
+	case ERR		= "   "
+	case OTHER		= "OTHER / PASS"
+	case ORDINARY	= "ORDINARY"
+	case EMERGENCY	= "EMERGENCY"
+	case PERMISSIVE	= "PERMISSIVE TDY"
+}
+
 class DA31FormFactory: NSObject {
 
 	class func appendLeaveTypeToForm(form: Form) {
 		form +++ Section("LEAVE TYPE")
-			<<< AlertRow<String>() { row in
+			<<< PickerInlineRow<String>() { (row : PickerInlineRow<String>) -> Void in
 				row.tag = da31_leave_type
 				row.title = da31_leave_type
-				row.selectorTitle = "Please Select Type of Leave"
 				row.options = DA31FormFactory.leaveTypes()
-				row.value = DA31FormFactory.leaveTypes()[0]
-				row.add(rule: RuleRequired())
-				}.onChange { row in
-					print(row.value ?? "No Value")
-				}.onPresent{ _, to in
-					to.view.tintColor = .purple
+				row.value = row.options.first
+				let nonErrRule = RuleClosure.init(closure: { (rowValue) -> ValidationError? in
+					return (DA31LeaveType(rawValue: rowValue!) == DA31LeaveType.ERR) ? ValidationError(msg: "Field required!") : nil
+				})
+				row.add(rule: nonErrRule)
 				}.cellSetup { cell, row in
 					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
-						
+						cell.textLabel?.textColor = .red
 					}
-				}
+			}
 	}
 	
 	class func appendLeaveAddressToForm(form: Form) {
@@ -310,6 +316,6 @@ class DA31FormFactory: NSObject {
 	}
 	
 	class func leaveTypes() -> [String] {
-		return [da31_leave_type_other, da31_leave_type_ordinary, da31_leave_type_emergency, da31_leave_type_permissive]
+		return [DA31LeaveType.ERR.rawValue, DA31LeaveType.OTHER.rawValue, DA31LeaveType.ORDINARY.rawValue, DA31LeaveType.EMERGENCY.rawValue, DA31LeaveType.PERMISSIVE.rawValue]
 	}
 }
