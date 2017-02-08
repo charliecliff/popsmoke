@@ -55,8 +55,8 @@ class DA31PDFFiller: NSObject {
 			document.forms!.setValue("xxx-xx-\(String(ssn))", forFormWithName: da31_pdf_ssn)
 		}
 		// Block 4 - Rank
-		if let rank = dictionary[personal_info_rank] as? String {
-			document.forms!.setValue(rank, forFormWithName: da31_pdf_rank)
+		if let rank = dictionary[personal_info_rank] as? USArmyRank {
+			document.forms!.setValue(rank.rawValue, forFormWithName: da31_pdf_rank)
 		}
 		// Block 5 - Current Date
 		let currentDate = Date(timeIntervalSinceReferenceDate: 0)
