@@ -295,7 +295,7 @@ class DA31FormFactory: NSObject {
 					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
-						
+						cell.textLabel?.textColor = .red
 					}
 				}
 			<<< DateRow() { row in
@@ -306,7 +306,7 @@ class DA31FormFactory: NSObject {
 					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
-						
+						cell.textLabel?.textColor = .red
 					}
 				}
 	}
