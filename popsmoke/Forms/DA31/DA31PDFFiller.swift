@@ -17,10 +17,12 @@ let da31_pdf_date				= "Date"
 let da31_pdf_address			= "Address"
 let da31_pdf_station			= "ORGN"
 
-let da31_pdf_leave_ordinary		= "Ordinary"
-let da31_pdf_leave_emergency	= "Emergency"
-let da31_pdf_leave_permissive	= "Permissive"
-let da31_pdf_leave_other		= "Other"
+let da31_pdf_leave_ordinary				= "Ordinary"
+let da31_pdf_leave_emergency			= "Emergency"
+let da31_pdf_leave_permissive			= "Permissive"
+let da31_pdf_leave_other				= "Other"
+let da31_pdf_leave_other_explanation	= "Other Explainations"
+
 let da31_pdf_accrued_leave		= "Accrued"
 let da31_pdf_advanced_leave		= "Advanced"
 let da31_pdf_excess_leave		= "Excess"
@@ -88,6 +90,7 @@ class DA31PDFFiller: NSObject {
 			}
 			if leaveType == da31_leave_type_other {
 				document.forms!.setValue("Yes", forFormWithName: da31_pdf_leave_other)
+				document.forms!.setValue("PASS", forFormWithName: da31_pdf_leave_other_explanation)
 			}
 		}
 		// Block 8
