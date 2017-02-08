@@ -91,20 +91,26 @@ class DA31PDFFiller: NSObject {
 			}
 		}
 		// Block 8
+		var stationString = ""
 		let platoon = dictionary[da31_station_platoon] as? String
 		let company = dictionary[da31_station_company] as? String
 		let battalion = dictionary[da31_station_battalion] as? String
-		var stationString = "\(platoon), \(company), \(battalion)"
+		if platoon != nil && company != nil && battalion != nil {
+			stationString = "\(stationString)\(platoon!), \(company!), \(battalion!)"
+		}
 		
 		let brigade = dictionary[da31_station_brigade] as? String
 		let division = dictionary[da31_station_division] as? String
-		stationString = "\(stationString)\n\(brigade), \(division)"
-
+		if brigade != nil && division != nil {
+			stationString = "\(stationString)\n\(brigade!), \(division!)"
+		}
+		
 		let post = dictionary[da31_station_post] as? String
 		let postZip = dictionary[da31_station_zip] as? String
 		let stationPhone = dictionary[da31_station_phone] as? String
-		stationString = "\(stationString)\n\(post) \(postZip), \(stationPhone)"
-		
+		if post != nil && postZip != nil && stationPhone != nil {
+			stationString = "\(stationString)\n\(post!) \(postZip!), \(stationPhone!)"
+		}
 		document.forms!.setValue(stationString, forFormWithName: da31_pdf_station)
 		
 		// Block 9
