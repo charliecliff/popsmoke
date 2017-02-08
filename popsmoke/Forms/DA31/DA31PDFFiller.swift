@@ -28,7 +28,7 @@ let da31_pdf_requested_leave	= "Requested"
 let da31_pdf_date_to			= "Date-To"
 let da31_pdf_date_from			= "Date-From"
 
-fileprivate let da31_pdf_date_format	= "yyyy/mm/dd"
+fileprivate let da31_pdf_date_format	= "yyyy/MM/dd"
 
 class DA31PDFFiller: NSObject {
 
@@ -59,7 +59,7 @@ class DA31PDFFiller: NSObject {
 			document.forms!.setValue(rank.rawValue, forFormWithName: da31_pdf_rank)
 		}
 		// Block 5 - Current Date
-		let currentDate = Date(timeIntervalSinceReferenceDate: 0)
+		let currentDate = Date()
 		let dateFormatter = DateFormatter()
 		dateFormatter.dateFormat = da31_pdf_date_format
 		let dateString = dateFormatter.string(from: currentDate)
