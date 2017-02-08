@@ -12,7 +12,7 @@ import Eureka
 let address_street	= "STREET"
 let address_city	= "CITY"
 let address_state	= "STATE"
-let address_zip	= "ZIP"
+let address_zip		= "ZIP"
 
 let da31_control_number			= "CONTROL NUMBER"
 let da31_date					= "DATE"
@@ -24,6 +24,7 @@ let da31_station_battalion		= "BATTALION"
 let da31_station_brigade		= "BRIGADE"
 let da31_station_division		= "DIVISION"
 let da31_station_post			= "POST"
+let da31_station_zip			= "POSTING ZIP"
 let da31_station_phone			= "PHONE NO."
 
 let da31_accrued_leave			= "ACCRUED"
@@ -95,6 +96,18 @@ class DA31FormFactory: NSObject {
 					row.value = row.options.first
 				}.cellSetup { cell, row in
 					cell.backgroundColor = form_row_background
+				}
+			<<< ZipCodeRow() { row in
+					row.tag = address_zip
+					row.title = address_zip
+					row.placeholder = "Enter text here"
+					row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
+				}.cellUpdate { cell, row in
+					if !row.isValid {
+						cell.titleLabel?.textColor = .red
+					}
 				}
 			<<< PhoneRow() { row in
 					row.tag = personal_info_phone
@@ -175,6 +188,18 @@ class DA31FormFactory: NSObject {
 			<<< TextRow() { row in
 				row.tag = da31_station_post
 				row.title = da31_station_post
+				row.placeholder = "Enter text here"
+				row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
+				}.cellUpdate { cell, row in
+					if !row.isValid {
+						cell.titleLabel?.textColor = .red
+					}
+				}
+			<<< ZipCodeRow() { row in
+				row.tag = da31_station_zip
+				row.title = da31_station_zip
 				row.placeholder = "Enter text here"
 				row.add(rule: RuleRequired())
 				}.cellSetup { cell, row in

@@ -68,9 +68,10 @@ class DA31PDFFiller: NSObject {
 		let street = dictionary[address_street] as? String
 		let city = dictionary[address_city] as? String
 		let state = dictionary[address_state] as? USState
+		let zip = dictionary[address_zip] as? String
 		let phone = dictionary[personal_info_phone] as? String
-		if street != nil  && city != nil && state != nil && phone != nil {
-			let address = DA31PDFFiller.addressFrom(street: street!, city: city!, state: state!, phoneNumber: phone!)
+		if street != nil  && city != nil && state != nil && phone != nil && zip != nil {
+			let address = DA31PDFFiller.addressFrom(street: street!, city: city!, state: state!, zip: zip!, phoneNumber: phone!)
 			document.forms!.setValue(address, forFormWithName: da31_pdf_address)
 		}
 		// Block 7 - Leave Type
@@ -100,8 +101,9 @@ class DA31PDFFiller: NSObject {
 		stationString = "\(stationString)\n\(brigade), \(division)"
 
 		let post = dictionary[da31_station_post] as? String
+		let postZip = dictionary[da31_station_zip] as? String
 		let stationPhone = dictionary[da31_station_phone] as? String
-		stationString = "\(stationString)\n\(post), \(stationPhone)"
+		stationString = "\(stationString)\n\(post) \(postZip), \(stationPhone)"
 		
 		document.forms!.setValue(stationString, forFormWithName: da31_pdf_station)
 		
@@ -166,9 +168,9 @@ class DA31PDFFiller: NSObject {
 	}
 	
 	
-	class func addressFrom(street:String, city: String, state: USState, phoneNumber: String) -> String {
+	class func addressFrom(street:String, city: String, state: USState, zip: String, phoneNumber: String) -> String {
 		let formatedPhoneNumber = DA31PDFFiller.formattedPhonNumber(phoneNumber: phoneNumber)
-		return "\(street)\n\(city), \(state.rawValue)\n\(formatedPhoneNumber)"
+		return "\(street)\n\(city), \(state.rawValue) \(zip)\n\(formatedPhoneNumber)"
 	}
 	
 	class func stationFrom(station:String, orgn: String, phone: String) -> String {
