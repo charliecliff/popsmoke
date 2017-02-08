@@ -228,7 +228,7 @@ class DA31FormFactory: NSObject {
 			<<< IntRow() { row in
 					row.tag = da31_accrued_leave
 					row.title = da31_accrued_leave
-					row.add(rule: RuleRequired())
+					row.placeholder = "N/A"
 				}.cellSetup { cell, row in
 					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
@@ -239,7 +239,7 @@ class DA31FormFactory: NSObject {
 			<<< IntRow() { row in
 					row.tag = da31_requested_leave
 					row.title = da31_requested_leave
-					row.add(rule: RuleRequired())
+					row.placeholder = "N/A"
 				}.cellSetup { cell, row in
 					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
@@ -250,7 +250,7 @@ class DA31FormFactory: NSObject {
 			<<< IntRow() { row in
 					row.tag = da31_advanced_leave
 					row.title = da31_advanced_leave
-					row.add(rule: RuleRequired())
+					row.placeholder = "N/A"
 				}.cellSetup { cell, row in
 					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
@@ -261,7 +261,7 @@ class DA31FormFactory: NSObject {
 			<<< IntRow() { row in
 					row.tag = da31_excess_leave
 					row.title = da31_excess_leave
-					row.add(rule: RuleRequired())
+					row.placeholder = "N/A"
 				}.cellSetup { cell, row in
 					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in

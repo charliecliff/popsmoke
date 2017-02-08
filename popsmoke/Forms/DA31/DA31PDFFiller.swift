@@ -120,22 +120,22 @@ class DA31PDFFiller: NSObject {
 		if let accruedLeave = dictionary[da31_accrued_leave] as? Int {
 			document.forms!.setValue(String(accruedLeave), forFormWithName: da31_pdf_accrued_leave)
 		} else {
-			document.forms!.setValue("0", forFormWithName: da31_pdf_accrued_leave)
+			document.forms!.setValue("N/A", forFormWithName: da31_pdf_accrued_leave)
 		}
 		if let requestedLeave = dictionary[da31_requested_leave] as? Int {
 			document.forms!.setValue(String(requestedLeave), forFormWithName: da31_pdf_requested_leave)
 		} else {
-			document.forms!.setValue("0", forFormWithName: da31_pdf_requested_leave)
+			document.forms!.setValue("N/A", forFormWithName: da31_pdf_requested_leave)
 		}
 		if let advancedLeave = dictionary[da31_advanced_leave] as? Int {
 			document.forms!.setValue(String(advancedLeave), forFormWithName: da31_pdf_advanced_leave)
 		} else {
-			document.forms!.setValue("0", forFormWithName: da31_pdf_advanced_leave)
+			document.forms!.setValue("N/A", forFormWithName: da31_pdf_advanced_leave)
 		}
 		if let excessLeave = dictionary[da31_excess_leave] as? Int {
 			document.forms!.setValue(String(excessLeave), forFormWithName: da31_pdf_excess_leave)
 		} else {
-			document.forms!.setValue("0", forFormWithName: da31_pdf_excess_leave)
+			document.forms!.setValue("N/A", forFormWithName: da31_pdf_excess_leave)
 		}
 		// Block 10
 		if let date = dictionary[da31_leave_date_from] as? Date {
