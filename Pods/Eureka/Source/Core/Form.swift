@@ -28,7 +28,7 @@ import Foundation
 
 /// The delegate of the Eureka form.
 public protocol FormDelegate : class {
-    func sectionsHaveBeenAdded(_ sections: [Section], at: IndexSet)
+	func sectionsHaveBeenAdded(_ sections: [Section], at: IndexSet)
     func sectionsHaveBeenRemoved(_ sections: [Section], at: IndexSet)
     func sectionsHaveBeenReplaced(oldSections:[Section], newSections: [Section], at: IndexSet)
     func rowsHaveBeenAdded(_ rows: [BaseRow], at:[IndexPath])

@@ -92,7 +92,7 @@ class TRIPSFormFactory: NSObject {
 				row.value = TRIPSFormFactory.ageBrackets()[0]
 				row.add(rule: RuleRequired())
 				}.onChange { row in
-					print(row.value ?? "No Value")
+					
 				}.onPresent{ _, to in
 					to.view.tintColor = .purple
 				}.cellUpdate { cell, row in
@@ -124,7 +124,7 @@ class TRIPSFormFactory: NSObject {
 				row.value = TRIPSFormFactory.sleepBrackets()[0]
 				row.add(rule: RuleRequired())
 				}.onChange { row in
-					print(row.value ?? "No Value")
+					
 				}.onPresent{ _, to in
 					to.view.tintColor = .purple
 				}.cellUpdate { cell, row in
@@ -140,7 +140,7 @@ class TRIPSFormFactory: NSObject {
 				row.value = TRIPSFormFactory.roadBrackets()[0]
 				row.add(rule: RuleRequired())
 				}.onChange { row in
-					print(row.value ?? "No Value")
+					
 				}.onPresent{ _, to in
 					to.view.tintColor = .purple
 				}.cellUpdate { cell, row in
