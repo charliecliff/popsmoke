@@ -65,4 +65,13 @@ class PSPacketUtilities: NSObject {
 		let filePath = url.appendingPathComponent("\(uuid).pdf")?.path
 		return filePath
 	}
+	
+	class func normalIconFileFrom(iconName: String) -> UIImage? {
+		return UIImage.init(named: iconName)
+	}
+	
+	class func hightedIconFileFrom(iconName: String) -> UIImage? {
+		return UIImage.init(named: "\(iconName)_complete")
+
+	}
 }

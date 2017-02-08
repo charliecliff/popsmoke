@@ -23,7 +23,7 @@ class PSDocumentCollectionViewCell: UICollectionViewCell {
 		self.document = document
 
 		if let imageName = document.icon {
-			iconImageView?.image = UIImage.init(named: imageName)
+			iconImageView?.image =  UIImage.init(named: imageName)
 		}
 		if let title = document.title {
 			documentLabel?.text = title
@@ -36,10 +36,14 @@ class PSDocumentCollectionViewCell: UICollectionViewCell {
 	}
 	
 	func set(completed: Bool) {
-		if completed {
-			self.iconImageView?.image = UIImage.init(named: "form_complete")
+		if !completed {
+			if let imageName = document?.icon {
+				iconImageView?.image =  PSPacketUtilities.normalIconFileFrom(iconName: imageName)
+			}
 		} else {
-			self.iconImageView?.renderWithColor(color: dark_grey)
+			if let imageName = document?.icon {
+				iconImageView?.image =  PSPacketUtilities.hightedIconFileFrom(iconName: imageName)
+			}
 		}
 	}
 }
