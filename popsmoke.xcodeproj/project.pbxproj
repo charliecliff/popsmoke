@@ -18,7 +18,6 @@
 		DA01F01D1E39AA9100B7FB04 /* PSPDFContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA01F01C1E39AA9100B7FB04 /* PSPDFContainerViewController.swift */; };
 		DA01F01F1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA01F01E1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard */; };
 		DA01F0281E39ACA700B7FB04 /* DA31_Packet.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA01F0251E39ACA700B7FB04 /* DA31_Packet.plist */; };
-		DA01F0291E39ACA700B7FB04 /* DA_31.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DA01F0271E39ACA700B7FB04 /* DA_31.pdf */; };
 		DA02879D1E40E69E008B481B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA0287991E40E69E008B481B /* Bolts.framework */; };
 		DA02879E1E40E69E008B481B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA02879A1E40E69E008B481B /* FBSDKCoreKit.framework */; };
 		DA02879F1E40E69E008B481B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA02879B1E40E69E008B481B /* FBSDKLoginKit.framework */; };
@@ -56,6 +55,7 @@
 		DA50080A1E28BBA80038A5E8 /* popsmokeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5008091E28BBA80038A5E8 /* popsmokeTests.swift */; };
 		DA53E22C1E46F61D00F95D6B /* PSLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53E22A1E46F61D00F95D6B /* PSLoadingViewController.swift */; };
 		DA53E22F1E46F76300F95D6B /* PSLoading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA53E22E1E46F76300F95D6B /* PSLoading.storyboard */; };
+		DA5C09141E4ADACC00FFF7E8 /* DA_31.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DA5C09131E4ADACC00FFF7E8 /* DA_31.pdf */; };
 		DAB08D9A1E38F68100F2E263 /* PSFormContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB08D981E38F68100F2E263 /* PSFormContainer.storyboard */; };
 		DAB08D9B1E38F68100F2E263 /* PSFormContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB08D991E38F68100F2E263 /* PSFormContainerViewController.swift */; };
 		DAB08D9D1E38F91F00F2E263 /* PSImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB08D9C1E38F91F00F2E263 /* PSImagePickerController.swift */; };
@@ -125,7 +125,6 @@
 		DA01F01C1E39AA9100B7FB04 /* PSPDFContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPDFContainerViewController.swift; sourceTree = "<group>"; };
 		DA01F01E1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSPDFContainerViewController.storyboard; sourceTree = "<group>"; };
 		DA01F0251E39ACA700B7FB04 /* DA31_Packet.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DA31_Packet.plist; sourceTree = "<group>"; };
-		DA01F0271E39ACA700B7FB04 /* DA_31.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = DA_31.pdf; sourceTree = "<group>"; };
 		DA0287991E40E69E008B481B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Facebook/Bolts.framework; sourceTree = "<group>"; };
 		DA02879A1E40E69E008B481B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Facebook/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		DA02879B1E40E69E008B481B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Facebook/FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -169,6 +168,7 @@
 		DA50080B1E28BBA80038A5E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA53E22A1E46F61D00F95D6B /* PSLoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSLoadingViewController.swift; sourceTree = "<group>"; };
 		DA53E22E1E46F76300F95D6B /* PSLoading.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSLoading.storyboard; sourceTree = "<group>"; };
+		DA5C09131E4ADACC00FFF7E8 /* DA_31.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = DA_31.pdf; sourceTree = "<group>"; };
 		DAB08D981E38F68100F2E263 /* PSFormContainer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSFormContainer.storyboard; sourceTree = "<group>"; };
 		DAB08D991E38F68100F2E263 /* PSFormContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSFormContainerViewController.swift; sourceTree = "<group>"; };
 		DAB08D9C1E38F91F00F2E263 /* PSImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSImagePickerController.swift; sourceTree = "<group>"; };
@@ -305,7 +305,7 @@
 		DA01F0261E39ACA700B7FB04 /* PDFs */ = {
 			isa = PBXGroup;
 			children = (
-				DA01F0271E39ACA700B7FB04 /* DA_31.pdf */,
+				DA5C09131E4ADACC00FFF7E8 /* DA_31.pdf */,
 			);
 			path = PDFs;
 			sourceTree = "<group>";
@@ -659,6 +659,7 @@
 				DA5007FC1E28BBA80038A5E8 /* Assets.xcassets in Resources */,
 				DAD3674D1E4429B1009980DC /* Montserrat-Regular.otf in Resources */,
 				DA01F01F1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard in Resources */,
+				DA5C09141E4ADACC00FFF7E8 /* DA_31.pdf in Resources */,
 				DA0287EA1E439FD4008B481B /* bottomBar@2x.png in Resources */,
 				DAB08D9A1E38F68100F2E263 /* PSFormContainer.storyboard in Resources */,
 				DA0287F01E439FD4008B481B /* topBar@2x.png in Resources */,
@@ -676,7 +677,6 @@
 				DA0287EB1E439FD4008B481B /* middleBar.png in Resources */,
 				DA0B26891E362A6D000CC2DC /* PSMainStoryboard.storyboard in Resources */,
 				DA0051361E37B36F008E7035 /* PSDocumentCollectionViewCell.xib in Resources */,
-				DA01F0291E39ACA700B7FB04 /* DA_31.pdf in Resources */,
 				DAD367481E4429B1009980DC /* Montserrat-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
