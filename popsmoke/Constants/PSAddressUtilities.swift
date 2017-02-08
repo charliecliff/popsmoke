@@ -9,6 +9,7 @@
 import Foundation
 
 enum USState: String {
+	case ERR					= "  "
 	case Alabama				= "AL"
 	case Alaska					= "AK"
 	case Arizona				= "AZ"
@@ -64,7 +65,7 @@ enum USState: String {
 
 class PSAddressUtilities: NSObject {
 
-	class func states() -> [USState] {
-		return [.Alabama, .Alaska, .Arizona, .Arkansas, .California, .Colorado, .Connecticut, .Delaware, .District_of_Columbia, .Florida, .Georgia, .Hawaii, .Idaho, .Illinois, .Indiana, .Iowa, .Kentucky, .Louisiana, .Maine, .Montana, .Nebraska, .Nevada, .New_Hampshire, .New_Jersey, .New_Mexico, .New_York, .North_Carolina, .North_Dakota, .Ohio, .Oklahoma, .Oregon, .Maryland, .Massachusetts, .Michigan, .Minnesota, .Mississippi, .Missouri, .Pennsylvania, .Rhode_Island, .South_Carolina, .South_Dakota, .Tennessee, .Texas, .Utah, .Vermont, .Virginia, .Washington, .West_Virginia, .Wisconsin, .Wyoming]
+	class func states() -> [String] {
+		return [USState.ERR.rawValue, USState.Alabama.rawValue, USState.Alaska.rawValue, USState.Arizona.rawValue, USState.Arkansas.rawValue, USState.California.rawValue, USState.Colorado.rawValue, USState.Connecticut.rawValue, USState.Delaware.rawValue, USState.District_of_Columbia.rawValue, USState.Florida.rawValue, USState.Georgia.rawValue, USState.Hawaii.rawValue, USState.Idaho.rawValue, USState.Illinois.rawValue, USState.Indiana.rawValue, USState.Iowa.rawValue, USState.Kentucky.rawValue, USState.Louisiana.rawValue, USState.Maine.rawValue, USState.Montana.rawValue, USState.Nebraska.rawValue, USState.Nevada.rawValue, USState.New_Hampshire.rawValue, USState.New_Jersey.rawValue, USState.New_Mexico.rawValue, USState.New_York.rawValue, USState.North_Carolina.rawValue, USState.North_Dakota.rawValue, USState.Ohio.rawValue, USState.Oklahoma.rawValue, USState.Oregon.rawValue, USState.Maryland.rawValue, USState.Massachusetts.rawValue, USState.Michigan.rawValue, USState.Minnesota.rawValue, USState.Mississippi.rawValue, USState.Missouri.rawValue, USState.Pennsylvania.rawValue, USState.Rhode_Island.rawValue, USState.South_Carolina.rawValue, USState.South_Dakota.rawValue, USState.Tennessee.rawValue, USState.Texas.rawValue, USState.Utah.rawValue, USState.Vermont.rawValue, USState.Virginia.rawValue, USState.Washington.rawValue, USState.West_Virginia.rawValue, USState.Wisconsin.rawValue, USState.Wyoming.rawValue]
 	}
 }

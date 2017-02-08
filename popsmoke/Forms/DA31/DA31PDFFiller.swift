@@ -57,8 +57,8 @@ class DA31PDFFiller: NSObject {
 			document.forms!.setValue("xxx-xx-\(String(ssn))", forFormWithName: da31_pdf_ssn)
 		}
 		// Block 4 - Rank
-		if let rank = dictionary[personal_info_rank] as? USArmyRank {
-			document.forms!.setValue(rank.rawValue, forFormWithName: da31_pdf_rank)
+		if let rank = dictionary[personal_info_rank] as? String {
+			document.forms!.setValue(rank, forFormWithName: da31_pdf_rank)
 		}
 		// Block 5 - Current Date
 		let currentDate = Date()
@@ -69,11 +69,12 @@ class DA31PDFFiller: NSObject {
 		// Block 6 - Leave Address
 		let street = dictionary[address_street] as? String
 		let city = dictionary[address_city] as? String
-		let state = dictionary[address_state] as? USState
 		let zip = dictionary[address_zip] as? String
 		let phone = dictionary[personal_info_phone] as? String
+		let state = dictionary[address_state] as? String
 		if street != nil  && city != nil && state != nil && phone != nil && zip != nil {
-			let address = DA31PDFFiller.addressFrom(street: street!, city: city!, state: state!, zip: zip!, phoneNumber: phone!)
+			let stateEnum = USState(rawValue: state!)
+			let address = DA31PDFFiller.addressFrom(street: street!, city: city!, state: stateEnum!, zip: zip!, phoneNumber: phone!)
 			document.forms!.setValue(address, forFormWithName: da31_pdf_address)
 		}
 		// Block 7 - Leave Type

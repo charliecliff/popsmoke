@@ -89,13 +89,21 @@ class DA31FormFactory: NSObject {
 						cell.titleLabel?.textColor = .red
 					}
 				}
-			<<< PickerInlineRow<USState>() { (row : PickerInlineRow<USState>) -> Void in
+			<<< PickerInlineRow<String>() { (row : PickerInlineRow<String>) -> Void in
 					row.tag = address_state
 					row.title = address_state
 					row.options = PSAddressUtilities.states()
 					row.value = row.options.first
+					let nonErrRule = RuleClosure.init(closure: { (rowValue) -> ValidationError? in
+						return (USState(rawValue: rowValue!) == USState.ERR) ? ValidationError(msg: "Field required!") : nil
+					})
+					row.add(rule: nonErrRule)
 				}.cellSetup { cell, row in
 					cell.backgroundColor = form_row_background
+				}.cellUpdate { cell, row in
+					if !row.isValid {
+						cell.textLabel?.textColor = .red
+					}
 				}
 			<<< ZipCodeRow() { row in
 					row.tag = address_zip
