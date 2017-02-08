@@ -152,9 +152,9 @@ class DA31PDFFiller: NSObject {
 			document.forms!.setValue(dateString, forFormWithName: da31_pdf_date_to)
 		}
 		// Return PDF Form
-//		let data = document.savedStaticPDFData()
-//		let savedVCDocument = ILPDFDocument(data: data)
-		return document
+		let data = document.savedStaticPDFData()
+		let savedVCDocument = ILPDFDocument(data: data)
+		return savedVCDocument
 	}
 	
 	class func fullNameFrom(firstName:String, middleInitial: String, lastName: String) -> String {
