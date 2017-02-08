@@ -238,11 +238,17 @@ class DA31FormFactory: NSObject {
 	}
 	
 	class func appendLeaveDaysToForm(form: Form) {
+		
 		form +++ Section("NUMBER OF DAYS LEAVE")
 			<<< IntRow() { row in
 					row.tag = da31_accrued_leave
 					row.title = da31_accrued_leave
 					row.placeholder = "N/A"
+					let sumRule = RuleClosure<Int>.init(closure: { (rowValue) -> ValidationError? in
+						let sum = DA31FormFactory.leaveDaysSumForForm(form: form)
+						return (sum <= 0) ? ValidationError(msg: "Fields required!") : nil
+					})
+					row.add(rule: sumRule)
 				}.cellSetup { cell, row in
 					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
@@ -254,6 +260,11 @@ class DA31FormFactory: NSObject {
 					row.tag = da31_requested_leave
 					row.title = da31_requested_leave
 					row.placeholder = "N/A"
+					let sumRule = RuleClosure<Int>.init(closure: { (rowValue) -> ValidationError? in
+						let sum = DA31FormFactory.leaveDaysSumForForm(form: form)
+						return (sum <= 0) ? ValidationError(msg: "Fields required!") : nil
+					})
+					row.add(rule: sumRule)
 				}.cellSetup { cell, row in
 					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
@@ -265,6 +276,11 @@ class DA31FormFactory: NSObject {
 					row.tag = da31_advanced_leave
 					row.title = da31_advanced_leave
 					row.placeholder = "N/A"
+					let sumRule = RuleClosure<Int>.init(closure: { (rowValue) -> ValidationError? in
+						let sum = DA31FormFactory.leaveDaysSumForForm(form: form)
+						return (sum <= 0) ? ValidationError(msg: "Fields required!") : nil
+					})
+					row.add(rule: sumRule)
 				}.cellSetup { cell, row in
 					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
@@ -276,6 +292,11 @@ class DA31FormFactory: NSObject {
 					row.tag = da31_excess_leave
 					row.title = da31_excess_leave
 					row.placeholder = "N/A"
+					let sumRule = RuleClosure<Int>.init(closure: { (rowValue) -> ValidationError? in
+						let sum = DA31FormFactory.leaveDaysSumForForm(form: form)
+						return (sum <= 0) ? ValidationError(msg: "Fields required!") : nil
+					})
+					row.add(rule: sumRule)
 				}.cellSetup { cell, row in
 					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
@@ -317,5 +338,23 @@ class DA31FormFactory: NSObject {
 	
 	class func leaveTypes() -> [String] {
 		return [DA31LeaveType.ERR.rawValue, DA31LeaveType.OTHER.rawValue, DA31LeaveType.ORDINARY.rawValue, DA31LeaveType.EMERGENCY.rawValue, DA31LeaveType.PERMISSIVE.rawValue]
+	}
+	
+	class func leaveDaysSumForForm(form: Form) -> Int {
+		var sum = 0
+		if let accrued = (form.rowBy(tag: da31_accrued_leave) as! IntRow).value {
+			sum = sum + accrued
+		}
+		if let requested = (form.rowBy(tag: da31_requested_leave) as! IntRow).value {
+			sum = sum + requested
+		}
+		if let advanced = (form.rowBy(tag: da31_advanced_leave) as! IntRow).value {
+			sum = sum + advanced
+			
+		}
+		if let excess = (form.rowBy(tag: da31_excess_leave) as! IntRow).value {
+			sum = sum + excess
+		}
+		return sum
 	}
 }
