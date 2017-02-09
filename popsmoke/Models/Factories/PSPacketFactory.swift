@@ -14,7 +14,7 @@ class PSPacketFactory: NSObject {
 	class func newFilePath() -> String? {
 		
 		guard let uuid = CFUUIDCreateString(nil, CFUUIDCreate(nil)) else {
-			//TODO: Handle the errors in a global error alert
+			PSErrorHandler.presentErrorWith(title: "Whoops!", message: "We weren't able to create a randomized UID")
 			return nil
 		}
 		let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as String
@@ -25,7 +25,7 @@ class PSPacketFactory: NSObject {
 	
 	class func newPacketID() -> String? {
 		guard let uuid = CFUUIDCreateString(nil, CFUUIDCreate(nil)) else {
-			//TODO: Handle the errors in a global error alert
+			PSErrorHandler.presentErrorWith(title: "Whoops!", message: "We weren't able to create a randomized UID")
 			return nil
 		}
 		return "\(uuid)"

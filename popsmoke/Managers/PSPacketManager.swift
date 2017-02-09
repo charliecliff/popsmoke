@@ -38,9 +38,9 @@ class PSPacketManager {
 			reloadCurrentPacket.value = true
 			reloadCurrentPacket.value = false
 		} catch PersistenceError.packetPersistence {
-			//TODO: Handle the errors in a global error alert
+			PSErrorHandler.presentErrorWith(title: "Whoops!", message: "We had a problem loading the Packet!")
 		} catch {
-			//TODO: Handle the errors in a global error alert
+			PSErrorHandler.presentErrorWith(title: "Whoops!", message: "We messed up building our packet.")
 		}
 	}
 

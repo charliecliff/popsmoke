@@ -34,13 +34,13 @@ class PSPDFContainerViewController: UIViewController {
 	
 	@IBAction func didSelectSaveButton(_ sender: UIButton) {
 		guard let  destinationPath = PSPacketUtilities.newPDFFilePath() else {
-			// TODO: Handle the Saving Errors
+			PSErrorHandler.presentErrorWith(title: "Whoops!", message: "That's not a real FilePath!")
 			return
 		}
 		var error : NSError?
 		pdf?.save(toPath: destinationPath, error: &error)
 		if error != nil {
-			// TODO: Handle the Saving Errors
+			PSErrorHandler.presentError(error: error)
 		}
 		document?.filePath = destinationPath
 		navigationController!.popToRootViewController(animated: true)

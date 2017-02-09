@@ -50,7 +50,7 @@ class PSLoginViewController: UIViewController {
 	
 	private func segueToMainViewController() {
 		SVProgressHUD.dismiss()
-		navigationController?.popToRootViewController(animated: true)
+		_ = navigationController?.popToRootViewController(animated: true)
 	}
 	
 	private func bindToUserManager() {

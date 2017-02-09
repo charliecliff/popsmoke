@@ -36,11 +36,11 @@ class PSPacketUtilities: NSObject {
 
 	class func copyPDF(pdfName: String) -> String? {
 		guard let url = Bundle.main.url(forResource: pdfName, withExtension: "pdf", subdirectory: nil, localization: nil) else {
-			//TODO: Handle the errors in a global error alert
+			PSErrorHandler.presentErrorWith(title: "Whoops!", message: "We weren't able to read the PDF File")
 			return nil
 		}
 		guard let uuid = CFUUIDCreateString(nil, CFUUIDCreate(nil)) else {
-			//TODO: Handle the errors in a global error alert
+			PSErrorHandler.presentErrorWith(title: "Whoops!", message: "We weren't able to create a randomized UID")
 			return nil
 		}
 		let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as String
@@ -50,8 +50,7 @@ class PSPacketUtilities: NSObject {
 			try FileManager.default.copyItem(atPath: url.path, toPath: destinationPath!)
 		}
 		catch let error as NSError {
-			//TODO: Handle the errors in a global error alert
-			print("Ooops! Something went wrong: \(error)")
+			PSErrorHandler.presentError(error: error)
 		}
 		return destinationPath
 	}
