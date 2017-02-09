@@ -55,6 +55,11 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 	@IBAction func didPressSubmitButton(sender: UIButton) {
 		let mailComposer = PSMailComposerFactory.mailComposerFor(packet: PSPacketManager.sharedInstance.packet)
 		mailComposer.mailComposeDelegate = self
+		if( !MFMailComposeViewController.canSendMail() ) {
+			//TODO: Handle the errors in a global error alert
+			print("Cannot send email.")
+			return
+		}
 		present(mailComposer, animated: true, completion: nil)
 	}
 	

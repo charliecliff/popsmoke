@@ -99,21 +99,20 @@ class DA31PDFFiller: NSObject {
 		let platoon = dictionary[da31_station_platoon] as? String
 		let company = dictionary[da31_station_company] as? String
 		let battalion = dictionary[da31_station_battalion] as? String
-		if platoon != nil && company != nil && battalion != nil {
-			stationString = "\(stationString)\(platoon!), \(company!), \(battalion!)"
-		}
-		
 		let brigade = dictionary[da31_station_brigade] as? String
-		let division = dictionary[da31_station_division] as? String
-		if brigade != nil && division != nil {
-			stationString = "\(stationString)\n\(brigade!), \(division!)"
+		if brigade != nil && platoon != nil && company != nil && battalion != nil {
+			stationString = "\(stationString)\(platoon!) - \(company!) - \(battalion!) - \(brigade!)"
+		}
+		if  let division = dictionary[da31_station_division] as? String {
+			stationString = "\(stationString) - \(division)"
 		}
 		
 		let post = dictionary[da31_station_post] as? String
 		let postZip = dictionary[da31_station_zip] as? String
 		let stationPhone = dictionary[da31_station_phone] as? String
 		if post != nil && postZip != nil && stationPhone != nil {
-			stationString = "\(stationString)\n\(post!) \(postZip!), \(stationPhone!)"
+			let formattedPhone = DA31PDFFiller.formattedPhoneNumber(phoneNumber: stationPhone!)
+			stationString = "\(stationString)\n\(post!) \(postZip!), \(formattedPhone)"
 		}
 		document.forms!.setValue(stationString, forFormWithName: da31_pdf_station)
 		
@@ -161,7 +160,7 @@ class DA31PDFFiller: NSObject {
 		return "\(lastName), \(firstName) \(middleInitial)."
 	}
 
-	class func formattedPhonNumber(phoneNumber: String) -> String {
+	class func formattedPhoneNumber(phoneNumber: String) -> String {
 		var start = phoneNumber.index(phoneNumber.startIndex, offsetBy: 0)
 		var end = phoneNumber.index(phoneNumber.startIndex, offsetBy: 3)
 		var range = Range(uncheckedBounds: (lower: start, upper: end))
@@ -177,14 +176,14 @@ class DA31PDFFiller: NSObject {
 		return "(\(areaCode)) \(firstThreeDigits)-\(lastFourDigits)"
 	}
 	
-	
 	class func addressFrom(street:String, city: String, state: USState, zip: String, phoneNumber: String) -> String {
-		let formatedPhoneNumber = DA31PDFFiller.formattedPhonNumber(phoneNumber: phoneNumber)
+		let formatedPhoneNumber = DA31PDFFiller.formattedPhoneNumber(phoneNumber: phoneNumber)
 		return "\(street)\n\(city), \(state.rawValue) \(zip)\n\(formatedPhoneNumber)"
 	}
 	
 	class func stationFrom(station:String, orgn: String, phone: String) -> String {
-		return "\(station), \(orgn) \(phone)"
+		let formatedPhoneNumber = DA31PDFFiller.formattedPhoneNumber(phoneNumber: phone)
+		return "\(station), \(orgn) \(formatedPhoneNumber)"
 	}
 	
 	class func createNewPDFFile() -> String? {

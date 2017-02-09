@@ -191,7 +191,6 @@ class DA31FormFactory: NSObject {
 				row.tag = da31_station_division
 				row.title = da31_station_division
 				row.placeholder = "Enter text here"
-				row.add(rule: RuleRequired())
 				}.cellSetup { cell, row in
 					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
