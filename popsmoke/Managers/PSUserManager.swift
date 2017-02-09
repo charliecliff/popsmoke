@@ -50,7 +50,7 @@ class PSUserManager {
 			set(user: user!)
 			hasValidUser.value = true
 		} catch PersistenceError.userPersistence {
-			PSErrorHandler.presentErrorWith(title: "Whoops!", message: "We had trouble accessing the database.")
+			
 		} catch {
 			PSErrorHandler.presentErrorWith(title: "Whoops!", message: "We had trouble loading your profile")
 		}
