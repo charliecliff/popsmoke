@@ -5,6 +5,11 @@
 //  Created by Charles Cliff on 1/28/17.
 //  Copyright © 2017 Charles Cliff. All rights reserved.
 //
+// We are implementing our own HTTPS Certificate Evaluation according to Apple Technical Note - 2232:
+// https://developer.apple.com/library/content/technotes/tn2232/_index.html#//apple_ref/doc/uid/DTS40012884-CH1-SECCUSTOMCERT
+// This is because the .mil Security Certificate is not available to the list of commercially available
+// security certificates.
+//
 
 import UIKit
 
@@ -13,54 +18,41 @@ fileprivate let container_segue = "container_segue"
 class PSMilWebViewController: UIViewController, UIWebViewDelegate, NSURLConnectionDelegate, NSURLConnectionDataDelegate {
 	
 	private var authenticated = false
-	
 	weak var document: PSDocument?
 	@IBOutlet weak var webView: UIWebView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		
+		// TODO: Start the Spinner
+		loadWebAddress()
+    }
+	
+	private func loadWebAddress() {
 		guard let address = document?.webAddress else {
-			//TODO: Handle the errors in a global error alert
+			PSErrorHandler.presentErrorWith(title: "Whoops!", message: "Trying to oad a Document in a Web View Without a valid URL.")
 			return
 		}
 		let url = URL.init(string: address)
 		let request = URLRequest.init(url: url!)
 		self.webView?.loadRequest(request)
-		// TODO: Start the Spinner
-    }
-
-	// MARK: - URLSessionDelegate
-	
-	func urlSession(_ session: URLSession, didBecomeInvalidWithError error: Error?){
-		
-	}
-	
-	func urlSession(_ session: URLSession,
-	                didReceive challenge: URLAuthenticationChallenge,
-	                completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void){
-		
-		let credential = URLCredential.init(trust: challenge.protectionSpace.serverTrust!)
-		challenge.sender!.use(credential, for: challenge)
-	}
-	
-	func urlSessionDidFinishEvents(forBackgroundURLSession session: URLSession) {
-		
 	}
 	
 	// MARK: - NSURLConnectionDelegate
 	
 	func connectionShouldUseCredentialStorage(_ connection: NSURLConnection) -> Bool {
-		
-		// TODO: Some Logic
-		return false
+		if (connection.currentRequest.url?.absoluteString.range(of:"https://trips.safety.army.mil/") != nil) {
+			return false
+		}
+		return true
 	}
 
 	func connection(_ connection: NSURLConnection, willSendRequestFor challenge: URLAuthenticationChallenge){
-		
-		// TODO: Some Logic
-		let credential = URLCredential.init(trust: challenge.protectionSpace.serverTrust!)
-		challenge.sender!.use(credential, for: challenge)
+		if (connection.currentRequest.url?.absoluteString.range(of:"https://trips.safety.army.mil/") != nil) {
+			let credential = URLCredential.init(trust: challenge.protectionSpace.serverTrust!)
+			challenge.sender!.use(credential, for: challenge)
+		} else {
+			challenge.sender!.performDefaultHandling!(for: challenge)
+		}
 	}
 	
 	func connection(_ connection: NSURLConnection, didFailWithError error: Error){
@@ -69,54 +61,18 @@ class PSMilWebViewController: UIViewController, UIWebViewDelegate, NSURLConnecti
 		
 	}
 	
-	// MARK: - URLSessionDataDelegate
-
-	func urlSession(_ session: URLSession,
-	                dataTask: URLSessionDataTask,
-	                didReceive response: URLResponse,
-	                completionHandler: @escaping (URLSession.ResponseDisposition) -> Void) {
-		
-		authenticated = true
-		session.invalidateAndCancel()
-		guard let address = document?.webAddress else {
-			//TODO: Handle the errors in a global error alert
-			return
-		}
-		let url = URL.init(string: address)
-		let request = URLRequest.init(url: url!)
-		self.webView?.loadRequest(request)
-	}
-	
 	// MARK: - NSURLConnectionDataDelegate
-
 	
 	func connectionDidFinishLoading(_ connection: NSURLConnection) {
-		
-		guard let address = document?.webAddress else {
-			//TODO: Handle the errors in a global error alert
-			return
-		}
-		let url = URL.init(string: address)
-		let request = URLRequest.init(url: url!)
-		self.webView?.loadRequest(request)
+		authenticated = true
+		connection.cancel()
+		loadWebAddress()
 	}
 	
 	func connection(_ connection: NSURLConnection, didReceive response: URLResponse){
-		
 		authenticated = true
 		connection.cancel()
-		guard let address = document?.webAddress else {
-			//TODO: Handle the errors in a global error alert
-			return
-		}
-		let url = URL.init(string: address)
-		let request = URLRequest.init(url: url!)
-		self.webView?.loadRequest(request)
-	}
-	
-	func connection(_ connection: NSURLConnection, didReceive data: Data) {
-		
-		
+		loadWebAddress()
 	}
 	
 	// MARK: - UIWebViewDelegate
@@ -124,17 +80,11 @@ class PSMilWebViewController: UIViewController, UIWebViewDelegate, NSURLConnecti
 	func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool{
 		
 		if !authenticated {
-			let connection = NSURLConnection.init()
-			
+			// TODO: Display a "Need to Connect Message"
 			_ = NSURLConnection(request: request, delegate: self, startImmediately: true)
 			return false
 		}
 		return true
-	}
-	
-	func webViewDidStartLoad(_ webView: UIWebView) {
-		// TODO: Stop the Spinner
-
 	}
 	
 	func webViewDidFinishLoad(_ webView: UIWebView) {
@@ -144,6 +94,7 @@ class PSMilWebViewController: UIViewController, UIWebViewDelegate, NSURLConnecti
 	
 	func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
 		// TODO: Stop the Spinner
+		// TODO: Display Global Error
 
 	}
 }
