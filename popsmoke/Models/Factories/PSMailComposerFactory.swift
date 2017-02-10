@@ -12,10 +12,6 @@ import MessageUI
 class PSMailComposerFactory: NSObject {
 
 	class func mailComposerFor(packet: PSPacket) -> MFMailComposeViewController {
-		if( !MFMailComposeViewController.canSendMail() ) {
-			//TODO: Handle the errors in a global error alert
-			print("Cannot send email.")
-		}
 		let mailComposer = MFMailComposeViewController()
 		mailComposer.setSubject("Have you heard a swift?")
 		mailComposer.setMessageBody("This is what they sound like.", isHTML: false)

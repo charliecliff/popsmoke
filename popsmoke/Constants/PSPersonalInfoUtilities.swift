@@ -9,6 +9,7 @@
 import Foundation
 
 enum USArmyRank: String {
+	case ERR	= "   "
 	case PVT	= "PVT"
 	case PVT2	= "PV2"
 	case PFC	= "PFC"
@@ -39,8 +40,8 @@ enum USArmyRank: String {
 
 class PSPersonalInfoUtilities: NSObject {
 
-	class func ranks() -> [USArmyRank] {
-		return [.PVT, .PVT2, .PFC, .SPC, .CPL, .SGT, .SSG, .SFC, .SG1, .SGM, .CSM, .WO1, .CW2, .CW3, .CW4, .CW5, .LT2, .LT1, .CPT, .MAJ, .LTC, .COL, .BG, .MG, .LTG, .GEN]
+	class func ranks() -> [String] {
+		return [USArmyRank.ERR.rawValue, USArmyRank.PVT.rawValue, USArmyRank.PVT2.rawValue, USArmyRank.PFC.rawValue, USArmyRank.SPC.rawValue, USArmyRank.CPL.rawValue, USArmyRank.SGT.rawValue, USArmyRank.SSG.rawValue, USArmyRank.SFC.rawValue, USArmyRank.SG1.rawValue, USArmyRank.SGM.rawValue, USArmyRank.CSM.rawValue, USArmyRank.WO1.rawValue, USArmyRank.CW2.rawValue, USArmyRank.CW3.rawValue, USArmyRank.CW4.rawValue, USArmyRank.CW5.rawValue, USArmyRank.LT2.rawValue, USArmyRank.LT1.rawValue, USArmyRank.CPT.rawValue, USArmyRank.MAJ.rawValue, USArmyRank.LTC.rawValue, USArmyRank.COL.rawValue, USArmyRank.BG.rawValue, USArmyRank.MG.rawValue, USArmyRank.LTG.rawValue, USArmyRank.GEN.rawValue]
 	}
 }
 

@@ -89,6 +89,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="containerView" destination="NgZ-fj-0m7" id="ort-an-oHi"/>
+                        <outlet property="verifyButton" destination="Mom-Tj-LCp" id="gbt-kH-fPE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egN-fy-u21" userLabel="First Responder" sceneMemberID="firstResponder"/>

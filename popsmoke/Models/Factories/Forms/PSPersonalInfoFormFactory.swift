@@ -76,12 +76,16 @@ class PSPersonalInfoFormFactory: NSObject {
 						cell.titleLabel?.textColor = .red
 					}
 			}
-			<<< PickerInlineRow<USArmyRank>() { (row : PickerInlineRow<USArmyRank>) -> Void in
+			<<< PickerInlineRow<String>() { (row : PickerInlineRow<String>) -> Void in
 				row.tag = personal_info_rank
 				row.title = personal_info_rank
 				row.options = PSPersonalInfoUtilities.ranks()
 				row.value = row.options.first
 				row.add(rule: RuleRequired())
+				let nonErrRule = RuleClosure.init(closure: { (rowValue) -> ValidationError? in
+					return (USArmyRank(rawValue: rowValue!) == USArmyRank.ERR) ? ValidationError(msg: "Field required!") : nil
+				})
+				row.add(rule: nonErrRule)
 				}.cellSetup { cell, row in
 					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in

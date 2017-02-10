@@ -17,10 +17,12 @@ let da31_pdf_date				= "Date"
 let da31_pdf_address			= "Address"
 let da31_pdf_station			= "ORGN"
 
-let da31_pdf_leave_ordinary		= "Ordinary"
-let da31_pdf_leave_emergency	= "Emergency"
-let da31_pdf_leave_permissive	= "Permissive"
-let da31_pdf_leave_other		= "Other"
+let da31_pdf_leave_ordinary				= "Ordinary"
+let da31_pdf_leave_emergency			= "Emergency"
+let da31_pdf_leave_permissive			= "Permissive"
+let da31_pdf_leave_other				= "Other"
+let da31_pdf_leave_other_explanation	= "Other Explainations"
+
 let da31_pdf_accrued_leave		= "Accrued"
 let da31_pdf_advanced_leave		= "Advanced"
 let da31_pdf_excess_leave		= "Excess"
@@ -28,7 +30,7 @@ let da31_pdf_requested_leave	= "Requested"
 let da31_pdf_date_to			= "Date-To"
 let da31_pdf_date_from			= "Date-From"
 
-fileprivate let da31_pdf_date_format	= "yyyy/mm/dd"
+fileprivate let da31_pdf_date_format	= "yyyy/MM/dd"
 
 class DA31PDFFiller: NSObject {
 
@@ -59,7 +61,7 @@ class DA31PDFFiller: NSObject {
 			document.forms!.setValue(rank, forFormWithName: da31_pdf_rank)
 		}
 		// Block 5 - Current Date
-		let currentDate = Date(timeIntervalSinceReferenceDate: 0)
+		let currentDate = Date()
 		let dateFormatter = DateFormatter()
 		dateFormatter.dateFormat = da31_pdf_date_format
 		let dateString = dateFormatter.string(from: currentDate)
@@ -67,10 +69,12 @@ class DA31PDFFiller: NSObject {
 		// Block 6 - Leave Address
 		let street = dictionary[address_street] as? String
 		let city = dictionary[address_city] as? String
-		let state = dictionary[address_state] as? USState
+		let zip = dictionary[address_zip] as? String
 		let phone = dictionary[personal_info_phone] as? String
-		if street != nil  && city != nil && state != nil && phone != nil {
-			let address = DA31PDFFiller.addressFrom(street: street!, city: city!, state: state!, phoneNumber: phone!)
+		let state = dictionary[address_state] as? String
+		if street != nil  && city != nil && state != nil && phone != nil && zip != nil {
+			let stateEnum = USState(rawValue: state!)
+			let address = DA31PDFFiller.addressFrom(street: street!, city: city!, state: stateEnum!, zip: zip!, phoneNumber: phone!)
 			document.forms!.setValue(address, forFormWithName: da31_pdf_address)
 		}
 		// Block 7 - Leave Type
@@ -87,44 +91,51 @@ class DA31PDFFiller: NSObject {
 			}
 			if leaveType == da31_leave_type_other {
 				document.forms!.setValue("Yes", forFormWithName: da31_pdf_leave_other)
+				document.forms!.setValue("PASS", forFormWithName: da31_pdf_leave_other_explanation)
 			}
 		}
 		// Block 8
+		var stationString = ""
 		let platoon = dictionary[da31_station_platoon] as? String
 		let company = dictionary[da31_station_company] as? String
 		let battalion = dictionary[da31_station_battalion] as? String
-		var stationString = "\(platoon), \(company), \(battalion)"
-		
 		let brigade = dictionary[da31_station_brigade] as? String
-		let division = dictionary[da31_station_division] as? String
-		stationString = "\(stationString)\n\(brigade), \(division)"
-
-		let post = dictionary[da31_station_post] as? String
-		let stationPhone = dictionary[da31_station_phone] as? String
-		stationString = "\(stationString)\n\(post), \(stationPhone)"
+		if brigade != nil && platoon != nil && company != nil && battalion != nil {
+			stationString = "\(stationString)\(platoon!) - \(company!) - \(battalion!) - \(brigade!)"
+		}
+		if  let division = dictionary[da31_station_division] as? String {
+			stationString = "\(stationString) - \(division)"
+		}
 		
+		let post = dictionary[da31_station_post] as? String
+		let postZip = dictionary[da31_station_zip] as? String
+		let stationPhone = dictionary[da31_station_phone] as? String
+		if post != nil && postZip != nil && stationPhone != nil {
+			let formattedPhone = DA31PDFFiller.formattedPhoneNumber(phoneNumber: stationPhone!)
+			stationString = "\(stationString)\n\(post!) \(postZip!), \(formattedPhone)"
+		}
 		document.forms!.setValue(stationString, forFormWithName: da31_pdf_station)
 		
 		// Block 9
 		if let accruedLeave = dictionary[da31_accrued_leave] as? Int {
 			document.forms!.setValue(String(accruedLeave), forFormWithName: da31_pdf_accrued_leave)
 		} else {
-			document.forms!.setValue("0", forFormWithName: da31_pdf_accrued_leave)
+			document.forms!.setValue("N/A", forFormWithName: da31_pdf_accrued_leave)
 		}
 		if let requestedLeave = dictionary[da31_requested_leave] as? Int {
 			document.forms!.setValue(String(requestedLeave), forFormWithName: da31_pdf_requested_leave)
 		} else {
-			document.forms!.setValue("0", forFormWithName: da31_pdf_requested_leave)
+			document.forms!.setValue("N/A", forFormWithName: da31_pdf_requested_leave)
 		}
 		if let advancedLeave = dictionary[da31_advanced_leave] as? Int {
 			document.forms!.setValue(String(advancedLeave), forFormWithName: da31_pdf_advanced_leave)
 		} else {
-			document.forms!.setValue("0", forFormWithName: da31_pdf_advanced_leave)
+			document.forms!.setValue("N/A", forFormWithName: da31_pdf_advanced_leave)
 		}
 		if let excessLeave = dictionary[da31_excess_leave] as? Int {
 			document.forms!.setValue(String(excessLeave), forFormWithName: da31_pdf_excess_leave)
 		} else {
-			document.forms!.setValue("0", forFormWithName: da31_pdf_excess_leave)
+			document.forms!.setValue("N/A", forFormWithName: da31_pdf_excess_leave)
 		}
 		// Block 10
 		if let date = dictionary[da31_leave_date_from] as? Date {
@@ -149,7 +160,7 @@ class DA31PDFFiller: NSObject {
 		return "\(lastName), \(firstName) \(middleInitial)."
 	}
 
-	class func formattedPhonNumber(phoneNumber: String) -> String {
+	class func formattedPhoneNumber(phoneNumber: String) -> String {
 		var start = phoneNumber.index(phoneNumber.startIndex, offsetBy: 0)
 		var end = phoneNumber.index(phoneNumber.startIndex, offsetBy: 3)
 		var range = Range(uncheckedBounds: (lower: start, upper: end))
@@ -165,14 +176,14 @@ class DA31PDFFiller: NSObject {
 		return "(\(areaCode)) \(firstThreeDigits)-\(lastFourDigits)"
 	}
 	
-	
-	class func addressFrom(street:String, city: String, state: USState, phoneNumber: String) -> String {
-		let formatedPhoneNumber = DA31PDFFiller.formattedPhonNumber(phoneNumber: phoneNumber)
-		return "\(street)\n\(city), \(state.rawValue)\n\(formatedPhoneNumber)"
+	class func addressFrom(street:String, city: String, state: USState, zip: String, phoneNumber: String) -> String {
+		let formatedPhoneNumber = DA31PDFFiller.formattedPhoneNumber(phoneNumber: phoneNumber)
+		return "\(street)\n\(city), \(state.rawValue) \(zip)\n\(formatedPhoneNumber)"
 	}
 	
 	class func stationFrom(station:String, orgn: String, phone: String) -> String {
-		return "\(station), \(orgn) \(phone)"
+		let formatedPhoneNumber = DA31PDFFiller.formattedPhoneNumber(phoneNumber: phone)
+		return "\(station), \(orgn) \(formatedPhoneNumber)"
 	}
 	
 	class func createNewPDFFile() -> String? {

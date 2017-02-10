@@ -50,11 +50,9 @@ class PSUserManager {
 			set(user: user!)
 			hasValidUser.value = true
 		} catch PersistenceError.userPersistence {
-			//TODO: Handle the errors in a global error alert
 			
 		} catch {
-			//TODO: Handle the errors in a global error alert
-			
+			PSErrorHandler.presentErrorWith(title: "Whoops!", message: "We had trouble loading your profile")
 		}
 	}
 	
@@ -67,17 +65,14 @@ class PSUserManager {
 			hasValidUser.value = false
 		}
 		catch {
-			//TODO: Handle the errors in a global error alert
+			PSErrorHandler.presentErrorWith(title: "Whoops!", message: "We had trouble logging you out")
 		}
 	}
 	
 	func validateUserForSocialMediaToken(token: String?, completion: ((_ error: NSError?) -> Void)?) {
 		REKIFacebookClient.getUserDataForToken(token: (token)!, completion: { (userData, error) in
 			guard userData != nil else {
-				if completion != nil {
-					// TODO: Define Social Media Error Codes
-					completion!(NSError.init(domain: "REKI", code: userErrorCode, userInfo: nil))
-				}
+				completion?(NSError.init(domain: "REKI", code: userErrorCode, userInfo: nil))
 				return
 			}
 			let userID = PSUserFactory.userIDFromDictionary(userDictionary: userData!)

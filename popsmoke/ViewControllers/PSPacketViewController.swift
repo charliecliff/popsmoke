@@ -55,6 +55,10 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 	@IBAction func didPressSubmitButton(sender: UIButton) {
 		let mailComposer = PSMailComposerFactory.mailComposerFor(packet: PSPacketManager.sharedInstance.packet)
 		mailComposer.mailComposeDelegate = self
+		if( !MFMailComposeViewController.canSendMail() ) {
+			PSErrorHandler.presentErrorWith(title: "Whoops!", message: "Cannot send email.")
+			return
+		}
 		present(mailComposer, animated: true, completion: nil)
 	}
 	
@@ -94,11 +98,11 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 	
 	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		guard let cell = collectionView.cellForItem(at: indexPath) as? PSDocumentCollectionViewCell else {
-			//TODO: Handle the errors in a global error alert
+			PSErrorHandler.presentErrorWith(title: "Whoops!", message: "We can't seem to instantiate a colleciton cell.")
 			return
 		}
 		guard let vc = PSDocumentViewFactory.documentView(forDocument: cell.document) else {
-			//TODO: Handle the errors in a global error alert
+			PSErrorHandler.presentErrorWith(title: "Whoops!", message: "Cannot seem to make a View for your Document.")
 			return
 		}
 		if vc is PSImagePickerController {
@@ -134,7 +138,7 @@ class PSPacketViewController: UIViewController, UICollectionViewDelegate, UIColl
 	
 	func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?){
 		if error != nil {
-			//TODO: Handle the errors in a global error alert
+			PSErrorHandler.presentError(error: error as NSError?)
 		} else {
 			PSPacketManager.sharedInstance.savePacket(packet: PSPacketManager.sharedInstance.packet)
 		}

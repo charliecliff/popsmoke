@@ -32,7 +32,7 @@ class PSMainViewController: UIViewController {
 		super.viewDidAppear(true)
 		subscription = PSUserManager.sharedInstance.hasValidUser.asObservable().subscribe(onNext: {
 			if !($0) {
-				self.navigationController?.popToRootViewController(animated: true)
+				_ = self.navigationController?.popToRootViewController(animated: true)
 			}
 		})
 	}
@@ -40,11 +40,11 @@ class PSMainViewController: UIViewController {
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		if segue.identifier == navigation_container_segue {
 			guard let navVC = segue.destination as? UINavigationController else {
-				//TODO: Handle the errors in a global error alert
+				PSErrorHandler.presentErrorWith(title: "Whoops!", message: "We had trouble with our segue!")
 				return
 			}
-			guard let vc = navVC.viewControllers.first as? PSPacketViewController else {
-				//TODO: Handle the errors in a global error alert
+			guard let vc = navVC.viewControllers.first as? PSPacketViewController else {				
+				PSErrorHandler.presentErrorWith(title: "Whoops!", message: "We had trouble with our segue!")
 				return
 			}
 			packetVC = vc

@@ -15,11 +15,12 @@ class PSFormContainerViewController: UIViewController {
 	weak var document: PSDocument?
 	private var formViewController: FormViewController?
 	@IBOutlet public var containerView: UIView?
+	@IBOutlet public var verifyButton: UIButton?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		guard document != nil else {
-			//TODO: Handle the errors in a global error alert
+			PSErrorHandler.presentErrorWith(title: "Whoops!", message: "We can't display an empty document!")
 			return
 		}
 		formViewController = PSFormViewControllerFactory.viewControllerForForm(type: document!.formType)
@@ -28,7 +29,7 @@ class PSFormContainerViewController: UIViewController {
 	
 	func add(formViewController: FormViewController) {
 		guard containerView != nil else {
-			//TODO: Handle the errors in a global error alert
+			PSErrorHandler.presentErrorWith(title: "Whoops!", message: "The Form Container doesn't exist")
 			return
 		}
 		
@@ -54,25 +55,36 @@ class PSFormContainerViewController: UIViewController {
 	}
 	
 	@IBAction func didSelectCompletionButton(_ sender: UIButton) {
-		
+		if formIsValid() {
+			guard let form = formViewController?.form else {
+				PSErrorHandler.presentErrorWith(title: "Whoops!", message: "The Form has been deallocated")
+				return
+			}
+			let formData = DA31FormFactory.toDictionary(form: form) // Generate PDF Form
+			guard let pdf = DA31PDFFiller.fillPDFWithFormData(dictionary: formData) else {
+				PSErrorHandler.presentErrorWith(title: "Whoops!", message: "We coudln't fill out the PDF.")
+				return
+			}
+			guard let pdfVC = PSPDFContainerViewFactory.pdfContainerViewController(withDocument: document!, withPDF: pdf) else {
+				PSErrorHandler.presentErrorWith(title: "Whoops!", message: "We coudln't display the PDF!")
+				return
+			}
+			navigationController?.pushViewController(pdfVC, animated: true)
+		}
+	}
+	
+	// MARK : - FormDelegate
+	
+	func formIsValid() -> Bool {
 		guard let form = formViewController?.form else {
-			//TODO: Handle the errors in a global error alert
-			return
+			return false
 		}
-		/**		let errors = form.validate() // Validate
-		if errors.count > 0 {
-		// TODO: Display Warning Message
-		return
-		} */
-		let formData = DA31FormFactory.toDictionary(form: form) // Generate PDF Form
-		guard let pdf = DA31PDFFiller.fillPDFWithFormData(dictionary: formData) else {
-			//TODO: Handle the errors in a global error alert
-			return
+		let errors = form.validate()
+		formViewController?.tableView?.reloadData()
+		if errors.count <= 0 {
+			return true
+		} else {
+			return false
 		}
-		guard let pdfVC = PSPDFContainerViewFactory.pdfContainerViewController(withDocument: document!, withPDF: pdf) else {
-			//TODO: Handle the errors in a global error alert
-			return
-		}
-		navigationController?.pushViewController(pdfVC, animated: true)
 	}
 }

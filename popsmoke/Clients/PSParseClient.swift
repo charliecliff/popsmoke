@@ -52,7 +52,7 @@ class PSParseClient: PSUserProvider {
 		}
 		player.saveInBackground { (succeeded, error) -> Void in
 			if completion != nil {
-				completion!(error as NSError?) // TODO: Fix these type casting calls
+				completion!(error as NSError?)
 			}
 		}
 	}

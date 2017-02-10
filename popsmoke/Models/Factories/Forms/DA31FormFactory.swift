@@ -12,7 +12,7 @@ import Eureka
 let address_street	= "STREET"
 let address_city	= "CITY"
 let address_state	= "STATE"
-let address_zip	= "ZIP"
+let address_zip		= "ZIP"
 
 let da31_control_number			= "CONTROL NUMBER"
 let da31_date					= "DATE"
@@ -24,6 +24,7 @@ let da31_station_battalion		= "BATTALION"
 let da31_station_brigade		= "BRIGADE"
 let da31_station_division		= "DIVISION"
 let da31_station_post			= "POST"
+let da31_station_zip			= "POSTING ZIP"
 let da31_station_phone			= "PHONE NO."
 
 let da31_accrued_leave			= "ACCRUED"
@@ -38,28 +39,34 @@ let da31_leave_type_emergency	= "EMERGENCY"
 let da31_leave_type_permissive	= "PERMISSIVE TDY"
 let da31_leave_type_other		= "OTHER / PASS"
 
+enum DA31LeaveType: String {
+	case ERR		= "   "
+	case OTHER		= "OTHER / PASS"
+	case ORDINARY	= "ORDINARY"
+	case EMERGENCY	= "EMERGENCY"
+	case PERMISSIVE	= "PERMISSIVE TDY"
+}
+
 class DA31FormFactory: NSObject {
 
 	class func appendLeaveTypeToForm(form: Form) {
 		form +++ Section("LEAVE TYPE")
-			<<< AlertRow<String>() { row in
+			<<< PickerInlineRow<String>() { (row : PickerInlineRow<String>) -> Void in
 				row.tag = da31_leave_type
 				row.title = da31_leave_type
-				row.selectorTitle = "Please Select Type of Leave"
 				row.options = DA31FormFactory.leaveTypes()
-				row.value = DA31FormFactory.leaveTypes()[0]
-				row.add(rule: RuleRequired())
-				}.onChange { row in
-					print(row.value ?? "No Value")
-				}.onPresent{ _, to in
-					to.view.tintColor = .purple
+				row.value = row.options.first
+				let nonErrRule = RuleClosure.init(closure: { (rowValue) -> ValidationError? in
+					return (DA31LeaveType(rawValue: rowValue!) == DA31LeaveType.ERR) ? ValidationError(msg: "Field required!") : nil
+				})
+				row.add(rule: nonErrRule)
 				}.cellSetup { cell, row in
 					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
-						
+						cell.textLabel?.textColor = .red
 					}
-				}
+			}
 	}
 	
 	class func appendLeaveAddressToForm(form: Form) {
@@ -88,13 +95,33 @@ class DA31FormFactory: NSObject {
 						cell.titleLabel?.textColor = .red
 					}
 				}
-			<<< PickerInlineRow<USState>() { (row : PickerInlineRow<USState>) -> Void in
+			<<< PickerInlineRow<String>() { (row : PickerInlineRow<String>) -> Void in
 					row.tag = address_state
 					row.title = address_state
 					row.options = PSAddressUtilities.states()
 					row.value = row.options.first
+					let nonErrRule = RuleClosure.init(closure: { (rowValue) -> ValidationError? in
+						return (USState(rawValue: rowValue!) == USState.ERR) ? ValidationError(msg: "Field required!") : nil
+					})
+					row.add(rule: nonErrRule)
 				}.cellSetup { cell, row in
 					cell.backgroundColor = form_row_background
+				}.cellUpdate { cell, row in
+					if !row.isValid {
+						cell.textLabel?.textColor = .red
+					}
+				}
+			<<< ZipCodeRow() { row in
+					row.tag = address_zip
+					row.title = address_zip
+					row.placeholder = "Enter text here"
+					row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
+				}.cellUpdate { cell, row in
+					if !row.isValid {
+						cell.titleLabel?.textColor = .red
+					}
 				}
 			<<< PhoneRow() { row in
 					row.tag = personal_info_phone
@@ -164,7 +191,6 @@ class DA31FormFactory: NSObject {
 				row.tag = da31_station_division
 				row.title = da31_station_division
 				row.placeholder = "Enter text here"
-				row.add(rule: RuleRequired())
 				}.cellSetup { cell, row in
 					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
@@ -175,6 +201,18 @@ class DA31FormFactory: NSObject {
 			<<< TextRow() { row in
 				row.tag = da31_station_post
 				row.title = da31_station_post
+				row.placeholder = "Enter text here"
+				row.add(rule: RuleRequired())
+				}.cellSetup { cell, row in
+					cell.backgroundColor = form_row_background
+				}.cellUpdate { cell, row in
+					if !row.isValid {
+						cell.titleLabel?.textColor = .red
+					}
+				}
+			<<< ZipCodeRow() { row in
+				row.tag = da31_station_zip
+				row.title = da31_station_zip
 				row.placeholder = "Enter text here"
 				row.add(rule: RuleRequired())
 				}.cellSetup { cell, row in
@@ -199,11 +237,17 @@ class DA31FormFactory: NSObject {
 	}
 	
 	class func appendLeaveDaysToForm(form: Form) {
+		
 		form +++ Section("NUMBER OF DAYS LEAVE")
 			<<< IntRow() { row in
 					row.tag = da31_accrued_leave
 					row.title = da31_accrued_leave
-					row.add(rule: RuleRequired())
+					row.placeholder = "N/A"
+					let sumRule = RuleClosure<Int>.init(closure: { (rowValue) -> ValidationError? in
+						let sum = DA31FormFactory.leaveDaysSumForForm(form: form)
+						return (sum <= 0) ? ValidationError(msg: "Fields required!") : nil
+					})
+					row.add(rule: sumRule)
 				}.cellSetup { cell, row in
 					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
@@ -214,7 +258,12 @@ class DA31FormFactory: NSObject {
 			<<< IntRow() { row in
 					row.tag = da31_requested_leave
 					row.title = da31_requested_leave
-					row.add(rule: RuleRequired())
+					row.placeholder = "N/A"
+					let sumRule = RuleClosure<Int>.init(closure: { (rowValue) -> ValidationError? in
+						let sum = DA31FormFactory.leaveDaysSumForForm(form: form)
+						return (sum <= 0) ? ValidationError(msg: "Fields required!") : nil
+					})
+					row.add(rule: sumRule)
 				}.cellSetup { cell, row in
 					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
@@ -225,7 +274,12 @@ class DA31FormFactory: NSObject {
 			<<< IntRow() { row in
 					row.tag = da31_advanced_leave
 					row.title = da31_advanced_leave
-					row.add(rule: RuleRequired())
+					row.placeholder = "N/A"
+					let sumRule = RuleClosure<Int>.init(closure: { (rowValue) -> ValidationError? in
+						let sum = DA31FormFactory.leaveDaysSumForForm(form: form)
+						return (sum <= 0) ? ValidationError(msg: "Fields required!") : nil
+					})
+					row.add(rule: sumRule)
 				}.cellSetup { cell, row in
 					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
@@ -236,7 +290,12 @@ class DA31FormFactory: NSObject {
 			<<< IntRow() { row in
 					row.tag = da31_excess_leave
 					row.title = da31_excess_leave
-					row.add(rule: RuleRequired())
+					row.placeholder = "N/A"
+					let sumRule = RuleClosure<Int>.init(closure: { (rowValue) -> ValidationError? in
+						let sum = DA31FormFactory.leaveDaysSumForForm(form: form)
+						return (sum <= 0) ? ValidationError(msg: "Fields required!") : nil
+					})
+					row.add(rule: sumRule)
 				}.cellSetup { cell, row in
 					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
@@ -256,7 +315,7 @@ class DA31FormFactory: NSObject {
 					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
-						
+						cell.textLabel?.textColor = .red
 					}
 				}
 			<<< DateRow() { row in
@@ -267,7 +326,7 @@ class DA31FormFactory: NSObject {
 					cell.backgroundColor = form_row_background
 				}.cellUpdate { cell, row in
 					if !row.isValid {
-						
+						cell.textLabel?.textColor = .red
 					}
 				}
 	}
@@ -277,6 +336,24 @@ class DA31FormFactory: NSObject {
 	}
 	
 	class func leaveTypes() -> [String] {
-		return [da31_leave_type_other, da31_leave_type_ordinary, da31_leave_type_emergency, da31_leave_type_permissive]
+		return [DA31LeaveType.ERR.rawValue, DA31LeaveType.OTHER.rawValue, DA31LeaveType.ORDINARY.rawValue, DA31LeaveType.EMERGENCY.rawValue, DA31LeaveType.PERMISSIVE.rawValue]
+	}
+	
+	class func leaveDaysSumForForm(form: Form) -> Int {
+		var sum = 0
+		if let accrued = (form.rowBy(tag: da31_accrued_leave) as! IntRow).value {
+			sum = sum + accrued
+		}
+		if let requested = (form.rowBy(tag: da31_requested_leave) as! IntRow).value {
+			sum = sum + requested
+		}
+		if let advanced = (form.rowBy(tag: da31_advanced_leave) as! IntRow).value {
+			sum = sum + advanced
+			
+		}
+		if let excess = (form.rowBy(tag: da31_excess_leave) as! IntRow).value {
+			sum = sum + excess
+		}
+		return sum
 	}
 }
