@@ -12,6 +12,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 fileprivate let container_segue = "container_segue"
 
@@ -23,7 +24,7 @@ class PSMilWebViewController: UIViewController, UIWebViewDelegate, NSURLConnecti
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		// TODO: Start the Spinner
+		SVProgressHUD.show(withStatus: "Connecting...")
 		loadWebAddress()
     }
 	
@@ -56,9 +57,8 @@ class PSMilWebViewController: UIViewController, UIWebViewDelegate, NSURLConnecti
 	}
 	
 	func connection(_ connection: NSURLConnection, didFailWithError error: Error){
-		// TODO: Stop the Spinner
-		//TODO: Handle the errors in a global error alert
-		
+		SVProgressHUD.dismiss()
+		PSErrorHandler.presentError(error: error as NSError?)
 	}
 	
 	// MARK: - NSURLConnectionDataDelegate
@@ -77,10 +77,9 @@ class PSMilWebViewController: UIViewController, UIWebViewDelegate, NSURLConnecti
 	
 	// MARK: - UIWebViewDelegate
 	
+	@available(iOS, deprecated: 9.0)
 	func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool{
-		
 		if !authenticated {
-			// TODO: Display a "Need to Connect Message"
 			_ = NSURLConnection(request: request, delegate: self, startImmediately: true)
 			return false
 		}
@@ -88,13 +87,11 @@ class PSMilWebViewController: UIViewController, UIWebViewDelegate, NSURLConnecti
 	}
 	
 	func webViewDidFinishLoad(_ webView: UIWebView) {
-		// TODO: Stop the Spinner
-
+		SVProgressHUD.dismiss()
 	}
 	
 	func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
-		// TODO: Stop the Spinner
-		// TODO: Display Global Error
-
+		SVProgressHUD.dismiss()
+		PSErrorHandler.presentError(error: error as NSError?)
 	}
 }
