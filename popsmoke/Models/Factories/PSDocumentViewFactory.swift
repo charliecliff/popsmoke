@@ -28,13 +28,13 @@ class PSDocumentViewFactory: NSObject {
 			vc.delegate = vc
 			vc.document = document
 			return vc
-//		case DocumentType.web:
-//			let storyboard = UIStoryboard.init(name: "PSWebViewController", bundle: nil)
-//			guard let vc = storyboard.instantiateInitialViewController() as? PSWebFormViewController else {
-//				return nil
-//			}
-//			vc.document = document
-//			return vc
+		case DocumentType.web:
+			let storyboard = UIStoryboard.init(name: "PSMilWebViewController", bundle: nil)
+			guard let vc = storyboard.instantiateInitialViewController() as? PSMilWebViewController else {
+				return nil
+			}
+			vc.document = document
+			return vc
 		default:
 			return nil
 		}
