@@ -30,7 +30,7 @@ class PSDocumentViewFactory: NSObject {
 			return vc
 		case DocumentType.web:
 			let storyboard = UIStoryboard.init(name: "PSMilWebViewController", bundle: nil)
-			guard let vc = storyboard.instantiateInitialViewController() as? PSMilWebViewController else {
+			guard let vc = storyboard.instantiateInitialViewController() as? PSWebContainerViewController else {
 				return nil
 			}
 			vc.document = document

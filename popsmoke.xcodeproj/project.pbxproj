@@ -44,6 +44,7 @@
 		DA0287F11E439FD4008B481B /* SkullAndBonesMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0287E81E439FD4008B481B /* SkullAndBonesMenuView.m */; };
 		DA0B26871E362A62000CC2DC /* PSMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0B26861E362A62000CC2DC /* PSMainViewController.swift */; };
 		DA0B26891E362A6D000CC2DC /* PSMainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */; };
+		DA0EF03E1E4D7F3E00BD30E2 /* PSWebContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA0EF03D1E4D7F3E00BD30E2 /* PSWebContainerViewController.swift */; };
 		DA1402281E44F608005EEE31 /* PSAddressUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1402241E44F608005EEE31 /* PSAddressUtilities.swift */; };
 		DA1402291E44F608005EEE31 /* PSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1402251E44F608005EEE31 /* PSConstants.swift */; };
 		DA14022A1E44F608005EEE31 /* PSPacketUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1402261E44F608005EEE31 /* PSPacketUtilities.swift */; };
@@ -162,6 +163,7 @@
 		DA0287E81E439FD4008B481B /* SkullAndBonesMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkullAndBonesMenuView.m; sourceTree = "<group>"; };
 		DA0B26861E362A62000CC2DC /* PSMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSMainViewController.swift; sourceTree = "<group>"; };
 		DA0B26881E362A6D000CC2DC /* PSMainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSMainStoryboard.storyboard; sourceTree = "<group>"; };
+		DA0EF03D1E4D7F3E00BD30E2 /* PSWebContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSWebContainerViewController.swift; sourceTree = "<group>"; };
 		DA1402241E44F608005EEE31 /* PSAddressUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSAddressUtilities.swift; sourceTree = "<group>"; };
 		DA1402251E44F608005EEE31 /* PSConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSConstants.swift; sourceTree = "<group>"; };
 		DA1402261E44F608005EEE31 /* PSPacketUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPacketUtilities.swift; sourceTree = "<group>"; };
@@ -391,6 +393,7 @@
 				DAD367301E43ACD5009980DC /* PSSettingsViewController.swift */,
 				DAE4E7651E4ABE9D00A8CC5D /* PSMilWebViewController.storyboard */,
 				DAE4E7641E4ABE9D00A8CC5D /* PSMilWebViewController.swift */,
+				DA0EF03D1E4D7F3E00BD30E2 /* PSWebContainerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -847,6 +850,7 @@
 				DAF836A71E3E4330003178C4 /* PSPacketHistoryTableViewController.swift in Sources */,
 				DA22F4A71E4C1DE400BE730B /* HROPopupController.m in Sources */,
 				DA01F01D1E39AA9100B7FB04 /* PSPDFContainerViewController.swift in Sources */,
+				DA0EF03E1E4D7F3E00BD30E2 /* PSWebContainerViewController.swift in Sources */,
 				DAF8368E1E3AA68E003178C4 /* DA31PDFFiller.swift in Sources */,
 				DAF836871E3AA677003178C4 /* PSPacketViewFactory.swift in Sources */,
 				DA14022B1E44F608005EEE31 /* PSPersonalInfoUtilities.swift in Sources */,
