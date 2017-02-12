@@ -16,6 +16,16 @@
 		</dict>
 		<dict>
 			<key>type</key>
+			<string>web</string>
+			<key>url</key>
+			<string>https://trips.safety.army.mil/army/TRiPSAssessment</string>
+			<key>name</key>
+			<string>TRIPS</string>
+			<key>icon</key>
+			<string>form</string>
+		</dict>
+		<dict>
+			<key>type</key>
 			<string>attachment</string>
 			<key>attachment_type</key>
 			<string>insurance</string>

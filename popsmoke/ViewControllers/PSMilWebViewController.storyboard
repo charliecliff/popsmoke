@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8l5-Z6-ybA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="black-ops-one.regular.ttf">
+            <string>BlackOpsOne-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Web Container View Controller-->
+        <scene sceneID="Y4W-cE-C4A">
+            <objects>
+                <viewController id="8l5-Z6-ybA" customClass="PSWebContainerViewController" customModule="popsmoke" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T71-NX-9vJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="L6w-yp-ZT5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oaH-mb-s7D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LYO-jY-BfE">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <connections>
+                                    <segue destination="bid-s7-5zm" kind="embed" identifier="container_segue" id="5nw-ux-1cC"/>
+                                </connections>
+                            </containerView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbp-MG-fFo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwK-9c-a4p">
+                                        <rect key="frame" x="12" y="10" width="44" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="HCn-sT-P4u"/>
+                                            <constraint firstAttribute="width" constant="44" id="bbD-AQ-deb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="BlackOpsOne-Regular" family="Black Ops One" pointSize="15"/>
+                                        <state key="normal" title="BACK">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressBackButton:" destination="8l5-Z6-ybA" eventType="touchUpInside" id="rgk-4U-0mG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Cof-M7-H8C"/>
+                                    <constraint firstItem="gwK-9c-a4p" firstAttribute="centerY" secondItem="zbp-MG-fFo" secondAttribute="centerY" id="JbJ-cF-VQl"/>
+                                    <constraint firstItem="gwK-9c-a4p" firstAttribute="leading" secondItem="zbp-MG-fFo" secondAttribute="leading" constant="12" id="gHO-Su-EzR"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEW-kZ-wML" userLabel="Footer">
+                                <rect key="frame" x="0.0" y="667" width="375" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLU-n9-kTV">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                        <fontDescription key="fontDescription" name="BlackOpsOne-Regular" family="Black Ops One" pointSize="30"/>
+                                        <state key="normal" title="DOWNLOAD">
+                                            <color key="titleColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressDownloadButton:" destination="8l5-Z6-ybA" eventType="touchUpInside" id="y5u-J2-D54"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.043137254899999998" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="GLU-n9-kTV" secondAttribute="bottom" id="ACR-fC-vua"/>
+                                    <constraint firstItem="GLU-n9-kTV" firstAttribute="leading" secondItem="cEW-kZ-wML" secondAttribute="leading" id="M4G-o6-RjJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="GLU-n9-kTV" secondAttribute="trailing" id="WNd-rw-8zQ"/>
+                                    <constraint firstItem="GLU-n9-kTV" firstAttribute="top" secondItem="cEW-kZ-wML" secondAttribute="top" id="af7-gZ-UX5"/>
+                                    <constraint firstAttribute="height" constant="64" id="yVk-5K-6g8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zbp-MG-fFo" firstAttribute="leading" secondItem="oaH-mb-s7D" secondAttribute="leading" id="2nh-vQ-RP9"/>
+                            <constraint firstItem="cEW-kZ-wML" firstAttribute="leading" secondItem="oaH-mb-s7D" secondAttribute="leading" id="3ty-kr-Nfn"/>
+                            <constraint firstItem="LYO-jY-BfE" firstAttribute="top" secondItem="zbp-MG-fFo" secondAttribute="bottom" id="GPa-QY-kpq"/>
+                            <constraint firstAttribute="trailing" secondItem="cEW-kZ-wML" secondAttribute="trailing" id="I0r-ct-8AM"/>
+                            <constraint firstItem="zbp-MG-fFo" firstAttribute="top" secondItem="oaH-mb-s7D" secondAttribute="topMargin" id="RM3-0o-mgl"/>
+                            <constraint firstItem="L6w-yp-ZT5" firstAttribute="top" secondItem="LYO-jY-BfE" secondAttribute="bottom" id="Wvc-PV-gJR"/>
+                            <constraint firstItem="LYO-jY-BfE" firstAttribute="leading" secondItem="oaH-mb-s7D" secondAttribute="leading" id="XCh-RT-h4B"/>
+                            <constraint firstAttribute="trailing" secondItem="zbp-MG-fFo" secondAttribute="trailing" id="afM-a6-eZA"/>
+                            <constraint firstAttribute="trailing" secondItem="LYO-jY-BfE" secondAttribute="trailing" id="di9-5G-r2x"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="cEW-kZ-wML" secondAttribute="bottom" constant="-64" id="z5V-WU-ZbY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bottomViewConstraint" destination="z5V-WU-ZbY" id="nB5-Qb-AdA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IdD-Oa-pnh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="101"/>
+        </scene>
+        <!--Mil Web View Controller-->
+        <scene sceneID="GGV-wq-vZ6">
+            <objects>
+                <viewController id="bid-s7-5zm" customClass="PSMilWebViewController" customModule="popsmoke" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eHB-Ae-nGn"/>
+                        <viewControllerLayoutGuide type="bottom" id="HSE-AN-Yre"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ezf-6y-oN8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j1p-1h-3s4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bid-s7-5zm" id="x21-Qa-ixI"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="j1p-1h-3s4" firstAttribute="leading" secondItem="Ezf-6y-oN8" secondAttribute="leading" id="Aje-3d-Ep6"/>
+                            <constraint firstAttribute="trailing" secondItem="j1p-1h-3s4" secondAttribute="trailing" id="IRP-Mt-0LN"/>
+                            <constraint firstItem="HSE-AN-Yre" firstAttribute="top" secondItem="j1p-1h-3s4" secondAttribute="bottom" id="mrl-NP-fhm"/>
+                            <constraint firstItem="j1p-1h-3s4" firstAttribute="top" secondItem="eHB-Ae-nGn" secondAttribute="bottom" id="txv-XB-Sai"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="j1p-1h-3s4" id="XPd-6x-QJ4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wLo-17-yIq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873" y="100"/>
+        </scene>
+    </scenes>
+</document>
