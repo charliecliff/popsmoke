@@ -22,7 +22,7 @@
 			<key>name</key>
 			<string>TRIPS</string>
 			<key>icon</key>
-			<string>icon_form</string>
+			<string>form</string>
 		</dict>
 		<dict>
 			<key>type</key>

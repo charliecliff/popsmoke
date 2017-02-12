@@ -131,7 +131,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PEr-4L-5df">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PEr-4L-5df">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="brT-rK-Xud">
@@ -205,7 +205,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="PopSmoke" id="9vL-GM-D5F">
-                        <barButtonItem key="leftBarButtonItem" image="gear" id="9o7-DO-aCD"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="9o7-DO-aCD"/>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="PEr-4L-5df" id="GHI-Yi-pFP"/>
@@ -214,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3aP-v5-COb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-138" y="122"/>
+            <point key="canvasLocation" x="-374" y="122"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="5Je-K9-yhy">
@@ -289,12 +289,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTa-yn-kCW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-847.20000000000005" y="795.6521739130435"/>
+            <point key="canvasLocation" x="-848" y="928"/>
         </scene>
     </scenes>
     <resources>
         <image name="PopSmoke" width="185" height="44"/>
         <image name="facebook" width="80" height="80"/>
-        <image name="gear" width="22" height="22"/>
     </resources>
 </document>

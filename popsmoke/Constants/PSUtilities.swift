@@ -18,4 +18,16 @@ class PSUtilities: NSObject {
 		}
 		return "\(uuid)"
 	}
+	
+	class func urlStringIsPDF(url: String) -> Bool {
+		let last4 = String(url.characters.suffix(4))
+		return (last4 == ".pdf")
+	}
+	
+	class func fileNameFrom(url: URL) -> String {
+		let urlPath = url.absoluteString
+		let components = urlPath.components(separatedBy: "/")
+		return components.last!
+	}
+
 }

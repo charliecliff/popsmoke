@@ -16,9 +16,13 @@ import SVProgressHUD
 
 fileprivate let container_segue = "container_segue"
 
+protocol PSMilWebDelegate: class {
+	func didLoadURL(url: URL)
+}
 class PSMilWebViewController: UIViewController, UIWebViewDelegate, NSURLConnectionDelegate, NSURLConnectionDataDelegate {
 	
 	private var authenticated = false
+	var delegate: PSMilWebDelegate?
 	weak var document: PSDocument?
 	@IBOutlet weak var webView: UIWebView?
 
@@ -88,6 +92,7 @@ class PSMilWebViewController: UIViewController, UIWebViewDelegate, NSURLConnecti
 	
 	func webViewDidFinishLoad(_ webView: UIWebView) {
 		SVProgressHUD.dismiss()
+		delegate?.didLoadURL(url: (webView.request?.url)!)
 	}
 	
 	func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {

@@ -57,18 +57,47 @@
                                     <constraint firstItem="gwK-9c-a4p" firstAttribute="leading" secondItem="zbp-MG-fFo" secondAttribute="leading" constant="12" id="gHO-Su-EzR"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cEW-kZ-wML" userLabel="Footer">
+                                <rect key="frame" x="0.0" y="667" width="375" height="64"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLU-n9-kTV">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                        <fontDescription key="fontDescription" name="BlackOpsOne-Regular" family="Black Ops One" pointSize="30"/>
+                                        <state key="normal" title="DOWNLOAD">
+                                            <color key="titleColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="didPressDownloadButton:" destination="8l5-Z6-ybA" eventType="touchUpInside" id="y5u-J2-D54"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.043137254899999998" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="GLU-n9-kTV" secondAttribute="bottom" id="ACR-fC-vua"/>
+                                    <constraint firstItem="GLU-n9-kTV" firstAttribute="leading" secondItem="cEW-kZ-wML" secondAttribute="leading" id="M4G-o6-RjJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="GLU-n9-kTV" secondAttribute="trailing" id="WNd-rw-8zQ"/>
+                                    <constraint firstItem="GLU-n9-kTV" firstAttribute="top" secondItem="cEW-kZ-wML" secondAttribute="top" id="af7-gZ-UX5"/>
+                                    <constraint firstAttribute="height" constant="64" id="yVk-5K-6g8"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="zbp-MG-fFo" firstAttribute="leading" secondItem="oaH-mb-s7D" secondAttribute="leading" id="2nh-vQ-RP9"/>
+                            <constraint firstItem="cEW-kZ-wML" firstAttribute="leading" secondItem="oaH-mb-s7D" secondAttribute="leading" id="3ty-kr-Nfn"/>
                             <constraint firstItem="LYO-jY-BfE" firstAttribute="top" secondItem="zbp-MG-fFo" secondAttribute="bottom" id="GPa-QY-kpq"/>
+                            <constraint firstAttribute="trailing" secondItem="cEW-kZ-wML" secondAttribute="trailing" id="I0r-ct-8AM"/>
                             <constraint firstItem="zbp-MG-fFo" firstAttribute="top" secondItem="oaH-mb-s7D" secondAttribute="topMargin" id="RM3-0o-mgl"/>
                             <constraint firstItem="L6w-yp-ZT5" firstAttribute="top" secondItem="LYO-jY-BfE" secondAttribute="bottom" id="Wvc-PV-gJR"/>
                             <constraint firstItem="LYO-jY-BfE" firstAttribute="leading" secondItem="oaH-mb-s7D" secondAttribute="leading" id="XCh-RT-h4B"/>
                             <constraint firstAttribute="trailing" secondItem="zbp-MG-fFo" secondAttribute="trailing" id="afM-a6-eZA"/>
                             <constraint firstAttribute="trailing" secondItem="LYO-jY-BfE" secondAttribute="trailing" id="di9-5G-r2x"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="cEW-kZ-wML" secondAttribute="bottom" constant="-64" id="z5V-WU-ZbY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomViewConstraint" destination="z5V-WU-ZbY" id="nB5-Qb-AdA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IdD-Oa-pnh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

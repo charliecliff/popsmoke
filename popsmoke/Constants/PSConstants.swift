@@ -28,4 +28,3 @@ let form_row_background = UIColor.init(colorLiteralRed: 1, green: 1, blue: 1, al
 let kUserFileName = "/current_user.txt"
 
 // MARK: - Allowed Military URLS
-
