@@ -14,8 +14,21 @@ import FBSDKLoginKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-
+	var helper: IAPHelper?
+	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+		
+		
+		let productIDs: Set<ProductIdentifier> = ["popsmokeTest_001", "product_001"]
+		helper = IAPHelper.init(productIds: productIDs)
+		helper?.requestProducts { (success, products) in
+			
+			
+			
+			print("Got Some Products")
+		}
+		
+		
 		
 		let storyboard = UIStoryboard(name: kLoadingStoryboard, bundle: nil)
 		self.window?.rootViewController = storyboard.instantiateInitialViewController()

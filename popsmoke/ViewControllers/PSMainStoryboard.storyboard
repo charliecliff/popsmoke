@@ -214,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3aP-v5-COb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-374" y="122"/>
+            <point key="canvasLocation" x="-153" y="122"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="5Je-K9-yhy">
@@ -229,17 +229,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rrZ-t1-XWk" userLabel="Logout Containert">
-                                <rect key="frame" x="133" y="496" width="108" height="108"/>
+                                <rect key="frame" x="128" y="486" width="118" height="118"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="lce-XZ-xTv">
-                                        <rect key="frame" x="24" y="20" width="60" height="60"/>
+                                        <rect key="frame" x="24" y="20" width="70" height="70"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="60" id="OBL-1J-7xC"/>
-                                            <constraint firstAttribute="height" constant="60" id="elZ-Ix-R5g"/>
+                                            <constraint firstAttribute="width" constant="70" id="OBL-1J-7xC"/>
+                                            <constraint firstAttribute="height" constant="70" id="elZ-Ix-R5g"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGOUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRe-KI-EoH">
-                                        <rect key="frame" x="0.0" y="80" width="108" height="28"/>
+                                        <rect key="frame" x="0.0" y="90" width="118" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="28" id="LCH-Ja-WWl"/>
                                         </constraints>
@@ -248,7 +248,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hjV-X0-IWz">
-                                        <rect key="frame" x="0.0" y="0.0" width="108" height="108"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
                                         <connections>
                                             <action selector="didPressLogoutButtonWithSender:" destination="2eP-cI-VJv" eventType="touchUpInside" id="dod-FN-E9j"/>
                                         </connections>
@@ -269,6 +269,48 @@
                                     <constraint firstItem="lce-XZ-xTv" firstAttribute="top" secondItem="rrZ-t1-XWk" secondAttribute="top" constant="20" id="u3v-TQ-w68"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJO-La-EU3" userLabel="Shopping Cart Container">
+                                <rect key="frame" x="128" y="348" width="118" height="118"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopping_cart" translatesAutoresizingMaskIntoConstraints="NO" id="clo-R7-QBu">
+                                        <rect key="frame" x="24" y="20" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="91m-eL-LZ9"/>
+                                            <constraint firstAttribute="height" constant="70" id="HtF-KB-NVR"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUBSCRIBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wJu-n5-cBu">
+                                        <rect key="frame" x="0.0" y="90" width="118" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="zDg-bZ-rTA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iL0-ty-AAH">
+                                        <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
+                                        <connections>
+                                            <action selector="didPressLogoutButtonWithSender:" destination="2eP-cI-VJv" eventType="touchUpInside" id="2pf-WN-NYS"/>
+                                            <action selector="didPressShoppingCartButtonWithSender:" destination="2eP-cI-VJv" eventType="touchUpInside" id="rpO-Pe-tta"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="iL0-ty-AAH" firstAttribute="top" secondItem="uJO-La-EU3" secondAttribute="top" id="2tn-LN-Syp"/>
+                                    <constraint firstAttribute="bottom" secondItem="wJu-n5-cBu" secondAttribute="bottom" id="J9U-QB-R7o"/>
+                                    <constraint firstAttribute="bottom" secondItem="iL0-ty-AAH" secondAttribute="bottom" id="NVp-Bm-I4d"/>
+                                    <constraint firstItem="clo-R7-QBu" firstAttribute="centerX" secondItem="uJO-La-EU3" secondAttribute="centerX" id="Z2b-nn-lab"/>
+                                    <constraint firstAttribute="width" secondItem="uJO-La-EU3" secondAttribute="height" id="axp-PB-74l"/>
+                                    <constraint firstItem="wJu-n5-cBu" firstAttribute="leading" secondItem="uJO-La-EU3" secondAttribute="leading" id="dCD-ef-2Nf"/>
+                                    <constraint firstItem="wJu-n5-cBu" firstAttribute="top" secondItem="clo-R7-QBu" secondAttribute="bottom" id="iAI-Xz-FjW"/>
+                                    <constraint firstItem="clo-R7-QBu" firstAttribute="top" secondItem="uJO-La-EU3" secondAttribute="top" constant="20" id="lfa-kl-HF9"/>
+                                    <constraint firstAttribute="trailing" secondItem="wJu-n5-cBu" secondAttribute="trailing" id="lnV-xz-CkL"/>
+                                    <constraint firstItem="iL0-ty-AAH" firstAttribute="leading" secondItem="uJO-La-EU3" secondAttribute="leading" id="r96-Ib-zr7"/>
+                                    <constraint firstAttribute="trailing" secondItem="iL0-ty-AAH" secondAttribute="trailing" id="xeK-3u-6xA"/>
+                                </constraints>
+                            </view>
                             <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rpp-fa-fgE">
                                 <rect key="frame" x="76" y="606" width="223" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -282,10 +324,17 @@
                             <constraint firstItem="rpp-fa-fgE" firstAttribute="top" secondItem="rrZ-t1-XWk" secondAttribute="bottom" constant="2" id="209-QG-fpA"/>
                             <constraint firstItem="rrZ-t1-XWk" firstAttribute="centerX" secondItem="iT4-XB-c6T" secondAttribute="centerX" id="4Tf-Qt-csC"/>
                             <constraint firstAttribute="bottomMargin" secondItem="rrZ-t1-XWk" secondAttribute="bottom" constant="19" id="GeF-DI-PoS"/>
+                            <constraint firstItem="uJO-La-EU3" firstAttribute="centerX" secondItem="iT4-XB-c6T" secondAttribute="centerX" id="JJE-yb-KTJ"/>
                             <constraint firstItem="rpp-fa-fgE" firstAttribute="leading" secondItem="iT4-XB-c6T" secondAttribute="leadingMargin" constant="60" id="ps8-T0-hg9"/>
+                            <constraint firstItem="rrZ-t1-XWk" firstAttribute="top" secondItem="uJO-La-EU3" secondAttribute="bottom" constant="20" id="quU-2a-Fc6"/>
+                            <constraint firstItem="uJO-La-EU3" firstAttribute="width" secondItem="uJO-La-EU3" secondAttribute="height" id="sja-Jh-u0e"/>
                             <constraint firstAttribute="trailingMargin" secondItem="rpp-fa-fgE" secondAttribute="trailing" constant="60" id="zcW-kW-CLc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="facebookIcon" destination="lce-XZ-xTv" id="D0F-W7-NiI"/>
+                        <outlet property="shoppingCartIcon" destination="clo-R7-QBu" id="ICh-0F-AkO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kTa-yn-kCW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -295,5 +344,6 @@
     <resources>
         <image name="PopSmoke" width="185" height="44"/>
         <image name="facebook" width="80" height="80"/>
+        <image name="shopping_cart" width="50" height="50"/>
     </resources>
 </document>
