@@ -10,14 +10,22 @@ import UIKit
 
 class PSSettingsViewController: UIViewController {
 
+	@IBOutlet public var facebookIcon: UIImageView?
+	@IBOutlet public var shoppingCartIcon: UIImageView?
+	
     override func viewDidLoad() {
         super.viewDidLoad()
-		
+		facebookIcon?.renderWithColor(color: .white)
+		shoppingCartIcon?.renderWithColor(color: .white)
     }
 	
 	// MARK: - Actions
 	
 	@IBAction func didPressLogoutButton(sender: UIButton) {
 		PSUserManager.sharedInstance.logout()
+	}
+	
+	@IBAction func didPressShoppingCartButton(sender: UIButton) {
+		
 	}
 }

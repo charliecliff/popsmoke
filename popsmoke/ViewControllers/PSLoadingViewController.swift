@@ -13,7 +13,7 @@ import RxCocoa
 class PSLoadingViewController: UIViewController {
 	
 	private var subscription : Disposable?
-	
+		
 	override func viewDidDisappear(_ animated: Bool) {
 		subscription?.dispose()
 		super.viewDidDisappear(true)
