@@ -50,6 +50,7 @@
 		DA53E22C1E46F61D00F95D6B /* PSLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA53E22A1E46F61D00F95D6B /* PSLoadingViewController.swift */; };
 		DA53E22F1E46F76300F95D6B /* PSLoading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA53E22E1E46F76300F95D6B /* PSLoading.storyboard */; };
 		DA5C09141E4ADACC00FFF7E8 /* DA_31.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DA5C09131E4ADACC00FFF7E8 /* DA_31.pdf */; };
+		DA5CE9D21E52694C001DA076 /* PSProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5CE9D11E52694C001DA076 /* PSProfileViewController.swift */; };
 		DA5E22BC1E4FCD48003AF0F2 /* PSMilDownloadUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E22BB1E4FCD48003AF0F2 /* PSMilDownloadUtility.swift */; };
 		DA5E22BE1E4FF94C003AF0F2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA5E22BD1E4FF94C003AF0F2 /* StoreKit.framework */; };
 		DA5E22CD1E4FFF0A003AF0F2 /* bottomBar.png in Resources */ = {isa = PBXBuildFile; fileRef = DA5E22C21E4FFF0A003AF0F2 /* bottomBar.png */; };
@@ -174,6 +175,7 @@
 		DA53E22A1E46F61D00F95D6B /* PSLoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSLoadingViewController.swift; sourceTree = "<group>"; };
 		DA53E22E1E46F76300F95D6B /* PSLoading.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSLoading.storyboard; sourceTree = "<group>"; };
 		DA5C09131E4ADACC00FFF7E8 /* DA_31.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = DA_31.pdf; sourceTree = "<group>"; };
+		DA5CE9D11E52694C001DA076 /* PSProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSProfileViewController.swift; sourceTree = "<group>"; };
 		DA5E22BB1E4FCD48003AF0F2 /* PSMilDownloadUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSMilDownloadUtility.swift; sourceTree = "<group>"; };
 		DA5E22BD1E4FF94C003AF0F2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		DA5E22C21E4FFF0A003AF0F2 /* bottomBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottomBar.png; sourceTree = "<group>"; };
@@ -366,9 +368,10 @@
 				DAF836A61E3E4330003178C4 /* PSPacketHistoryTableViewController.swift */,
 				DA01F01E1E39AAB100B7FB04 /* PSPDFContainerViewController.storyboard */,
 				DA01F01C1E39AA9100B7FB04 /* PSPDFContainerViewController.swift */,
-				DAD367301E43ACD5009980DC /* PSSettingsViewController.swift */,
+				DA5CE9D11E52694C001DA076 /* PSProfileViewController.swift */,
 				DAE4E7651E4ABE9D00A8CC5D /* PSMilWebViewController.storyboard */,
 				DAE4E7641E4ABE9D00A8CC5D /* PSMilWebViewController.swift */,
+				DAD367301E43ACD5009980DC /* PSSettingsViewController.swift */,
 				DA0EF03D1E4D7F3E00BD30E2 /* PSWebContainerViewController.swift */,
 			);
 			path = ViewControllers;
@@ -876,6 +879,7 @@
 				DA01F01D1E39AA9100B7FB04 /* PSPDFContainerViewController.swift in Sources */,
 				DA0EF03E1E4D7F3E00BD30E2 /* PSWebContainerViewController.swift in Sources */,
 				DAF8368E1E3AA68E003178C4 /* DA31PDFFiller.swift in Sources */,
+				DA5CE9D21E52694C001DA076 /* PSProfileViewController.swift in Sources */,
 				DAF836871E3AA677003178C4 /* PSPacketViewFactory.swift in Sources */,
 				DA14022B1E44F608005EEE31 /* PSPersonalInfoUtilities.swift in Sources */,
 				DA1402291E44F608005EEE31 /* PSConstants.swift in Sources */,

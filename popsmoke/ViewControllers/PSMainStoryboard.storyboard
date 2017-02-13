@@ -291,7 +291,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iL0-ty-AAH">
                                         <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
                                         <connections>
-                                            <action selector="didPressLogoutButtonWithSender:" destination="2eP-cI-VJv" eventType="touchUpInside" id="2pf-WN-NYS"/>
                                             <action selector="didPressShoppingCartButtonWithSender:" destination="2eP-cI-VJv" eventType="touchUpInside" id="rpO-Pe-tta"/>
                                         </connections>
                                     </button>
@@ -318,6 +317,47 @@
                                     <constraint firstAttribute="height" constant="1" id="iaE-1j-e8W"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iMb-Ip-l0r" userLabel="Profile Container">
+                                <rect key="frame" x="128.5" y="210" width="118" height="118"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_profile" translatesAutoresizingMaskIntoConstraints="NO" id="nhr-O6-QXw">
+                                        <rect key="frame" x="24" y="20" width="70" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="4cw-tU-EWb"/>
+                                            <constraint firstAttribute="height" constant="70" id="mb2-Yp-m4B"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PROFILE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ck-qX-0ja">
+                                        <rect key="frame" x="0.0" y="90" width="118" height="28"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="w47-8v-gwJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Montserrat-Light" family="Montserrat" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbN-w1-p92">
+                                        <rect key="frame" x="0.0" y="0.0" width="118" height="118"/>
+                                        <connections>
+                                            <action selector="didPressProfileButtonWithSender:" destination="2eP-cI-VJv" eventType="touchUpInside" id="Ip8-6d-CrK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="tbN-w1-p92" firstAttribute="leading" secondItem="iMb-Ip-l0r" secondAttribute="leading" id="137-Lz-KcQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="tbN-w1-p92" secondAttribute="bottom" id="5jM-7O-6EV"/>
+                                    <constraint firstAttribute="width" secondItem="iMb-Ip-l0r" secondAttribute="height" id="Bgj-3F-PcC"/>
+                                    <constraint firstItem="tbN-w1-p92" firstAttribute="top" secondItem="iMb-Ip-l0r" secondAttribute="top" id="DEO-3e-ztM"/>
+                                    <constraint firstItem="1ck-qX-0ja" firstAttribute="leading" secondItem="iMb-Ip-l0r" secondAttribute="leading" id="SbT-rH-ksC"/>
+                                    <constraint firstAttribute="bottom" secondItem="1ck-qX-0ja" secondAttribute="bottom" id="Tbs-Xf-Grk"/>
+                                    <constraint firstAttribute="trailing" secondItem="1ck-qX-0ja" secondAttribute="trailing" id="X94-1N-91C"/>
+                                    <constraint firstItem="nhr-O6-QXw" firstAttribute="centerX" secondItem="iMb-Ip-l0r" secondAttribute="centerX" id="hap-mf-7MU"/>
+                                    <constraint firstAttribute="trailing" secondItem="tbN-w1-p92" secondAttribute="trailing" id="mgO-lz-7Cw"/>
+                                    <constraint firstItem="nhr-O6-QXw" firstAttribute="top" secondItem="iMb-Ip-l0r" secondAttribute="top" constant="20" id="nwW-37-uad"/>
+                                    <constraint firstItem="1ck-qX-0ja" firstAttribute="top" secondItem="nhr-O6-QXw" secondAttribute="bottom" id="unm-wh-KFX"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -325,6 +365,10 @@
                             <constraint firstItem="rrZ-t1-XWk" firstAttribute="centerX" secondItem="iT4-XB-c6T" secondAttribute="centerX" id="4Tf-Qt-csC"/>
                             <constraint firstAttribute="bottomMargin" secondItem="rrZ-t1-XWk" secondAttribute="bottom" constant="19" id="GeF-DI-PoS"/>
                             <constraint firstItem="uJO-La-EU3" firstAttribute="centerX" secondItem="iT4-XB-c6T" secondAttribute="centerX" id="JJE-yb-KTJ"/>
+                            <constraint firstItem="iMb-Ip-l0r" firstAttribute="width" secondItem="iMb-Ip-l0r" secondAttribute="height" id="LyM-ZI-G4X"/>
+                            <constraint firstItem="uJO-La-EU3" firstAttribute="top" secondItem="iMb-Ip-l0r" secondAttribute="bottom" constant="20" id="YG9-M9-lYT"/>
+                            <constraint firstItem="iMb-Ip-l0r" firstAttribute="width" secondItem="iMb-Ip-l0r" secondAttribute="height" id="bLV-0y-j2R"/>
+                            <constraint firstItem="iMb-Ip-l0r" firstAttribute="centerX" secondItem="iT4-XB-c6T" secondAttribute="centerX" id="ldt-nG-1ga"/>
                             <constraint firstItem="rpp-fa-fgE" firstAttribute="leading" secondItem="iT4-XB-c6T" secondAttribute="leadingMargin" constant="60" id="ps8-T0-hg9"/>
                             <constraint firstItem="rrZ-t1-XWk" firstAttribute="top" secondItem="uJO-La-EU3" secondAttribute="bottom" constant="20" id="quU-2a-Fc6"/>
                             <constraint firstItem="uJO-La-EU3" firstAttribute="width" secondItem="uJO-La-EU3" secondAttribute="height" id="sja-Jh-u0e"/>
@@ -333,6 +377,7 @@
                     </view>
                     <connections>
                         <outlet property="facebookIcon" destination="lce-XZ-xTv" id="D0F-W7-NiI"/>
+                        <outlet property="profileIcon" destination="nhr-O6-QXw" id="k3b-u3-68H"/>
                         <outlet property="shoppingCartIcon" destination="clo-R7-QBu" id="ICh-0F-AkO"/>
                     </connections>
                 </viewController>
@@ -345,5 +390,6 @@
         <image name="PopSmoke" width="185" height="44"/>
         <image name="facebook" width="80" height="80"/>
         <image name="shopping_cart" width="50" height="50"/>
+        <image name="user_profile" width="70" height="70"/>
     </resources>
 </document>
