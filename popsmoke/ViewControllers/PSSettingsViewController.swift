@@ -32,7 +32,7 @@ class PSSettingsViewController: UIViewController {
 	}
 	
 	@IBAction func didPressProfileButton(sender: UIButton) {
-		let storyboard = UIStoryboard(name: "PSSetting", bundle: nil)
+		let storyboard = UIStoryboard(name: kProfileStoryboard, bundle: nil)
 		let vc = storyboard.instantiateInitialViewController()
 		self.parent?.navigationController?.pushViewController(vc!, animated: true)
 	}
