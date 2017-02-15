@@ -168,3 +168,10 @@ extension PSPurchaseManager: SKPaymentTransactionObserver {
 		saveLicense()
 	}
 }
+
+extension PSPurchaseManager: PSPermissions {
+	
+	func allowedToCreatePacket() -> Bool {
+		return (license.type() != LicenseType.none)
+	}
+}

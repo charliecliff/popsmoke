@@ -8,6 +8,11 @@
 
 import CoreFoundation
 
+enum LicenseType: String {
+	case none		= "NONE"
+	case individual	= "INDIVIDUAL"
+}
+
 fileprivate let kPurchasedIndividualLicense = "individual_license"
 
 class PSLicense: NSObject, NSCoding {
@@ -22,6 +27,15 @@ class PSLicense: NSObject, NSCoding {
 	
 	func didPurchaseIndividualLicense() {
 		hasPurchasedIndividualLicense = true
+	}
+	
+	// MARK: - State Machine
+	
+	func type() -> LicenseType {
+		if hasPurchasedIndividualLicense {
+			return LicenseType.individual
+		}
+		return LicenseType.none
 	}
 	
 	// MARK: - NSCoding

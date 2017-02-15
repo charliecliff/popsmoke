@@ -77,6 +77,7 @@
 		DA9465001E52D9F3006FBEDA /* PSPersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9464FF1E52D9F3006FBEDA /* PSPersonalInfoViewController.swift */; };
 		DA9465021E540566006FBEDA /* PSPurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9465011E540566006FBEDA /* PSPurchaseManager.swift */; };
 		DA9465041E5419D9006FBEDA /* PSLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9465031E5419D9006FBEDA /* PSLicense.swift */; };
+		DA9465271E54EBAE006FBEDA /* PSPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9465261E54EBAE006FBEDA /* PSPermissions.swift */; };
 		DAB08D9A1E38F68100F2E263 /* PSFormContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB08D981E38F68100F2E263 /* PSFormContainer.storyboard */; };
 		DAB08D9B1E38F68100F2E263 /* PSFormContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB08D991E38F68100F2E263 /* PSFormContainerViewController.swift */; };
 		DAB08D9D1E38F91F00F2E263 /* PSImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB08D9C1E38F91F00F2E263 /* PSImagePickerController.swift */; };
@@ -215,6 +216,7 @@
 		DA9464FF1E52D9F3006FBEDA /* PSPersonalInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPersonalInfoViewController.swift; sourceTree = "<group>"; };
 		DA9465011E540566006FBEDA /* PSPurchaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPurchaseManager.swift; sourceTree = "<group>"; };
 		DA9465031E5419D9006FBEDA /* PSLicense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSLicense.swift; sourceTree = "<group>"; };
+		DA9465261E54EBAE006FBEDA /* PSPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPermissions.swift; sourceTree = "<group>"; };
 		DAB08D981E38F68100F2E263 /* PSFormContainer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSFormContainer.storyboard; sourceTree = "<group>"; };
 		DAB08D991E38F68100F2E263 /* PSFormContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSFormContainerViewController.swift; sourceTree = "<group>"; };
 		DAB08D9C1E38F91F00F2E263 /* PSImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSImagePickerController.swift; sourceTree = "<group>"; };
@@ -614,6 +616,7 @@
 			children = (
 				DA0287AE1E40FC59008B481B /* PSUserProvider.swift */,
 				DAF836A21E3E3CBE003178C4 /* PSPacketBuilder.swift */,
+				DA9465261E54EBAE006FBEDA /* PSPermissions.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -908,6 +911,7 @@
 				DA0287A91E40F3E7008B481B /* REKIFacebookClient.swift in Sources */,
 				DA5E22E31E503544003AF0F2 /* HROPopupController.m in Sources */,
 				DA53E22C1E46F61D00F95D6B /* PSLoadingViewController.swift in Sources */,
+				DA9465271E54EBAE006FBEDA /* PSPermissions.swift in Sources */,
 				DAF836861E3AA677003178C4 /* PSFormViewControllerFactory.swift in Sources */,
 				DA5007F31E28BBA80038A5E8 /* AppDelegate.swift in Sources */,
 				DAF836851E3AA677003178C4 /* PSFormContainerViewFactory.swift in Sources */,

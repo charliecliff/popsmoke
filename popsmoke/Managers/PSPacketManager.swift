@@ -21,17 +21,12 @@ class PSPacketManager {
 		
 	private(set) var packet = PSPacket()
 	private(set) var completedPackets = [PSPacket]()
-	
 	private(set) var completedPacketFiePaths = [String]()
-	
 	private(set) var reloadCurrentPacket = Variable( false )
 	
 	init() {
 		beginPacketBuilding()
 	}
-
-	// MARK: - Capabilities
-	
 	
 	// MARK: - Packet Builder
 	
@@ -57,5 +52,12 @@ class PSPacketManager {
 	
 	func deletePacket(packet: PSPacket) {
 		
+	}
+}
+
+extension PSPacketManager: PSPermissions {
+	
+	func allowedToCreatePacket() -> Bool {
+		return (PSUserManager().allowedToCreatePacket() && PSPurchaseManager().allowedToCreatePacket() )
 	}
 }

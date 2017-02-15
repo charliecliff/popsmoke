@@ -30,3 +30,6 @@ let kUserFileName		= "/current_user.txt"
 let kLicenseFileName	= "/current_license.txt"
 
 // MARK: - Allowed Military URLS
+
+// MARK: - Time Constants
+let free_trial_expiration = 121000000.0 // Two Weeks in Seconds

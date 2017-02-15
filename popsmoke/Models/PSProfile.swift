@@ -8,11 +8,6 @@
 
 import UIKit
 
-enum LicenseType: String {
-	case none		= "NONE"
-	case individual	= "INDIVIDUAL"
-}
-
 class PSProfile: NSObject {
 
 	// Options
