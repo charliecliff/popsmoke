@@ -29,6 +29,9 @@ class PSPacketManager {
 	init() {
 		beginPacketBuilding()
 	}
+
+	// MARK: - Capabilities
+	
 	
 	// MARK: - Packet Builder
 	

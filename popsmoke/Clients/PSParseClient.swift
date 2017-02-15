@@ -29,7 +29,6 @@ class PSParseClient: PSUserProvider {
 	}
 	
 	func getUserForUserID(userID: String, completion: UserClosure?) {
-		
 		let query = PFQuery.init(className: parseUserKey)
 		query.getObjectInBackground(withId: userID) { (result, error) in
 			print("completed")
@@ -38,7 +37,6 @@ class PSParseClient: PSUserProvider {
 	}
 	
 	func postUser(user: PSUser, completion: ((_ error: NSError?) -> Void)?) {
-		
 		let player = PFObject(className: parseUserKey)
 		if let tmp = user.firstName as Any? {
 			player.setObject(tmp, forKey: parseFirstNameKey)
@@ -58,7 +56,6 @@ class PSParseClient: PSUserProvider {
 	}
 	
 	func putUser(user: PSUser, completion: ((_ error: NSError?) -> Void)?) {
-		
 		self.postUser(user: user, completion: completion)
 	}
 }

@@ -96,7 +96,7 @@ class PSUserManager {
 			guard userData != nil else {
 				return
 			}
-			guard let newUser = PSUserFactory.userForDictionary(userDictionary: userData!) else {
+			guard let newUser = PSUserFactory.newUserForSocialMediaDictionary(userDictionary: userData!) else {
 				return
 			}
 			self.set(user: newUser)
