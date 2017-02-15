@@ -21,9 +21,10 @@ enum DocumentType: String {
 }
 
 enum FormType: String {
-	case error	= "ERROR"
-	case da31	= "da31"
-	case trips	= "trips"
+	case error			= "ERROR"
+	case da31			= "da31"
+	case trips			= "trips"
+	case personalInfo	= "personal_info"
 }
 
 enum AttachmentType: String {

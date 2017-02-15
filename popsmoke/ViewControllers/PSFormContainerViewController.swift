@@ -13,18 +13,18 @@ import Eureka
 class PSFormContainerViewController: UIViewController {
 
 	weak var document: PSDocument?
-	private var formViewController: FormViewController?
+	var formViewController: FormViewController?
 	@IBOutlet public var containerView: UIView?
 	@IBOutlet public var verifyButton: UIButton?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		guard document != nil else {
-			PSErrorHandler.presentErrorWith(title: "Whoops!", message: "We can't display an empty document!")
-			return
+		if document != nil {
+			formViewController = PSFormViewControllerFactory.viewControllerForForm(type: document!.formType)
 		}
-		formViewController = PSFormViewControllerFactory.viewControllerForForm(type: document!.formType)
-		add(formViewController: formViewController!)
+		if formViewController != nil {
+			add(formViewController: formViewController!)
+		}
 	}
 	
 	func add(formViewController: FormViewController) {
