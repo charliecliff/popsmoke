@@ -15,6 +15,8 @@ class PSFormViewControllerFactory: NSObject {
 		switch type {
 		case .da31:
 			return DA31FormViewController()
+		case .personalInfo:
+			return PSPersonalInfoViewController()
 		default:
 			return FormViewController()
 		}

@@ -15,4 +15,7 @@ class PSPersonalInfoViewController: FormViewController {
 		PSPersonalInfoFormFactory.appendPersonalInformationToForm(form: form)
     }
 	
+	private func updateFor(user: PSUser) {
+		
+	}
 }

@@ -37,6 +37,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name="BlackOpsOne-Regular" family="Black Ops One" pointSize="15"/>
                                         <state key="normal" title="BACK"/>
+                                        <connections>
+                                            <action selector="didBackButton:" destination="aZn-ST-9b7" eventType="touchUpInside" id="ip5-gW-vAl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>

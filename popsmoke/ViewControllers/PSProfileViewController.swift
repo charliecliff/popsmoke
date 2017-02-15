@@ -33,6 +33,10 @@ class PSProfileViewController: UIViewController, UITableViewDelegate, UITableVie
 		self.tableView?.register(disclosureNib, forCellReuseIdentifier: profile_disclosure_cell)
 	}
 	
+	@IBAction func didBackButton(_ sender: UIButton) {
+		_ = navigationController?.popViewController(animated: true)
+	}
+	
 	// MARK: - UITableViewDataSource
 	
 	func numberOfSections(in tableView: UITableView) -> Int {
@@ -88,7 +92,8 @@ class PSProfileViewController: UIViewController, UITableViewDelegate, UITableVie
 			}
 		} else if indexPath.section == personalInfoSection {
 			if indexPath.row == personalInfoRow {
-				
+				let vc = PSFormContainerViewFactory.formContainerViewForPersonalInfo()
+				navigationController?.pushViewController(vc!, animated: true)
 			}
 		} else if indexPath.section == licenseSection {
 			// TODO: Display the Purchase Screen
