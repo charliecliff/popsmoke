@@ -20,14 +20,11 @@ class PSUser: NSObject, NSCoding {
 	var lastName: String?
 	var rank: USArmyRank?
 	
-	var hasIndividualLicense: Bool?
-	
 	override init() {
 		super.init()
 		userID					= ""
 		firstName				= ""
 		lastName				= ""
-		hasIndividualLicense	= false
 	}
 	
 	// MARK: - NSCoding

@@ -12,6 +12,7 @@ import UIKit
 let kMainStoryboard		= "PSMainStoryboard"
 let kLoginStoryboard	= "PSLogin"
 let kLoadingStoryboard	= "PSLoading"
+let kProfileStoryboard	= "PSProfile"
 
 // MARK: - User Factory
 let kKeyUserID      = "id"
