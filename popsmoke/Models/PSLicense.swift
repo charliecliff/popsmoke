@@ -8,19 +8,29 @@
 
 import CoreFoundation
 
-fileprivate let kLicensePurchasedIndividualLicense = "individual_license"
+fileprivate let kPurchasedIndividualLicense = "individual_license"
 
-class PSLicense: NSObject {
+class PSLicense: NSObject, NSCoding {
 
 	private var hasPurchasedIndividualLicense = false
+	
+	override init() {
+		super.init()
+	}
+	
+	// MARK: - Setters
+	
+	func didPurchaseIndividualLicense() {
+		hasPurchasedIndividualLicense = true
+	}
 	
 	// MARK: - NSCoding
 	
 	required init(coder aDecoder: NSCoder) {
-		hasPurchasedIndividualLicense = aDecoder.decodeBool(forKey: kLicensePurchasedIndividualLicense)
+		hasPurchasedIndividualLicense = aDecoder.decodeBool(forKey: kPurchasedIndividualLicense)
 	}
 	
 	func encode(with aCoder: NSCoder) {
-		aCoder.encode(hasPurchasedIndividualLicense, forKey: kLicensePurchasedIndividualLicense)
+		aCoder.encode(hasPurchasedIndividualLicense, forKey: kPurchasedIndividualLicense)
 	}
 }

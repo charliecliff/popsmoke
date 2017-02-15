@@ -21,26 +21,16 @@ class PSPurchaseManager: NSObject {
 	
 	static let sharedInstance = PSPurchaseManager()
 
-	private(set) var products = [SKProduct]()
-	
-	fileprivate var productIdentifiers: Set<ProductIdentifier>
-	fileprivate var purchasedProductIdentifiers = Set<ProductIdentifier>()
+	private(set) var license = PSLicense()
+	fileprivate var products = [SKProduct]()
+	fileprivate var productIdentifiers = Set<ProductIdentifier>()
 	fileprivate var productsRequestCompletionHandler: ProductsRequestCompletionHandler?
-
-	var productsRequest: SKProductsRequest?
+	fileprivate var productsRequest: SKProductsRequest?
 	
 	override init() {
-		productIdentifiers = PSPurchaseManager.availableProductIdentifiers()
-		for productIdentifier in productIdentifiers {
-			let purchased = UserDefaults.standard.bool(forKey: productIdentifier)
-			if purchased {
-				purchasedProductIdentifiers.insert(productIdentifier)
-				print("Previously purchased: \(productIdentifier)")
-			} else {
-				print("Not purchased: \(productIdentifier)")
-			}
-		}
 		super.init()
+		loadLicese()
+		productIdentifiers = PSPurchaseManager.availableProductIdentifiers()
 		SKPaymentQueue.default().add(self)
 		requestProducts { (success, products) in
 			if (success && products != nil) {
@@ -53,7 +43,7 @@ class PSPurchaseManager: NSObject {
 		let productIDs: Set<ProductIdentifier> = [kIndividualLicenseProductID]
 		return productIDs
 	}
-
+	
 	private func requestProducts(completionHandler: @escaping ProductsRequestCompletionHandler) {
 		productsRequest?.cancel()
 		productsRequestCompletionHandler = completionHandler
@@ -66,11 +56,29 @@ class PSPurchaseManager: NSObject {
 		let payment = SKPayment(product: product)
 		SKPaymentQueue.default().add(payment)
 	}
-
-	private func isProductPurchased(_ productIdentifier: ProductIdentifier) -> Bool {
-		return purchasedProductIdentifiers.contains(productIdentifier)
+	
+	fileprivate func clearRequestAndHandler() {
+		productsRequest = nil
+		productsRequestCompletionHandler = nil
 	}
-  
+	
+	// MARK: - Persistence
+	
+	fileprivate func saveLicense() {
+		PSPersistenceManager.save(license: license)
+	}
+	
+	fileprivate func loadLicese() {
+		do {
+			let localLicense = try PSPersistenceManager.loadLicense()
+			license = localLicense!
+		} catch PersistenceError.userPersistence {
+			
+		} catch {
+			PSErrorHandler.presentErrorWith(title: "Whoops!", message: "We had trouble loading your profile")
+		}
+	}
+	
 	class func canMakePayments() -> Bool {
 		return SKPaymentQueue.canMakePayments()
 	}
@@ -80,7 +88,7 @@ class PSPurchaseManager: NSObject {
 	}
 	
 	func buyIndividualLicense() {
-		guard let individualLicenseProduct = products.first(where: { $0.productIdentifier == "product_001" }) else {
+		guard let individualLicenseProduct = products.first(where: { $0.productIdentifier == kIndividualLicenseProductID }) else {
 			// TODO: Handle the Error
 			return
 		}
@@ -95,15 +103,14 @@ extension PSPurchaseManager: SKProductsRequestDelegate {
 	func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
 		let products = response.products
 		productsRequestCompletionHandler?(true, products)
-//		clearRequestAndHandler()
+		clearRequestAndHandler()
 	}
 	
 	func request(_ request: SKRequest, didFailWithError error: Error) {
 		productsRequestCompletionHandler?(false, nil)
-//	    clearRequestAndHandler()
+	    clearRequestAndHandler()
 	}
 }
-
 
 // MARK: - SKPaymentTransactionObserver
  
@@ -130,13 +137,15 @@ extension PSPurchaseManager: SKPaymentTransactionObserver {
 	}
  
 	private func complete(transaction: SKPaymentTransaction) {
-		deliverPurchaseNotificationFor(identifier: transaction.payment.productIdentifier)
+		deliverPurchaseFor(identifier: transaction.payment.productIdentifier)
 		SKPaymentQueue.default().finishTransaction(transaction)
 	}
  
 	private func restore(transaction: SKPaymentTransaction) {
-		guard let productIdentifier = transaction.original?.payment.productIdentifier else { return }
- 		deliverPurchaseNotificationFor(identifier: productIdentifier)
+		guard let productIdentifier = transaction.original?.payment.productIdentifier else {
+			return
+		}
+ 		deliverPurchaseFor(identifier: productIdentifier)
 		SKPaymentQueue.default().finishTransaction(transaction)
 	}
  
@@ -149,11 +158,13 @@ extension PSPurchaseManager: SKPaymentTransactionObserver {
 		SKPaymentQueue.default().finishTransaction(transaction)
 	}
  
-	private func deliverPurchaseNotificationFor(identifier: String?) {
-		guard let identifier = identifier else { return }
-		purchasedProductIdentifiers.insert(identifier)
-		UserDefaults.standard.set(true, forKey: identifier)
-		UserDefaults.standard.synchronize()
-		NotificationCenter.default.post(name: NSNotification.Name(rawValue: PSPurchaseManagerPurchaseNotification), object: identifier)
+	private func deliverPurchaseFor(identifier: String?) {
+		guard let identifier = identifier else {
+			return
+		}
+		if identifier == kIndividualLicenseProductID {
+			license.didPurchaseIndividualLicense()
+		}
+		saveLicense()
 	}
 }

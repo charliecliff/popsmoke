@@ -22,9 +22,9 @@ class PSUser: NSObject, NSCoding {
 	
 	override init() {
 		super.init()
-		userID					= ""
-		firstName				= ""
-		lastName				= ""
+		userID		= ""
+		firstName	= ""
+		lastName	= ""
 	}
 	
 	// MARK: - NSCoding
