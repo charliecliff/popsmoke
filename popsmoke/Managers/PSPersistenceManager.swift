@@ -13,6 +13,7 @@ enum PersistenceError: Error {
 	case packetPersistence
 	case imagePersistence
 	case userPersistence
+	case licensePersistence
 }
 
 class PSPersistenceManager: NSObject {
@@ -43,6 +44,12 @@ class PSPersistenceManager: NSObject {
 		NSKeyedArchiver.archiveRootObject(user, toFile: filePath)
 	}
 	
+	class func save(license: PSLicense) {
+		var filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as String
+		filePath.append(kLicenseFileName)
+		NSKeyedArchiver.archiveRootObject(license, toFile: filePath)
+	}
+	
 	class func save(packet: PSPacket) {
 		let filePath = PSPersistenceManager.getDocumentURL(packetID: packet.packetID!)
 		NSKeyedArchiver.archiveRootObject(packet, toFile: filePath)
@@ -66,6 +73,15 @@ class PSPersistenceManager: NSObject {
 			throw PersistenceError.userPersistence
 		}
 		return user
+	}
+	
+	class func loadLicense() throws -> PSLicense? {
+		var filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as String
+		filePath.append(kLicenseFileName)
+		guard let license = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? PSLicense else {
+			throw PersistenceError.licensePersistence
+		}
+		return license
 	}
 	
 	class func loadPacket(filePath: String) throws -> PSPacket? {

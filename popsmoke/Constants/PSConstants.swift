@@ -26,6 +26,7 @@ let form_row_background = UIColor.init(colorLiteralRed: 1, green: 1, blue: 1, al
 // MARK: - Errors
 
 // MARK: - FileNames
-let kUserFileName = "/current_user.txt"
+let kUserFileName		= "/current_user.txt"
+let kLicenseFileName	= "/current_license.txt"
 
 // MARK: - Allowed Military URLS

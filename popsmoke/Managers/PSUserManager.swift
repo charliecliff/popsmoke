@@ -24,6 +24,7 @@ protocol PSLoginStateMachine: class {
 class PSUserManager {
     
 	static let sharedInstance = PSUserManager()
+	
 	private var _userProvider : PSUserProvider?
 	private var _socialMediaToken: String?
 	private(set) var user = PSUser()
