@@ -9,7 +9,8 @@
 import UIKit
 
 fileprivate let titleKey	= "title"
-fileprivate let lineOneKey	= "lineOne"
+fileprivate let lineOneKey	= "line_1"
+fileprivate let lineTwoKey	= "line_2"
 fileprivate let iconKey		= "icon"
 
 class PSPopup: NSObject {
@@ -36,28 +37,39 @@ class PSPopup: NSObject {
 			let popup = HROPopupController.init(contents: [])
 			return popup
 		}
+		guard let popupDict = dict[productID] as? [String: AnyObject] else {
+			let popup = HROPopupController.init(contents: [])
+			return popup
+		}
 		
 		let paragraphStyle = NSMutableParagraphStyle()
 		paragraphStyle.lineBreakMode = .byWordWrapping
 		paragraphStyle.alignment = .center
 		
 		var titleString = "You are about to make a purchase"
-		if (dict[titleKey] as? String) != nil {
-			titleString = (dict[titleKey] as? String)!
+		if (popupDict[titleKey] as? String) != nil {
+			titleString = (popupDict[titleKey] as? String)!
 		}
 		let title = NSAttributedString.init(string: titleString,
 		                                    attributes: [NSFontAttributeName : UIFont.systemFont(ofSize: 24.0),NSParagraphStyleAttributeName : paragraphStyle])
 		
 		var lineOneString = ""
-		if (dict[lineOneKey] as? String) != nil {
-			lineOneString = (dict[lineOneKey] as? String)!
+		if (popupDict[lineOneKey] as? String) != nil {
+			lineOneString = (popupDict[lineOneKey] as? String)!
 		}
 		let lineOne = NSAttributedString.init(string: lineOneString,
 		                                    attributes: [NSFontAttributeName : UIFont.systemFont(ofSize: 18.0),NSParagraphStyleAttributeName : paragraphStyle])
 		var imageString = ""
-		if (dict[iconKey] as? String) != nil {
-			imageString = (dict[iconKey] as? String)!
+		if (popupDict[iconKey] as? String) != nil {
+			imageString = (popupDict[iconKey] as? String)!
 		}
+
+		var lineTwoString = ""
+		if (popupDict[lineTwoKey] as? String) != nil {
+			lineTwoString = (popupDict[lineTwoKey] as? String)!
+		}
+		let lineTwo = NSAttributedString.init(string: lineTwoString,
+		                                      attributes: [NSFontAttributeName : UIFont.systemFont(ofSize: 18.0),NSParagraphStyleAttributeName : paragraphStyle])
 		
 		let titleLabel = UILabel()
 		titleLabel.numberOfLines = 0
@@ -69,12 +81,16 @@ class PSPopup: NSObject {
 		
 		let imageView = UIImageView.init(image: UIImage.init(named: imageString))
 		
+		let lineTwoLabel = UILabel()
+		lineTwoLabel.numberOfLines = 0
+		lineTwoLabel.attributedText = lineTwo
+		
 		let spacerView = UIView.init(frame: CGRect(x:0, y:0, width:250, height:55))
 		spacerView.backgroundColor = .clear
 		
 		let buttonView = PSPopup.buttonViewFor(productID: productID)
 		
-		let popup = HROPopupController.init(contents: [titleLabel, lineOneLabel, imageView, spacerView, buttonView])
+		let popup = HROPopupController.init(contents: [titleLabel, lineOneLabel, imageView, lineTwoLabel, buttonView])
 		popup.theme = HROPopupTheme.default()
 		return popup
 	}

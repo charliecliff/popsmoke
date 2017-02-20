@@ -12,7 +12,7 @@ import RxCocoa
 
 let PSPurchaseManagerPurchaseNotification = "PSPurchaseManagerPurchaseNotification"
 
-let kIndividualLicenseProductID = "product_001"
+let kIndividualLicenseProductID = "PS_Individual_License"
 
 public typealias ProductIdentifier = String
 public typealias ProductsRequestCompletionHandler = (_ success: Bool, _ products: [SKProduct]?) -> ()

@@ -2,14 +2,16 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>product_001</key>
+	<key>PS_Individual_License</key>
 	<dict>
+		<key>line_2</key>
+		<string>The Cost of Monster</string>
 		<key>line_1</key>
-		<string>You itunes connect account will be charged.</string>
+		<string>Purchase for $2.99?</string>
 		<key>title</key>
-		<string>You are About to Make a Purchase</string>
+		<string>Individual Subscription</string>
 		<key>icon</key>
-		<string>user_profile</string>
+		<string>monster_can</string>
 	</dict>
 </dict>
 </plist>
