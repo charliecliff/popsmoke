@@ -123,6 +123,6 @@ extension PSUserManager: PSPermissions {
 	
 	func allowedToCreatePacket() -> Bool {
 		let expirationDate = user.createdAt?.addingTimeInterval(free_trial_expiration)
-		return (Date().compare(expirationDate!) == kCFCompareLessThan)
+		return (Date().compare(expirationDate!) == .orderedDescending)
 	}
 }

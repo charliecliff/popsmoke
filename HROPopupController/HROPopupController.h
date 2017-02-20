@@ -5,6 +5,9 @@
 
 #import <UIKit/UIKit.h>
 
+#define HRO_PRESENT_POPUP @"HRO_PRESENT_POPUP"
+#define HRO_DISMISS_POPUP @"HRO_DISMISS_POPUP"
+
 @protocol HROPopupControllerDelegate;
 @class HROPopupTheme, HROPopupButton;
 

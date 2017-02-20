@@ -56,10 +56,14 @@ static inline UIViewAnimationOptions UIViewAnimationCurveToAnimationOptions(UIVi
                                                  selector:@selector(orientationWillChange)
                                                      name:UIApplicationWillChangeStatusBarOrientationNotification
                                                    object:nil];
-            [[NSNotificationCenter defaultCenter] addObserver:self
+		[[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(orientationChanged)
                                                      name:UIApplicationDidChangeStatusBarOrientationNotification
                                                    object:nil];
+		[[NSNotificationCenter defaultCenter] addObserver:self
+												 selector:@selector(dismissPopupController)
+													 name:@"HRO_DISMISS_POPUP"
+												   object:nil];
     }
     return self;
 }
@@ -75,6 +79,7 @@ static inline UIViewAnimationOptions UIViewAnimationCurveToAnimationOptions(UIVi
     [[NSNotificationCenter defaultCenter]removeObserver:self name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:UIKeyboardWillShowNotification object:nil];
     [[NSNotificationCenter defaultCenter]removeObserver:self name:UIKeyboardWillHideNotification object:nil];
+	[[NSNotificationCenter defaultCenter]removeObserver:self name:@"HRO_DISMISS_POPUP" object:nil];
 }
 
 - (void)orientationWillChange {
@@ -275,12 +280,12 @@ CGFloat HRO_UIInterfaceOrientationAngleOfOrientation(UIInterfaceOrientation orie
 	self.popupView.center = [self originPoint];
     [self.applicationWindow addSubview:self.maskView];
 	
-    self.maskView.alpha = 0.0;
+	self.maskView.alpha = 0.0;
 	
 	dispatch_async(dispatch_get_main_queue(), ^{
 		[UIView animateWithDuration:flag?self.theme.animationDuration:0.0 animations:^{
 			self.maskView.alpha = 1.0;
-			self.popupView.center = [self endingPoint];;
+			self.popupView.center = [self endingPoint];
 		} completion:^(BOOL finished) {
 			self.popupView.userInteractionEnabled = YES;
 			if ([self.delegate respondsToSelector:@selector(popupControllerDidPresent:)]) {
@@ -290,7 +295,12 @@ CGFloat HRO_UIInterfaceOrientationAngleOfOrientation(UIInterfaceOrientation orie
 	});
 }
 
+- (void)dismissPopupController {
+	[self dismissPopupControllerAnimated:self.dismissAnimated];
+}
+
 - (void)dismissPopupControllerAnimated:(BOOL)flag {
+	//TODO: All these "self" referneces in the block should cause a memory leak, so fix them
     if ([self.delegate respondsToSelector:@selector(popupControllerWillDismiss:)]) {
         [self.delegate popupControllerWillDismiss:self];
     }
@@ -427,7 +437,7 @@ CGFloat HRO_UIInterfaceOrientationAngleOfOrientation(UIInterfaceOrientation orie
 
 + (HROPopupTheme *)defaultTheme {
     HROPopupTheme *defaultTheme = [[HROPopupTheme alloc] init];
-    defaultTheme.backgroundColor = [UIColor clearColor];
+    defaultTheme.backgroundColor = [UIColor whiteColor];
     defaultTheme.cornerRadius = 4.0f;
     defaultTheme.popupContentInsets = UIEdgeInsetsMake(16.0f, 16.0f, 16.0f, 16.0f);
     defaultTheme.popupStyle = HROPopupStyleCentered;

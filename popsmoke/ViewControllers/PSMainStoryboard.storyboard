@@ -378,6 +378,7 @@
                     <connections>
                         <outlet property="facebookIcon" destination="lce-XZ-xTv" id="D0F-W7-NiI"/>
                         <outlet property="profileIcon" destination="nhr-O6-QXw" id="k3b-u3-68H"/>
+                        <outlet property="shoppingCartContainerView" destination="uJO-La-EU3" id="6q7-TB-wf0"/>
                         <outlet property="shoppingCartIcon" destination="clo-R7-QBu" id="ICh-0F-AkO"/>
                     </connections>
                 </viewController>

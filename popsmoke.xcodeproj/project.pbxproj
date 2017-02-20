@@ -102,6 +102,8 @@
 		DAD367581E4429B1009980DC /* MontserratAlternates-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DAD367441E4429B1009980DC /* MontserratAlternates-SemiBold.otf */; };
 		DAD367591E4429B1009980DC /* MontserratAlternates-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = DAD367451E4429B1009980DC /* MontserratAlternates-Thin.otf */; };
 		DAD3675A1E4429B1009980DC /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = DAD367461E4429B1009980DC /* SIL Open Font License.txt */; };
+		DAD8C0481E5B4A1E008DF634 /* PSPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD8C0471E5B4A1E008DF634 /* PSPopup.swift */; };
+		DAD8C04A1E5B74B3008DF634 /* Product Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD8C0491E5B74B3008DF634 /* Product Data.plist */; };
 		DAE4E7661E4ABE9D00A8CC5D /* PSMilWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE4E7641E4ABE9D00A8CC5D /* PSMilWebViewController.swift */; };
 		DAE4E7671E4ABE9D00A8CC5D /* PSMilWebViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE4E7651E4ABE9D00A8CC5D /* PSMilWebViewController.storyboard */; };
 		DAF52BFE1E45686B00A3893C /* black-ops-one.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAF52BFD1E45686B00A3893C /* black-ops-one.regular.ttf */; };
@@ -241,6 +243,8 @@
 		DAD367441E4429B1009980DC /* MontserratAlternates-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-SemiBold.otf"; sourceTree = "<group>"; };
 		DAD367451E4429B1009980DC /* MontserratAlternates-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Thin.otf"; sourceTree = "<group>"; };
 		DAD367461E4429B1009980DC /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		DAD8C0471E5B4A1E008DF634 /* PSPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPopup.swift; sourceTree = "<group>"; };
+		DAD8C0491E5B74B3008DF634 /* Product Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Product Data.plist"; sourceTree = "<group>"; };
 		DAE4E7641E4ABE9D00A8CC5D /* PSMilWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSMilWebViewController.swift; sourceTree = "<group>"; };
 		DAE4E7651E4ABE9D00A8CC5D /* PSMilWebViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSMilWebViewController.storyboard; sourceTree = "<group>"; };
 		DAF52BFD1E45686B00A3893C /* black-ops-one.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "black-ops-one.regular.ttf"; sourceTree = "<group>"; };
@@ -330,13 +334,13 @@
 		DA01F0151E39612F00B7FB04 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DA5CE9D81E5287AC001DA076 /* PSProfileCellFactory.swift */,
 				DAF8367B1E3AA677003178C4 /* Factories */,
 				DA01F0161E39617C00B7FB04 /* PSPacket.swift */,
 				DA01F0181E3961D100B7FB04 /* PSDocument.swift */,
 				DA0287A51E40EDE9008B481B /* PSUser.swift */,
 				DA0287BB1E4265FE008B481B /* PSAddress.swift */,
 				DA5CE9D51E526EE5001DA076 /* PSProfile.swift */,
-				DA5CE9D81E5287AC001DA076 /* PSProfileCellFactory.swift */,
 				DA9465031E5419D9006FBEDA /* PSLicense.swift */,
 			);
 			path = Models;
@@ -349,6 +353,7 @@
 				DAD367321E4429B1009980DC /* Fonts */,
 				DA01F0241E39ACA700B7FB04 /* Packet Data */,
 				DA01F0261E39ACA700B7FB04 /* PDFs */,
+				DAD8C0491E5B74B3008DF634 /* Product Data.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -443,6 +448,7 @@
 			children = (
 				DA5CE9D71E526F94001DA076 /* popsmoke.entitlements */,
 				DA5E22D61E4FFF45003AF0F2 /* popsmoke-Bridging-Header.h */,
+				DA5007F21E28BBA80038A5E8 /* AppDelegate.swift */,
 				DA01F0121E392D3600B7FB04 /* UICategories */,
 				DA00512E1E37AE7A008E7035 /* Cells */,
 				DA0287A71E40F3E7008B481B /* Clients */,
@@ -452,13 +458,13 @@
 				DA01F0151E39612F00B7FB04 /* Models */,
 				DAF836A11E3E3CA6003178C4 /* Protocols */,
 				DA0B26851E362A20000CC2DC /* ViewControllers */,
-				DA5007F21E28BBA80038A5E8 /* AppDelegate.swift */,
 				DA5007FB1E28BBA80038A5E8 /* Assets.xcassets */,
 				DA00513D1E37C8CB008E7035 /* Icons.xcassets */,
 				DA01F0231E39ACA700B7FB04 /* Resources */,
 				DA5007FD1E28BBA80038A5E8 /* LaunchScreen.storyboard */,
 				DA5008001E28BBA80038A5E8 /* Info.plist */,
 				DA22F4AF1E4C1FC700BE730B /* PSError.swift */,
+				DAD8C0471E5B4A1E008DF634 /* PSPopup.swift */,
 			);
 			path = popsmoke;
 			sourceTree = "<group>";
@@ -777,6 +783,7 @@
 				DA0051361E37B36F008E7035 /* PSDocumentCollectionViewCell.xib in Resources */,
 				DA5E22D01E4FFF0A003AF0F2 /* middleBar@2x.png in Resources */,
 				DAD367481E4429B1009980DC /* Montserrat-Bold.otf in Resources */,
+				DAD8C04A1E5B74B3008DF634 /* Product Data.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -870,6 +877,7 @@
 				DA0B26871E362A62000CC2DC /* PSMainViewController.swift in Sources */,
 				DA0051321E37AEC3008E7035 /* PSDocumentCollectionViewCell.swift in Sources */,
 				DA0287A21E40E8A2008B481B /* PSLoginViewController.swift in Sources */,
+				DAD8C0481E5B4A1E008DF634 /* PSPopup.swift in Sources */,
 				DA0287AF1E40FC59008B481B /* PSUserProvider.swift in Sources */,
 				DA9465021E540566006FBEDA /* PSPurchaseManager.swift in Sources */,
 				DAF836941E3AAFC2003178C4 /* TRIPSFormFactory.swift in Sources */,
@@ -952,7 +960,7 @@
 		DA50080C1E28BBA80038A5E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1003,7 +1011,7 @@
 		DA50080D1E28BBA80038A5E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

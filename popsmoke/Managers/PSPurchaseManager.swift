@@ -94,6 +94,14 @@ class PSPurchaseManager: NSObject {
 		}
 		buyProduct(individualLicenseProduct)
 	}
+	
+	func buyProduct(productID: String) {
+		guard let individualLicenseProduct = products.first(where: { $0.productIdentifier == productID }) else {
+			// TODO: Handle the Error
+			return
+		}
+		buyProduct(individualLicenseProduct)
+	}
 }
 
 // MARK: - SKProductsRequestDelegate

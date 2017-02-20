@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>product_001</key>
+	<dict>
+		<key>line_1</key>
+		<string>You itunes connect account will be charged.</string>
+		<key>title</key>
+		<string>You are About to Make a Purchase</string>
+		<key>icon</key>
+		<string>user_profile</string>
+	</dict>
+</dict>
+</plist>
