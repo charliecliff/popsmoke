@@ -15,7 +15,7 @@ import Parse
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-	var helper: IAPHelper?
+	var helper: PSPurchaseManager?
 	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		
@@ -26,11 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		application.registerForRemoteNotifications()
 		
 		// StoreKit
-		let productIDs: Set<ProductIdentifier> = ["popsmokeTest_001", "product_001"]
-		helper = IAPHelper.init(productIds: productIDs)
-		helper?.requestProducts { (success, products) in
-			print("Got Some Products")
-		}
+		helper = PSPurchaseManager.sharedInstance
 		
 		// Storyboard
 		let storyboard = UIStoryboard(name: kLoadingStoryboard, bundle: nil)

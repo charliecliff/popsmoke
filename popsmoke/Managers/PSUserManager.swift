@@ -24,6 +24,7 @@ protocol PSLoginStateMachine: class {
 class PSUserManager {
     
 	static let sharedInstance = PSUserManager()
+	
 	private var _userProvider : PSUserProvider?
 	private var _socialMediaToken: String?
 	private(set) var user = PSUser()
@@ -95,7 +96,7 @@ class PSUserManager {
 			guard userData != nil else {
 				return
 			}
-			guard let newUser = PSUserFactory.userForDictionary(userDictionary: userData!) else {
+			guard let newUser = PSUserFactory.newUserForSocialMediaDictionary(userDictionary: userData!) else {
 				return
 			}
 			self.set(user: newUser)
@@ -115,5 +116,13 @@ class PSUserManager {
 		validateUserForSocialMediaToken(token: token) { (error) in
 			self.saveUser()
 		}
+	}
+}
+
+extension PSUserManager: PSPermissions {
+	
+	func allowedToCreatePacket() -> Bool {
+		let expirationDate = user.createdAt?.addingTimeInterval(free_trial_expiration)
+		return (Date().compare(expirationDate!) == .orderedDescending)
 	}
 }

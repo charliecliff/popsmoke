@@ -3,4 +3,8 @@
 //
 
 #import "SkullAndBonesMenuView.h"
+
+#import "HROPopupController.h"
+#import "HROProgressPopupController.h"
+
 #import <ILPDFKit/ILPDFKit.h>

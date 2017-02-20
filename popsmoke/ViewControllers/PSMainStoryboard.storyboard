@@ -318,7 +318,7 @@
                                 </constraints>
                             </view>
                             <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iMb-Ip-l0r" userLabel="Profile Container">
-                                <rect key="frame" x="128.5" y="210" width="118" height="118"/>
+                                <rect key="frame" x="129" y="210" width="118" height="118"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_profile" translatesAutoresizingMaskIntoConstraints="NO" id="nhr-O6-QXw">
                                         <rect key="frame" x="24" y="20" width="70" height="70"/>
@@ -378,6 +378,7 @@
                     <connections>
                         <outlet property="facebookIcon" destination="lce-XZ-xTv" id="D0F-W7-NiI"/>
                         <outlet property="profileIcon" destination="nhr-O6-QXw" id="k3b-u3-68H"/>
+                        <outlet property="shoppingCartContainerView" destination="uJO-La-EU3" id="6q7-TB-wf0"/>
                         <outlet property="shoppingCartIcon" destination="clo-R7-QBu" id="ICh-0F-AkO"/>
                     </connections>
                 </viewController>

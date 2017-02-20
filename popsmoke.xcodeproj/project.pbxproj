@@ -66,7 +66,6 @@
 		DA5E22D31E4FFF0A003AF0F2 /* topBar.png in Resources */ = {isa = PBXBuildFile; fileRef = DA5E22C81E4FFF0A003AF0F2 /* topBar.png */; };
 		DA5E22D41E4FFF0A003AF0F2 /* topBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA5E22C91E4FFF0A003AF0F2 /* topBar@2x.png */; };
 		DA5E22D51E4FFF0A003AF0F2 /* SkullAndBonesMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5E22CC1E4FFF0A003AF0F2 /* SkullAndBonesMenuView.m */; };
-		DA5E22D91E5002FA003AF0F2 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5E22D81E5002FA003AF0F2 /* IAPHelper.swift */; };
 		DA5E22E31E503544003AF0F2 /* HROPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5E22DC1E503544003AF0F2 /* HROPopupController.m */; };
 		DA5E22E41E503544003AF0F2 /* HROProgressPopupController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA5E22DE1E503544003AF0F2 /* HROProgressPopupController.m */; };
 		DA5E22E51E503544003AF0F2 /* loading_spinner.png in Resources */ = {isa = PBXBuildFile; fileRef = DA5E22E01E503544003AF0F2 /* loading_spinner.png */; };
@@ -76,6 +75,9 @@
 		DA9464FD1E52CD07006FBEDA /* PSDisclosureTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9464FB1E52CD07006FBEDA /* PSDisclosureTableViewCell.swift */; };
 		DA9464FE1E52CD07006FBEDA /* PSDisclosureTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA9464FC1E52CD07006FBEDA /* PSDisclosureTableViewCell.xib */; };
 		DA9465001E52D9F3006FBEDA /* PSPersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9464FF1E52D9F3006FBEDA /* PSPersonalInfoViewController.swift */; };
+		DA9465021E540566006FBEDA /* PSPurchaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9465011E540566006FBEDA /* PSPurchaseManager.swift */; };
+		DA9465041E5419D9006FBEDA /* PSLicense.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9465031E5419D9006FBEDA /* PSLicense.swift */; };
+		DA9465271E54EBAE006FBEDA /* PSPermissions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA9465261E54EBAE006FBEDA /* PSPermissions.swift */; };
 		DAB08D9A1E38F68100F2E263 /* PSFormContainer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAB08D981E38F68100F2E263 /* PSFormContainer.storyboard */; };
 		DAB08D9B1E38F68100F2E263 /* PSFormContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB08D991E38F68100F2E263 /* PSFormContainerViewController.swift */; };
 		DAB08D9D1E38F91F00F2E263 /* PSImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB08D9C1E38F91F00F2E263 /* PSImagePickerController.swift */; };
@@ -100,6 +102,8 @@
 		DAD367581E4429B1009980DC /* MontserratAlternates-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = DAD367441E4429B1009980DC /* MontserratAlternates-SemiBold.otf */; };
 		DAD367591E4429B1009980DC /* MontserratAlternates-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = DAD367451E4429B1009980DC /* MontserratAlternates-Thin.otf */; };
 		DAD3675A1E4429B1009980DC /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = DAD367461E4429B1009980DC /* SIL Open Font License.txt */; };
+		DAD8C0481E5B4A1E008DF634 /* PSPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAD8C0471E5B4A1E008DF634 /* PSPopup.swift */; };
+		DAD8C04A1E5B74B3008DF634 /* Product Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAD8C0491E5B74B3008DF634 /* Product Data.plist */; };
 		DAE4E7661E4ABE9D00A8CC5D /* PSMilWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAE4E7641E4ABE9D00A8CC5D /* PSMilWebViewController.swift */; };
 		DAE4E7671E4ABE9D00A8CC5D /* PSMilWebViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAE4E7651E4ABE9D00A8CC5D /* PSMilWebViewController.storyboard */; };
 		DAF52BFE1E45686B00A3893C /* black-ops-one.regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DAF52BFD1E45686B00A3893C /* black-ops-one.regular.ttf */; };
@@ -201,7 +205,6 @@
 		DA5E22CB1E4FFF0A003AF0F2 /* SkullAndBonesMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkullAndBonesMenuView.h; sourceTree = "<group>"; };
 		DA5E22CC1E4FFF0A003AF0F2 /* SkullAndBonesMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkullAndBonesMenuView.m; sourceTree = "<group>"; };
 		DA5E22D61E4FFF45003AF0F2 /* popsmoke-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "popsmoke-Bridging-Header.h"; sourceTree = "<group>"; };
-		DA5E22D81E5002FA003AF0F2 /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		DA5E22DB1E503544003AF0F2 /* HROPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HROPopupController.h; sourceTree = "<group>"; };
 		DA5E22DC1E503544003AF0F2 /* HROPopupController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HROPopupController.m; sourceTree = "<group>"; };
 		DA5E22DD1E503544003AF0F2 /* HROProgressPopupController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HROProgressPopupController.h; sourceTree = "<group>"; };
@@ -213,6 +216,9 @@
 		DA9464FB1E52CD07006FBEDA /* PSDisclosureTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSDisclosureTableViewCell.swift; sourceTree = "<group>"; };
 		DA9464FC1E52CD07006FBEDA /* PSDisclosureTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PSDisclosureTableViewCell.xib; sourceTree = "<group>"; };
 		DA9464FF1E52D9F3006FBEDA /* PSPersonalInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPersonalInfoViewController.swift; sourceTree = "<group>"; };
+		DA9465011E540566006FBEDA /* PSPurchaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPurchaseManager.swift; sourceTree = "<group>"; };
+		DA9465031E5419D9006FBEDA /* PSLicense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSLicense.swift; sourceTree = "<group>"; };
+		DA9465261E54EBAE006FBEDA /* PSPermissions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPermissions.swift; sourceTree = "<group>"; };
 		DAB08D981E38F68100F2E263 /* PSFormContainer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSFormContainer.storyboard; sourceTree = "<group>"; };
 		DAB08D991E38F68100F2E263 /* PSFormContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSFormContainerViewController.swift; sourceTree = "<group>"; };
 		DAB08D9C1E38F91F00F2E263 /* PSImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSImagePickerController.swift; sourceTree = "<group>"; };
@@ -237,6 +243,8 @@
 		DAD367441E4429B1009980DC /* MontserratAlternates-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-SemiBold.otf"; sourceTree = "<group>"; };
 		DAD367451E4429B1009980DC /* MontserratAlternates-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Thin.otf"; sourceTree = "<group>"; };
 		DAD367461E4429B1009980DC /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		DAD8C0471E5B4A1E008DF634 /* PSPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSPopup.swift; sourceTree = "<group>"; };
+		DAD8C0491E5B74B3008DF634 /* Product Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Product Data.plist"; sourceTree = "<group>"; };
 		DAE4E7641E4ABE9D00A8CC5D /* PSMilWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PSMilWebViewController.swift; sourceTree = "<group>"; };
 		DAE4E7651E4ABE9D00A8CC5D /* PSMilWebViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PSMilWebViewController.storyboard; sourceTree = "<group>"; };
 		DAF52BFD1E45686B00A3893C /* black-ops-one.regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "black-ops-one.regular.ttf"; sourceTree = "<group>"; };
@@ -326,13 +334,14 @@
 		DA01F0151E39612F00B7FB04 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DA5CE9D81E5287AC001DA076 /* PSProfileCellFactory.swift */,
 				DAF8367B1E3AA677003178C4 /* Factories */,
 				DA01F0161E39617C00B7FB04 /* PSPacket.swift */,
 				DA01F0181E3961D100B7FB04 /* PSDocument.swift */,
 				DA0287A51E40EDE9008B481B /* PSUser.swift */,
 				DA0287BB1E4265FE008B481B /* PSAddress.swift */,
 				DA5CE9D51E526EE5001DA076 /* PSProfile.swift */,
-				DA5CE9D81E5287AC001DA076 /* PSProfileCellFactory.swift */,
+				DA9465031E5419D9006FBEDA /* PSLicense.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -344,6 +353,7 @@
 				DAD367321E4429B1009980DC /* Fonts */,
 				DA01F0241E39ACA700B7FB04 /* Packet Data */,
 				DA01F0261E39ACA700B7FB04 /* PDFs */,
+				DAD8C0491E5B74B3008DF634 /* Product Data.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -437,8 +447,8 @@
 			isa = PBXGroup;
 			children = (
 				DA5CE9D71E526F94001DA076 /* popsmoke.entitlements */,
-				DA5E22D71E5002FA003AF0F2 /* InAppPurchasing */,
 				DA5E22D61E4FFF45003AF0F2 /* popsmoke-Bridging-Header.h */,
+				DA5007F21E28BBA80038A5E8 /* AppDelegate.swift */,
 				DA01F0121E392D3600B7FB04 /* UICategories */,
 				DA00512E1E37AE7A008E7035 /* Cells */,
 				DA0287A71E40F3E7008B481B /* Clients */,
@@ -448,13 +458,13 @@
 				DA01F0151E39612F00B7FB04 /* Models */,
 				DAF836A11E3E3CA6003178C4 /* Protocols */,
 				DA0B26851E362A20000CC2DC /* ViewControllers */,
-				DA5007F21E28BBA80038A5E8 /* AppDelegate.swift */,
 				DA5007FB1E28BBA80038A5E8 /* Assets.xcassets */,
 				DA00513D1E37C8CB008E7035 /* Icons.xcassets */,
 				DA01F0231E39ACA700B7FB04 /* Resources */,
 				DA5007FD1E28BBA80038A5E8 /* LaunchScreen.storyboard */,
 				DA5008001E28BBA80038A5E8 /* Info.plist */,
 				DA22F4AF1E4C1FC700BE730B /* PSError.swift */,
+				DAD8C0471E5B4A1E008DF634 /* PSPopup.swift */,
 			);
 			path = popsmoke;
 			sourceTree = "<group>";
@@ -499,14 +509,6 @@
 				DA5E22C91E4FFF0A003AF0F2 /* topBar@2x.png */,
 			);
 			path = images;
-			sourceTree = "<group>";
-		};
-		DA5E22D71E5002FA003AF0F2 /* InAppPurchasing */ = {
-			isa = PBXGroup;
-			children = (
-				DA5E22D81E5002FA003AF0F2 /* IAPHelper.swift */,
-			);
-			path = InAppPurchasing;
 			sourceTree = "<group>";
 		};
 		DA5E22DA1E503544003AF0F2 /* HROPopupController */ = {
@@ -608,6 +610,7 @@
 			isa = PBXGroup;
 			children = (
 				DA0287AA1E40F3F1008B481B /* PSUserManager.swift */,
+				DA9465011E540566006FBEDA /* PSPurchaseManager.swift */,
 				DAF836901E3AA747003178C4 /* PSPersistenceManager.swift */,
 				DAF836991E3D6B46003178C4 /* PSPacketManager.swift */,
 			);
@@ -619,6 +622,7 @@
 			children = (
 				DA0287AE1E40FC59008B481B /* PSUserProvider.swift */,
 				DAF836A21E3E3CBE003178C4 /* PSPacketBuilder.swift */,
+				DA9465261E54EBAE006FBEDA /* PSPermissions.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -779,6 +783,7 @@
 				DA0051361E37B36F008E7035 /* PSDocumentCollectionViewCell.xib in Resources */,
 				DA5E22D01E4FFF0A003AF0F2 /* middleBar@2x.png in Resources */,
 				DAD367481E4429B1009980DC /* Montserrat-Bold.otf in Resources */,
+				DAD8C04A1E5B74B3008DF634 /* Product Data.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,16 +877,18 @@
 				DA0B26871E362A62000CC2DC /* PSMainViewController.swift in Sources */,
 				DA0051321E37AEC3008E7035 /* PSDocumentCollectionViewCell.swift in Sources */,
 				DA0287A21E40E8A2008B481B /* PSLoginViewController.swift in Sources */,
+				DAD8C0481E5B4A1E008DF634 /* PSPopup.swift in Sources */,
 				DA0287AF1E40FC59008B481B /* PSUserProvider.swift in Sources */,
+				DA9465021E540566006FBEDA /* PSPurchaseManager.swift in Sources */,
 				DAF836941E3AAFC2003178C4 /* TRIPSFormFactory.swift in Sources */,
 				DAF8368D1E3AA68E003178C4 /* DA31FormViewController.swift in Sources */,
 				DA14022A1E44F608005EEE31 /* PSPacketUtilities.swift in Sources */,
+				DA9465041E5419D9006FBEDA /* PSLicense.swift in Sources */,
 				DA0287AD1E40F7EC008B481B /* PSUserFactory.swift in Sources */,
 				DA0287AB1E40F3F1008B481B /* PSUserManager.swift in Sources */,
 				DA01F0141E392D4C00B7FB04 /* UILabel+Size.swift in Sources */,
 				DAB08D9D1E38F91F00F2E263 /* PSImagePickerController.swift in Sources */,
 				DA5CE9D61E526EE5001DA076 /* PSProfile.swift in Sources */,
-				DA5E22D91E5002FA003AF0F2 /* IAPHelper.swift in Sources */,
 				DA01F0191E3961D100B7FB04 /* PSDocument.swift in Sources */,
 				DA9465001E52D9F3006FBEDA /* PSPersonalInfoViewController.swift in Sources */,
 				DAF836A31E3E3CBE003178C4 /* PSPacketBuilder.swift in Sources */,
@@ -912,6 +919,7 @@
 				DA0287A91E40F3E7008B481B /* REKIFacebookClient.swift in Sources */,
 				DA5E22E31E503544003AF0F2 /* HROPopupController.m in Sources */,
 				DA53E22C1E46F61D00F95D6B /* PSLoadingViewController.swift in Sources */,
+				DA9465271E54EBAE006FBEDA /* PSPermissions.swift in Sources */,
 				DAF836861E3AA677003178C4 /* PSFormViewControllerFactory.swift in Sources */,
 				DA5007F31E28BBA80038A5E8 /* AppDelegate.swift in Sources */,
 				DAF836851E3AA677003178C4 /* PSFormContainerViewFactory.swift in Sources */,
@@ -952,7 +960,7 @@
 		DA50080C1E28BBA80038A5E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -1003,7 +1011,7 @@
 		DA50080D1E28BBA80038A5E8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

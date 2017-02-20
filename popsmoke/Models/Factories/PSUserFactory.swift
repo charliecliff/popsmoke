@@ -14,7 +14,7 @@ class PSUserFactory: NSObject {
 		return userDictionary[kKeyUserID]!
 	}
 	
-	class func userForDictionary(userDictionary: [String: String]) -> PSUser? {
+	class func newUserForSocialMediaDictionary(userDictionary: [String: String]) -> PSUser? {
 		let newUser = PSUser()
 		newUser.userID    = userDictionary[kKeyUserID]
 		newUser.firstName = userDictionary[kKeyFirstName]
