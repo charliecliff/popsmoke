@@ -269,7 +269,7 @@
                                     <constraint firstItem="lce-XZ-xTv" firstAttribute="top" secondItem="rrZ-t1-XWk" secondAttribute="top" constant="20" id="u3v-TQ-w68"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJO-La-EU3" userLabel="Shopping Cart Container">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJO-La-EU3" userLabel="Shopping Cart Container">
                                 <rect key="frame" x="128" y="348" width="118" height="118"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopping_cart" translatesAutoresizingMaskIntoConstraints="NO" id="clo-R7-QBu">
